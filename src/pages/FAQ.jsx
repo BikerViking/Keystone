@@ -6,7 +6,7 @@ export default function FAQ() {
 
   return (
     <section className="container py-16 space-y-8">
-      <h1 className="text-4xl font-serif font-semibold tracking-wide">Frequently Asked Questions</h1>
+      <h1 className="text-4xl font-serif font-semibold tracking-wide heading-gradient">Frequently Asked Questions</h1>
       <ul className="space-y-4">
         {faqs.map(({ q, a }) => (
           <li key={q}>

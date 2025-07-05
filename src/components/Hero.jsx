@@ -13,11 +13,11 @@ export default function Hero() {
         <div className="mx-auto flex h-40 w-40 items-center justify-center rounded-md bg-black text-gray-300 shadow-2xl">
           Logo Reveal Coming Soon
         </div>
-        <h1 className="text-4xl font-serif font-semibold tracking-wide md:text-6xl">Keystone Notary Group</h1>
+        <h1 className="text-4xl font-serif font-semibold tracking-wide heading-gradient md:text-6xl">Keystone Notary Group</h1>
         <p className="text-lg font-light md:text-2xl">Reliable Mobile Notary Services</p>
         <a
           href="#contact"
-          className="inline-block rounded border border-gray-600 bg-[#1a1a1a] px-8 py-3 text-lg font-medium text-white transition hover:shadow-lg"
+          className="inline-block rounded border border-gray-600 bg-[#1a1a1a] px-8 py-3 text-lg font-medium text-white transition hover:text-silver-500 hover:border-silver-500 hover:shadow-lg"
         >
           Request Notary
         </a>

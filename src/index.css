@@ -17,3 +17,19 @@
   background-image: radial-gradient(circle at center, rgba(255,255,255,0.05), transparent 70%);
 }
 
+@layer components {
+  /* Silver underline accent for headings */
+  .heading-gradient {
+    @apply relative pb-2;
+  }
+  .heading-gradient::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    width: 100%;
+    background-image: linear-gradient(to right, #bfbfbf, transparent);
+  }
+}
+
