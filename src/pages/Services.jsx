@@ -3,24 +3,28 @@ import { MotionSection } from '../components';
 export default function Services() {
   const services = [
     {
-      title: 'Acknowledgements & Jurats',
-      desc: 'Official witnessing of signatures and sworn statements.',
+      title: 'Acknowledgements & Oaths',
+      desc:
+        'Official witnessing of signatures, affirmations, and acknowledgements as required by Pennsylvania law.',
     },
     {
       title: 'Loan Signing Services',
       desc: 'Professional handling of mortgage closings and refinance packages.',
     },
     {
-      title: 'Apostille Facilitation',
-      desc: 'Guidance obtaining apostilles for documents destined for foreign use.',
+      title: 'After-Hours & Emergency Notary',
+      desc:
+        'Provide notary services outside regular business hours or on short notice, subject to availability and applicable surcharges.',
     },
     {
-      title: 'I-9 Employment Verification',
-      desc: 'Authorized representative services for remote employee onboarding.',
+      title: 'Oaths & Affirmations',
+      desc:
+        'Administer legally binding oaths and affirmations for affidavits, statements, and declarations.',
     },
     {
-      title: 'Remote Notarization',
-      desc: 'Online notarization where permitted by Pennsylvania law.',
+      title: 'Document Certifications',
+      desc:
+        'Certify copies of documents as true and accurate representations of the original when allowed by law.',
     },
   ];
 
