@@ -137,3 +137,24 @@ dist
 # Vite logs files
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+# ──────────────────────────────────────────────
+# ADDITIONS FOR KEYSTONE NOTARY GROUP PROJECT
+# ──────────────────────────────────────────────
+
+# Codex local config
+.codex
+
+# Vite cache
+.vite
+
+# Vercel and Netlify deployment configs
+.vercel
+.netlify
+
+# Local environment override files
+.env.local
+.env.*.local
+
+# Asset manifest (if generated)
+asset-manifest.json
