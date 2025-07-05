@@ -25,7 +25,7 @@ export default function ScrollToTopButton() {
           transition={{ duration: 0.3 }}
           onClick={handleClick}
           aria-label="Scroll to top"
-          className="fixed bottom-4 right-4 rounded-full bg-primary-600 p-3 text-white shadow-lg focus:outline-none focus:ring focus:ring-primary-400"
+          className="fixed bottom-4 right-4 rounded-full bg-[#1a1a1a] p-3 text-white shadow-lg focus:outline-none focus:ring focus:ring-gray-500"
         >
           ↑
         </motion.button>
