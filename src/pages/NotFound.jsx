@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import MotionSection from '../components/MotionSection';
+import { MotionSection } from '../components';
 
 export default function NotFound() {
   return (

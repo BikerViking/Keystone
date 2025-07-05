@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
-import Layout from '../components/Layout';
+import { Layout } from '../components';
 
 // Ensure the layout always has router context
 describe('Layout component', () => {
