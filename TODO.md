@@ -6,7 +6,7 @@ This file outlines features, improvements, and implementation tasks for Codex to
 
 ## Priority Features to Add
 
-- [ ] Create a full About page with company overview, professionalism, and mission statement.
+- [x] Create a full About page with company overview, professionalism, and mission statement.
 - [ ] Create a full Services page listing all notarial offerings in a well-structured layout.
 - [ ] Build a styled FAQ page with accessible, collapsible Q&A components.
 - [ ] Enhance the Contact form with fields for appointment type and document category.
