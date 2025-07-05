@@ -1,4 +1,4 @@
-import MotionSection from '../components/MotionSection';
+import { MotionSection } from '../components';
 
 export default function FAQ() {
   const faqs = [

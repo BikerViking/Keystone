@@ -1,6 +1,6 @@
 import { fireEvent, render, screen, waitForElementToBeRemoved } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
-import Navbar from '../components/Navbar';
+import { Navbar } from '../components';
 
 test('toggles mobile menu', async () => {
   render(

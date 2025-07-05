@@ -1,6 +1,4 @@
-import Hero from '../components/Hero';
-import Credentials from '../components/Credentials';
-import MotionSection from '../components/MotionSection';
+import { Hero, Credentials, MotionSection } from '../components';
 
 export default function Home() {
   return (
