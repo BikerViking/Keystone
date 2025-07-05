@@ -4,17 +4,9 @@
 
 @layer base {
   body {
-    @apply bg-[#121212] text-platinum font-sans;
-    /* Subtle texture and depth */
-    background-image:
-      radial-gradient(circle at center, rgba(255,255,255,0.05), transparent 70%),
-      repeating-linear-gradient(45deg, rgba(255,255,255,0.02) 0, rgba(255,255,255,0.02) 1px, transparent 1px, transparent 5px);
-    background-size: 100% 100%, 40px 40px;
+    @apply bg-charcoal text-platinum font-sans;
+    /* Keep the background clean with no decorative textures */
   }
-}
-
-.bg-hero {
-  background-image: radial-gradient(circle at center, rgba(255,255,255,0.05), transparent 70%);
 }
 
 @layer components {
