@@ -1,6 +1,6 @@
-# Keystone Vite React App
+# Keystone Notary Group Website
 
-This project uses [Vite](https://vitejs.dev/) with React and Tailwind CSS.
+Modern React application using [Vite](https://vitejs.dev/) and Tailwind CSS. The site provides information about Keystone Notary Group including services, FAQs, and a contact form.
 
 ## Development
 
@@ -11,6 +11,12 @@ npm install
 npm run dev
 ```
 
-## Template Notes
-This project started from the [React + Vite](https://github.com/vitejs/vite/tree/main/packages/create-vite) template which includes basic ESLint setup with Fast Refresh support.
+## Testing
+
+Run ESLint and unit tests:
+
+```bash
+npm run lint
+npm test
+```
 
