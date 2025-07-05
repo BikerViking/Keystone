@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import logo from '../assets/logo.svg';
 
 export default function Hero() {
   return (
@@ -11,12 +10,14 @@ export default function Hero() {
         transition={{ duration: 0.8 }}
         className="relative z-10 space-y-6"
       >
-        <img src={logo} alt="Keystone Notary Group" className="mx-auto h-24 w-24" />
-        <h1 className="text-4xl font-serif font-bold md:text-6xl">Keystone Notary Group</h1>
+        <div className="mx-auto flex h-40 w-40 items-center justify-center rounded-md bg-black text-gray-300 shadow-2xl">
+          Logo Reveal Coming Soon
+        </div>
+        <h1 className="text-4xl font-serif font-semibold tracking-wide md:text-6xl">Keystone Notary Group</h1>
         <p className="text-lg font-light md:text-2xl">Reliable Mobile Notary Services</p>
         <a
           href="#contact"
-          className="inline-block rounded bg-primary-600 px-8 py-3 text-lg font-medium text-white transition hover:bg-primary-500"
+          className="inline-block rounded border border-gray-600 bg-[#1a1a1a] px-8 py-3 text-lg font-medium text-white transition hover:shadow-lg"
         >
           Request Notary
         </a>

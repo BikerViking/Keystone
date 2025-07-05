@@ -8,7 +8,7 @@ export default function Layout() {
   const location = useLocation();
 
   return (
-    <div className="flex min-h-screen flex-col bg-gray-900 text-white">
+    <div className="flex min-h-screen flex-col bg-[#111111] text-gray-200">
       <Navbar />
       <AnimatePresence mode="wait">
         <motion.main
