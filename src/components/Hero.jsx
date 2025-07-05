@@ -16,7 +16,7 @@ export default function Hero() {
         <h1 className="text-4xl font-serif font-semibold tracking-wide heading-gradient md:text-6xl">Keystone Notary Group</h1>
         <p className="text-lg font-light md:text-2xl">Reliable Mobile Notary Services</p>
         <motion.a
-          href="#contact"
+          href="/contact"
           whileHover={{ y: -2, boxShadow: '0 4px 15px rgba(255,255,255,0.15)' }}
           className="cta-button hover:border-silver hover:text-silver"
         >
