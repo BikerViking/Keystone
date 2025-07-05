@@ -1,3 +1,5 @@
+import MotionSection from '../components/MotionSection';
+
 export default function Services() {
   const services = [
     'Acknowledgements',
@@ -7,15 +9,15 @@ export default function Services() {
   ];
 
   return (
-    <section className="container py-16 space-y-8">
-      <h1 className="text-4xl font-serif font-semibold tracking-wide heading-gradient">Services</h1>
+    <MotionSection className="container space-y-8">
+      <h1 className="text-4xl font-serif font-semibold tracking-wide heading-gradient text-silver">Services</h1>
       <ul className="grid gap-4 md:grid-cols-2">
         {services.map((service) => (
-          <li key={service} className="rounded bg-deepgray p-4">
+          <li key={service} className="rounded border border-platinum bg-deepgray p-4">
             {service}
           </li>
         ))}
       </ul>
-    </section>
+    </MotionSection>
   );
 }

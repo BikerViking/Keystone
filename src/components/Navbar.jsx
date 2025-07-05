@@ -16,26 +16,29 @@ export default function Navbar() {
   const toggle = () => setOpen(!open);
 
   const linkClasses = ({ isActive }) =>
-    `block rounded px-3 py-2 text-lg font-medium text-platinum bg-deepgray transition-colors hover:text-silver hover:bg-charcoal hover:shadow ${
-      isActive ? 'text-silver shadow-inner' : ''
+    `block rounded border border-transparent bg-deepgray px-3 py-2 text-lg font-medium transition-colors hover:bg-charcoal hover:border-silver hover:text-silver hover:shadow ${
+      isActive ? 'text-silver shadow-inner' : 'text-platinum'
     }`;
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 bg-charcoal/70 backdrop-blur">
       <nav className="container flex items-center justify-between py-4">
-        <Link to="/" className="flex items-center text-xl font-semibold transition-colors hover:text-silver">
+        <Link
+          to="/"
+          className="flex items-center rounded border border-transparent px-2 text-xl font-semibold transition-colors hover:border-silver hover:text-silver"
+        >
           <img src={logo} alt="Keystone Notary Group" className="h-8 w-8 mr-2" />
           Keystone
         </Link>
         <button
-          className="md:hidden"
+          className="md:hidden flex flex-col items-center justify-center"
           onClick={toggle}
           aria-label="Toggle navigation"
           aria-expanded={open}
         >
-          <span className="block h-0.5 w-6 bg-platinum mb-1" />
-          <span className="block h-0.5 w-6 bg-platinum mb-1" />
-          <span className="block h-0.5 w-6 bg-platinum" />
+          <span className="mb-1 block h-0.5 w-6 bg-platinum transition-colors hover:bg-silver" />
+          <span className="mb-1 block h-0.5 w-6 bg-platinum transition-colors hover:bg-silver" />
+          <span className="block h-0.5 w-6 bg-platinum transition-colors hover:bg-silver" />
         </button>
         <ul className="hidden md:flex space-x-3">
           {navItems.map((item) => (
