@@ -11,7 +11,7 @@ export default function FAQ() {
         {faqs.map(({ q, a }) => (
           <li key={q}>
             <h2 className="text-xl font-medium">{q}</h2>
-            <p className="text-gray-300">{a}</p>
+            <p className="text-platinum">{a}</p>
           </li>
         ))}
       </ul>
