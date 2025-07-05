@@ -67,20 +67,23 @@ export default function Navbar() {
             >
               ✕
             </button>
-            <ul className="mt-8 space-y-4">
-              {navItems.map((item) => (
-                <li key={item.name}>
-                  <NavLink
-                    to={item.path}
-                    className={linkClasses}
-                    onClick={() => setOpen(false)}
-                    end
-                  >
-                    {item.name}
-                  </NavLink>
-                </li>
-              ))}
-            </ul>
+            {/* Mobile menu with a solid background behind item gaps */}
+            <nav aria-label="Mobile navigation" className="mt-8">
+              <ul className="space-y-4 bg-black">
+                {navItems.map((item) => (
+                  <li key={item.name}>
+                    <NavLink
+                      to={item.path}
+                      className={linkClasses}
+                      onClick={() => setOpen(false)}
+                      end
+                    >
+                      {item.name}
+                    </NavLink>
+                  </li>
+                ))}
+              </ul>
+            </nav>
           </motion.div>
         )}
       </AnimatePresence>

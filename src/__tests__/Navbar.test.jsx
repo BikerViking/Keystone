@@ -12,6 +12,10 @@ test('toggles mobile menu', async () => {
   const button = screen.getByRole('button', { name: /toggle navigation/i });
   fireEvent.click(button);
   expect(screen.getByRole('button', { name: /close navigation/i })).toBeInTheDocument();
+  // Mobile menu should render with a navigation region for accessibility
+  expect(
+    screen.getByRole('navigation', { name: /mobile navigation/i })
+  ).toBeInTheDocument();
 
   const close = screen.getByRole('button', { name: /close navigation/i });
   fireEvent.click(close);
