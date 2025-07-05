@@ -8,16 +8,10 @@ export default {
         serif: ['Playfair Display', 'ui-serif', 'Georgia'],
       },
       colors: {
-        primary: {
-          400: '#4f9dbb',
-          500: '#2d8aac',
-          600: '#197189',
-        },
-        silver: {
-          400: '#999999',
-          500: '#adadad',
-          600: '#bfbfbf',
-        },
+        charcoal: '#121212',
+        deepgray: '#1A1A1A',
+        platinum: '#999999',
+        silver: '#bfbfbf',
       },
       container: {
         center: true,

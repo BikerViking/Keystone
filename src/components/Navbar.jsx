@@ -16,14 +16,14 @@ export default function Navbar() {
   const toggle = () => setOpen(!open);
 
   const linkClasses = ({ isActive }) =>
-    `block rounded px-3 py-2 text-lg font-medium text-gray-200 bg-gray-800 transition-colors hover:text-silver-500 hover:bg-gray-700 hover:shadow ${
-      isActive ? 'text-silver-600 shadow-inner' : ''
+    `block rounded px-3 py-2 text-lg font-medium text-platinum bg-deepgray transition-colors hover:text-silver hover:bg-charcoal hover:shadow ${
+      isActive ? 'text-silver shadow-inner' : ''
     }`;
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 bg-gray-950/70 backdrop-blur">
+    <header className="fixed inset-x-0 top-0 z-50 bg-charcoal/70 backdrop-blur">
       <nav className="container flex items-center justify-between py-4">
-        <Link to="/" className="flex items-center text-xl font-semibold transition-colors hover:text-silver-500">
+        <Link to="/" className="flex items-center text-xl font-semibold transition-colors hover:text-silver">
           <img src={logo} alt="Keystone Notary Group" className="h-8 w-8 mr-2" />
           Keystone
         </Link>
@@ -33,9 +33,9 @@ export default function Navbar() {
           aria-label="Toggle navigation"
           aria-expanded={open}
         >
-          <span className="block h-0.5 w-6 bg-gray-200 mb-1" />
-          <span className="block h-0.5 w-6 bg-gray-200 mb-1" />
-          <span className="block h-0.5 w-6 bg-gray-200" />
+          <span className="block h-0.5 w-6 bg-platinum mb-1" />
+          <span className="block h-0.5 w-6 bg-platinum mb-1" />
+          <span className="block h-0.5 w-6 bg-platinum" />
         </button>
         <ul className="hidden md:flex space-x-3">
           {navItems.map((item) => (
@@ -54,10 +54,10 @@ export default function Navbar() {
             animate={{ x: 0 }}
             exit={{ x: '100%' }}
             transition={{ type: 'tween' }}
-            className="fixed inset-0 z-40 bg-gray-900/90 p-6 md:hidden"
+            className="fixed inset-0 z-40 bg-black/90 p-6 md:hidden"
           >
             <button
-              className="absolute top-4 right-4 text-gray-200"
+              className="absolute top-4 right-4 text-platinum"
               onClick={toggle}
               aria-label="Close navigation"
             >

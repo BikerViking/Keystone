@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply bg-[#111111] text-gray-200 font-sans;
+    @apply bg-[#121212] text-platinum font-sans;
     /* Subtle texture and depth */
     background-image:
       radial-gradient(circle at center, rgba(255,255,255,0.05), transparent 70%),
