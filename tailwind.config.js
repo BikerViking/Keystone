@@ -13,6 +13,11 @@ export default {
           500: '#2d8aac',
           600: '#197189',
         },
+        silver: {
+          400: '#999999',
+          500: '#adadad',
+          600: '#bfbfbf',
+        },
       },
       container: {
         center: true,
