@@ -1,3 +1,5 @@
+import MotionSection from '../components/MotionSection';
+
 export default function FAQ() {
   const faqs = [
     { q: 'Do you offer mobile services?', a: 'Yes, we travel to your location.' },
@@ -5,8 +7,8 @@ export default function FAQ() {
   ];
 
   return (
-    <section className="container py-16 space-y-8">
-      <h1 className="text-4xl font-serif font-semibold tracking-wide heading-gradient">Frequently Asked Questions</h1>
+    <MotionSection className="container space-y-8">
+      <h1 className="text-4xl font-serif font-semibold tracking-wide heading-gradient text-silver">Frequently Asked Questions</h1>
       <ul className="space-y-4">
         {faqs.map(({ q, a }) => (
           <li key={q}>
@@ -15,6 +17,6 @@ export default function FAQ() {
           </li>
         ))}
       </ul>
-    </section>
+    </MotionSection>
   );
 }

@@ -1,4 +1,5 @@
 import CheckIcon from './CheckIcon';
+import MotionSection from './MotionSection';
 
 export default function Credentials() {
   const credentials = [
@@ -8,8 +9,8 @@ export default function Credentials() {
   ];
 
   return (
-    <section className="container py-16 space-y-6">
-      <h2 className="text-3xl font-serif font-semibold tracking-wide heading-gradient">
+    <MotionSection className="container space-y-6">
+      <h2 className="text-3xl font-serif font-semibold tracking-wide heading-gradient text-silver">
         Credentials
       </h2>
       <ul className="space-y-4">
@@ -20,6 +21,6 @@ export default function Credentials() {
           </li>
         ))}
       </ul>
-    </section>
+    </MotionSection>
   );
 }
