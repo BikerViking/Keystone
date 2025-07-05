@@ -16,7 +16,7 @@ export default function Navbar() {
   const toggle = () => setOpen(!open);
 
   const linkClasses = ({ isActive }) =>
-    `block rounded border border-transparent bg-deepgray px-3 py-2 text-lg font-medium transition-colors hover:bg-charcoal hover:border-silver hover:text-silver hover:shadow ${
+    `block w-full rounded bg-black px-4 py-3 text-lg font-medium transition-colors hover:bg-deepgray hover:text-silver md:w-auto md:bg-deepgray md:px-3 md:py-2 ${
       isActive ? 'text-silver shadow-inner' : 'text-platinum'
     }`;
 
@@ -31,7 +31,7 @@ export default function Navbar() {
           Keystone
         </Link>
         <button
-          className="md:hidden flex flex-col items-center justify-center"
+          className="md:hidden flex h-10 w-10 flex-col items-center justify-center rounded focus:outline-none focus:ring-2 focus:ring-silver"
           onClick={toggle}
           aria-label="Toggle navigation"
           aria-expanded={open}
@@ -57,10 +57,10 @@ export default function Navbar() {
             animate={{ x: 0 }}
             exit={{ x: '100%' }}
             transition={{ type: 'tween' }}
-            className="fixed inset-0 z-40 bg-black/90 p-6 md:hidden"
+            className="fixed inset-0 z-40 bg-black p-6 md:hidden overflow-auto"
           >
             <button
-              className="absolute top-4 right-4 text-platinum"
+              className="absolute top-4 right-4 h-10 w-10 rounded text-platinum focus:outline-none focus:ring-2 focus:ring-silver"
               onClick={toggle}
               aria-label="Close navigation"
             >
