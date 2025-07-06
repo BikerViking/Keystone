@@ -87,7 +87,7 @@ export default function Contact() {
         Contact Us
       </h1>
       <form onSubmit={handleSubmit} className="space-y-6" noValidate>
-        <div className="grid gap-4 min-[568px]:grid-cols-2">
+        <div className="space-y-4">
           <label className="block" htmlFor="name">
             <span className="mb-1 block text-platinum">Full Name</span>
             <input
@@ -135,7 +135,7 @@ export default function Contact() {
               className="w-full rounded border border-platinum bg-deepgray px-3 py-2 text-white placeholder-platinum focus:border-silver focus:outline-none"
             />
           </label>
-          <label className="flex items-center gap-2 md:col-span-2" htmlFor="requestAppointment">
+          <label className="flex items-center gap-2" htmlFor="requestAppointment">
             <input
               id="requestAppointment"
               name="requestAppointment"
@@ -194,7 +194,7 @@ export default function Contact() {
             )}
           </label>
           {!requestAppointment && (
-            <p className="md:col-span-2 text-xs italic text-platinum">
+            <p className="text-xs italic text-platinum">
               Enable appointment request above to choose date and time.
             </p>
           )}
