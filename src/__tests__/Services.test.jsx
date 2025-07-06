@@ -6,7 +6,7 @@ function setup() {
   render(
     <MemoryRouter
       initialEntries={['/services']}
-      future={{ v7_relativeSplatPath: true }}
+      future={{ v7_relativeSplatPath: true, v7_startTransition: true }}
     >
       <App />
     </MemoryRouter>

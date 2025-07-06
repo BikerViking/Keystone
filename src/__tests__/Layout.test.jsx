@@ -6,7 +6,7 @@ import { Layout } from '../components';
 describe('Layout component', () => {
   test('renders header and footer', () => {
     render(
-      <MemoryRouter future={{ v7_relativeSplatPath: true }}>
+      <MemoryRouter future={{ v7_relativeSplatPath: true, v7_startTransition: true }}>
         <Layout />
       </MemoryRouter>
     );

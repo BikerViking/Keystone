@@ -6,7 +6,7 @@ test('renders about page content', () => {
   render(
     <MemoryRouter
       initialEntries={['/about']}
-      future={{ v7_relativeSplatPath: true }}
+      future={{ v7_relativeSplatPath: true, v7_startTransition: true }}
     >
       <App />
     </MemoryRouter>

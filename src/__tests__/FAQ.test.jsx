@@ -4,7 +4,7 @@ import App from '../App';
 
 function setup() {
   render(
-    <MemoryRouter initialEntries={["/faq"]} future={{ v7_relativeSplatPath: true }}>
+    <MemoryRouter initialEntries={["/faq"]} future={{ v7_relativeSplatPath: true, v7_startTransition: true }}>
       <App />
     </MemoryRouter>
   );
