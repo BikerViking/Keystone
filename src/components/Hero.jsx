@@ -1,7 +1,9 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
-const MotionLink = motion(Link);
+// framer-motion 11 deprecates `motion()` in favor of `motion.create()`
+// Use the new API to avoid deprecation warnings during tests
+const MotionLink = motion.create(Link);
 
 export default function Hero() {
   return (
