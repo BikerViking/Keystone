@@ -87,7 +87,7 @@ export default function Contact() {
         Contact Us
       </h1>
       <form onSubmit={handleSubmit} className="space-y-6" noValidate>
-        <div className="grid gap-4 md:grid-cols-2">
+        <div className="grid gap-4 min-[568px]:grid-cols-2">
           <label className="block" htmlFor="name">
             <span className="mb-1 block text-platinum">Full Name</span>
             <input

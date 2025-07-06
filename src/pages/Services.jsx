@@ -33,7 +33,7 @@ export default function Services() {
       <h1 className="text-4xl font-serif font-semibold tracking-wide heading-gradient text-silver">
         Services
       </h1>
-      <ul className="grid gap-6 md:grid-cols-2">
+      <ul className="grid gap-6 min-[568px]:grid-cols-2">
         {services.map(({ title, desc }) => (
           <li
             key={title}

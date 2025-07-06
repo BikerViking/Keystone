@@ -7,7 +7,7 @@ function setup() {
   render(
     <MemoryRouter
       initialEntries={['/contact']}
-      future={{ v7_relativeSplatPath: true }}
+      future={{ v7_relativeSplatPath: true, v7_startTransition: true }}
     >
       <App />
     </MemoryRouter>
