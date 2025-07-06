@@ -14,28 +14,38 @@ function setup() {
   );
 }
 
-test('renders contact form', async () => {
+test('renders contact form and validates fields', async () => {
   setup();
+  const user = userEvent.setup();
   expect(screen.getByRole('heading', { name: /contact us/i })).toBeInTheDocument();
   expect(screen.getByLabelText(/full name/i)).toBeInTheDocument();
   expect(
     screen.getByText(/Submitting this form does not guarantee an appointment/i)
   ).toBeInTheDocument();
-  // appointment scheduling elements
+
   const checkbox = screen.getByLabelText(/i am requesting an appointment/i);
   let dateInput = screen.getByLabelText(/preferred date/i);
   let timeInput = screen.getByLabelText(/preferred time/i);
-  expect(checkbox).toBeInTheDocument();
   expect(dateInput).toBeDisabled();
   expect(timeInput).toBeDisabled();
 
+  const submitButton = screen.getByRole('button', { name: /send message/i });
+  await user.click(submitButton);
+  expect(screen.getByText(/full name is required/i)).toBeInTheDocument();
+  expect(screen.getByText(/email address is required/i)).toBeInTheDocument();
+  expect(screen.getByText(/message is required/i)).toBeInTheDocument();
+  expect(screen.queryByText(/preferred date is required/i)).not.toBeInTheDocument();
+
   // enable appointment fields
-  await userEvent.click(checkbox);
-  // re-query inputs after state update
+  await user.click(checkbox);
   dateInput = screen.getByLabelText(/preferred date/i);
   timeInput = screen.getByLabelText(/preferred time/i);
   expect(dateInput).toBeEnabled();
   expect(dateInput).toBeRequired();
   expect(timeInput).toBeEnabled();
   expect(timeInput).toBeRequired();
+
+  await user.click(submitButton);
+  expect(screen.getByText(/preferred date is required/i)).toBeInTheDocument();
+  expect(screen.getByText(/preferred time is required/i)).toBeInTheDocument();
 });
