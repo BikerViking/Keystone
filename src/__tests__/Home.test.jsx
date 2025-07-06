@@ -11,6 +11,6 @@ test('renders home page heading and cta', () => {
   expect(screen.getByRole('heading', { name: /keystone notary group/i })).toBeInTheDocument();
   const cta = screen.getByRole('link', { name: /schedule appointment/i });
   expect(cta).toHaveAttribute('href', '/contact#contact');
-  // Animated logo should fall back to the static logo image with alt text for accessibility
+  // Logo should render with accessible alt text
   expect(screen.getByAltText(/keystone notary group logo/i)).toBeInTheDocument();
 });
