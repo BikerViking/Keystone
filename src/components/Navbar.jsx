@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import logo from "../assets/logo.svg";
@@ -13,7 +13,43 @@ const navItems = [
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-  const toggle = () => setOpen(!open);
+  const menuRef = useRef(null);
+  const toggle = () => setOpen((prev) => !prev);
+  const closeMenu = () => setOpen(false);
+
+  // Close menu on outside click or orientation change for mobile UX
+  useEffect(() => {
+    if (!open) return;
+
+    function handlePointerDown(event) {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        closeMenu();
+      }
+    }
+
+    function handleKey(event) {
+      if (event.key === "Escape") {
+        closeMenu();
+      }
+    }
+
+    function handleResize() {
+      closeMenu();
+    }
+
+    document.addEventListener("mousedown", handlePointerDown);
+    document.addEventListener("touchstart", handlePointerDown);
+    document.addEventListener("keydown", handleKey);
+    window.addEventListener("orientationchange", handleResize);
+    window.addEventListener("resize", handleResize);
+    return () => {
+      document.removeEventListener("mousedown", handlePointerDown);
+      document.removeEventListener("touchstart", handlePointerDown);
+      document.removeEventListener("keydown", handleKey);
+      window.removeEventListener("orientationchange", handleResize);
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [open]);
 
   const linkClasses = ({ isActive }) =>
     // Deep gray items stand out against the black overlay
@@ -66,16 +102,17 @@ export default function Navbar() {
             exit={{ x: "100%" }}
             transition={{ type: "tween" }}
             className="fixed inset-0 z-40 bg-black md:hidden"
-            onClick={toggle}
+            onClick={closeMenu}
             role="presentation"
           >
             <div
+              ref={menuRef}
               className="relative h-full p-6"
               onClick={(e) => e.stopPropagation()}
             >
               <button
                 className="absolute top-4 right-4 text-platinum"
-                onClick={toggle}
+                onClick={closeMenu}
                 aria-label="Close navigation"
               >
                 ✕
@@ -88,7 +125,7 @@ export default function Navbar() {
                       <NavLink
                         to={item.path}
                         className={linkClasses}
-                        onClick={() => setOpen(false)}
+                        onClick={closeMenu}
                         end
                       >
                         {item.name}
