@@ -17,7 +17,7 @@ const faqs = [
   },
   {
     q: 'Are you certified and insured?',
-    a: 'Yes. Keystone Notary Group is NNA Certified and carries full Errors & Omissions insurance coverage. You can trust that our agents follow best practices and strict industry standards.',
+    a: 'Yes. Keystone Notary Group, LLC is NNA Certified and carries full Errors & Omissions insurance coverage. You can trust that our agents follow best practices and strict industry standards.',
   },
   {
     q: 'Do you provide legal advice or prepare documents?',

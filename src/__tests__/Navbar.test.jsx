@@ -4,7 +4,7 @@ import { Navbar } from '../components';
 
 test('toggles mobile menu', async () => {
   render(
-    <MemoryRouter>
+    <MemoryRouter future={{ v7_relativeSplatPath: true }}>
       <Navbar />
     </MemoryRouter>
   );

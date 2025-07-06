@@ -4,7 +4,10 @@ import App from '../App';
 
 test('renders about page content', () => {
   render(
-    <MemoryRouter initialEntries={['/about']}>
+    <MemoryRouter
+      initialEntries={['/about']}
+      future={{ v7_relativeSplatPath: true }}
+    >
       <App />
     </MemoryRouter>
   );

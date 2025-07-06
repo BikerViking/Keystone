@@ -22,13 +22,20 @@ export default function Navbar() {
     }`;
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 bg-charcoal/70 backdrop-blur">
+    <header
+      role="banner"
+      className="fixed inset-x-0 top-0 z-50 bg-charcoal/70 backdrop-blur"
+    >
       <nav className="container flex items-center justify-between py-4">
         <Link
           to="/"
           className="flex items-center rounded border border-transparent px-2 text-xl font-semibold transition-colors hover:border-silver hover:text-silver"
         >
-          <img src={logo} alt="Keystone Notary Group" className="h-8 w-8 mr-2" />
+          <img
+            src={logo}
+            alt="Keystone Notary Group, LLC logo"
+            className="mr-2 h-8 w-8"
+          />
           Keystone
         </Link>
         <button

@@ -4,7 +4,7 @@ import App from '../App';
 
 test('renders home page heading and cta', () => {
   render(
-    <MemoryRouter initialEntries={["/"]}>
+    <MemoryRouter initialEntries={["/"]} future={{ v7_relativeSplatPath: true }}>
       <App />
     </MemoryRouter>
   );
