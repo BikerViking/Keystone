@@ -140,7 +140,7 @@ export default function Contact() {
       </form>
       <p className="text-sm italic text-platinum">
         Submitting this form does not guarantee an appointment. All requests are
-        subject to confirmation by Keystone Notary Group.
+        subject to confirmation by Keystone Notary Group, LLC.
       </p>
       <p className="text-xs text-platinum">
         Keystone Notary Group, LLC is not a law firm and does not provide legal

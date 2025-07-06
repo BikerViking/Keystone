@@ -7,8 +7,8 @@ export default function Home() {
       <MotionSection className="container space-y-8">
         <h2 className="text-3xl font-serif font-semibold tracking-wide heading-gradient text-silver">Why Choose Us?</h2>
         <p className="text-lg text-platinum">
-          Keystone Notary Group provides professional, reliable, and convenient mobile
-          notary services. We bring the notary public to you.
+          Keystone Notary Group, LLC provides professional, reliable, and
+          convenient mobile notary services. We bring the notary public to you.
         </p>
       </MotionSection>
       <Credentials />

@@ -13,7 +13,9 @@ export default function Hero() {
         <div className="mx-auto flex h-40 w-40 items-center justify-center rounded-md bg-black text-platinum shadow-lg">
           Logo Reveal Coming Soon
         </div>
-        <h1 className="text-4xl font-serif font-semibold tracking-wide heading-gradient md:text-6xl">Keystone Notary Group</h1>
+        <h1 className="text-4xl font-serif font-semibold tracking-wide heading-gradient md:text-6xl">
+          Keystone Notary Group, LLC
+        </h1>
         <p className="text-lg font-light md:text-2xl">Reliable Mobile Notary Services</p>
         <motion.a
           href="/contact"

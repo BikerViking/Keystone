@@ -5,7 +5,10 @@ import App from '../App';
 
 function setup() {
   render(
-    <MemoryRouter initialEntries={['/contact']}>
+    <MemoryRouter
+      initialEntries={['/contact']}
+      future={{ v7_relativeSplatPath: true }}
+    >
       <App />
     </MemoryRouter>
   );
