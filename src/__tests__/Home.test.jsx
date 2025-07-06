@@ -11,6 +11,8 @@ test('renders home page heading and cta', () => {
   expect(screen.getByRole('heading', { name: /keystone notary group/i })).toBeInTheDocument();
   const cta = screen.getByRole('link', { name: /schedule appointment/i });
   expect(cta).toHaveAttribute('href', '/contact#contact');
+  const phoneLink = screen.getByRole('link', { name: /call or text/i });
+  expect(phoneLink).toHaveAttribute('href', 'tel:2673099000');
   // Logo should render with accessible alt text
   expect(screen.getByAltText(/keystone notary group logo/i)).toBeInTheDocument();
 });
