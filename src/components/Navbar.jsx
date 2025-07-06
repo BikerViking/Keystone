@@ -1,14 +1,14 @@
-import { useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import logo from '../assets/logo.svg';
+import { useState } from "react";
+import { Link, NavLink } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
+import logo from "../assets/logo.svg";
 
 const navItems = [
-  { name: 'Home', path: '/' },
-  { name: 'About', path: '/about' },
-  { name: 'Services', path: '/services' },
-  { name: 'FAQ', path: '/faq' },
-  { name: 'Contact', path: '/contact' },
+  { name: "Home", path: "/" },
+  { name: "About", path: "/about" },
+  { name: "Services", path: "/services" },
+  { name: "FAQ", path: "/faq" },
+  { name: "Contact", path: "/contact" },
 ];
 
 export default function Navbar() {
@@ -18,7 +18,7 @@ export default function Navbar() {
   const linkClasses = ({ isActive }) =>
     // Deep gray items stand out against the black overlay
     `block rounded border border-transparent bg-deepgray px-3 py-2 text-lg font-medium transition-colors hover:bg-charcoal hover:border-silver hover:text-silver hover:shadow ${
-      isActive ? 'text-silver shadow-inner' : 'text-platinum'
+      isActive ? "text-silver shadow-inner" : "text-platinum"
     }`;
 
   return (
@@ -61,36 +61,43 @@ export default function Navbar() {
       <AnimatePresence>
         {open && (
           <motion.div
-            initial={{ x: '100%' }}
+            initial={{ x: "100%" }}
             animate={{ x: 0 }}
-            exit={{ x: '100%' }}
-            transition={{ type: 'tween' }}
-            className="fixed inset-0 z-40 bg-black p-6 md:hidden"
+            exit={{ x: "100%" }}
+            transition={{ type: "tween" }}
+            className="fixed inset-0 z-40 bg-black md:hidden"
+            onClick={toggle}
+            role="presentation"
           >
-            <button
-              className="absolute top-4 right-4 text-platinum"
-              onClick={toggle}
-              aria-label="Close navigation"
+            <div
+              className="relative h-full p-6"
+              onClick={(e) => e.stopPropagation()}
             >
-              ✕
-            </button>
-            {/* Mobile menu with a solid background behind item gaps */}
-            <nav aria-label="Mobile navigation" className="mt-8">
-              <ul className="space-y-4 bg-black">
-                {navItems.map((item) => (
-                  <li key={item.name}>
-                    <NavLink
-                      to={item.path}
-                      className={linkClasses}
-                      onClick={() => setOpen(false)}
-                      end
-                    >
-                      {item.name}
-                    </NavLink>
-                  </li>
-                ))}
-              </ul>
-            </nav>
+              <button
+                className="absolute top-4 right-4 text-platinum"
+                onClick={toggle}
+                aria-label="Close navigation"
+              >
+                ✕
+              </button>
+              {/* Mobile menu with a solid background behind item gaps */}
+              <nav aria-label="Mobile navigation" className="mt-8">
+                <ul className="space-y-4 bg-black">
+                  {navItems.map((item) => (
+                    <li key={item.name}>
+                      <NavLink
+                        to={item.path}
+                        className={linkClasses}
+                        onClick={() => setOpen(false)}
+                        end
+                      >
+                        {item.name}
+                      </NavLink>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

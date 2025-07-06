@@ -1,6 +1,6 @@
-# Keystone Notary Group Agents
+# Keystone Notary Group, LLC Agents
 
-Keystone Notary Group is staffed by professional notaries commissioned in the Commonwealth of Pennsylvania. Each agent maintains the following credentials:
+Keystone Notary Group, LLC is staffed by professional notaries commissioned in the Commonwealth of Pennsylvania. Each agent maintains the following credentials:
 
 - **NNA Certified Notary Signing Agent** with current background screening
 - Licensed, bonded and insured as required by the state
