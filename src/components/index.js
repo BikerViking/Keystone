@@ -6,3 +6,4 @@ export { default as Layout } from './Layout';
 export { default as MotionSection } from './MotionSection';
 export { default as Navbar } from './Navbar';
 export { default as ScrollToTopButton } from './ScrollToTopButton';
+export { default as StructuredData } from './StructuredData';
