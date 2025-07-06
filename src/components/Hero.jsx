@@ -13,8 +13,16 @@ export default function Hero() {
         transition={{ duration: 0.8 }}
         className="relative z-10 space-y-6"
       >
-        <div className="mx-auto flex h-40 w-40 items-center justify-center rounded-md bg-black text-platinum shadow-lg">
-          Logo Reveal Coming Soon
+        <div className="mx-auto h-40 w-40 md:h-48 md:w-48 flex items-center justify-center">
+          {/* Use a picture element so browsers lacking SVG animation support fall back to the static logo */}
+          <picture>
+            <source srcSet="/logo-animated.svg" type="image/svg+xml" />
+            <img
+              src="/logo.svg"
+              alt="Keystone Notary Group Logo"
+              className="h-full w-full"
+            />
+          </picture>
         </div>
         <h1 className="text-4xl font-serif font-semibold tracking-wide heading-gradient md:text-6xl">
           Keystone Notary Group, LLC
