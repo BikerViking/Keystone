@@ -10,5 +10,5 @@ test('renders home page heading and cta', () => {
   );
   expect(screen.getByRole('heading', { name: /keystone notary group/i })).toBeInTheDocument();
   const cta = screen.getByRole('link', { name: /schedule appointment/i });
-  expect(cta).toHaveAttribute('href', '/contact');
+  expect(cta).toHaveAttribute('href', '/contact#contact');
 });

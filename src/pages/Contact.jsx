@@ -1,9 +1,11 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { MotionSection } from '../components';
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
   const [requestAppointment, setRequestAppointment] = useState(false);
+  const location = useLocation();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -22,6 +24,16 @@ export default function Contact() {
     // In the future, form data can be sent to the backend for owner review
     setSubmitted(true);
   };
+
+  useEffect(() => {
+    if (location.hash) {
+      const id = location.hash.substring(1);
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [location]);
 
   if (submitted) {
     return (
