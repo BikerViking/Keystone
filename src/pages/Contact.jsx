@@ -3,11 +3,13 @@ import { MotionSection } from '../components';
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
+  const [requestAppointment, setRequestAppointment] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
-    datetime: '',
+    date: '',
+    time: '',
     message: '',
   });
 
@@ -74,17 +76,48 @@ export default function Contact() {
               className="w-full rounded border border-platinum bg-deepgray px-3 py-2 text-white placeholder-platinum focus:border-silver focus:outline-none"
             />
           </label>
-          <label className="block" htmlFor="datetime">
-            <span className="mb-1 block text-platinum">Preferred Appointment Date/Time</span>
+          <label className="flex items-center gap-2 md:col-span-2" htmlFor="requestAppointment">
             <input
-              id="datetime"
-              name="datetime"
-              type="datetime-local"
-              value={formData.datetime}
+              id="requestAppointment"
+              name="requestAppointment"
+              type="checkbox"
+              checked={requestAppointment}
+              onChange={(e) => setRequestAppointment(e.target.checked)}
+              className="h-5 w-5 accent-silver"
+            />
+            <span className="text-platinum">I am requesting an appointment.</span>
+          </label>
+          <label className="block" htmlFor="date">
+            <span className="mb-1 block text-platinum">Preferred Date</span>
+            <input
+              id="date"
+              name="date"
+              type="date"
+              disabled={!requestAppointment}
+              required={requestAppointment}
+              value={formData.date}
               onChange={handleChange}
-              className="w-full rounded border border-platinum bg-deepgray px-3 py-2 text-white placeholder-platinum focus:border-silver focus:outline-none"
+              className="w-full rounded border border-platinum bg-deepgray px-3 py-2 text-white placeholder-platinum focus:border-silver focus:outline-none disabled:opacity-50 disabled:cursor-not-allowed"
             />
           </label>
+          <label className="block" htmlFor="time">
+            <span className="mb-1 block text-platinum">Preferred Time</span>
+            <input
+              id="time"
+              name="time"
+              type="time"
+              disabled={!requestAppointment}
+              required={requestAppointment}
+              value={formData.time}
+              onChange={handleChange}
+              className="w-full rounded border border-platinum bg-deepgray px-3 py-2 text-white placeholder-platinum focus:border-silver focus:outline-none disabled:opacity-50 disabled:cursor-not-allowed"
+            />
+          </label>
+          {!requestAppointment && (
+            <p className="md:col-span-2 text-xs italic text-platinum">
+              Enable appointment request above to choose date and time.
+            </p>
+          )}
         </div>
         <label className="block" htmlFor="message">
           <span className="mb-1 block text-platinum">Message</span>
