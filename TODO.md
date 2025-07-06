@@ -1,4 +1,4 @@
-# TODO.md — Keystone Notary Group Website
+# TODO.md — Keystone Notary Group, LLC Website
 
 This file outlines features, improvements, and implementation tasks for Codex to assist with. Codex should review this list regularly and complete items when instructed or when appropriate during development.
 
