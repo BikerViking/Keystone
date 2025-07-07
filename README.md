@@ -29,10 +29,10 @@ Run tests in watch mode during development:
 npm test
 ```
 
-For a single run with [Vitest](https://vitest.dev/):
+For CI pipelines or one-off runs, use the script below to avoid hanging watch mode:
 
 ```bash
-npx vitest run
+npm run test:run
 ```
 
 ## Static Hosting
