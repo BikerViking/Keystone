@@ -1,11 +1,11 @@
 import { motion } from 'framer-motion';
 import cn from '../utils/cn';
 
-export default function MotionSection({ children, className, ...props }) {
+export default function MotionSection({ children, className = '', ...props }) {
   return (
     <motion.section
       {...props}
-      className={cn('section-divider scroll-mt-16', className)}
+      className={cn(className)}
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
