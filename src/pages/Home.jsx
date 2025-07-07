@@ -9,8 +9,10 @@ export default function Home() {
         path="/"
       />
       <Hero />
-      <MotionSection className="container space-y-8 text-center">
-        <h2 className="text-3xl font-serif font-semibold tracking-wide heading-gradient text-silver">Why Choose Us?</h2>
+      <MotionSection className="container space-y-6 text-center">
+        <h2 className="why-heading text-3xl font-serif font-semibold tracking-wide heading-gradient text-silver">
+          Why Choose Us?
+        </h2>
         <p className="text-lg text-platinum">
           Keystone Notary Group, LLC provides professional, reliable, and
           convenient mobile notary services. We bring the notary public to you.
