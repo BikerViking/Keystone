@@ -11,7 +11,7 @@ export default function Credentials() {
   return (
     <MotionSection className="container space-y-6">
       {/* Heading and badge inline with decorative line behind */}
-      <div className="flex items-center justify-between border-b border-gray-700 pb-2 mb-4 relative">
+      <div className="flex items-center gap-4 border-b border-gray-700 pb-2 mb-4">
         <h2 className="text-3xl font-serif font-semibold tracking-wide text-silver">Credentials</h2>
         <img
           src="/nna-badge.png"
