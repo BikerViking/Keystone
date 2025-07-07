@@ -14,6 +14,9 @@ Future plans: Add appointment request with owner confirmation. Video hero animat
     "Do not modify or re-add favicon or Apple splash screen tags unless explicitly instructed. All relevant assets have been uploaded and linked correctly in index.html.",
     "All asset filenames in /public follow kebab-case (hyphenated) naming. Do not use underscores in filenames.",
     "Manifest and metadata have been manually verified and should not be auto-regenerated without confirmation.",
-    "Tests must always be run after changes. React Router logs do not block tests unless actual test failures occur."
+    "Tests must always be run after changes. React Router logs do not block tests unless actual test failures occur.",
+    "Do not attempt to fix or reconfigure React Router v7 warnings.",
+    "vite.config.mjs already includes __REACT_ROUTER_V7__ and __REACT_ROUTER_V7_SPLATPATH__.",
+    "React Router warnings during tests are expected. Do not stop or edit config. Continue all tasks as normal."
   ]
 }

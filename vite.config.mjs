@@ -10,6 +10,7 @@ export default defineConfig({
       generateRobotsTxt: false,
     }),
   ],
+  // ⚠️ React Router v7 warnings already suppressed — do not re-add
   define: {
     __REACT_ROUTER_V7__: true,
     __REACT_ROUTER_V7_SPLATPATH__: true,
