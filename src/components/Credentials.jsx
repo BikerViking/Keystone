@@ -9,10 +9,10 @@ export default function Credentials() {
   ];
 
   return (
-    <MotionSection className="container space-y-6">
+    <MotionSection className="container space-y-6 text-center md:text-left">
       {/* Heading and badge inline with decorative line behind */}
       <div className="flex items-center gap-4 border-b border-gray-700 pb-2 mb-4">
-        <h2 className="text-3xl font-serif font-semibold tracking-wide text-silver">Credentials</h2>
+        <h2 className="credentials-heading text-3xl font-serif font-semibold tracking-wide text-silver">Credentials</h2>
         <img
           src="/nna-badge.png"
           alt="Certified NNA Notary Signing Agent 2025 badge"
