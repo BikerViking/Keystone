@@ -33,10 +33,10 @@ export default function Credentials() {
         {credentials.map((cred) => (
           <li
             key={cred}
-            className="flex items-center justify-center sm:justify-start gap-3"
+            className="flex items-start justify-center sm:justify-start gap-3"
           >
-            <CheckIcon className="h-6 w-6 text-white flex-shrink-0" />
-            <span className="text-lg sm:text-xl text-white font-semibold leading-relaxed tracking-wide">
+            <CheckIcon className="h-5 w-5 text-silver mt-1 flex-shrink-0" />
+            <span className="text-platinum text-base sm:text-lg font-medium leading-relaxed tracking-normal">
               {cred}
             </span>
           </li>
