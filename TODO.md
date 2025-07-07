@@ -45,6 +45,7 @@ This file outlines features, improvements, and implementation tasks for Codex to
 - [ ] Configure automatic sitemap and robots.txt generation.
 - [ ] Implement client-side routing fallback for deeper links if needed.
 - [x] Update README with testing instructions for Vitest.
+- [x] Add `test:run` script for non-watch test execution.
 
 ---
 
