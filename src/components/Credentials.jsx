@@ -10,39 +10,38 @@ export default function Credentials() {
 
   return (
     <MotionSection className="container mx-auto px-4">
-      <div className="max-w-4xl mx-auto space-y-6">
-        {/* Aligned container */}
-        <div className="ml-[5%] sm:ml-[8%] md:ml-[10%] lg:ml-[12%] xl:ml-[14%]">
+      <div className="max-w-2xl mx-auto space-y-6">
 
-          {/* Title and Badge in line */}
-          <div className="relative flex items-center mb-4">
-            {/* Divider */}
-            <div className="absolute inset-y-0 left-0 right-0 h-px bg-gray-700 top-1/2 -z-10" />
+        {/* Header and Badge */}
+        <div className="relative">
+          {/* Divider */}
+          <div className="absolute inset-x-0 top-1/2 h-px bg-gray-700 -z-10" />
 
+          <div className="flex items-center justify-start gap-4">
             {/* Heading */}
-            <h2 className="text-3xl sm:text-4xl font-serif font-semibold text-silver whitespace-nowrap pr-8">
+            <h2 className="text-3xl sm:text-4xl font-serif font-semibold text-silver whitespace-nowrap">
               Credentials
             </h2>
 
-            {/* Badge adjusted */}
+            {/* Badge */}
             <img
               src="/nna-badge.png"
               alt="Certified NNA Notary Signing Agent 2025"
-              className="w-24 sm:w-28 md:w-32 lg:w-36 ml-4"
+              className="w-20 sm:w-24 md:w-28 lg:w-28"
             />
           </div>
-
-          {/* Credential list */}
-          <ul className="space-y-4">
-            {credentials.map((cred) => (
-              <li key={cred} className="flex items-start text-platinum">
-                <CheckIcon className="h-5 w-5 mt-1 mr-2 text-silver" />
-                <span className="text-lg sm:text-xl leading-relaxed">{cred}</span>
-              </li>
-            ))}
-          </ul>
-
         </div>
+
+        {/* Credentials List */}
+        <ul className="space-y-4 pl-1">
+          {credentials.map((cred) => (
+            <li key={cred} className="flex items-start text-platinum">
+              <CheckIcon className="h-5 w-5 mt-1 mr-2 text-silver" />
+              <span className="text-lg sm:text-xl leading-relaxed">{cred}</span>
+            </li>
+          ))}
+        </ul>
+
       </div>
     </MotionSection>
   );
