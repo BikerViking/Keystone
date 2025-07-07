@@ -10,15 +10,14 @@ export default function Credentials() {
 
   return (
     <MotionSection className="container mx-auto px-4">
-      {/* Centered credentials block */}
-      <div className="mx-auto w-full max-w-2xl flex flex-col items-start space-y-6">
-        {/* Heading + Badge in row */}
-        <div className="relative w-full">
+      <div className="mx-auto w-full max-w-2xl space-y-6">
+        {/* Heading + Badge row */}
+        <div className="relative w-full flex justify-center">
           {/* Divider line */}
           <div className="absolute top-1/2 left-0 w-full h-px bg-gray-700 -z-10" />
 
-          <div className="flex items-center justify-start space-x-4">
-            <h2 className="text-3xl sm:text-4xl font-serif font-semibold text-silver whitespace-nowrap">
+          <div className="flex items-center justify-center space-x-4">
+            <h2 className="text-3xl sm:text-4xl font-serif font-semibold text-silver whitespace-nowrap text-center">
               Credentials
             </h2>
             <img
@@ -29,8 +28,8 @@ export default function Credentials() {
           </div>
         </div>
 
-        {/* Credential list */}
-        <ul className="space-y-4 pl-1">
+        {/* Credential list - left aligned under centered block */}
+        <ul className="mx-auto w-full max-w-md space-y-4 pl-1">
           {credentials.map((cred) => (
             <li key={cred} className="flex items-start text-platinum">
               <CheckIcon className="h-5 w-5 mr-2 mt-1 text-silver" />
