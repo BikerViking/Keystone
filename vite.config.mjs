@@ -10,6 +10,10 @@ export default defineConfig({
       generateRobotsTxt: false,
     }),
   ],
+  define: {
+    __REACT_ROUTER_V7__: true,
+    __REACT_ROUTER_V7_SPLATPATH__: true,
+  },
   test: {
     environment: 'jsdom',
     setupFiles: './vitest.setup.js',
