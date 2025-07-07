@@ -1,4 +1,4 @@
-import { MotionSection } from '../components';
+import { MotionSection, SEO } from '../components';
 
 export default function Services() {
   const services = [
@@ -30,6 +30,11 @@ export default function Services() {
 
   return (
     <MotionSection className="container space-y-8">
+      <SEO
+        title="Notary Services | Keystone Notary Group"
+        description="Explore our full range of notary services including loan signings, apostilles, and more."
+        path="/services"
+      />
       <h1 className="text-4xl font-serif font-semibold tracking-wide heading-gradient text-silver">
         Services
       </h1>
