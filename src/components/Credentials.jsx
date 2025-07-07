@@ -9,32 +9,28 @@ export default function Credentials() {
   ];
 
   return (
-    <MotionSection className="container text-center space-y-8">
-      {/* Heading and badge stacked */}
-      <div className="relative flex flex-col items-center gap-4">
-        {/* Divider line behind */}
-        <div className="absolute inset-x-0 top-1/2 h-px bg-gray-700 z-0" />
-        {/* Heading + badge */}
-        <div className="relative z-10 flex flex-col items-center">
-          <h2 className="text-3xl sm:text-4xl font-serif font-semibold tracking-wide text-silver">
+    <MotionSection className="container mx-auto px-4 py-12 text-center">
+      {/* Header with badge and divider */}
+      <div className="relative flex flex-col items-center justify-center">
+        <div className="relative flex items-center justify-center w-full max-w-3xl">
+          <hr className="absolute top-1/2 left-0 w-full border-t border-gray-700" />
+          <h2 className="relative z-10 bg-black px-4 text-3xl font-serif font-semibold tracking-wide text-silver">
             Credentials
           </h2>
           <img
             src="/nna-badge.png"
             alt="Certified NNA Notary Signing Agent 2025 badge"
-            className="w-28 sm:w-32 md:w-36 lg:w-40 xl:w-44 mt-2"
+            className="relative z-10 ml-4 h-16 w-16 md:h-20 md:w-20 object-contain bg-black px-2"
           />
         </div>
       </div>
 
-      {/* List of credentials */}
-      <ul className="space-y-4 max-w-xl mx-auto text-left">
+      {/* Credential list */}
+      <ul className="mt-8 space-y-4 text-center max-w-xl mx-auto">
         {credentials.map((cred) => (
-          <li key={cred} className="flex items-start">
-            <CheckIcon className="h-5 w-5 text-silver mt-1 mr-2 flex-shrink-0" />
-            <span className="text-platinum text-lg font-medium leading-relaxed">
-              {cred}
-            </span>
+          <li key={cred} className="flex items-start justify-center">
+            <CheckIcon className="mr-2 h-5 w-5 text-silver mt-1" />
+            <span className="text-platinum text-lg">{cred}</span>
           </li>
         ))}
       </ul>
