@@ -1,22 +1,69 @@
-Project: Keystone Notary Group, LLC Website
-Purpose: High-end, professional notary website for mobile and remote appointments.
-Visual style: Minimalist, dark/charcoal/metallic aesthetic, geometric design.
-Stack: React, TailwindCSS, Vite (stable versions only)
-Project features: SEO metadata, sitemap generation, PWA manifest and icons.
-Future plans: Add appointment request with owner confirmation. Video hero animation.
+# Godforge Codex Instructions (Live Standard)
 
-{
-  "instructions": [
-    "Always keep the following files updated after relevant changes: README.md, TODO.md, site.webmanifest, index.html, vite.config.mjs, and .codex.",
-    "Do not attempt to fix or reconfigure React Router v7 warnings.",
-    "The define block in vite.config.mjs already includes __REACT_ROUTER_V7__ and __REACT_ROUTER_V7_SPLATPATH__.",
-    "These warnings may appear during tests and are expected. Ignore them unless test assertions fail.",
-    "Do not modify or re-add favicon or Apple splash screen tags unless explicitly instructed. All relevant assets have been uploaded and linked correctly in index.html.",
-    "All asset filenames in /public follow kebab-case (hyphenated) naming. Do not use underscores in filenames.",
-    "Manifest and metadata have been manually verified and should not be auto-regenerated without confirmation.",
-    "Tests must always be run after changes. React Router logs do not block tests unless actual test failures occur.",
-    "Do not attempt to fix or reconfigure React Router v7 warnings.",
-    "vite.config.mjs already includes __REACT_ROUTER_V7__ and __REACT_ROUTER_V7_SPLATPATH__.",
-    "React Router warnings during tests are expected. Do not stop or edit config. Continue all tasks as normal."
-  ]
-}
+**Codex and all engineers must follow these instructions for every code change. This is non-negotiable baseline for quality.**
+
+## Core Assumption
+> You are contributing to a production system. Code must be fully complete, secure, accessible, and visually polished. All output must be deployable to `main` with no cleanup.
+
+---
+
+## Rules of Engagement
+
+### 1. CODE PURITY
+- Remove unused imports, placeholder elements, dead styles, and console logs.
+- One source of truth only. Refactor the old — never clone or append.
+- Output must be clean, minimal, readable.
+
+### 2. SELF-AUDIT CHECKLIST
+- Validate responsiveness across all breakpoints.
+- Run all tests (unit, snapshot, integration, accessibility).
+- Zero build warnings or lint errors.
+- Code is production-ready: `yarn build && preview` must pass.
+
+### 3. UX POLISH
+- Perfect spacing, alignment, rhythm, transitions.
+- No layout jitter, overflow, or hardcoded pixel widths unless requested.
+- Fully responsive from 320px → 1920px.
+
+### 4. REACT + TAILWIND PROTOCOL
+- Use flex/grid/flow. Avoid absolute/fixed unless specified.
+- Use `gap`, `items-center`, `justify-*`, and responsive classes.
+- Eliminate wrapper divs unless necessary.
+- Modular components only. Co-locate logic/styles. Use `clsx` or `tailwind-variants`.
+
+### 5. TESTING COVERAGE
+- Use `screen.getByRole`, `findByText`, never brittle queries.
+- Viewport simulation with `setViewport()` for mobile tests.
+- Stub all APIs and side effects.
+- Update DOM/snapshot tests when UI/layout changes.
+
+### 6. SECURITY + A11Y
+- Never hardcode secrets, tokens, env vars, IPs, or external URLs.
+- No third-party fonts/assets unless explicitly required.
+- WCAG 2.1 AA required:
+  - Contrast ≥ 4.5:1
+  - Alt text
+  - aria-* roles
+  - Focus states
+  - Keyboard nav
+
+### 7. COMMUNICATION
+- Don’t guess — clarify ambiguous requirements.
+- Inline comments must explain intent (*why*, not *what*).
+- Propose options with tradeoffs if spec is unclear.
+
+---
+
+##  FINAL MERGE CHECKLIST
+- [ ] All tests pass
+- [ ] Fully responsive
+- [ ] A11y-verified
+- [ ] Code linted + formatted
+- [ ] No legacy or duplicate logic
+- [ ] Semantic HTML
+- [ ] Secure (no secrets, tokens, unsafe links)
+- [ ] Visual polish complete
+
+**Mindset**: You’re pushing to `main` on a Friday with no rollback window.
+
+This is the standard.
