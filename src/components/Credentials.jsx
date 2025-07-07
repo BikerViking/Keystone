@@ -11,17 +11,15 @@ export default function Credentials() {
   return (
     <MotionSection className="px-4">
       <div className="max-w-4xl mx-auto w-full">
-        <div className="flex flex-col items-start sm:flex-row sm:items-center justify-between">
-          {/* Heading */}
+        {/* Heading and Badge in a single row */}
+        <div className="flex justify-between items-center">
           <h2 className="text-3xl font-serif font-semibold tracking-wide text-silver">
             Credentials
           </h2>
-
-          {/* Badge */}
           <img
             src="/nna-badge.png"
             alt="Certified NNA Notary Signing Agent 2025 badge"
-            className="w-16 sm:w-20 mt-4 sm:mt-0"
+            className="w-16 sm:w-20"
           />
         </div>
 
