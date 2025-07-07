@@ -31,4 +31,10 @@
   .cta-button {
     @apply inline-block rounded border border-platinum bg-deepgray px-8 py-3 text-lg font-medium text-white transition-colors;
   }
+
+  @media (orientation: landscape) and (max-height: 500px) {
+    .hero-heading {
+      @apply text-3xl;
+    }
+  }
 }
