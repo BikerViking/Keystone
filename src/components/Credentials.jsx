@@ -11,14 +11,13 @@ export default function Credentials() {
   return (
     <MotionSection className="container space-y-6">
       {/* Heading and badge inline with decorative line behind */}
-      <div
-        className="relative mb-4 pb-2 flex items-center justify-between w-full before:absolute before:bottom-0 before:left-0 before:right-0 before:h-px before:bg-gray-700 before:content-['']"
-      >
+      <div className="flex items-center justify-between border-b border-gray-700 pb-2 mb-4 relative">
         <h2 className="text-3xl font-serif font-semibold tracking-wide text-silver">Credentials</h2>
         <img
           src="/nna-badge.png"
           alt="Certified NNA Notary Signing Agent 2025 badge"
-          className="w-24 sm:w-28 lg:w-32 shrink-0 z-10"
+          className="w-24 sm:w-28 lg:w-32 -mb-5 z-10"
+          style={{ transform: 'translateY(10%)' }}
         />
       </div>
       <ul className="space-y-4">
