@@ -11,28 +11,28 @@ export default function Credentials() {
   return (
     <MotionSection className="container mx-auto px-4">
       <div className="max-w-4xl mx-auto space-y-6">
-        {/* Container aligned with hero title */}
+        {/* Aligned container */}
         <div className="ml-[5%] sm:ml-[8%] md:ml-[10%] lg:ml-[12%] xl:ml-[14%]">
 
-          {/* Title + Badge with Divider */}
+          {/* Title and Badge in line */}
           <div className="relative flex items-center mb-4">
-            {/* Divider Behind */}
+            {/* Divider */}
             <div className="absolute inset-y-0 left-0 right-0 h-px bg-gray-700 top-1/2 -z-10" />
 
-            {/* Title */}
-            <h2 className="text-3xl sm:text-4xl font-serif font-semibold text-silver whitespace-nowrap pr-10">
+            {/* Heading */}
+            <h2 className="text-3xl sm:text-4xl font-serif font-semibold text-silver whitespace-nowrap pr-8">
               Credentials
             </h2>
 
-            {/* Badge */}
+            {/* Badge adjusted */}
             <img
               src="/nna-badge.png"
               alt="Certified NNA Notary Signing Agent 2025"
-              className="w-30 sm:w-36 md:w-40 lg:w-48 ml-4"
+              className="w-24 sm:w-28 md:w-32 lg:w-36 ml-4"
             />
           </div>
 
-          {/* Left-aligned List */}
+          {/* Credential list */}
           <ul className="space-y-4">
             {credentials.map((cred) => (
               <li key={cred} className="flex items-start text-platinum">
