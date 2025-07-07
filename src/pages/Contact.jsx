@@ -10,6 +10,8 @@ export default function Contact() {
     name: '',
     email: '',
     phone: '',
+    documentCategory: '',
+    appointmentType: '',
     date: '',
     time: '',
     message: '',
@@ -26,10 +28,16 @@ export default function Contact() {
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
       newErrors.email = 'Enter a valid email address.';
     }
+    if (!formData.documentCategory) {
+      newErrors.documentCategory = 'Document category is required.';
+    }
     if (!formData.message.trim()) {
       newErrors.message = 'Message is required.';
     }
     if (requestAppointment) {
+      if (!formData.appointmentType) {
+        newErrors.appointmentType = 'Appointment type is required.';
+      }
       if (!formData.date) {
         newErrors.date = 'Preferred date is required.';
       }
@@ -145,6 +153,29 @@ export default function Contact() {
               className="w-full rounded border border-platinum bg-deepgray px-3 py-2 text-white placeholder-platinum focus:border-silver focus:outline-none"
             />
           </label>
+          <label className="block" htmlFor="documentCategory">
+            <span className="mb-1 block text-platinum">Document Category</span>
+            <select
+              id="documentCategory"
+              name="documentCategory"
+              required
+              value={formData.documentCategory}
+              onChange={handleChange}
+              aria-invalid={!!errors.documentCategory}
+              className="w-full rounded border border-platinum bg-deepgray px-3 py-2 text-white placeholder-platinum focus:border-silver focus:outline-none"
+            >
+              <option value="">Select a category</option>
+              <option value="real_estate">Real Estate / Loan</option>
+              <option value="personal">Personal Document</option>
+              <option value="business">Business Document</option>
+              <option value="other">Other</option>
+            </select>
+            {errors.documentCategory && (
+              <p role="alert" className="mt-1 text-sm text-red-500">
+                {errors.documentCategory}
+              </p>
+            )}
+          </label>
           <label className="flex items-center gap-2" htmlFor="requestAppointment">
             <input
               id="requestAppointment"
@@ -156,7 +187,7 @@ export default function Contact() {
                 setRequestAppointment(checked);
                 if (!checked) {
                   setErrors((prev) => {
-                    const { date, time, ...rest } = prev;
+                    const { date, time, appointmentType, ...rest } = prev;
                     return rest;
                   });
                 }
@@ -164,6 +195,28 @@ export default function Contact() {
               className="h-5 w-5 accent-silver"
             />
             <span className="text-platinum">I am requesting an appointment.</span>
+          </label>
+          <label className="block" htmlFor="appointmentType">
+            <span className="mb-1 block text-platinum">Appointment Type</span>
+            <select
+              id="appointmentType"
+              name="appointmentType"
+              disabled={!requestAppointment}
+              required={requestAppointment}
+              value={formData.appointmentType}
+              onChange={handleChange}
+              aria-invalid={!!errors.appointmentType}
+              className="w-full rounded border border-platinum bg-deepgray px-3 py-2 text-white placeholder-platinum focus:border-silver focus:outline-none disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              <option value="">Select type</option>
+              <option value="in_person">In-Person</option>
+              <option value="remote">Remote/Online</option>
+            </select>
+            {errors.appointmentType && (
+              <p role="alert" className="mt-1 text-sm text-red-500">
+                {errors.appointmentType}
+              </p>
+            )}
           </label>
           <label className="block" htmlFor="date">
             <span className="mb-1 block text-platinum">Preferred Date</span>
