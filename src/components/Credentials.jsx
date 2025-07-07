@@ -9,18 +9,19 @@ export default function Credentials() {
   ];
 
   return (
-    <MotionSection className="container mx-auto px-4 py-12 text-center">
-      {/* Header with badge and divider */}
-      <div className="relative flex flex-col items-center justify-center">
-        <div className="relative flex items-center justify-center w-full max-w-3xl">
-          <hr className="absolute top-1/2 left-0 w-full border-t border-gray-700" />
-          <h2 className="relative z-10 bg-black px-4 text-3xl font-serif font-semibold tracking-wide text-silver">
+    <MotionSection className="container px-4 py-12 text-center mx-auto">
+      {/* Header + badge + divider */}
+      <div className="relative mx-auto max-w-4xl">
+        <div className="absolute inset-x-0 top-1/2 border-t border-gray-700 z-0"></div>
+
+        <div className="relative z-10 flex flex-wrap justify-center items-center gap-4 bg-black px-4">
+          <h2 className="text-3xl md:text-4xl font-serif font-semibold tracking-wide text-silver whitespace-nowrap">
             Credentials
           </h2>
           <img
             src="/nna-badge.png"
             alt="Certified NNA Notary Signing Agent 2025 badge"
-            className="relative z-10 ml-4 h-16 w-16 md:h-20 md:w-20 object-contain bg-black px-2"
+            className="h-16 w-16 md:h-20 md:w-20 object-contain"
           />
         </div>
       </div>
@@ -30,7 +31,7 @@ export default function Credentials() {
         {credentials.map((cred) => (
           <li key={cred} className="flex items-start justify-center">
             <CheckIcon className="mr-2 h-5 w-5 text-silver mt-1" />
-            <span className="text-platinum text-lg">{cred}</span>
+            <span className="text-platinum text-lg md:text-xl">{cred}</span>
           </li>
         ))}
       </ul>
