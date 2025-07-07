@@ -10,9 +10,9 @@ export default function Credentials() {
 
   return (
     <MotionSection className="px-4">
-      <div className="max-w-2xl mx-auto">
-        {/* Header and badge as a unit */}
-        <div className="flex justify-center items-center gap-4 mb-4">
+      <div className="mx-auto w-full max-w-2xl text-center">
+        {/* Heading + badge */}
+        <div className="flex items-center justify-center gap-4">
           <h2 className="text-3xl sm:text-4xl font-serif font-semibold tracking-wide text-silver whitespace-nowrap">
             Credentials
           </h2>
@@ -24,10 +24,10 @@ export default function Credentials() {
         </div>
 
         {/* Divider */}
-        <div className="h-px bg-gray-700 mb-6" />
+        <div className="h-px bg-gray-700 my-4 sm:my-6" />
 
-        {/* Credential list, aligned within same box */}
-        <ul className="space-y-4 px-2">
+        {/* Credential list */}
+        <ul className="text-left space-y-4">
           {credentials.map((cred) => (
             <li key={cred} className="flex items-start text-platinum text-lg sm:text-xl">
               <CheckIcon className="h-5 w-5 mr-2 text-silver" />
