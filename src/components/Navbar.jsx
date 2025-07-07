@@ -1,7 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import logo from "../assets/logo.svg";
 
 const navItems = [
   { name: "Home", path: "/" },
@@ -60,19 +59,14 @@ export default function Navbar() {
   return (
     <header
       role="banner"
-      className="fixed inset-x-0 top-0 z-50 bg-charcoal/70 backdrop-blur"
+      className="fixed inset-x-0 top-0 z-50 bg-black/80 backdrop-blur-md"
     >
-      <nav className="container flex items-center justify-between py-4">
+      <nav className="container flex items-center justify-between py-3 md:py-4">
         <Link
           to="/"
-          className="flex items-center rounded border border-transparent px-2 text-xl font-semibold transition-colors hover:border-silver hover:text-silver"
+          className="flex items-center rounded border border-transparent px-3 text-xl font-semibold font-serif tracking-wide text-white transition-colors hover:border-silver hover:text-silver"
         >
-          <img
-            src={logo}
-            alt="Keystone Notary Group, LLC logo"
-            className="mr-2 h-8 w-8"
-          />
-          Keystone
+          Keystone Notary Group, LLC
         </Link>
         <button
           className="md:hidden flex flex-col items-center justify-center"
