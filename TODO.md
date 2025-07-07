@@ -7,18 +7,18 @@ This file outlines features, improvements, and implementation tasks for Codex to
 ## Priority Features to Add
 
 - [x] Create a full About page with company overview, professionalism, and mission statement.
-- [ ] Create a full Services page listing all notarial offerings in a well-structured layout.
-- [ ] Build a styled FAQ page with accessible, collapsible Q&A components.
+- [x] Create a full Services page listing all notarial offerings in a well-structured layout.
+- [x] Build a styled FAQ page with accessible, collapsible Q&A components.
 - [ ] Enhance the Contact form with fields for appointment type and document category.
-- [ ] Add Open Graph and Twitter Card metadata for SEO and sharing.
-- [ ] Add a favicon and Apple touch icon to the site.
+- [x] Add Open Graph and Twitter Card metadata for SEO and sharing.
+- [x] Add a favicon and Apple touch icon to the site.
 - [ ] Create a custom 404 page consistent with brand style.
 
 ---
 
 ## Functionality Enhancements (Planned)
 
-- [ ] Implement appointment request system with manual approval flow.
+- [ ] Implement appointment request system with manual approval flow, including scheduling logic to track availability.
 - [ ] Add inline form validation and display for success/error messages.
 - [ ] Include a confirmation screen or success state for the contact form.
 
@@ -30,6 +30,7 @@ This file outlines features, improvements, and implementation tasks for Codex to
 - [ ] Confirm hamburger menu positioning remains stable at all screen widths.
 - [ ] Review background visuals and subtle accents for performance impact on mobile devices.
 - [ ] Replace logo with video animation (non-looping) when asset becomes available.
+- [ ] Add dark-mode Apple splash screens to complement existing light-mode images.
 
 ---
 
