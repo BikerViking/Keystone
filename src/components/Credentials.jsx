@@ -9,15 +9,17 @@ export default function Credentials() {
   ];
 
   return (
-    <MotionSection className="relative container space-y-6">
-      <h2 className="text-3xl font-serif font-semibold tracking-wide heading-gradient text-silver">
-        Credentials
-      </h2>
-      <img
-        src="/nna-badge.png"
-        alt="Certified NNA Notary Signing Agent 2025 badge"
-        className="absolute right-4 -top-6 w-24 md:w-28 z-10"
-      />
+    <MotionSection className="container space-y-6">
+      <div className="relative inline-block">
+        <h2 className="text-3xl font-serif font-semibold tracking-wide heading-gradient text-silver">
+          Credentials
+        </h2>
+        <img
+          src="/nna-badge.png"
+          alt="Certified NNA Notary Signing Agent 2025 badge"
+          className="absolute left-full ml-2 top-[60%] -translate-y-1/2 w-24 md:w-28 z-10"
+        />
+      </div>
       <ul className="space-y-4">
         {credentials.map((cred) => (
           <li key={cred} className="flex items-start">
