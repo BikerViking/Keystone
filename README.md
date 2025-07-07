@@ -1,6 +1,6 @@
-# Vite + React + Tailwind CSS
+# Keystone Notary Group Website
 
-A minimal starter project using [Vite](https://vitejs.dev/), [React](https://reactjs.org/), and [Tailwind CSS](https://tailwindcss.com/).
+A professional notary website built with [React](https://reactjs.org/), [Vite](https://vitejs.dev/), and [Tailwind CSS](https://tailwindcss.com/). The project includes SEO metadata, automated sitemap generation, and PWA support through a web manifest and install icons. Favicons and Apple splash screens are integrated for a polished mobile experience.
 
 ## Development
 
@@ -21,13 +21,18 @@ npm run build
 npm run preview
 ```
 
+## Tests
+
+Run the full test suite with [Vitest](https://vitest.dev/):
+
+```bash
+npx vitest run
+```
+
 ## Static Hosting
 
-This project is configured for seamless deployment on most static hosts. The repo includes routing fallbacks for Netlify and Vercel and a `404.html` for platforms that rely on a dedicated 404 file.
+The repository includes routing fallbacks for popular static hosts. After building, deploy the `dist` directory.
 
-- **Netlify**: the `/public/_redirects` file ensures all routes serve `index.html`.
-- **Vercel**: `vercel.json` rewrites incoming paths to `index.html`.
-- **Other hosts**: `404.html` mirrors `index.html` so client-side routes function on refresh or direct navigation.
-
-After running `npm run build`, deploy the generated `dist` directory.
-
+- **Netlify**: `/public/_redirects` ensures all routes serve `index.html`.
+- **Vercel**: `vercel.json` rewrites paths to `index.html`.
+- **Other hosts**: `404.html` mirrors `index.html` so client-side routes work on refresh.

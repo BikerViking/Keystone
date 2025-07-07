@@ -2,5 +2,18 @@ Project: Keystone Notary Group, LLC Website
 Purpose: High-end, professional notary website for mobile and remote appointments.
 Visual style: Minimalist, dark/charcoal/metallic aesthetic, geometric design.
 Stack: React, TailwindCSS, Vite (stable versions only)
-Rules: Do not use experimental/beta packages. Create missing files automatically if needed. Always apply polish and improvements when building.
+Project features: SEO metadata, sitemap generation, PWA manifest and icons.
 Future plans: Add appointment request with owner confirmation. Video hero animation.
+
+{
+  "instructions": [
+    "Always keep the following files updated after relevant changes: README.md, TODO.md, site.webmanifest, index.html, vite.config.mjs, and .codex.",
+    "Do not attempt to fix or reconfigure React Router v7 warnings.",
+    "The define block in vite.config.mjs already includes __REACT_ROUTER_V7__ and __REACT_ROUTER_V7_SPLATPATH__.",
+    "These warnings may appear during tests and are expected. Ignore them unless test assertions fail.",
+    "Do not modify or re-add favicon or Apple splash screen tags unless explicitly instructed. All relevant assets have been uploaded and linked correctly in index.html.",
+    "All asset filenames in /public follow kebab-case (hyphenated) naming. Do not use underscores in filenames.",
+    "Manifest and metadata have been manually verified and should not be auto-regenerated without confirmation.",
+    "Tests must always be run after changes. React Router logs do not block tests unless actual test failures occur."
+  ]
+}
