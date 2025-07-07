@@ -18,7 +18,7 @@ export default function Credentials() {
         <img
           src="/nna-badge.png"
           alt="Certified NNA Notary Signing Agent 2025 badge"
-          className="absolute right-2 top-[60%] -translate-y-1/2 w-28 md:w-32 z-10"
+          className="absolute right-2 top-[60%] -translate-y-1/2 mt-4 w-32 md:w-36 z-10"
         />
       </div>
       <ul className="space-y-4">
