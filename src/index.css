@@ -32,18 +32,6 @@
     @apply inline-block rounded border border-platinum bg-deepgray px-8 py-3 text-lg font-medium text-white transition-colors;
   }
 
-  .credentials-container {
-    @apply relative flex flex-wrap items-center justify-center gap-4 pb-4 mb-6 md:justify-start;
-  }
-  .credentials-container::after {
-    content: '';
-    @apply absolute bottom-0 left-0 w-full border-b border-gray-700;
-    z-index: 0;
-  }
-
-  .credentials-container img {
-    @apply relative z-10 flex-none -mb-6 translate-y-[10%];
-  }
 
   @media (orientation: landscape) and (max-height: 500px) {
     .hero-heading {
