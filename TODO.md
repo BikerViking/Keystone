@@ -12,7 +12,7 @@ This file outlines features, improvements, and implementation tasks for Codex to
 - [ ] Enhance the Contact form with fields for appointment type and document category.
 - [x] Add Open Graph and Twitter Card metadata for SEO and sharing.
 - [x] Add a favicon and Apple touch icon to the site.
-- [ ] Create a custom 404 page consistent with brand style.
+- [x] Design and implement custom 404 page with router fallback and homepage link.
 
 ---
 
@@ -21,6 +21,7 @@ This file outlines features, improvements, and implementation tasks for Codex to
 - [ ] Implement appointment request system with manual approval flow, including scheduling logic to track availability.
 - [ ] Add inline form validation and display for success/error messages.
 - [ ] Include a confirmation screen or success state for the contact form.
+- [ ] Include "Schedule Appointment" CTA on 404 fallback.
 
 ---
 
@@ -30,7 +31,8 @@ This file outlines features, improvements, and implementation tasks for Codex to
 - [ ] Confirm hamburger menu positioning remains stable at all screen widths.
 - [ ] Review background visuals and subtle accents for performance impact on mobile devices.
 - [ ] Replace logo with video animation (non-looping) when asset becomes available.
-- [ ] Add dark-mode Apple splash screens to complement existing light-mode images.
+- [ ] Add dark mode splash screens for mobile (Apple devices) to complement existing light-mode images.
+- [ ] Add Framer Motion or subtle animation to the 404 page for elegance.
 
 ---
 
@@ -38,17 +40,22 @@ This file outlines features, improvements, and implementation tasks for Codex to
 
 - [ ] Add analytics support (Plausible or Google Analytics recommended).
 - [ ] Optimize all media and assets for responsive delivery and performance.
+- [x] Suppress React Router v7 warnings via `.codex` and `vite.config.mjs`.
 - [ ] Perform accessibility review for keyboard navigation, ARIA, and contrast compliance.
 - [ ] Configure automatic sitemap and robots.txt generation.
+- [ ] Implement client-side routing fallback for deeper links if needed.
+- [x] Update README with testing instructions for Vitest.
 
 ---
 
 ## Refactoring and Maintenance
 
 - [ ] Clean up or remove unused component files and CSS remnants.
+- [x] Remove unused asset files (vite.svg, favicon-96x96.svg, logo.svg).
 - [ ] Normalize all file naming conventions (PascalCase for components, kebab-case for assets).
 - [ ] Verify route consistency between navigation and actual pages.
 - [ ] Add basic unit test coverage or component smoke tests where applicable.
+- [x] Create smoke tests for ScrollToTopButton, PhoneIcon, and CheckIcon.
 
 ---
 
