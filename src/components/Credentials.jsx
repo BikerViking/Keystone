@@ -10,14 +10,22 @@ export default function Credentials() {
 
   return (
     <MotionSection className="container space-y-6">
-      <div className="flex items-center justify-between border-b border-gray-600 pb-1">
-        <h2 className="text-3xl font-serif font-semibold tracking-wide text-silver">
-          Credentials
-        </h2>
-        <img
-          src="/nna-badge.png"
-          alt="Certified NNA Notary Signing Agent 2025 badge"
-          className="w-20 sm:w-24 md:w-28 lg:w-32 -mb-6 mr-2 lg:mr-4"
+      {/* Heading and badge aligned in a single row with line behind */}
+      <div className="relative mb-2">
+        <div className="relative z-10 flex w-full items-end justify-between gap-4">
+          <h2 className="text-3xl font-serif font-semibold tracking-wide text-silver">
+            Credentials
+          </h2>
+          <img
+            src="/nna-badge.png"
+            alt="Certified NNA Notary Signing Agent 2025 badge"
+            className="shrink-0 w-20 sm:w-24 md:w-28 lg:w-32"
+          />
+        </div>
+        {/* Full-width line positioned behind the heading and badge */}
+        <hr
+          aria-hidden="true"
+          className="absolute inset-x-0 bottom-0 border-0 border-b border-gray-600"
         />
       </div>
       <ul className="space-y-4">
