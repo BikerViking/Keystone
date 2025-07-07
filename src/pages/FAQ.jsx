@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import { MotionSection } from '../components';
+import { MotionSection, SEO } from '../components';
 
 const faqs = [
   {
@@ -38,6 +38,11 @@ export default function FAQ() {
 
   return (
     <MotionSection className="container space-y-8 py-8">
+      <SEO
+        title="Notary FAQs | Keystone Notary Group"
+        description="Answers to common questions about our mobile notary services and scheduling."
+        path="/faq"
+      />
       <h1 className="text-4xl font-serif font-semibold tracking-wide heading-gradient text-silver">
         Frequently Asked Questions
       </h1>

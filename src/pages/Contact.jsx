@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import { MotionSection } from '../components';
+import { MotionSection, SEO } from '../components';
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
@@ -73,6 +73,11 @@ export default function Contact() {
   if (submitted) {
     return (
       <MotionSection className="container space-y-6 py-20">
+        <SEO
+          title="Contact Keystone Notary Group | Schedule a Notary"
+          description="Request a mobile notary appointment or ask questions through our contact form."
+          path="/contact"
+        />
         <h1 className="text-4xl font-serif font-semibold tracking-wide heading-gradient text-silver">
           Thank You
         </h1>
@@ -83,6 +88,11 @@ export default function Contact() {
 
   return (
     <MotionSection id="contact" className="container space-y-8 py-8">
+      <SEO
+        title="Contact Keystone Notary Group | Schedule a Notary"
+        description="Request a mobile notary appointment or ask questions through our contact form."
+        path="/contact"
+      />
       <h1 className="text-4xl font-serif font-semibold tracking-wide heading-gradient text-silver">
         Contact Us
       </h1>

@@ -1,8 +1,13 @@
-import { Hero, Credentials, MotionSection } from '../components';
+import { Hero, Credentials, MotionSection, SEO } from '../components';
 
 export default function Home() {
   return (
     <>
+      <SEO
+        title="Keystone Notary Group | Mobile Notary Services in Philadelphia"
+        description="Professional mobile notary services serving Philadelphia and surrounding counties."
+        path="/"
+      />
       <Hero />
       <MotionSection className="container space-y-8">
         <h2 className="text-3xl font-serif font-semibold tracking-wide heading-gradient text-silver">Why Choose Us?</h2>

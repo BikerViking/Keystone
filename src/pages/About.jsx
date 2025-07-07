@@ -1,9 +1,14 @@
 import { Link } from 'react-router-dom';
-import { MotionSection } from '../components';
+import { MotionSection, SEO } from '../components';
 
 export default function About() {
   return (
     <MotionSection className="relative container space-y-8 py-8">
+      <SEO
+        title="About Keystone Notary Group | Professional Mobile Notaries"
+        description="Learn about Keystone Notary Group, our mission, and the services we provide across the Greater Philadelphia area."
+        path="/about"
+      />
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 opacity-20 [background:radial-gradient(circle_at_center,_rgba(255,255,255,0.05),_transparent)]"
