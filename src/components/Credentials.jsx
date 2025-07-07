@@ -20,7 +20,7 @@ export default function Credentials() {
             <div className="absolute inset-y-0 left-0 right-0 h-px bg-gray-700 top-1/2 -z-10" />
 
             {/* Title */}
-            <h2 className="text-3xl sm:text-4xl font-serif font-semibold text-silver whitespace-nowrap pr-6">
+            <h2 className="text-3xl sm:text-4xl font-serif font-semibold text-silver whitespace-nowrap pr-10">
               Credentials
             </h2>
 
@@ -28,7 +28,7 @@ export default function Credentials() {
             <img
               src="/nna-badge.png"
               alt="Certified NNA Notary Signing Agent 2025"
-              className="w-24 sm:w-28 md:w-32 lg:w-36 ml-2"
+              className="w-30 sm:w-36 md:w-40 lg:w-48 ml-4"
             />
           </div>
 
