@@ -9,29 +9,32 @@ export default function Credentials() {
   ];
 
   return (
-    <MotionSection className="container space-y-6 text-center md:text-left">
-      {/* Divider background */}
-      <div className="relative mb-6">
-        <div className="absolute inset-0 flex items-center pointer-events-none">
-          <div className="w-full border-b border-gray-700" />
-        </div>
+    <MotionSection className="container space-y-6 text-center">
+      {/* Divider line behind header block */}
+      <div className="relative mb-6 flex flex-col items-center">
+        {/* Full-width divider line */}
+        <div className="absolute inset-x-0 top-1/2 h-px bg-gray-700 z-0" />
 
-        {/* Heading and badge (exact mockup layout) */}
-        <div className="relative z-10 inline-flex items-center gap-4 flex-wrap">
+        {/* Heading + badge overlay */}
+        <div className="relative z-10 flex items-center justify-center gap-4 flex-wrap">
           <h2 className="text-3xl sm:text-4xl font-serif font-semibold tracking-wide text-silver whitespace-nowrap">
             Credentials
           </h2>
           <img
             src="/nna-badge.png"
             alt="Certified NNA Notary Signing Agent 2025 badge"
-            className="h-20 sm:h-24 md:h-28 w-auto max-w-[160px] -mb-4"
+            className="h-[160px] sm:h-[180px] md:h-[192px] w-auto max-w-[200px] -mb-6"
           />
         </div>
       </div>
 
+      {/* Credential list */}
       <ul className="space-y-4">
         {credentials.map((cred) => (
-          <li key={cred} className="flex items-start">
+          <li
+            key={cred}
+            className="flex items-start justify-center sm:justify-start"
+          >
             <CheckIcon className="mr-2 h-5 w-5 text-silver" />
             <span className="text-platinum">{cred}</span>
           </li>
