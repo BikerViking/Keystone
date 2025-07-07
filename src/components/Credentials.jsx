@@ -10,14 +10,15 @@ export default function Credentials() {
 
   return (
     <MotionSection className="container space-y-6">
-      <div className="relative inline-block">
-        <h2 className="text-3xl font-serif font-semibold tracking-wide heading-gradient text-silver">
+      {/* Full-width wrapper allows the decorative line to extend behind the badge */}
+      <div className="relative">
+        <h2 className="text-3xl font-serif font-semibold tracking-wide heading-gradient text-silver w-full">
           Credentials
         </h2>
         <img
           src="/nna-badge.png"
           alt="Certified NNA Notary Signing Agent 2025 badge"
-          className="absolute left-full ml-2 top-[60%] -translate-y-1/2 w-24 md:w-28 z-10"
+          className="absolute right-2 top-[60%] -translate-y-1/2 w-28 md:w-32 z-10"
         />
       </div>
       <ul className="space-y-4">
