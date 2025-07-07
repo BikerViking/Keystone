@@ -10,22 +10,22 @@ export default function Credentials() {
 
   return (
     <MotionSection className="container space-y-6 text-center md:text-left">
-      {/* Divider line behind the heading + image */}
+      {/* Divider with inline header and badge */}
       <div className="relative mb-6">
-        {/* Background line */}
+        {/* Divider line behind */}
         <div className="absolute inset-0 flex items-center pointer-events-none">
           <div className="w-full border-b border-gray-700" />
         </div>
 
-        {/* Foreground content */}
-        <div className="relative z-10 inline-flex items-center gap-4 px-1 flex-wrap">
+        {/* Heading + badge */}
+        <div className="relative z-10 flex items-center justify-center sm:justify-start gap-4 flex-wrap px-1">
           <h2 className="text-3xl font-serif font-semibold tracking-wide text-silver whitespace-nowrap">
             Credentials
           </h2>
           <img
             src="/nna-badge.png"
             alt="Certified NNA Notary Signing Agent 2025 badge"
-            className="h-14 w-auto -mb-2"
+            className="h-14 sm:h-16 w-auto max-w-[120px] -mb-2"
           />
         </div>
       </div>
