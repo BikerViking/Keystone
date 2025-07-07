@@ -10,17 +10,16 @@ export default function Credentials() {
 
   return (
     <MotionSection className="container mx-auto px-4">
-      <div className="max-w-2xl mx-auto">
+      {/* Apply left margin to match "Keystone" alignment */}
+      <div className="ml-[1.5rem] sm:ml-[2.75rem] md:ml-[3.25rem] lg:ml-[3.75rem] max-w-2xl">
 
-        {/* Header + Badge Row */}
+        {/* Heading and badge */}
         <div className="relative mb-8">
           <div className="absolute inset-x-0 top-1/2 h-px bg-gray-700 -z-10" />
-
           <div className="flex items-center justify-start gap-6">
             <h2 className="text-3xl sm:text-4xl font-serif font-semibold text-silver whitespace-nowrap">
               Credentials
             </h2>
-
             <img
               src="/nna-badge.png"
               alt="Certified NNA Notary Signing Agent 2025"
@@ -29,7 +28,7 @@ export default function Credentials() {
           </div>
         </div>
 
-        {/* Credential list aligned under heading */}
+        {/* List items */}
         <ul className="space-y-4 pl-1">
           {credentials.map((cred) => (
             <li key={cred} className="flex items-start text-platinum">
