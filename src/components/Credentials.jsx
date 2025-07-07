@@ -29,14 +29,16 @@ export default function Credentials() {
       </div>
 
       {/* Credential list */}
-      <ul className="space-y-4">
+      <ul className="space-y-4 text-center sm:text-left">
         {credentials.map((cred) => (
           <li
             key={cred}
-            className="flex items-start justify-center sm:justify-start"
+            className="flex items-center justify-center sm:justify-start gap-3"
           >
-            <CheckIcon className="mr-2 h-5 w-5 text-silver" />
-            <span className="text-platinum">{cred}</span>
+            <CheckIcon className="h-6 w-6 text-white flex-shrink-0" />
+            <span className="text-lg sm:text-xl text-white font-semibold leading-relaxed tracking-wide">
+              {cred}
+            </span>
           </li>
         ))}
       </ul>
