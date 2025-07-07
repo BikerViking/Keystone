@@ -10,26 +10,29 @@ export default function Credentials() {
 
   return (
     <MotionSection className="px-4">
-      <div className="max-w-2xl mx-auto text-left">
-        {/* Heading and badge container */}
-        <div className="flex items-center justify-center gap-4">
-          <h2 className="text-3xl sm:text-4xl font-serif font-semibold tracking-wide text-silver whitespace-nowrap">
+      <div className="mx-auto max-w-2xl rounded-xl bg-deepgray p-6 shadow-lg">
+        {/* Heading + Badge */}
+        <div className="flex items-center justify-between">
+          <h2 className="text-3xl font-serif font-semibold tracking-wide text-silver">
             Credentials
           </h2>
           <img
             src="/nna-badge.png"
             alt="Certified NNA Notary Signing Agent 2025 badge"
-            className="w-16 sm:w-20 md:w-24 lg:w-28"
+            className="w-16 sm:w-20"
           />
         </div>
 
         {/* Divider */}
-        <div className="h-px bg-gray-700 my-4 sm:my-6" />
+        <div className="my-4 h-px bg-gray-700" />
 
-        {/* Credential List aligned with heading */}
-        <ul className="space-y-4 pl-[0.15rem]">
+        {/* List */}
+        <ul className="space-y-4">
           {credentials.map((cred) => (
-            <li key={cred} className="flex items-start text-platinum text-lg sm:text-xl">
+            <li
+              key={cred}
+              className="flex items-start text-platinum text-lg sm:text-xl"
+            >
               <CheckIcon className="h-5 w-5 mt-1 mr-2 text-silver" />
               <span>{cred}</span>
             </li>
