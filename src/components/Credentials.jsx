@@ -9,14 +9,16 @@ export default function Credentials() {
   ];
 
   return (
-    <MotionSection className="container mx-auto px-4 text-center space-y-10">
-      {/* Unified Header + Badge Block */}
-      <div className="flex flex-col items-center justify-center w-full">
-        {/* Divider behind */}
-        <div className="relative w-full flex justify-center items-center">
-          <div className="absolute w-full h-px bg-gray-700 -z-10 top-1/2" />
+    <MotionSection className="container mx-auto px-4">
+      {/* Outer centered block */}
+      <div className="mx-auto w-full max-w-2xl px-4 flex flex-col items-start space-y-6">
+        {/* Header with badge and line */}
+        <div className="relative w-full">
+          {/* Divider behind */}
+          <div className="absolute top-1/2 left-0 w-full h-px bg-gray-700 -z-10" />
 
-          <div className="flex items-center justify-center space-x-4 px-4">
+          {/* Header + Badge */}
+          <div className="flex items-center justify-between w-full">
             <h2 className="text-3xl sm:text-4xl font-serif font-semibold text-silver whitespace-nowrap">
               Credentials
             </h2>
@@ -27,20 +29,17 @@ export default function Credentials() {
             />
           </div>
         </div>
-      </div>
 
-      {/* Centered Credential List */}
-      <ul className="space-y-4">
-        {credentials.map((cred) => (
-          <li
-            key={cred}
-            className="flex items-center justify-center text-platinum text-lg sm:text-xl"
-          >
-            <CheckIcon className="h-5 w-5 mr-2 text-silver" />
-            <span>{cred}</span>
-          </li>
-        ))}
-      </ul>
+        {/* Credential list - left aligned */}
+        <ul className="space-y-4">
+          {credentials.map((cred) => (
+            <li key={cred} className="flex items-start text-platinum">
+              <CheckIcon className="h-5 w-5 mr-2 mt-1 text-silver" />
+              <span className="text-lg sm:text-xl">{cred}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
     </MotionSection>
   );
 }
