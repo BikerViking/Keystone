@@ -23,7 +23,13 @@ npm run preview
 
 ## Tests
 
-Run the full test suite with [Vitest](https://vitest.dev/):
+Run tests in watch mode during development:
+
+```bash
+npm test
+```
+
+For a single run with [Vitest](https://vitest.dev/):
 
 ```bash
 npx vitest run
