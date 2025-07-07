@@ -10,34 +10,36 @@ export default function Credentials() {
 
   return (
     <MotionSection className="px-4">
-      <div className="mx-auto max-w-2xl rounded-xl bg-deepgray p-6 shadow-lg">
-        {/* Heading + Badge */}
-        <div className="flex items-center justify-between">
-          <h2 className="text-3xl font-serif font-semibold tracking-wide text-silver">
-            Credentials
-          </h2>
-          <img
-            src="/nna-badge.png"
-            alt="Certified NNA Notary Signing Agent 2025 badge"
-            className="w-16 sm:w-20"
-          />
+      <div className="mx-auto w-full max-w-4xl">
+        <div className="rounded-xl bg-deepgray p-6 shadow-lg">
+          {/* Header Row */}
+          <div className="flex items-center justify-between">
+            <h2 className="text-3xl font-serif font-semibold tracking-wide text-silver">
+              Credentials
+            </h2>
+            <img
+              src="/nna-badge.png"
+              alt="Certified NNA Notary Signing Agent 2025 badge"
+              className="w-16 sm:w-20"
+            />
+          </div>
+
+          {/* Divider */}
+          <div className="my-4 h-px bg-gray-700" />
+
+          {/* Credential List */}
+          <ul className="space-y-4">
+            {credentials.map((cred) => (
+              <li
+                key={cred}
+                className="flex items-start text-platinum text-lg sm:text-xl"
+              >
+                <CheckIcon className="h-5 w-5 mt-1 mr-2 text-silver" />
+                <span>{cred}</span>
+              </li>
+            ))}
+          </ul>
         </div>
-
-        {/* Divider */}
-        <div className="my-4 h-px bg-gray-700" />
-
-        {/* List */}
-        <ul className="space-y-4">
-          {credentials.map((cred) => (
-            <li
-              key={cred}
-              className="flex items-start text-platinum text-lg sm:text-xl"
-            >
-              <CheckIcon className="h-5 w-5 mt-1 mr-2 text-silver" />
-              <span>{cred}</span>
-            </li>
-          ))}
-        </ul>
       </div>
     </MotionSection>
   );
