@@ -10,8 +10,15 @@ export default function Home() {
       />
       <Hero />
 
-      <MotionSection className="container space-y-6 text-center py-8">
-        <h2 className="why-heading text-3xl font-serif font-semibold tracking-wide heading-gradient text-silver">
+      {/* Separate section with explicit landmarks for accessibility */}
+      <MotionSection
+        aria-labelledby="why-heading"
+        className="container space-y-6 py-8 text-center"
+      >
+        <h2
+          id="why-heading"
+          className="why-heading text-3xl font-serif font-semibold tracking-wide heading-gradient text-silver"
+        >
           Why Choose Us?
         </h2>
         <p className="text-lg text-platinum">
@@ -20,6 +27,6 @@ export default function Home() {
         </p>
       </MotionSection>
 
+      {/* Apply margin and border to visually separate from the text above */}
       <Credentials />
-    </>
-  );}
+    </>  );}
