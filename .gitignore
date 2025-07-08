@@ -3,3 +3,7 @@ node_modules
 .env
 *.lock
 
+
+# Generated files
+/build-output
+/public/sitemap.xml
