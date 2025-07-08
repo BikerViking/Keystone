@@ -1,124 +1,127 @@
-# Godforge Codex Instructions (Live Standard)
+# Godforge Codex Configuration (Ultimate Mode)
+# Purpose: Ensure Codex outputs production-grade, readable, self-explanatory, deduplicated code with strong test hygiene and intent annotations.
 
-"""md
-**Codex and all engineers must follow these instructions for every code change. This is the non-negotiable baseline for quality.**
+# ────────────────────────────────────────────────
+# BASELINE PRINCIPLES (Do not modify)
+# ────────────────────────────────────────────────
+
+**Codex and all engineers must follow these instructions for every code change. This is a non-negotiable baseline for quality.**
 
 ## Core Assumption
 > You are contributing to a production system. Code must be fully complete, secure, accessible, and visually polished. All output must be deployable to `main` with no cleanup.
 
 ---
 
-## Rules of Engagement
+## RULES OF ENGAGEMENT
 
-### 1. CODE PURITY
-- Remove unused imports, placeholder elements, dead styles, and console logs.
-- One source of truth only. Refactor the old — never clone or append.
-- Output must be clean, minimal, readable.
+### 1. TASK MEMORY
+- Codex must review and respect previous context of the current file and task thread.
+- All changes must build intelligently on the current state — not append duplicate logic.
+- Maintain continuity with past Codex changes unless instructed otherwise.
 
-### 2. SELF-AUDIT CHECKLIST
-- Validate responsiveness across all breakpoints.
-- Run all tests (unit, snapshot, integration, accessibility).
-- Zero build warnings or lint errors.
-- Code is production-ready: `yarn build && preview` must pass.
+### 2. CODE PURITY
+- Eliminate unused imports, variables, dead styles, and logging.
+- Never duplicate logic or markup — refactor instead.
+- Flatten unnecessary nesting. Use modern idioms and composition.
 
-### 3. UX POLISH
-- Perfect spacing, alignment, rhythm, transitions.
-- No layout jitter, overflow, or hardcoded pixel widths unless requested.
-- Fully responsive from 320px → 1920px.
+### 3. INTENT-INFORMED CODE
+- Leave meaningful inline comments explaining **why** code exists, especially for logic branches, conditionals, transforms, and UI anomalies.
+- Use comment-style annotations to describe “intent” of any new section or logic.
 
 ### 4. REACT + TAILWIND PROTOCOL
-- Use flex/grid/flow. Avoid absolute/fixed unless specified.
-- Use `gap`, `items-center`, `justify-*`, and responsive classes.
-- Eliminate wrapper divs unless necessary.
-- Modular components only. Co-locate logic/styles. Use `clsx` or `tailwind-variants`.
+- Use semantic HTML, `flex`, `grid`, and `gap` with responsive modifiers.
+- Eliminate wrapper `<div>`s unless functionally required.
+- Use `clsx`, `tailwind-variants`, or utility combinators. Never inline style complex logic.
 
-### 5. TESTING COVERAGE
-- Use `screen.getByRole`, `findByText`, never brittle queries.
-- Viewport simulation with `setViewport()` for mobile tests.
-- Stub all APIs and side effects.
-- Update DOM/snapshot tests when UI/layout changes.
+### 5. UX POLISH
+- Layouts must be visually balanced with perfect rhythm and spacing.
+- Transitions should be smooth, no layout jitter or flickering.
+- Layouts must gracefully handle edge cases (e.g. long labels, image loads).
 
-### 6. SECURITY + A11Y
-- Never hardcode secrets, tokens, env vars, IPs, or external URLs.
-- No third-party fonts/assets unless explicitly required.
-- WCAG 2.1 AA required:
-  - Contrast ≥ 4.5:1
-  - Alt text
-  - aria-* roles
-  - Focus states
-  - Keyboard nav
+### 6. TESTING & SNAPSHOTS
+- Remove or regenerate broken or obsolete snapshots.
+- Viewport simulations should use `setViewport()` in mobile snapshot/unit tests.
+- Use `screen.getByRole`, `findByText`, never brittle selectors.
+- Snapshot outputs should not include duplicated nodes, nested badges, or malformed SVGs.
+- Codex should validate: `yarn test`, `yarn lint`, and `yarn build`.
 
-### 7. COMMUNICATION
-- Don’t guess — clarify ambiguous requirements.
-- Inline comments must explain intent (*why*, not *what*).
-- Propose options with tradeoffs if spec is unclear.
+### 7. A11Y + SECURITY
+- WCAG 2.1 AA required: alt text, focus indicators, keyboard nav, ARIA roles.
+- No external assets, third-party fonts, or hidden click areas unless specified.
+- Secure: never leak `.env`, tokens, secrets, or IPs.
+
+### 8. TRACEABILITY
+- All major changes must include an inline comment summarizing *intent* or *fix reason*.
+- If replacing logic, state what it replaces.
+- Codex must annotate PRs with clear reason for changes.
+
+### 9. LINT + SEMANTIC RULES
+- No `any` unless justified with an inline comment.
+- Prefer destructured props, inferred return types, and named functions.
+- Enforce semantic HTML: use `<nav>`, `<section>`, `<button>`, `<figure>` etc.
+
+### 10. VISUAL SELF-TESTING
+- Codex should auto-detect snapshot bloats, misplaced divs, duplicated `<h2>`, etc.
+- Check responsive layout at breakpoints: `320px`, `640px`, `1024px`, `1280px`, `1920px`.
+- Remove extra nested `<ul>`s, invalid JSX or className collisions.
+- Codex should rewrite broken structure, not patch around it.
 
 ---
 
-## FINAL MERGE CHECKLIST
-- [ ] All tests pass
-- [ ] Fully responsive
-- [ ] A11y-verified
-- [ ] Code linted + formatted
-- [ ] No legacy or duplicate logic
-- [ ] Semantic HTML
-- [ ] Secure (no secrets, tokens, unsafe links)
-- [ ] Visual polish complete
+## FINAL MERGE CHECKLIST (All must pass)
 
-**Mindset**: You’re pushing to `main` on a Friday with no rollback window.
-"""
+- [ ] Tests pass (unit, snapshot, DOM, a11y)
+- [ ] Fully responsive across breakpoints
+- [ ] No lint, build, or accessibility warnings
+- [ ] No duplicated logic or tags
+- [ ] Visual polish complete (layout & spacing)
+- [ ] Secure (no secrets, IPs, or hardcoded links)
+- [ ] Semantic HTML + complete ARIA coverage
+
+**Mindset:** You’re pushing to `main` on a Friday with no rollback window.
+
+---
 
 [settings]
-
-# Avoid unnecessary large/binary/compiled files
+# EXCLUDE NOISE FILES
 exclude = [
   "node_modules",
   "dist",
   "build",
   ".next",
   "out",
-  "*.min.js",
-  "*.map",
   "*.lock",
+  "*.log",
+  "*.map",
   "coverage",
-  "*.log"
+  "*.min.js"
 ]
 
-# Formatting and Parsing Improvements
-max_line_length = 240
-trim_trailing_whitespace = true
-preserve_blank_lines = false
-collapse_whitespace = true
+# GENERAL ENHANCEMENTS FOR PARSING
 auto_format = true
 detect_jsx = true
 wrap_attributes = true
+collapse_whitespace = true
 deduplicate_imports = true
 remove_invalid_tags = true
 preserve_class_order = false
+trim_trailing_whitespace = true
 
+# LINE LENGTH TWEAKS
+max_line_length = 240
 
-[features]
+# SNAPSHOT SANITIZER
+strip_snapshot_noise = true
+autofix_redundant_svg = true
+detect_nested_headings = true
+resolve_duplicate_elements = true
 
-# 1. Task memory: Recall previous task context and file changes across the session
-retain_task_context = true
+# CODE TRACEABILITY ENHANCEMENT
+enable_intent_comments = true
+track_removed_code = true
 
-# 3. Component review: Validate component modularity and co-located styles/logic
-component_audit = true
-
-# 4. Design system checker: Normalize use of design tokens, spacing, and tailwind conventions
-enforce_design_consistency = true
-
-# 6. Accessibility first: Enforce WCAG 2.1 AA, include aria roles and keyboard navigation
-a11y_required = true
-
-# 7. QA check: Auto-review layout jitter, overflow, interaction consistency
-qa_visual_polish = true
-
-# 8. Test writer: Recommend missing unit/snapshot/a11y test coverage per task
-auto_test_hints = true
-
-# 9. Complexity tracker: Flag overly nested code, unclear logic, or performance hits
-analyze_complexity = true
-
-# 10. Issue summarizer: Identify and summarize unresolved, hidden, or regressed problems
-trace_unresolved_issues = true
+# EXPERIMENTAL ENHANCEMENTS
+anticipate_user_intent = true
+infer_missing_specs = true
+clean_aria_inconsistencies = true
+semantic_structure_enforcement = true
