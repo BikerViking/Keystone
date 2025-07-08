@@ -10,8 +10,9 @@ export default function Credentials() {
 
   return (
     <MotionSection className="container space-y-6 py-8 text-center">
-      <div className="flex items-center justify-center gap-4">
-        <h2 className="text-3xl font-serif font-semibold tracking-wide heading-gradient text-silver">
+      <div className="flex items-center gap-4">
+        {/* align divider to left edge like 'Why Choose Us?' heading */}
+        <h2 className="w-full text-3xl font-serif font-semibold tracking-wide heading-gradient text-silver">
           Credentials
         </h2>
         <img
@@ -29,4 +30,6 @@ export default function Credentials() {
           </li>
         ))}
       </ul>
-    </MotionSection>  );}
+    </MotionSection>
+  );
+}
