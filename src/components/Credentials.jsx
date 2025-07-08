@@ -9,7 +9,7 @@ export default function Credentials() {
   ];
 
   return (
-    <MotionSection className="container space-y-6">
+    <MotionSection className="container space-y-6 py-8">
       <div className="flex items-center justify-center gap-4 md:justify-start">
         <h2 className="text-3xl font-serif font-semibold tracking-wide heading-gradient text-silver">
           Credentials
@@ -30,5 +30,4 @@ export default function Credentials() {
         ))}
       </ul>
     </MotionSection>
-  );
-}
+  );}
