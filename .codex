@@ -1,6 +1,8 @@
-# Godforge Codex Instructions (Live Standard)
+# Codex AI Configuration – Optimized for Maximum Code Quality and Task Accuracy
 
-**Codex and all engineers must follow these instructions for every code change. This is non-negotiable baseline for quality.**
+# === Core Codex Instructions ===
+
+**Codex and all engineers must follow these instructions for every code change. This is a non-negotiable baseline for quality.**
 
 ## Core Assumption
 > You are contributing to a production system. Code must be fully complete, secure, accessible, and visually polished. All output must be deployable to `main` with no cleanup.
@@ -12,7 +14,7 @@
 ### 1. CODE PURITY
 - Remove unused imports, placeholder elements, dead styles, and console logs.
 - One source of truth only. Refactor the old — never clone or append.
-- Output must be clean, minimal, readable.
+- Output must be clean, minimal, and readable.
 
 ### 2. SELF-AUDIT CHECKLIST
 - Validate responsiveness across all breakpoints.
@@ -37,7 +39,7 @@
 - Stub all APIs and side effects.
 - Update DOM/snapshot tests when UI/layout changes.
 
-### 6. SECURITY + A11Y
+### 6. SECURITY + ACCESSIBILITY (A11Y)
 - Never hardcode secrets, tokens, env vars, IPs, or external URLs.
 - No third-party fonts/assets unless explicitly required.
 - WCAG 2.1 AA required:
@@ -54,7 +56,7 @@
 
 ---
 
-##  FINAL MERGE CHECKLIST
+## FINAL MERGE CHECKLIST
 - [ ] All tests pass
 - [ ] Fully responsive
 - [ ] A11y-verified
@@ -66,4 +68,38 @@
 
 **Mindset**: You’re pushing to `main` on a Friday with no rollback window.
 
-This is the standard.
+---
+
+## [settings]
+
+# Avoid unnecessary large/binary/compiled files
+exclude = [
+  "node_modules",
+  "dist",
+  "build",
+  ".next",
+  "out",
+  "*.min.js",
+  "*.map",
+  "*.lock",
+  "coverage",
+  "*.log"
+]
+
+# .codex file for improved Codex performance
+
+# Increase line length so Codex doesn’t truncate or misread JSX attributes
+max_line_length = 240
+
+# Clean up whitespace that can confuse parsing
+trim_trailing_whitespace = true
+preserve_blank_lines = false
+collapse_whitespace = true
+
+# General improvements to help Codex read long, dense files better
+auto_format = true
+detect_jsx = true
+wrap_attributes = true
+deduplicate_imports = true
+remove_invalid_tags = true
+preserve_class_order = false
