@@ -9,15 +9,15 @@ export default function Credentials() {
   ];
 
   return (
-    <MotionSection className="container space-y-6">
-      <div className="relative mb-6 flex items-center justify-center gap-4 pb-4 after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-gray-700 md:justify-start">
+    <MotionSection className="container space-y-6 text-center md:text-left">
+      <div className="relative mb-6 flex items-center justify-center gap-4 pb-4 after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-gray-700/60 md:justify-start">
         <h2 className="text-3xl font-serif font-semibold tracking-wide heading-gradient text-silver">
           Credentials
         </h2>
         <img
           src="/nna-badge.png"
           alt="Certified NNA Notary Signing Agent 2025 badge"
-          className="h-[5.6rem] w-auto flex-none"
+          className="h-[5rem] w-auto flex-none"
         />
       </div>
 
