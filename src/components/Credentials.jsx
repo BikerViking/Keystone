@@ -9,36 +9,26 @@ export default function Credentials() {
   ];
 
   return (
-    <MotionSection className="px-4">
-      <div className="max-w-3xl mx-auto w-full">
-        {/* Heading and Badge Row */}
-        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
-          <h2 className="text-3xl font-serif font-semibold tracking-wide text-silver">
-            Credentials
-          </h2>
-          <img
-            src="/nna-badge.png"
-            alt="Certified NNA Notary Signing Agent 2025 badge"
-            className="mt-4 sm:mt-0 w-16 sm:w-20"
-          />
-        </div>
-
-        {/* Divider */}
-        <div className="my-4 h-px bg-gray-700" />
-
-        {/* List */}
-        <ul className="space-y-4 pl-1">
-          {credentials.map((cred) => (
-            <li
-              key={cred}
-              className="flex items-start text-platinum text-lg sm:text-xl"
-            >
-              <CheckIcon className="h-5 w-5 mt-1 mr-2 text-silver" />
-              <span>{cred}</span>
-            </li>
-          ))}
-        </ul>
+    <MotionSection className="container space-y-6 text-center md:text-left">
+      <div className="relative inline-flex flex-wrap items-end gap-4 pb-4 mb-6 bg-black after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-gray-700">
+        <h2 className="text-3xl font-serif font-semibold tracking-wide text-silver">
+          Credentials
+        </h2>
+        <img
+          src="/nna-badge.png"
+          alt="Certified NNA Notary Signing Agent 2025 badge"
+          className="h-14 -mb-6 flex-none"
+        />
       </div>
+
+      <ul className="space-y-4">
+        {credentials.map((cred) => (
+          <li key={cred} className="flex items-start">
+            <CheckIcon className="mr-2 h-5 w-5 text-silver" aria-hidden="true" />
+            <span className="text-platinum">{cred}</span>
+          </li>
+        ))}
+      </ul>
     </MotionSection>
   );
 }
