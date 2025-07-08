@@ -9,8 +9,8 @@ export default function Credentials() {
   ];
 
   return (
-    <MotionSection className="container space-y-6 py-8">
-      <div className="flex items-center justify-center gap-4 md:justify-start">
+    <MotionSection className="container space-y-6 py-8 text-center">
+      <div className="flex items-center justify-center gap-4">
         <h2 className="text-3xl font-serif font-semibold tracking-wide heading-gradient text-silver">
           Credentials
         </h2>
@@ -23,11 +23,10 @@ export default function Credentials() {
 
       <ul className="space-y-4">
         {credentials.map((cred) => (
-          <li key={cred} className="flex items-start">
+          <li key={cred} className="flex items-start justify-center">
             <CheckIcon className="mr-2 h-5 w-5 text-silver" aria-hidden="true" />
             <span className="text-platinum">{cred}</span>
           </li>
         ))}
       </ul>
-    </MotionSection>
-  );}
+    </MotionSection>  );}

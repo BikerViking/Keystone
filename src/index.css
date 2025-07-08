@@ -37,9 +37,6 @@
     .hero-heading {
       @apply text-3xl;
     }
-    .credentials-heading {
-      @apply text-2xl;
-    }
     .why-heading {
       @apply text-2xl;
     }
