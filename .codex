@@ -12,78 +12,105 @@
 
 ---
 
-## RULES OF ENGAGEMENT
+[task_memory]
+respect_previous_context = true
+maintain_continuity = true
+no_duplicate_logic = true
 
-### 1. TASK MEMORY
-- Codex must review and respect previous context of the current file and task thread.
-- All changes must build intelligently on the current state — not append duplicate logic.
-- Maintain continuity with past Codex changes unless instructed otherwise.
+[code_purity]
+remove_unused_imports = true
+no_duplicate_markup = true
+flatten_nesting = true
+prefer_modern_idioms = true
 
-### 2. CODE PURITY
-- Eliminate unused imports, variables, dead styles, and logging.
-- Never duplicate logic or markup — refactor instead.
-- Flatten unnecessary nesting. Use modern idioms and composition.
+[intent_comments]
+require_why_comments = true
+annotate_new_logic = true
 
-### 3. INTENT-INFORMED CODE
-- Leave meaningful inline comments explaining **why** code exists, especially for logic branches, conditionals, transforms, and UI anomalies.
-- Use comment-style annotations to describe “intent” of any new section or logic.
+[react_tailwind]
+use_semantic_html = true
+require_flex_grid = true
+eliminate_wrapper_divs = true
+use_clsx_or_variants = true
+no_inline_complex_styles = true
 
-### 4. REACT + TAILWIND PROTOCOL
-- Use semantic HTML, `flex`, `grid`, and `gap` with responsive modifiers.
-- Eliminate wrapper `<div>`s unless functionally required.
-- Use `clsx`, `tailwind-variants`, or utility combinators. Never inline style complex logic.
+[ux_polish]
+perfect_spacing = true
+smooth_transitions = true
+handle_edge_cases = true
 
-### 5. UX POLISH
-- Layouts must be visually balanced with perfect rhythm and spacing.
-- Transitions should be smooth, no layout jitter or flickering.
-- Layouts must gracefully handle edge cases (e.g. long labels, image loads).
+[testing]
+remove_broken_snapshots = true
+simulate_mobile_viewport = true
+prefer_getByRole = true
+validate_all = ["yarn test", "yarn lint", "yarn build"]
 
-### 6. TESTING & SNAPSHOTS
-- Remove or regenerate broken or obsolete snapshots.
-- Viewport simulations should use `setViewport()` in mobile snapshot/unit tests.
-- Use `screen.getByRole`, `findByText`, never brittle selectors.
-- Snapshot outputs should not include duplicated nodes, nested badges, or malformed SVGs.
-- Codex should validate: `yarn test`, `yarn lint`, and `yarn build`.
+[accessibility_security]
+require_wcag_aa = true
+no_third_party_assets = true
+no_env_leaks = true
 
-### 7. A11Y + SECURITY
-- WCAG 2.1 AA required: alt text, focus indicators, keyboard nav, ARIA roles.
-- No external assets, third-party fonts, or hidden click areas unless specified.
-- Secure: never leak `.env`, tokens, secrets, or IPs.
+[traceability]
+require_change_reason = true
+annotate_replacements = true
+summarize_in_pr = true
 
-### 8. TRACEABILITY
-- All major changes must include an inline comment summarizing *intent* or *fix reason*.
-- If replacing logic, state what it replaces.
-- Codex must annotate PRs with clear reason for changes.
+[lint_semantic]
+no_any_type = true
+prefer_destructured_props = true
+use_named_functions = true
+enforce_semantic_tags = true
 
-### 9. LINT + SEMANTIC RULES
-- No `any` unless justified with an inline comment.
-- Prefer destructured props, inferred return types, and named functions.
-- Enforce semantic HTML: use `<nav>`, `<section>`, `<button>`, `<figure>` etc.
+[self_testing]
+auto_detect_bloat = true
+check_responsive_layouts = true
+remove_invalid_structure = true
+rewrite_broken_layouts = true
 
-### 10. VISUAL SELF-TESTING
-- Codex should auto-detect snapshot bloats, misplaced divs, duplicated `<h2>`, etc.
-- Check responsive layout at breakpoints: `320px`, `640px`, `1024px`, `1280px`, `1920px`.
-- Remove extra nested `<ul>`s, invalid JSX or className collisions.
-- Codex should rewrite broken structure, not patch around it.
+[merge_checklist]
+tests_pass = true
+fully_responsive = true
+no_lint_warnings = true
+no_duplicate_logic = true
+layout_polished = true
+secure_code = true
+semantic_and_a11y_verified = true
 
----
+[structure]
+detect_duplicate_tags = true
+flatten_nested_layouts = true
+enforce_responsive_breakpoints = ["320px", "640px", "1024px", "1280px", "1920px"]
 
-## FINAL MERGE CHECKLIST (All must pass)
+[react_tailwind_strict]
+require_flex_grid = true
+prohibit_absolute_unless_explicit = true
+co_locate_logic_and_styles = true
+eliminate_wrapper_divs = true
+use_clsx_or_variants = true
+prefer_gap_and_items_center = true
 
-- [ ] Tests pass (unit, snapshot, DOM, a11y)
-- [ ] Fully responsive across breakpoints
-- [ ] No lint, build, or accessibility warnings
-- [ ] No duplicated logic or tags
-- [ ] Visual polish complete (layout & spacing)
-- [ ] Secure (no secrets, IPs, or hardcoded links)
-- [ ] Semantic HTML + complete ARIA coverage
+[testing_strict]
+require_snapshot_tests = true
+require_accessibility_tests = true
+simulate_viewport_mobile = true
+prefer_getByRole_queries = true
+stub_network_calls = true
+auto_update_snapshots_if_layout_changes = true
 
-**Mindset:** You’re pushing to `main` on a Friday with no rollback window.
+[security]
+prohibit_env_leaks = true
+prohibit_third_party_fonts = true
+prohibit_inline_tokens = true
+enforce_https_links = true
 
----
+[metadata]
+require_version_file = true
+require_changelog = true
+require_release_notes = true
+require_comments_explaining_intent = true
+track_technical_debt = true
 
 [settings]
-# EXCLUDE NOISE FILES
 exclude = [
   "node_modules",
   "dist",
@@ -97,7 +124,6 @@ exclude = [
   "*.min.js"
 ]
 
-# GENERAL ENHANCEMENTS FOR PARSING
 auto_format = true
 detect_jsx = true
 wrap_attributes = true
@@ -107,20 +133,14 @@ remove_invalid_tags = true
 preserve_class_order = false
 trim_trailing_whitespace = true
 
-# LINE LENGTH TWEAKS
 max_line_length = 240
 
-# SNAPSHOT SANITIZER
 strip_snapshot_noise = true
 autofix_redundant_svg = true
 detect_nested_headings = true
 resolve_duplicate_elements = true
-
-# CODE TRACEABILITY ENHANCEMENT
 enable_intent_comments = true
 track_removed_code = true
-
-# EXPERIMENTAL ENHANCEMENTS
 anticipate_user_intent = true
 infer_missing_specs = true
 clean_aria_inconsistencies = true
