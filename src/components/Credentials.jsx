@@ -30,9 +30,9 @@ export default function Credentials({ className = '' }) {
         />
       </div>
 
-      <ul className="space-y-4">
+      <ul className="mx-auto w-max space-y-4 text-left">
         {credentials.map((cred) => (
-          <li key={cred} className="flex items-start justify-center">
+          <li key={cred} className="flex items-start justify-start">
             <CheckIcon className="mr-2 h-5 w-5 text-silver" aria-hidden="true" />
             <span className="text-platinum">{cred}</span>
           </li>
