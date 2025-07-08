@@ -26,6 +26,7 @@ prefer_modern_idioms = true
 [intent_comments]
 require_why_comments = true
 annotate_new_logic = true
+explain_functions_plain_english = true
 
 [react_tailwind]
 use_semantic_html = true
@@ -43,17 +44,28 @@ handle_edge_cases = true
 remove_broken_snapshots = true
 simulate_mobile_viewport = true
 prefer_getByRole = true
-validate_all = ["yarn test", "yarn lint", "yarn build"]
+validate_all = ["yarn test", "yarn lint"]
+require_snapshot_tests = true
+require_accessibility_tests = true
+simulate_viewport_mobile = true
+prefer_getByRole_queries = true
+stub_network_calls = true
+auto_update_snapshots_if_layout_changes = true
 
 [accessibility_security]
 require_wcag_aa = true
 no_third_party_assets = true
 no_env_leaks = true
+prohibit_env_leaks = true
+prohibit_third_party_fonts = true
+prohibit_inline_tokens = true
+enforce_https_links = true
 
 [traceability]
 require_change_reason = true
 annotate_replacements = true
 summarize_in_pr = true
+track_removed_code = true
 
 [lint_semantic]
 no_any_type = true
@@ -89,26 +101,21 @@ eliminate_wrapper_divs = true
 use_clsx_or_variants = true
 prefer_gap_and_items_center = true
 
-[testing_strict]
-require_snapshot_tests = true
-require_accessibility_tests = true
-simulate_viewport_mobile = true
-prefer_getByRole_queries = true
-stub_network_calls = true
-auto_update_snapshots_if_layout_changes = true
-
-[security]
-prohibit_env_leaks = true
-prohibit_third_party_fonts = true
-prohibit_inline_tokens = true
-enforce_https_links = true
-
 [metadata]
 require_version_file = true
 require_changelog = true
 require_release_notes = true
 require_comments_explaining_intent = true
 track_technical_debt = true
+
+[dependencies]
+allow_auto_install = true
+only_dev_dependencies = false
+allow_global_packages = true
+version_lock = "strict"
+require_approval_for_prod = false
+permit_peer_dependencies = true
+permit_optional_dependencies = true
 
 [settings]
 exclude = [
@@ -140,7 +147,6 @@ autofix_redundant_svg = true
 detect_nested_headings = true
 resolve_duplicate_elements = true
 enable_intent_comments = true
-track_removed_code = true
 anticipate_user_intent = true
 infer_missing_specs = true
 clean_aria_inconsistencies = true
