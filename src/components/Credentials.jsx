@@ -9,6 +9,7 @@ export default function Credentials() {
   ];
 
   return (
+
     <MotionSection className="container space-y-6 text-center md:text-left">
       <div className="relative inline-flex flex-wrap items-end gap-4 pb-4 mb-6 bg-black after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-gray-700">
         <h2 className="text-3xl font-serif font-semibold tracking-wide text-silver">
