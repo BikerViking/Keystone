@@ -10,7 +10,7 @@ export default function Home() {
       />
       <Hero />
 
-      <MotionSection className="container space-y-6 text-center">
+      <MotionSection className="container space-y-6 text-center py-8">
         <h2 className="why-heading text-3xl font-serif font-semibold tracking-wide heading-gradient text-silver">
           Why Choose Us?
         </h2>
@@ -22,5 +22,4 @@ export default function Home() {
 
       <Credentials />
     </>
-  );
-}
+  );}
