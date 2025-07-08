@@ -1,8 +1,7 @@
-# Codex AI Configuration – Optimized for Maximum Code Quality and Task Accuracy
 
-# === Core Codex Instructions ===
+# Godforge Codex Instructions (Full Performance Optimized)
 
-**Codex and all engineers must follow these instructions for every code change. This is a non-negotiable baseline for quality.**
+**Codex and all engineers must follow these instructions for every code change. This is the highest standard of production readiness.**
 
 ## Core Assumption
 > You are contributing to a production system. Code must be fully complete, secure, accessible, and visually polished. All output must be deployable to `main` with no cleanup.
@@ -13,19 +12,19 @@
 
 ### 1. CODE PURITY
 - Remove unused imports, placeholder elements, dead styles, and console logs.
-- One source of truth only. Refactor the old — never clone or append.
-- Output must be clean, minimal, and readable.
+- One source of truth only. Refactor old code — never clone or append.
+- Output must be clean, minimal, readable, deduplicated.
 
 ### 2. SELF-AUDIT CHECKLIST
-- Validate responsiveness across all breakpoints.
+- Validate responsiveness across breakpoints (320px to 1920px).
 - Run all tests (unit, snapshot, integration, accessibility).
 - Zero build warnings or lint errors.
-- Code is production-ready: `yarn build && preview` must pass.
+- Code must be production-ready (`yarn build && preview` must pass).
 
 ### 3. UX POLISH
 - Perfect spacing, alignment, rhythm, transitions.
-- No layout jitter, overflow, or hardcoded pixel widths unless requested.
-- Fully responsive from 320px → 1920px.
+- No layout jitter, overflow, or hardcoded widths unless requested.
+- Fully responsive layout: uses `flex`, `grid`, and `gap` responsibly.
 
 ### 4. REACT + TAILWIND PROTOCOL
 - Use flex/grid/flow. Avoid absolute/fixed unless specified.
@@ -35,44 +34,46 @@
 
 ### 5. TESTING COVERAGE
 - Use `screen.getByRole`, `findByText`, never brittle queries.
-- Viewport simulation with `setViewport()` for mobile tests.
-- Stub all APIs and side effects.
+- Simulate responsive viewports with `setViewport()`.
+- Stub APIs and side effects properly.
 - Update DOM/snapshot tests when UI/layout changes.
 
-### 6. SECURITY + ACCESSIBILITY (A11Y)
-- Never hardcode secrets, tokens, env vars, IPs, or external URLs.
-- No third-party fonts/assets unless explicitly required.
-- WCAG 2.1 AA required:
+### 6. SECURITY + A11Y
+- No hardcoded secrets, tokens, IPs, or URLs.
+- No third-party fonts/assets unless required.
+- Must meet WCAG 2.1 AA:
   - Contrast ≥ 4.5:1
-  - Alt text
-  - aria-* roles
-  - Focus states
-  - Keyboard nav
+  - Alt text for all images
+  - Proper `aria-*` roles
+  - Keyboard navigation support
+  - Clearly visible focus states
 
 ### 7. COMMUNICATION
-- Don’t guess — clarify ambiguous requirements.
-- Inline comments must explain intent (*why*, not *what*).
-- Propose options with tradeoffs if spec is unclear.
+- Don’t guess. Clarify requirements when ambiguous.
+- Inline comments must explain *why*, not just *what*.
+- Propose tradeoffs if requirements are unclear.
 
 ---
 
 ## FINAL MERGE CHECKLIST
 - [ ] All tests pass
-- [ ] Fully responsive
-- [ ] A11y-verified
-- [ ] Code linted + formatted
-- [ ] No legacy or duplicate logic
-- [ ] Semantic HTML
-- [ ] Secure (no secrets, tokens, unsafe links)
-- [ ] Visual polish complete
+- [ ] Fully responsive layout
+- [ ] Accessibility verified
+- [ ] Code linted and formatted
+- [ ] No duplicate or legacy logic
+- [ ] Semantic, valid HTML
+- [ ] Secure: no secrets or unsafe content
+- [ ] Visual design complete
 
-**Mindset**: You’re pushing to `main` on a Friday with no rollback window.
+**Mindset**: Code is being pushed to `main` on Friday with no rollback window.
 
 ---
 
-## [settings]
+## Codex Parsing Optimizations
 
-# Avoid unnecessary large/binary/compiled files
+[settings]
+
+# Avoid unnecessary files
 exclude = [
   "node_modules",
   "dist",
@@ -86,20 +87,36 @@ exclude = [
   "*.log"
 ]
 
-# .codex file for improved Codex performance
-
-# Increase line length so Codex doesn’t truncate or misread JSX attributes
+# Increase line length to avoid JSX truncation
 max_line_length = 240
 
-# Clean up whitespace that can confuse parsing
+# Normalize whitespace
 trim_trailing_whitespace = true
 preserve_blank_lines = false
 collapse_whitespace = true
 
-# General improvements to help Codex read long, dense files better
+# Improve parsing of complex JSX and layout logic
 auto_format = true
 detect_jsx = true
 wrap_attributes = true
 deduplicate_imports = true
 remove_invalid_tags = true
 preserve_class_order = false
+
+# Implicit Linting Suggestions
+validate_attributes = true
+check_duplicate_ids = true
+ensure_semantic_html = true
+flatten_nested_lists = true
+normalize_svg_tags = true
+
+# Heuristics for detecting and resolving logic redundancies
+deduplicate_elements = true
+verify_props_consistency = true
+strict_mode_jsx_analysis = true
+component_structure_validation = true
+
+# Codex Observability Enhancements
+track_source_context = true
+log_output_feedback = true
+annotate_inline_issues = true
