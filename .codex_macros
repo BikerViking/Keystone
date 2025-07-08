@@ -1,0 +1,32 @@
+# .codex_macros
+# Custom macros to optimize Codex performance, readability, and task coverage.
+
+[macros]
+
+@final_audit = Perform a complete end-of-task audit. Ensure production-readiness, remove dead code, check for duplicate logic, and verify visual polish, responsiveness, accessibility (WCAG 2.1), and semantic structure.
+
+@clean_snapshot_layouts = Scan and correct layout snapshots. Remove invalid HTML, duplicate classes, orphaned tags, nested SVGs, and malformed closing elements.
+
+@explain_code = Go through the latest code diff or function and explain clearly in plain English what the code is doing, what each block is for, and how the structure works. Assume the reader is new to coding.
+
+@explain_tailwind_classes = Explain the Tailwind CSS classes used in this component, grouped by type (layout, color, spacing, typography). Help me understand how each contributes to design.
+
+@reformat_for_learning = Reformat the component for beginner readability. Add inline comments that explain each major element or behavior. Maintain functionality but help someone learn from it.
+
+@optimize_accessibility = Audit the component for accessibility. Add or improve alt text, roles, aria-* labels, keyboard nav, and contrast compliance (WCAG 2.1 AA).
+
+@simulate_mobile_tests = Confirm this component renders cleanly on screen widths: 320px, 640px, and 768px. Adjust layout or classes if there's jitter, overflow, or missing content.
+
+@setup_unit_test_template = Add a basic but production-grade unit test for this component using `vitest` and `@testing-library/react`. Include test cases for rendering, props, and interaction.
+
+@refactor_to_variants = Refactor this Tailwind-heavy component using `tailwind-variants` or `clsx`. Group conditional classes logically, reduce repetition, and improve composability.
+
+@diagnose_snapshot_failures = If a test snapshot failed, identify the root cause (missing layout div, invalid structure, unexpected diff) and correct it so the snapshot passes.
+
+@annotate_logic = Leave inline code comments explaining *why* a block of logic exists or a decision was made (e.g., conditionals, loops, transforms). Make the reasoning clear.
+
+@deduplicate_classes = Remove duplicate `className` or `class` entries in the JSX, especially in `class="..." class="..."` format. Merge cleanly into one set of classes.
+
+@verify_semantics = Ensure all markup uses proper semantic HTML (e.g., heading levels in order, buttons vs divs, section vs article). Upgrade as needed.
+
+@preflight_check = Before pushing, ensure no leftover console logs, test prints, debug styles, or placeholder content remain.
