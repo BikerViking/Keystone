@@ -9,7 +9,7 @@ export default function Credentials() {
   ];
 
   return (
-    <MotionSection className="px-4">
+    <MotionSection className="container px-4">
       <div className="max-w-3xl mx-auto w-full">
         {/* Heading and Badge Row */}
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">

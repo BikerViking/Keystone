@@ -12,19 +12,25 @@ function setViewport(width) {
   window.dispatchEvent(new Event('resize'));
 }
 
-test('mobile portrait layout matches snapshot', () => {
-  setViewport(375);
+test('320px layout matches snapshot', () => {
+  setViewport(320);
   const { container } = render(<Credentials />);
   expect(container.firstChild).toMatchSnapshot();
 });
 
-test('mobile landscape layout matches snapshot', () => {
-  setViewport(812);
+test('640px layout matches snapshot', () => {
+  setViewport(640);
   const { container } = render(<Credentials />);
   expect(container.firstChild).toMatchSnapshot();
 });
 
-test('desktop layout matches snapshot', () => {
+test('1024px layout matches snapshot', () => {
+  setViewport(1024);
+  const { container } = render(<Credentials />);
+  expect(container.firstChild).toMatchSnapshot();
+});
+
+test('1280px layout matches snapshot', () => {
   setViewport(1280);
   const { container } = render(<Credentials />);
   expect(container.firstChild).toMatchSnapshot();
