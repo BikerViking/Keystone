@@ -1,0 +1,8 @@
+{
+  "project": "Notary Website",
+  "version": "1.0.0",
+  "status": "active",
+  "maintainer": "your-email@example.com",
+  "last_updated": "YYYY-MM-DD",
+  "codex_compliance": true
+}
