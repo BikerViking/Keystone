@@ -3,7 +3,7 @@ import { Credentials } from '../components';
 
 test('displays NNA badge image with alt text', () => {
   render(<Credentials />);
-  const badge = screen.getByAltText(/certified nna notary signing agent 2025 badge/i);
+  const badge = screen.getByAltText(/certified nna notary signing agent badge/i);
   expect(badge).toBeInTheDocument();
 });
 
