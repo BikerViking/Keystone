@@ -15,6 +15,7 @@ All notable changes to this project will be documented in this file.
 - Moved decorative underline to the `header` element so it spans both the heading and badge.
 - Shifted badge downward so its center aligns with the underline.
 - Enlarged NNA badge by 25% while keeping it centered on the underline.
+- Enlarged NNA badge by an additional 25% for improved readability.
 
 ## [1.0.0] - YYYY-MM-DD
 ### Added
