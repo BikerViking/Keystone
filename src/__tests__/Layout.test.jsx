@@ -15,12 +15,12 @@ describe('Layout component', () => {
     expect(screen.getByRole('contentinfo')).toBeInTheDocument();
   });
 
-  test('matches snapshot', () => {
-    const { asFragment } = render(
+  test('includes main region', () => {
+    render(
       <MemoryRouter future={{ v7_relativeSplatPath: true, v7_startTransition: true }}>
         <Layout />
       </MemoryRouter>,
     );
-    expect(asFragment()).toMatchSnapshot();
+    expect(screen.getByRole('main')).toBeInTheDocument();
   });
 });

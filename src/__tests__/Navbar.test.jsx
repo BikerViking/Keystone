@@ -36,12 +36,15 @@ describe("Navbar component", () => {
     );
   });
 
-  test("matches snapshot", () => {
-    const { asFragment } = render(
+  test('aria-expanded toggles on button click', () => {
+    render(
       <MemoryRouter future={{ v7_relativeSplatPath: true, v7_startTransition: true }}>
         <Navbar />
       </MemoryRouter>,
     );
-    expect(asFragment()).toMatchSnapshot();
+    const toggleButton = screen.getByRole('button', { name: /toggle navigation/i });
+    expect(toggleButton).toHaveAttribute('aria-expanded', 'false');
+    fireEvent.click(toggleButton);
+    expect(toggleButton).toHaveAttribute('aria-expanded', 'true');
   });
 });

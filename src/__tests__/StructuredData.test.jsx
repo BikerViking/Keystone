@@ -19,8 +19,10 @@ describe('StructuredData component', () => {
     expect(document.head.querySelector('script[type="application/ld+json"]')).toBeNull();
   });
 
-  test('matches snapshot', () => {
-    const { asFragment } = render(<StructuredData />);
-    expect(asFragment()).toMatchSnapshot();
+  test('does not duplicate scripts on re-render', () => {
+    const { rerender } = render(<StructuredData />);
+    rerender(<StructuredData />);
+    const scripts = document.head.querySelectorAll('script[type="application/ld+json"]');
+    expect(scripts.length).toBe(1);
   });
 });

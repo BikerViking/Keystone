@@ -19,8 +19,15 @@ describe('ScrollToTopButton component', () => {
     ).toBeInTheDocument();
   });
 
-  test('matches snapshot', () => {
-    const { asFragment } = render(<ScrollToTopButton />);
-    expect(asFragment()).toMatchSnapshot();
+  test('scrolls to top when clicked', () => {
+    const original = window.scrollTo;
+    window.scrollTo = vi.fn();
+    render(<ScrollToTopButton />);
+    window.scrollY = 400;
+    fireEvent.scroll(window);
+    const button = screen.getByRole('button', { name: /scroll to top/i });
+    fireEvent.click(button);
+    expect(window.scrollTo).toHaveBeenCalledWith({ top: 0, behavior: 'smooth' });
+    window.scrollTo = original;
   });
 });
