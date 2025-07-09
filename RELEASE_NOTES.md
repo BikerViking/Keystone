@@ -18,3 +18,4 @@
 - Restored 10-15% NNA badge enlargement after rollback.
 - Ensured NNA badge uses responsive positioning to keep alignment consistent on all devices.
 - Decorative underline now lives on the `header` wrapper so it stretches under both the heading and badge.
+- Shifted badge downward to sit directly atop the underline across breakpoints.
