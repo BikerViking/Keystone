@@ -3,25 +3,20 @@ import { MotionSection, SEO } from '../components';
 
 export default function NotFound() {
   return (
-    <MotionSection className="container flex min-h-screen flex-col items-center justify-center gap-6 text-center">
+    <MotionSection className="container flex min-h-screen flex-col items-center justify-center gap-6 py-8 text-center">
       <SEO
         title="Page Not Found | Keystone Notary Group"
         description="Sorry, the page you are looking for does not exist."
       />
+      <img src="/logo.svg" alt="Keystone Notary Group logo" className="mx-auto h-16 w-16 text-silver" />
       <h1 className="text-6xl font-serif font-semibold tracking-wide heading-gradient text-silver">404</h1>
-      <p className="text-lg text-platinum">Page not found.</p>
-      <nav aria-label="Error options" className="flex flex-col items-center gap-4 sm:flex-row">
-        <Link
-          to="/contact#contact"
-          className="cta-button hover:border-silver hover:text-silver px-6"
-        >
+      <p className="text-lg text-platinum">Sorry, we can’t find that page.</p>
+      <nav aria-label="Helpful links" className="flex flex-col items-center gap-4 sm:flex-row">
+        <Link to="/contact#contact" className="cta-button hover:border-silver hover:text-silver px-6">
           Schedule Appointment
         </Link>
-        <Link
-          to="/"
-          className="cta-button hover:border-silver hover:text-silver px-6"
-        >
-          Back to Home
+        <Link to="/" className="cta-button hover:border-silver hover:text-silver px-6">
+          Return Home
         </Link>
       </nav>
     </MotionSection>
