@@ -43,7 +43,12 @@ export default function Credentials({ className = '' }) {
           alt="Certified NNA Notary Signing Agent 2025 badge"
 
           /* Enlarged by 20% and nudged left for better visual balance */
-          className="absolute right-10 top-1/2 h-[7.2rem] w-auto -translate-y-1/2"
+          /*
+            Move badge lower so its center aligns with the decorative underline
+            rather than the heading's midpoint. Horizontal position remains
+            unchanged.
+          */
+          className="absolute right-10 top-[calc(50%+1.25rem)] h-[7.2rem] w-auto -translate-y-1/2"
           width="115"
           height="115"
         />

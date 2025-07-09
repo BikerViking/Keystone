@@ -10,6 +10,6 @@ All notable changes to this project will be documented in this file.
 - Adjusted Credentials underline alignment and enlarged badge for
   consistent appearance.
 - Shifted NNA badge closer to the heading and increased size by 20%.
+- Aligned badge center with the decorative underline for cleaner spacing.
   
-## [1.0.0] - YYYY-MM-DD
-### Added- Initial project setup.- Core components and layouts.
+## [1.0.0] - YYYY-MM-DD### Added- Initial project setup.- Core components and layouts.
