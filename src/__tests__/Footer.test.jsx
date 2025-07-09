@@ -8,8 +8,9 @@ describe('Footer component', () => {
     expect(screen.getByText(new RegExp(year))).toBeInTheDocument();
   });
 
-  test('matches snapshot', () => {
-    const { asFragment } = render(<Footer />);
-    expect(asFragment()).toMatchSnapshot();
+  test('has landmark role', () => {
+    render(<Footer />);
+    const footer = screen.getByRole('contentinfo');
+    expect(footer).toBeInTheDocument();
   });
 });

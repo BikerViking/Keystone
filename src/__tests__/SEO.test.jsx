@@ -23,10 +23,16 @@ describe('SEO component', () => {
     expect(hasBreadcrumb).toBe(true);
   });
 
-  test('matches snapshot', () => {
-    const { asFragment } = render(
-      <MemoryRouter initialEntries={['/']}> <SEO title="Snapshot" description="test" /> </MemoryRouter>
+  test('updates canonical link when rerendered', () => {
+    const { rerender } = render(
+      <MemoryRouter initialEntries={['/']}> <SEO title="Title" description="d" path="/" /> </MemoryRouter>
     );
-    expect(asFragment()).toMatchSnapshot();
+    const first = document.head.querySelector('link[rel="canonical"]');
+    expect(first).toHaveAttribute('href', 'https://www.keystonenotarygroup.com/');
+    rerender(
+      <MemoryRouter initialEntries={['/about']}> <SEO title="About" description="d" path="/about" /> </MemoryRouter>
+    );
+    const updated = document.head.querySelector('link[rel="canonical"]');
+    expect(updated).toHaveAttribute('href', 'https://www.keystonenotarygroup.com/about');
   });
 });

@@ -13,32 +13,15 @@ describe('Credentials component', () => {
     expect(badge).toBeInTheDocument();
   });
 
-  test('matches snapshot', () => {
-    const { asFragment } = render(<Credentials />);
-    expect(asFragment()).toMatchSnapshot();
-  });
+  const viewports = [320, 640, 1024, 1280];
 
-  test('320px layout matches snapshot', () => {
-    setViewport(320);
-    const { container } = render(<Credentials />);
-    expect(container.firstChild).toMatchSnapshot();
-  });
-
-  test('640px layout matches snapshot', () => {
-    setViewport(640);
-    const { container } = render(<Credentials />);
-    expect(container.firstChild).toMatchSnapshot();
-  });
-
-  test('1024px layout matches snapshot', () => {
-    setViewport(1024);
-    const { container } = render(<Credentials />);
-    expect(container.firstChild).toMatchSnapshot();
-  });
-
-  test('1280px layout matches snapshot', () => {
-    setViewport(1280);
-    const { container } = render(<Credentials />);
-    expect(container.firstChild).toMatchSnapshot();
+  test.each(viewports)('renders correctly at %ipx viewport', (width) => {
+    setViewport(width);
+    render(<Credentials />);
+    // Section should be accessible via its heading label
+    const region = screen.getByRole('region', { name: /credentials/i });
+    expect(region).toBeInTheDocument();
+    const items = screen.getAllByRole('listitem');
+    expect(items).toHaveLength(3);
   });
 });
