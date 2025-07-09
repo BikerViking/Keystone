@@ -11,7 +11,7 @@ export default function Layout() {
   return (
     <> 
       <StructuredData />
-      <div className="flex min-h-screen flex-col bg-[#121212] text-platinum">
+      <div className="flex min-h-screen flex-col bg-charcoal text-platinum">
         <Navbar />
         <AnimatePresence mode="wait">
           <motion.main

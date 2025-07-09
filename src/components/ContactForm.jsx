@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import ContactFields from './ContactFields';
+import clsx from 'clsx';
 
 export default function ContactForm({ onSuccess }) {
   const [requestAppointment, setRequestAppointment] = useState(false);
@@ -14,6 +15,9 @@ export default function ContactForm({ onSuccess }) {
     message: '',
   });
   const [errors, setErrors] = useState({});
+
+  const inputBase =
+    'w-full rounded border border-platinum bg-deepgray px-3 py-2 text-white placeholder-platinum focus:border-silver focus:outline-none';
 
   const validate = () => {
     const newErrors = {};
@@ -88,7 +92,7 @@ export default function ContactForm({ onSuccess }) {
             value={formData.message}
             onChange={handleChange}
             aria-invalid={!!errors.message}
-            className="w-full rounded border border-platinum bg-deepgray px-3 py-2 text-white placeholder-platinum focus:border-silver focus:outline-none"
+            className={clsx(inputBase)}
           />
           {errors.message && (
             <p role="alert" className="mt-1 text-sm text-red-500">

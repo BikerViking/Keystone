@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import clsx from 'clsx';
 
+// Animate sections as they enter the viewport to draw subtle attention
 export default function MotionSection({ children, className = '', ...props }) {
   return (
     <motion.section
@@ -12,5 +13,5 @@ export default function MotionSection({ children, className = '', ...props }) {
       transition={{ duration: 0.6 }}
     >
       {children}
-    </motion.section>
-  );}
+    </motion.section>  );
+}
