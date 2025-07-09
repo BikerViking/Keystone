@@ -90,24 +90,19 @@ export default function Navbar() {
       </nav>
       <AnimatePresence>
         {open && (
-          <div
-            className="fixed inset-0 z-40 bg-black md:hidden"
-            role="button"
-            aria-label="Close menu overlay"
-            tabIndex={0}
-            onClick={closeMenu}
-            onKeyDown={(e) => {
-              if (['Escape', 'Enter', ' '].includes(e.key)) {
-                closeMenu();
-              }
-            }}
-          >
+          <div className="relative fixed inset-0 z-40 bg-black md:hidden">
+            <button
+              type="button"
+              aria-label="Close menu overlay"
+              onClick={closeMenu}
+              className="absolute inset-0"
+            />
             {/* eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions */}
             <nav
               ref={menuRef}
               aria-label="Mobile navigation"
               onMouseDown={(e) => e.stopPropagation()}
-              className="relative h-full p-6 mt-8"
+              className="relative h-full mt-8 p-6"
             >
               <button
                 className="absolute top-4 right-4 text-platinum"
