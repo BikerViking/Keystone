@@ -15,18 +15,19 @@ export default function Credentials({ className = '' }) {
       aria-labelledby="credentials-heading"
       className={`container mt-12 border-t border-deepgray py-8 text-center space-y-6 ${className}`}
     >
-      <div className="flex items-center gap-4">
-        {/* align divider to left edge like 'Why Choose Us?' heading */}
+      <div className="flex items-center justify-center gap-4">
+        {/* keep heading sizing consistent with other sections */}
         <h2
           id="credentials-heading"
-          className="w-full text-3xl font-serif font-semibold tracking-wide heading-gradient text-silver"
+          className="text-3xl font-serif font-semibold tracking-wide heading-gradient text-silver"
         >
           Credentials
         </h2>
+        {/* display NNA credential badge next to the heading */}
         <img
           src="/nna-badge.png"
           alt="Certified NNA Notary Signing Agent 2025 badge"
-          className="h-16 w-auto flex-none"
+          className="h-20 w-auto flex-none"
         />
       </div>
 
