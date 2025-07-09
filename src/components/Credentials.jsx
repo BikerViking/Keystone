@@ -19,20 +19,28 @@ export default function Credentials({ className = "" }) {
         className,
       )}
     >
-      <header className="flex justify-center">
-        {/* Wrapper preserves underline width while isolating badge from layout */}
-        <div className="heading-gradient relative inline-block">
+      <header className="flex justify-start">
+        <div
+          className="relative flex flex-row items-center w-full"
+          style={{ minHeight: '7rem' }}
+        >
+          {/* Decorative line fully behind heading and badge */}
+          <div className="absolute left-0 right-0 top-1/2 -translate-y-1/2 h-0.5 bg-gray-400 z-0" />
+          {/* Heading */}
           <h2
             id="credentials-heading"
-            className="text-3xl font-serif font-semibold tracking-wide text-silver"
+            className="relative z-10 text-4xl font-serif font-semibold tracking-wide text-silver bg-black pr-4"
+            style={{ lineHeight: 1 }}
           >
             Credentials
           </h2>
-          {/* Badge overlays the heading exactly as in reference image */}
+          {/* Badge */}
           <img
             src="/nna-badge.png"
             alt="Certified NNA Notary Signing Agent 2025 badge"
-            className="absolute right-4 top-1/2 translate-y-[62.5%] flex-shrink-0 pointer-events-none select-none"
+            className="relative z-10 w-32 h-32 -my-8 ml-2 drop-shadow-xl pointer-events-none select-none bg-black"
+            style={{ objectFit: 'contain' }}
+            draggable={false}
           />
         </div>
       </header>
@@ -49,5 +57,4 @@ export default function Credentials({ className = "" }) {
         ))}
       </ul>
     </MotionSection>
-  );
-}
+  );}
