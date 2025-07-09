@@ -16,3 +16,4 @@
 - Centered NNA badge on decorative underline for improved alignment.
 - Enlarged NNA badge slightly for better readability across devices.
 - Restored 10-15% NNA badge enlargement after rollback.
+- Ensured NNA badge uses responsive positioning to keep alignment consistent on all devices.
