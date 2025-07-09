@@ -13,16 +13,14 @@ describe('Credentials component', () => {
     expect(badge).toBeInTheDocument();
   });
 
-  test('badge uses responsive sizing classes', () => {
+  test('badge uses expected attributes and classes', () => {
     render(<Credentials />);
     const badge = screen.getByAltText(/certified nna notary signing agent 2025 badge/i);
     const className = badge.getAttribute('class');
-    expect(className).toEqual(expect.stringContaining('h-20'));
-    expect(className).toEqual(expect.stringContaining('w-auto'));
-    expect(className).toEqual(expect.stringContaining('sm:h-24'));
     expect(className).toEqual(expect.stringContaining('flex-shrink-0'));
     expect(className).toEqual(expect.stringContaining('translate-y-[62.5%]'));
-    expect(className).toEqual(expect.stringContaining('scale-[156.25%]'));
+    expect(badge.getAttribute('width')).toBe('220');
+    expect(badge.getAttribute('height')).toBe('220');
   });
 
   const viewports = [320, 640, 1024, 1280];

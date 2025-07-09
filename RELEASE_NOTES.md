@@ -20,4 +20,4 @@
 - Decorative underline now lives on the `header` wrapper so it stretches under both the heading and badge.
 - Shifted badge downward to sit directly atop the underline across breakpoints.
 - Scaled NNA badge up by 25% while maintaining center alignment.
-- Expanded NNA badge by an additional 25% for clarity.
+- Replaced NNA badge image with a 220x220 asset to remove scaling.
