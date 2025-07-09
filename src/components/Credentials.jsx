@@ -19,37 +19,29 @@ export default function Credentials({ className = '' }) {
         className,
       )}
     >
-      <header className="relative flex justify-center">
+      <header className="heading-gradient flex items-center justify-center gap-4">
         {/*
-          Center heading to mirror other sections while preserving space for the
-          credential badge overlay.
+          Shift heading slightly left so the "C" aligns with the list
+          checkmarks while keeping the badge spacing consistent.
         */}
         <h2
           id="credentials-heading"
-
-          /* Uniform width ensures the decorative underline matches other
-             headings. Additional padding keeps text clear of the badge. */
-          className="w-full pr-32 text-3xl font-serif font-semibold tracking-wide heading-gradient text-silver"
+          /*
+            Slightly increased negative margin ensures the "C" of
+            Credentials lines up with the leading check marks below
+            while maintaining badge spacing across breakpoints.
+          */
+          className="-ml-8 text-3xl font-serif font-semibold tracking-wide text-silver"
         >
           Credentials
         </h2>
         {/* display NNA credential badge next to the heading */}
-        {/*
-          Position badge over the extended underline without shifting the
-          heading. Larger size improves readability across breakpoints.
-        */}
         <img
           src="/nna-badge.png"
           alt="Certified NNA Notary Signing Agent 2025 badge"
-
-          /*
-            Badge size scales with viewport to maintain proportion without
-            altering its fixed position. Height adjusts gradually from 6rem on
-            small screens up to 8rem on larger displays.
-          */
-          className="absolute right-10 top-[calc(50%+1.25rem)] h-24 sm:h-28 md:h-32 lg:h-36 w-auto -translate-y-1/2"
-          width="128"
-          height="128"
+          className="h-20 w-auto flex-none relative z-10"
+          width="80"
+          height="80"
         />
       </header>
 
