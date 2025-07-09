@@ -12,5 +12,5 @@
 - Reverted to "Audit and secure code base for HTTPS" patch state.
 - Extended decorative underline for Why Choose Us and Credentials
   headings, overlaying the badge without disrupting layout.
-- Aligned Credentials line with other sections and shifted badge left  at a larger size.- Moved NNA badge closer to heading and enlarged by 20% for clarity.
-- Centered NNA badge on decorative underline for improved alignment.
+- Aligned Credentials line with other sections and shifted badge left  at a larger size.- Moved NNA badge closer to heading and enlarged by 20% for clarity.- Centered NNA badge on decorative underline for improved alignment.
+- Enlarged NNA badge slightly for better readability across devices.
