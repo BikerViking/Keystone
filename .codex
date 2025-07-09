@@ -60,6 +60,17 @@ perfect_spacing = true
 smooth_transitions = true
 handle_edge_cases = true
 
+[layout_reference]
+enable_image_reference = true
+accept_image_formats = ["jpeg", "jpg", "png"]
+respect_visual_layout = true
+image_guidance_priority = true
+auto_scale_images = false
+honor_image_spacing = true
+no_dom_disruption = true
+reference_screenshot_tag = "layout-reference"
+position_elements_to_match_reference = true
+
 [testing]
 remove_broken_snapshots = true
 simulate_mobile_viewport = true
