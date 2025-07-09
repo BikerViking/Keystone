@@ -16,10 +16,13 @@ export default function Credentials({ className = '' }) {
       className={`container mt-12 border-t border-deepgray py-8 text-center space-y-6 ${className}`}
     >
       <div className="flex items-center justify-center gap-4">
-        {/* keep heading sizing consistent with other sections */}
+        {/*
+          Shift heading slightly left so the "C" aligns with the list
+          checkmarks while keeping the badge spacing consistent.
+        */}
         <h2
           id="credentials-heading"
-          className="text-3xl font-serif font-semibold tracking-wide heading-gradient text-silver"
+          className="-ml-6 text-3xl font-serif font-semibold tracking-wide heading-gradient text-silver"
         >
           Credentials
         </h2>
