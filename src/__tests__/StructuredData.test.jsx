@@ -3,7 +3,7 @@ import StructuredData from '../components/StructuredData';
 
 describe('StructuredData component', () => {
   // Ensure JSON-LD script is added to document head
-  test('inserts organization and business structured data', () => {
+  test('inserts organization, business, and service structured data', () => {
     const { unmount } = render(<StructuredData />);
     const script = document.head.querySelector('script[type="application/ld+json"]');
     expect(script).toBeTruthy();
@@ -12,8 +12,10 @@ describe('StructuredData component', () => {
       expect(Array.isArray(data['@graph'])).toBe(true);
       const org = data['@graph'].find((d) => d['@type'] === 'Organization');
       const business = data['@graph'].find((d) => d['@type'] === 'LocalBusiness');
+      const service = data['@graph'].find((d) => d['@type'] === 'Notary');
       expect(org).toBeTruthy();
       expect(business.telephone).toBe('(267) 309-9000');
+      expect(service.serviceType).toBe('Mobile Notary Public');
     }
     unmount();
     expect(document.head.querySelector('script[type="application/ld+json"]')).toBeNull();
