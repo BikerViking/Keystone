@@ -78,7 +78,7 @@ export default function Navbar() {
           <span className="mb-1 block h-0.5 w-6 bg-platinum transition-colors hover:bg-silver" />
           <span className="block h-0.5 w-6 bg-platinum transition-colors hover:bg-silver" />
         </button>
-        <ul className="hidden md:flex space-x-3">
+        <ul className="hidden gap-3 md:flex">
           {navItems.map((item) => (
             <li key={item.name}>
               <NavLink to={item.path} className={linkClasses} end>
@@ -112,7 +112,7 @@ export default function Navbar() {
                 ✕
               </button>
               {/* Mobile menu with a solid background behind item gaps */}
-              <ul className="space-y-4 bg-black">
+              <ul className="flex flex-col gap-4 bg-black">
                   {navItems.map((item) => (
                     <li key={item.name}>
                       <NavLink

@@ -37,7 +37,7 @@ export default function FAQ() {
   };
 
   return (
-    <MotionSection className="container space-y-8 py-8">
+    <MotionSection className="container flex flex-col gap-8 py-8">
       <SEO
         title="Notary FAQs | Keystone Notary Group"
         description="Answers to common questions about our mobile notary services and scheduling."
@@ -46,7 +46,7 @@ export default function FAQ() {
       <h1 className="text-4xl font-serif font-semibold tracking-wide heading-gradient text-silver">
         Frequently Asked Questions
       </h1>
-      <ul className="space-y-4">
+      <ul className="flex flex-col gap-4">
         {faqs.map(({ q, a }, idx) => {
           const isOpen = openIndex === idx;
           return (

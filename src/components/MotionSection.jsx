@@ -1,11 +1,11 @@
 import { motion } from 'framer-motion';
-import cn from '../utils/cn';
+import clsx from 'clsx';
 
 export default function MotionSection({ children, className = '', ...props }) {
   return (
     <motion.section
       {...props}
-      className={cn(className)}
+      className={clsx(className)}
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
@@ -13,5 +13,4 @@ export default function MotionSection({ children, className = '', ...props }) {
     >
       {children}
     </motion.section>
-  );
-}
+  );}

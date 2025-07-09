@@ -3,7 +3,7 @@ import { MotionSection, SEO } from '../components';
 
 export default function About() {
   return (
-    <MotionSection className="relative container space-y-8 py-8">
+    <MotionSection className="relative container flex flex-col gap-8 py-8">
       <SEO
         title="About Keystone Notary Group | Professional Mobile Notaries"
         description="Learn about Keystone Notary Group, our mission, and the services we provide across the Greater Philadelphia area."

@@ -13,7 +13,7 @@ export default function Home() {
       {/* Separate section with explicit landmarks for accessibility */}
       <MotionSection
         aria-labelledby="why-heading"
-        className="container space-y-6 py-8 text-center"
+        className="container flex flex-col items-center gap-6 py-8 text-center"
       >
         <h2
           id="why-heading"
@@ -28,5 +28,4 @@ export default function Home() {
       </MotionSection>
 
       {/* Apply margin and border to visually separate from the text above */}
-      <Credentials />
-    </>  );}
+      <Credentials />    </>  );}
