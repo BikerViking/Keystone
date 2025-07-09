@@ -19,31 +19,29 @@ export default function Credentials({ className = "" }) {
         className,
       )}
     >
-      <header className="flex justify-start">
-        <div
-          className="relative flex flex-row items-center w-full"
-          style={{ minHeight: '7rem' }}
-        >
-          {/* Decorative line fully behind heading and badge */}
-          <div className="absolute left-0 right-0 top-1/2 -translate-y-1/2 h-0.5 bg-gray-400 z-0" />
-          {/* Heading */}
-          <h2
-            id="credentials-heading"
-            className="relative z-10 text-4xl font-serif font-semibold tracking-wide text-silver bg-black pr-4"
-            style={{ lineHeight: 1 }}
+        <header className="flex justify-start w-full">
+          <div
+            className="relative flex flex-row items-center w-full"
+            style={{ minHeight: '7rem' }}
           >
-            Credentials
-          </h2>
-          {/* Badge */}
-          <img
-            src="/nna-badge.png"
-            alt="Certified NNA Notary Signing Agent 2025 badge"
-            className="relative z-10 w-32 h-32 -my-8 ml-2 drop-shadow-xl pointer-events-none select-none bg-black"
-            style={{ objectFit: 'contain' }}
-            draggable={false}
-          />
-        </div>
-      </header>
+            {/* Decorative line runs fully behind both heading and badge */}
+            <div className="absolute left-0 right-0 top-1/2 -translate-y-1/2 h-0.5 bg-gray-400 z-0" />
+            <h2
+              id="credentials-heading"
+              className="relative z-10 text-4xl font-serif font-semibold tracking-wide text-silver"
+              style={{ lineHeight: 1 }}
+            >
+              Credentials
+            </h2>
+            <img
+              src="/nna-badge.png"
+              alt="Certified NNA Notary Signing Agent 2025 badge"
+              className="relative z-10 w-28 h-28 -my-8 ml-2 drop-shadow-xl pointer-events-none select-none"
+              style={{ objectFit: 'contain' }}
+              draggable={false}
+            />
+          </div>
+        </header>
 
       <ul className="mx-auto w-max flex flex-col gap-4 text-left">
         {credentials.map((cred) => (
@@ -56,5 +54,4 @@ export default function Credentials({ className = "" }) {
           </li>
         ))}
       </ul>
-    </MotionSection>
-  );}
+    </MotionSection>  );}

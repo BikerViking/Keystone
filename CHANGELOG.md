@@ -17,6 +17,7 @@ All notable changes to this project will be documented in this file.
 - Enlarged NNA badge by 25% while keeping it centered on the underline.
 - Replaced NNA badge image with a 220x220 asset to remove scaling.
 - Positioned final-size NNA badge absolutely so it no longer shifts surrounding layout.
+- Removed background and padding on Credentials heading and badge, keeping line visible behind both elements.
 
 ## [1.0.0] - YYYY-MM-DD
 ### Added
