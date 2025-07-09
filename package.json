@@ -16,7 +16,8 @@
     "framer-motion": "^11.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.23.0"
+    "react-router-dom": "^6.23.0",
+    "tailwind-variants": "^1.0.0"
   },
   "devDependencies": {
     "@testing-library/dom": "^10.4.0",
