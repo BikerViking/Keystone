@@ -2,7 +2,7 @@ import {
   fireEvent,
   render,
   screen,
-  waitForElementToBeRemoved,
+  waitFor,
 } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
 import { Navbar } from "../components";
@@ -26,9 +26,13 @@ describe("Navbar component", () => {
     ).toBeInTheDocument();
 
     // Clicking outside the menu should close it
-    fireEvent.click(screen.getByRole("presentation"));
-    await waitForElementToBeRemoved(
-      screen.queryByRole("button", { name: /close navigation/i }),
+    fireEvent.click(
+      screen.getByRole("button", { name: /close menu overlay/i })
+    );
+    await waitFor(() =>
+      expect(
+        screen.queryByRole("button", { name: /close navigation/i })
+      ).not.toBeInTheDocument()
     );
   });
 

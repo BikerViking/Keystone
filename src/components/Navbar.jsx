@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 
 const navItems = [
   { name: "Home", path: "/" },
@@ -90,19 +90,23 @@ export default function Navbar() {
       </nav>
       <AnimatePresence>
         {open && (
-          <motion.div
-            initial={{ x: "100%" }}
-            animate={{ x: 0 }}
-            exit={{ x: "100%" }}
-            transition={{ type: "tween" }}
+          <div
             className="fixed inset-0 z-40 bg-black md:hidden"
+            role="button"
+            aria-label="Close menu overlay"
+            tabIndex={0}
             onClick={closeMenu}
-            role="presentation"
+            onKeyDown={(e) => {
+              if (['Escape', 'Enter', ' '].includes(e.key)) {
+                closeMenu();
+              }
+            }}
           >
+            {/* eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions */}
             <nav
               ref={menuRef}
               aria-label="Mobile navigation"
-              onClick={(e) => e.stopPropagation()}
+              onMouseDown={(e) => e.stopPropagation()}
               className="relative h-full p-6 mt-8"
             >
               <button
@@ -128,9 +132,9 @@ export default function Navbar() {
                   ))}
                 </ul>
               </nav>
-          </motion.div>
-        )}
-      </AnimatePresence>
+            </div>
+          )}
+        </AnimatePresence>
     </header>
   );
 }
