@@ -12,3 +12,5 @@
 - Reverted to "Audit and secure code base for HTTPS" patch state.
 - Extended decorative underline for Why Choose Us and Credentials
   headings, overlaying the badge without disrupting layout.
+- Aligned Credentials line with other sections and shifted badge left
+  at a larger size.
