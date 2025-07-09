@@ -4,6 +4,7 @@ export default function ContactFields({
   formData,
   errors,
   onChange,
+  onBlur,
   requestAppointment,
   setRequestAppointment,
   setErrors,
@@ -19,11 +20,13 @@ export default function ContactFields({
           required
           value={formData.name}
           onChange={onChange}
+          onBlur={onBlur}
           aria-invalid={!!errors.name}
+          aria-describedby={errors.name ? 'name-error' : undefined}
           className={inputStyles()}
         />
         {errors.name && (
-          <p role="alert" className="mt-1 text-sm text-red-500">
+          <p id="name-error" role="alert" className="mt-1 text-sm text-red-500">
             {errors.name}
           </p>
         )}
@@ -37,11 +40,13 @@ export default function ContactFields({
           required
           value={formData.email}
           onChange={onChange}
+          onBlur={onBlur}
           aria-invalid={!!errors.email}
+          aria-describedby={errors.email ? 'email-error' : undefined}
           className={inputStyles()}
         />
         {errors.email && (
-          <p role="alert" className="mt-1 text-sm text-red-500">
+          <p id="email-error" role="alert" className="mt-1 text-sm text-red-500">
             {errors.email}
           </p>
         )}
@@ -54,8 +59,15 @@ export default function ContactFields({
           type="tel"
           value={formData.phone}
           onChange={onChange}
+          onBlur={onBlur}
+          aria-describedby={errors.phone ? 'phone-error' : undefined}
           className={inputStyles()}
         />
+        {errors.phone && (
+          <p id="phone-error" role="alert" className="mt-1 text-sm text-red-500">
+            {errors.phone}
+          </p>
+        )}
       </label>
       <label className="block" htmlFor="documentCategory">
         <span className="mb-1 block text-platinum">Document Category</span>
@@ -65,7 +77,9 @@ export default function ContactFields({
           required
           value={formData.documentCategory}
           onChange={onChange}
+          onBlur={onBlur}
           aria-invalid={!!errors.documentCategory}
+          aria-describedby={errors.documentCategory ? 'documentCategory-error' : undefined}
           className={inputStyles()}
         >
           <option value="">Select a category</option>
@@ -75,7 +89,11 @@ export default function ContactFields({
           <option value="other">Other</option>
         </select>
         {errors.documentCategory && (
-          <p role="alert" className="mt-1 text-sm text-red-500">
+          <p
+            id="documentCategory-error"
+            role="alert"
+            className="mt-1 text-sm text-red-500"
+          >
             {errors.documentCategory}
           </p>
         )}
@@ -112,7 +130,9 @@ export default function ContactFields({
           required={requestAppointment}
           value={formData.appointmentType}
           onChange={onChange}
+          onBlur={onBlur}
           aria-invalid={!!errors.appointmentType}
+          aria-describedby={errors.appointmentType ? 'appointmentType-error' : undefined}
           className={inputStyles({ disabled: !requestAppointment })}
         >
           <option value="">Select type</option>
@@ -120,7 +140,7 @@ export default function ContactFields({
           <option value="remote">Remote/Online</option>
         </select>
         {errors.appointmentType && (
-          <p role="alert" className="mt-1 text-sm text-red-500">
+          <p id="appointmentType-error" role="alert" className="mt-1 text-sm text-red-500">
             {errors.appointmentType}
           </p>
         )}
@@ -135,11 +155,13 @@ export default function ContactFields({
           required={requestAppointment}
           value={formData.date}
           onChange={onChange}
+          onBlur={onBlur}
           aria-invalid={!!errors.date}
+          aria-describedby={errors.date ? 'date-error' : undefined}
           className={inputStyles({ disabled: !requestAppointment })}
         />
         {errors.date && (
-          <p role="alert" className="mt-1 text-sm text-red-500">
+          <p id="date-error" role="alert" className="mt-1 text-sm text-red-500">
             {errors.date}
           </p>
         )}
@@ -154,11 +176,13 @@ export default function ContactFields({
           required={requestAppointment}
           value={formData.time}
           onChange={onChange}
+          onBlur={onBlur}
           aria-invalid={!!errors.time}
+          aria-describedby={errors.time ? 'time-error' : undefined}
           className={inputStyles({ disabled: !requestAppointment })}
         />
         {errors.time && (
-          <p role="alert" className="mt-1 text-sm text-red-500">
+          <p id="time-error" role="alert" className="mt-1 text-sm text-red-500">
             {errors.time}
           </p>
         )}

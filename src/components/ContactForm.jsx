@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { z } from 'zod';
 import ContactFields from './ContactFields';
 import { inputStyles } from './variants';
 
@@ -16,35 +17,64 @@ export default function ContactForm({ onSuccess }) {
   });
   const [errors, setErrors] = useState({});
 
+  const formSchema = z
+    .object({
+      name: z.string().trim().min(1, 'Full name is required.'),
+      email: z
+        .string()
+        .trim()
+        .min(1, 'Email address is required.')
+        .email('Enter a valid email address.'),
+      phone: z
+        .string()
+        .trim()
+        .regex(/^$|^\+?[0-9().\s-]{7,}$/i, 'Enter a valid phone number.')
+        .optional(),
+      documentCategory: z.string().min(1, 'Document category is required.'),
+      appointmentType: z.string().optional(),
+      date: z.string().optional(),
+      time: z.string().optional(),
+      message: z.string().trim().min(1, 'Message is required.'),
+      requestAppointment: z.boolean(),
+    })
+    .superRefine((data, ctx) => {
+      if (data.requestAppointment) {
+        if (!data.appointmentType) {
+          ctx.addIssue({
+            code: z.ZodIssueCode.custom,
+            path: ['appointmentType'],
+            message: 'Appointment type is required.',
+          });
+        }
+        if (!data.date) {
+          ctx.addIssue({
+            code: z.ZodIssueCode.custom,
+            path: ['date'],
+            message: 'Preferred date is required.',
+          });
+        }
+        if (!data.time) {
+          ctx.addIssue({
+            code: z.ZodIssueCode.custom,
+            path: ['time'],
+            message: 'Preferred time is required.',
+          });
+        }
+      }
+    });
 
   const validate = () => {
-    const newErrors = {};
-    if (!formData.name.trim()) {
-      newErrors.name = 'Full name is required.';
-    }
-    if (!formData.email.trim()) {
-      newErrors.email = 'Email address is required.';
-    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      newErrors.email = 'Enter a valid email address.';
-    }
-    if (!formData.documentCategory) {
-      newErrors.documentCategory = 'Document category is required.';
-    }
-    if (!formData.message.trim()) {
-      newErrors.message = 'Message is required.';
-    }
-    if (requestAppointment) {
-      if (!formData.appointmentType) {
-        newErrors.appointmentType = 'Appointment type is required.';
+    const result = formSchema.safeParse({ ...formData, requestAppointment });
+    if (!result.success) {
+      const newErrors = {};
+      for (const issue of result.error.issues) {
+        if (issue.path[0]) {
+          newErrors[issue.path[0]] = issue.message;
+        }
       }
-      if (!formData.date) {
-        newErrors.date = 'Preferred date is required.';
-      }
-      if (!formData.time) {
-        newErrors.time = 'Preferred time is required.';
-      }
+      return newErrors;
     }
-    return newErrors;
+    return {};
   };
 
   const handleChange = (e) => {
@@ -52,6 +82,14 @@ export default function ContactForm({ onSuccess }) {
     setFormData({ ...formData, [name]: value });
     if (errors[name]) {
       setErrors({ ...errors, [name]: '' });
+    }
+  };
+
+  const handleBlur = (e) => {
+    const { name } = e.target;
+    const validation = validate();
+    if (validation[name]) {
+      setErrors((prev) => ({ ...prev, [name]: validation[name] }));
     }
   };
 
@@ -76,6 +114,7 @@ export default function ContactForm({ onSuccess }) {
           formData={formData}
           errors={errors}
           onChange={handleChange}
+          onBlur={handleBlur}
           requestAppointment={requestAppointment}
           setRequestAppointment={setRequestAppointment}
           setErrors={setErrors}
@@ -89,11 +128,13 @@ export default function ContactForm({ onSuccess }) {
             rows="4"
             value={formData.message}
             onChange={handleChange}
+            onBlur={handleBlur}
             aria-invalid={!!errors.message}
+            aria-describedby={errors.message ? 'message-error' : undefined}
             className={inputStyles()}
           />
           {errors.message && (
-            <p role="alert" className="mt-1 text-sm text-red-500">
+            <p id="message-error" role="alert" className="mt-1 text-sm text-red-500">
               {errors.message}
             </p>
           )}
