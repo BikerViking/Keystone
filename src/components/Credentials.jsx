@@ -22,7 +22,12 @@ export default function Credentials({ className = '' }) {
         */}
         <h2
           id="credentials-heading"
-          className="-ml-6 text-3xl font-serif font-semibold tracking-wide heading-gradient text-silver"
+          /*
+            Slightly increased negative margin ensures the "C" of
+            Credentials lines up with the leading check marks below
+            while maintaining badge spacing across breakpoints.
+          */
+          className="-ml-8 text-3xl font-serif font-semibold tracking-wide heading-gradient text-silver"
         >
           Credentials
         </h2>
