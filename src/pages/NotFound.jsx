@@ -10,7 +10,7 @@ export default function NotFound() {
       />
       <h1 className="text-6xl font-serif font-semibold tracking-wide heading-gradient text-silver">404</h1>
       <p className="text-lg text-platinum">Page not found.</p>
-      <div className="flex flex-col items-center gap-4 sm:flex-row">
+      <nav aria-label="Error options" className="flex flex-col items-center gap-4 sm:flex-row">
         <Link
           to="/contact#contact"
           className="cta-button hover:border-silver hover:text-silver px-6"
@@ -23,7 +23,7 @@ export default function NotFound() {
         >
           Back to Home
         </Link>
-      </div>
+      </nav>
     </MotionSection>
   );
 }

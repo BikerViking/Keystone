@@ -105,7 +105,7 @@ export default function Contact() {
         Contact Us
       </h1>
       <form onSubmit={handleSubmit} className="space-y-6" noValidate>
-        <div className="space-y-4">
+        <fieldset className="space-y-4">
           <label className="block" htmlFor="name">
             <span className="mb-1 block text-platinum">Full Name</span>
             <input
@@ -261,7 +261,7 @@ export default function Contact() {
               Enable appointment request above to choose date and time.
             </p>
           )}
-        </div>
+        </fieldset>
         <label className="block" htmlFor="message">
           <span className="mb-1 block text-platinum">Message</span>
           <textarea
