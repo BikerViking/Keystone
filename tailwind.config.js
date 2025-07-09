@@ -4,8 +4,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter', 'ui-sans-serif', 'system-ui'],
-        serif: ['Playfair Display', 'ui-serif', 'Georgia'],
+        // Use system fonts to avoid remote font requests
+        sans: ['ui-sans-serif', 'system-ui', 'sans-serif'],
+        serif: ['ui-serif', 'Georgia', 'serif'],
       },
       colors: {
         charcoal: '#121212',
