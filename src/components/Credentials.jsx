@@ -15,7 +15,7 @@ export default function Credentials({ className = '' }) {
       aria-labelledby="credentials-heading"
       className={`container mt-12 border-t border-deepgray py-8 text-center space-y-6 ${className}`}
     >
-      <div className="flex items-center justify-center gap-4">
+      <header className="flex items-center justify-center gap-4">
         {/*
           Shift heading slightly left so the "C" aligns with the list
           checkmarks while keeping the badge spacing consistent.
@@ -37,7 +37,7 @@ export default function Credentials({ className = '' }) {
           alt="Certified NNA Notary Signing Agent 2025 badge"
           className="h-20 w-auto flex-none"
         />
-      </div>
+      </header>
 
       <ul className="mx-auto w-max space-y-4 text-left">
         {credentials.map((cred) => (

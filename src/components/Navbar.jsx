@@ -99,10 +99,11 @@ export default function Navbar() {
             onClick={closeMenu}
             role="presentation"
           >
-            <div
+            <nav
               ref={menuRef}
-              className="relative h-full p-6"
+              aria-label="Mobile navigation"
               onClick={(e) => e.stopPropagation()}
+              className="relative h-full p-6 mt-8"
             >
               <button
                 className="absolute top-4 right-4 text-platinum"
@@ -112,8 +113,7 @@ export default function Navbar() {
                 ✕
               </button>
               {/* Mobile menu with a solid background behind item gaps */}
-              <nav aria-label="Mobile navigation" className="mt-8">
-                <ul className="space-y-4 bg-black">
+              <ul className="space-y-4 bg-black">
                   {navItems.map((item) => (
                     <li key={item.name}>
                       <NavLink
@@ -128,7 +128,6 @@ export default function Navbar() {
                   ))}
                 </ul>
               </nav>
-            </div>
           </motion.div>
         )}
       </AnimatePresence>
