@@ -1,3 +1,5 @@
+import clsx from 'clsx';
+
 export default function ContactFields({
   formData,
   errors,
@@ -6,6 +8,9 @@ export default function ContactFields({
   setRequestAppointment,
   setErrors,
 }) {
+  const inputBase =
+    'w-full rounded border border-platinum bg-deepgray px-3 py-2 text-white placeholder-platinum focus:border-silver focus:outline-none';
+  const disabledStyles = 'disabled:opacity-50 disabled:cursor-not-allowed';
   return (
     <fieldset className="flex flex-col gap-4">
       <label className="block" htmlFor="name">
@@ -18,7 +23,7 @@ export default function ContactFields({
           value={formData.name}
           onChange={onChange}
           aria-invalid={!!errors.name}
-          className="w-full rounded border border-platinum bg-deepgray px-3 py-2 text-white placeholder-platinum focus:border-silver focus:outline-none"
+          className={clsx(inputBase)}
         />
         {errors.name && (
           <p role="alert" className="mt-1 text-sm text-red-500">
@@ -36,7 +41,7 @@ export default function ContactFields({
           value={formData.email}
           onChange={onChange}
           aria-invalid={!!errors.email}
-          className="w-full rounded border border-platinum bg-deepgray px-3 py-2 text-white placeholder-platinum focus:border-silver focus:outline-none"
+          className={clsx(inputBase)}
         />
         {errors.email && (
           <p role="alert" className="mt-1 text-sm text-red-500">
@@ -52,7 +57,7 @@ export default function ContactFields({
           type="tel"
           value={formData.phone}
           onChange={onChange}
-          className="w-full rounded border border-platinum bg-deepgray px-3 py-2 text-white placeholder-platinum focus:border-silver focus:outline-none"
+          className={clsx(inputBase)}
         />
       </label>
       <label className="block" htmlFor="documentCategory">
@@ -64,7 +69,7 @@ export default function ContactFields({
           value={formData.documentCategory}
           onChange={onChange}
           aria-invalid={!!errors.documentCategory}
-          className="w-full rounded border border-platinum bg-deepgray px-3 py-2 text-white placeholder-platinum focus:border-silver focus:outline-none"
+          className={clsx(inputBase)}
         >
           <option value="">Select a category</option>
           <option value="real_estate">Real Estate / Loan</option>
@@ -111,7 +116,7 @@ export default function ContactFields({
           value={formData.appointmentType}
           onChange={onChange}
           aria-invalid={!!errors.appointmentType}
-          className="w-full rounded border border-platinum bg-deepgray px-3 py-2 text-white placeholder-platinum focus:border-silver focus:outline-none disabled:opacity-50 disabled:cursor-not-allowed"
+          className={clsx(inputBase, disabledStyles)}
         >
           <option value="">Select type</option>
           <option value="in_person">In-Person</option>
@@ -134,7 +139,7 @@ export default function ContactFields({
           value={formData.date}
           onChange={onChange}
           aria-invalid={!!errors.date}
-          className="w-full rounded border border-platinum bg-deepgray px-3 py-2 text-white placeholder-platinum focus:border-silver focus:outline-none disabled:opacity-50 disabled:cursor-not-allowed"
+          className={clsx(inputBase, disabledStyles)}
         />
         {errors.date && (
           <p role="alert" className="mt-1 text-sm text-red-500">
@@ -153,7 +158,7 @@ export default function ContactFields({
           value={formData.time}
           onChange={onChange}
           aria-invalid={!!errors.time}
-          className="w-full rounded border border-platinum bg-deepgray px-3 py-2 text-white placeholder-platinum focus:border-silver focus:outline-none disabled:opacity-50 disabled:cursor-not-allowed"
+          className={clsx(inputBase, disabledStyles)}
         />
         {errors.time && (
           <p role="alert" className="mt-1 text-sm text-red-500">

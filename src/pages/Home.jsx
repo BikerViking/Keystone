@@ -10,7 +10,7 @@ export default function Home() {
       />
       <Hero />
 
-      {/* Separate section with explicit landmarks for accessibility */}
+      {/* Why Choose Us section explains our value prop */}
       <MotionSection
         aria-labelledby="why-heading"
         className="container flex flex-col items-center gap-6 py-8 text-center"
@@ -26,6 +26,7 @@ export default function Home() {
           convenient mobile notary services. We bring the notary public to you.
         </p>
       </MotionSection>
-
-      {/* Apply margin and border to visually separate from the text above */}
-      <Credentials />    </>  );}
+      <Credentials />
+    </>
+  );
+}

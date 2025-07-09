@@ -1,6 +1,7 @@
-import { useState, useRef, useEffect } from "react";
-import { Link, NavLink } from "react-router-dom";
-import { AnimatePresence } from "framer-motion";
+import { useState, useRef, useEffect } from 'react';
+import { Link, NavLink } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
+import clsx from 'clsx';
 
 const navItems = [
   { name: "Home", path: "/" },
@@ -51,10 +52,10 @@ export default function Navbar() {
   }, [open]);
 
   const linkClasses = ({ isActive }) =>
-    // Deep gray items stand out against the black overlay
-    `block rounded border border-transparent bg-deepgray px-3 py-2 text-lg font-medium transition-colors hover:bg-charcoal hover:border-silver hover:text-silver hover:shadow ${
-      isActive ? "text-silver shadow-inner" : "text-platinum"
-    }`;
+    clsx(
+      'block rounded border border-transparent bg-deepgray px-3 py-2 text-lg font-medium transition-colors hover:bg-charcoal hover:border-silver hover:text-silver hover:shadow',
+      isActive ? 'text-silver shadow-inner' : 'text-platinum',
+    );
 
   return (
     <header

@@ -1,5 +1,6 @@
 import CheckIcon from './CheckIcon';
 import MotionSection from './MotionSection';
+import clsx from 'clsx';
 
 // Provide optional className for additional layout control
 export default function Credentials({ className = '' }) {
@@ -13,7 +14,10 @@ export default function Credentials({ className = '' }) {
     // Top margin and border create clear division from prior section
     <MotionSection
       aria-labelledby="credentials-heading"
-      className={`container mt-12 border-t border-deepgray py-8 text-center flex flex-col gap-6 ${className}`}
+      className={clsx(
+        'container mt-12 border-t border-deepgray py-8 text-center flex flex-col gap-6',
+        className,
+      )}
     >
       <header className="flex items-center justify-center gap-4">
         {/*

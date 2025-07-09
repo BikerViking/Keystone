@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { MotionSection, SEO } from '../components';
+import clsx from 'clsx';
 
 const faqs = [
   {
@@ -61,7 +62,10 @@ export default function FAQ() {
               >
                 <span className="font-medium">{q}</span>
                 <svg
-                  className={`h-5 w-5 transform transition-transform ${isOpen ? 'rotate-45 text-silver' : 'text-platinum'}`}
+                  className={clsx(
+                    'h-5 w-5 transform transition-transform',
+                    isOpen ? 'rotate-45 text-silver' : 'text-platinum',
+                  )}
                   viewBox="0 0 20 20"
                   fill="none"
                   stroke="currentColor"
