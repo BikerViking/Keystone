@@ -22,8 +22,8 @@ describe("Credentials component", () => {
     );
     const className = badge.getAttribute("class");
     expect(className).toEqual(expect.stringContaining("relative"));
-    expect(className).toEqual(expect.stringContaining("w-32"));
-    expect(className).toEqual(expect.stringContaining("h-32"));
+    expect(className).toEqual(expect.stringContaining("w-28"));
+    expect(className).toEqual(expect.stringContaining("h-28"));
     expect(className).toEqual(expect.stringContaining("-my-8"));
     expect(className).toEqual(expect.stringContaining("drop-shadow-xl"));
     expect(badge.getAttribute("width")).toBeNull();

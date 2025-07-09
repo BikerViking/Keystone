@@ -22,3 +22,4 @@
 - Scaled NNA badge up by 25% while maintaining center alignment.
 - Replaced NNA badge image with a 220x220 asset to remove scaling.
 - Final-size badge now absolutely positioned to keep the heading centered.
+- Removed background and padding from the Credentials heading and badge so the underline shows continuously behind them.
