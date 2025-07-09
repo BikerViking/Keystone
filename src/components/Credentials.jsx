@@ -19,35 +19,20 @@ export default function Credentials({ className = '' }) {
         className,
       )}
     >
-      <header className="relative flex justify-center">
-        {/*
-          Center heading to mirror other sections while preserving space for the
-          credential badge overlay.
-        */}
+      <header
+        className="heading-gradient inline-flex items-center justify-center gap-4"
+      >
         <h2
           id="credentials-heading"
-
-          /* Uniform width ensures the decorative underline matches other
-             headings. Additional padding keeps text clear of the badge. */
-          className="w-full pr-32 text-3xl font-serif font-semibold tracking-wide heading-gradient text-silver"
+          className="text-3xl font-serif font-semibold tracking-wide text-silver"
         >
           Credentials
         </h2>
-        {/* display NNA credential badge next to the heading */}
-        {/*
-          Position badge over the extended underline without shifting the
-          heading. Larger size improves readability across breakpoints.
-        */}
+        {/* Ensure badge stays beside heading across breakpoints */}
         <img
           src="/nna-badge.png"
           alt="Certified NNA Notary Signing Agent 2025 badge"
-
-          /* Enlarged by an additional ~12% for improved visibility */
-          /*
-            Responsive offsets keep the badge in the same visual spot
-            across breakpoints without shifting surrounding elements.
-          */
-          className="absolute right-4 sm:right-10 top-1/2 sm:top-[calc(50%+1.25rem)] h-[8rem] w-auto -translate-y-1/2"
+          className="h-20 w-auto flex-shrink-0 sm:h-24"
           width="128"
           height="128"
         />
