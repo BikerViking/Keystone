@@ -17,7 +17,7 @@ export default function Home() {
       >
         <h2
           id="why-heading"
-          className="why-heading text-3xl font-serif font-semibold tracking-wide heading-gradient text-silver"
+          className="why-heading w-full text-3xl font-serif font-semibold tracking-wide heading-gradient text-silver"
         >
           Why Choose Us?
         </h2>
