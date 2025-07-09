@@ -20,7 +20,7 @@ export default function Contact() {
 
   if (submitted) {
     return (
-      <MotionSection className="container space-y-6 py-20">
+      <MotionSection className="container flex flex-col gap-6 py-20">
         <SEO
           title="Contact Keystone Notary Group | Schedule a Notary"
           description="Request a mobile notary appointment or ask questions through our contact form."
@@ -32,7 +32,7 @@ export default function Contact() {
   }
 
   return (
-    <MotionSection id="contact" className="container space-y-8 py-8">
+    <MotionSection id="contact" className="container flex flex-col gap-8 py-8">
       <SEO
         title="Contact Keystone Notary Group | Schedule a Notary"
         description="Request a mobile notary appointment or ask questions through our contact form."

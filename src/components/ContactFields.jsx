@@ -7,7 +7,7 @@ export default function ContactFields({
   setErrors,
 }) {
   return (
-    <fieldset className="space-y-4">
+    <fieldset className="flex flex-col gap-4">
       <label className="block" htmlFor="name">
         <span className="mb-1 block text-platinum">Full Name</span>
         <input

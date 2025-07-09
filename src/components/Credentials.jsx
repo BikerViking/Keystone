@@ -13,7 +13,7 @@ export default function Credentials({ className = '' }) {
     // Top margin and border create clear division from prior section
     <MotionSection
       aria-labelledby="credentials-heading"
-      className={`container mt-12 border-t border-deepgray py-8 text-center space-y-6 ${className}`}
+      className={`container mt-12 border-t border-deepgray py-8 text-center flex flex-col gap-6 ${className}`}
     >
       <header className="flex items-center justify-center gap-4">
         {/*
@@ -39,7 +39,7 @@ export default function Credentials({ className = '' }) {
         />
       </header>
 
-      <ul className="mx-auto w-max space-y-4 text-left">
+      <ul className="mx-auto w-max flex flex-col gap-4 text-left">
         {credentials.map((cred) => (
           <li key={cred} className="flex items-start justify-start">
             <CheckIcon className="mr-2 h-5 w-5 text-silver" aria-hidden="true" />
