@@ -36,6 +36,7 @@ export default function Credentials({ className = "" }) {
           />
         </div>
       </header>
+
       <ul className="mx-auto w-max flex flex-col gap-4 text-left">
         {credentials.map((cred) => (
           <li key={cred} className="flex items-start justify-start">
@@ -43,7 +44,8 @@ export default function Credentials({ className = "" }) {
               className="mr-2 h-5 w-5 text-silver"
               aria-hidden="true"
             />
-            <span className="text-platinum">{cred}</span>          </li>
+            <span className="text-platinum">{cred}</span>
+          </li>
         ))}
       </ul>
     </MotionSection>
