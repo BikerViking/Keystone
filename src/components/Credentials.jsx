@@ -42,13 +42,12 @@ export default function Credentials({ className = '' }) {
           src="/nna-badge.png"
           alt="Certified NNA Notary Signing Agent 2025 badge"
 
-          /* Enlarged by an additional ~12% for improved visibility */
           /*
-            Move badge lower so its center aligns with the decorative underline
-            rather than the heading's midpoint. Horizontal position remains
-            unchanged.
+            Badge size scales with viewport to maintain proportion without
+            altering its fixed position. Height adjusts gradually from 6rem on
+            small screens up to 8rem on larger displays.
           */
-          className="absolute right-10 top-[calc(50%+1.25rem)] h-[8rem] w-auto -translate-y-1/2"
+          className="absolute right-10 top-[calc(50%+1.25rem)] h-24 sm:h-28 md:h-32 lg:h-36 w-auto -translate-y-1/2"
           width="128"
           height="128"
         />
