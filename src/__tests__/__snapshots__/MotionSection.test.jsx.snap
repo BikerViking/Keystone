@@ -1,0 +1,12 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`MotionSection component > matches snapshot 1`] = `
+<DocumentFragment>
+  <section
+    class=""
+    style="opacity: 0; transform: translateY(20px);"
+  >
+    Hello
+  </section>
+</DocumentFragment>
+`;
