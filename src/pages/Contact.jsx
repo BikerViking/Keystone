@@ -188,6 +188,9 @@ export default function Contact() {
                 if (!checked) {
                   setErrors((prev) => {
                     const { date, time, appointmentType, ...rest } = prev;
+                    void date;
+                    void time;
+                    void appointmentType;
                     return rest;
                   });
                 }
