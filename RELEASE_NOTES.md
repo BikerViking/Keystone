@@ -19,3 +19,4 @@
 - Ensured NNA badge uses responsive positioning to keep alignment consistent on all devices.
 - Decorative underline now lives on the `header` wrapper so it stretches under both the heading and badge.
 - Shifted badge downward to sit directly atop the underline across breakpoints.
+- Scaled NNA badge up by 25% while maintaining center alignment.

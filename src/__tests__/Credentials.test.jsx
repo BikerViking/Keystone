@@ -21,7 +21,8 @@ describe('Credentials component', () => {
     expect(className).toEqual(expect.stringContaining('w-auto'));
     expect(className).toEqual(expect.stringContaining('sm:h-24'));
     expect(className).toEqual(expect.stringContaining('flex-shrink-0'));
-    expect(className).toEqual(expect.stringContaining('translate-y-1/2'));
+    expect(className).toEqual(expect.stringContaining('translate-y-[62.5%]'));
+    expect(className).toEqual(expect.stringContaining('scale-125'));
   });
 
   const viewports = [320, 640, 1024, 1280];

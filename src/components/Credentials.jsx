@@ -31,7 +31,7 @@ export default function Credentials({ className = '' }) {
         <img
           src="/nna-badge.png"
           alt="Certified NNA Notary Signing Agent 2025 badge"
-          className="h-20 w-auto flex-shrink-0 sm:h-24 translate-y-1/2"
+          className="h-20 w-auto flex-shrink-0 sm:h-24 translate-y-[62.5%] scale-125"
           width="128"
           height="128"
         />
@@ -44,5 +44,4 @@ export default function Credentials({ className = '' }) {
             <span className="text-platinum">{cred}</span>
           </li>
         ))}
-      </ul>
-    </MotionSection>  );}
+      </ul>    </MotionSection>  );}
