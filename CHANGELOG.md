@@ -11,5 +11,5 @@ All notable changes to this project will be documented in this file.
   consistent appearance.
 - Shifted NNA badge closer to the heading and increased size by 20%.
 - Aligned badge center with the decorative underline for cleaner spacing.
-  
-## [1.0.0] - YYYY-MM-DD### Added- Initial project setup.- Core components and layouts.
+- Enlarged NNA badge by an additional 12% for improved visibility.
+  ## [1.0.0] - YYYY-MM-DD### Added- Initial project setup.- Core components and layouts.
