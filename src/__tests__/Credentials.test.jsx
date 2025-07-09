@@ -21,9 +21,11 @@ describe("Credentials component", () => {
       /certified nna notary signing agent 2025 badge/i,
     );
     const className = badge.getAttribute("class");
-    expect(className).toEqual(expect.stringContaining("absolute"));
-    expect(className).toEqual(expect.stringContaining("translate-y-[62.5%]"));
-    expect(className).toEqual(expect.stringContaining("flex-shrink-0"));
+    expect(className).toEqual(expect.stringContaining("relative"));
+    expect(className).toEqual(expect.stringContaining("w-32"));
+    expect(className).toEqual(expect.stringContaining("h-32"));
+    expect(className).toEqual(expect.stringContaining("-my-8"));
+    expect(className).toEqual(expect.stringContaining("drop-shadow-xl"));
     expect(badge.getAttribute("width")).toBeNull();
     expect(badge.getAttribute("height")).toBeNull();
   });
