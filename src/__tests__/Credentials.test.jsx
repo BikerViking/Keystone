@@ -13,6 +13,15 @@ describe('Credentials component', () => {
     expect(badge).toBeInTheDocument();
   });
 
+  test('badge uses responsive positioning classes', () => {
+    render(<Credentials />);
+    const badge = screen.getByAltText(/certified nna notary signing agent 2025 badge/i);
+    const className = badge.getAttribute('class');
+    expect(className).toEqual(
+      expect.stringContaining('absolute right-4 sm:right-10 top-1/2 sm:top-[calc(50%+1.25rem)] h-[8rem] w-auto -translate-y-1/2'),
+    );
+  });
+
   const viewports = [320, 640, 1024, 1280];
 
   test.each(viewports)('renders correctly at %ipx viewport', (width) => {

@@ -44,11 +44,10 @@ export default function Credentials({ className = '' }) {
 
           /* Enlarged by an additional ~12% for improved visibility */
           /*
-            Move badge lower so its center aligns with the decorative underline
-            rather than the heading's midpoint. Horizontal position remains
-            unchanged.
+            Responsive offsets keep the badge in the same visual spot
+            across breakpoints without shifting surrounding elements.
           */
-          className="absolute right-10 top-[calc(50%+1.25rem)] h-[8rem] w-auto -translate-y-1/2"
+          className="absolute right-4 sm:right-10 top-1/2 sm:top-[calc(50%+1.25rem)] h-[8rem] w-auto -translate-y-1/2"
           width="128"
           height="128"
         />
