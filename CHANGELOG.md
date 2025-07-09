@@ -9,6 +9,7 @@ All notable changes to this project will be documented in this file.
   NNA badge over the Credentials line.
 - Adjusted Credentials underline alignment and enlarged badge for
   consistent appearance.
+  
 ## [1.0.0] - YYYY-MM-DD
 ### Added
 - Initial project setup.- Core components and layouts.

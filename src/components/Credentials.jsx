@@ -26,6 +26,7 @@ export default function Credentials({ className = '' }) {
         */}
         <h2
           id="credentials-heading"
+
           /* Uniform width ensures the decorative underline matches other
              headings. Additional padding keeps text clear of the badge. */
           className="w-full pr-32 text-3xl font-serif font-semibold tracking-wide heading-gradient text-silver"
@@ -40,6 +41,7 @@ export default function Credentials({ className = '' }) {
         <img
           src="/nna-badge.png"
           alt="Certified NNA Notary Signing Agent 2025 badge"
+
           className="absolute right-4 top-1/2 h-24 w-auto -translate-y-1/2"
           width="96"
           height="96"
