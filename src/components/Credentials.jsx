@@ -44,6 +44,8 @@ export default function Credentials({ className = '' }) {
           height="80"
         />
       </header>
+      {/* match hero divider styling */}
+      <div aria-hidden="true" className="self-start ml-0 h-px w-24 bg-silver" />
 
       <ul className="mx-auto w-max flex flex-col gap-4 text-left">
         {credentials.map((cred) => (
