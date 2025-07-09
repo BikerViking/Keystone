@@ -1,0 +1,81 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Navbar component > matches snapshot 1`] = `
+<DocumentFragment>
+  <header
+    class="fixed inset-x-0 top-0 z-50 bg-black/80 backdrop-blur-md"
+    role="banner"
+  >
+    <nav
+      class="container flex items-center justify-between py-3 md:py-4"
+    >
+      <a
+        class="flex items-center rounded border border-transparent px-3 text-xl font-semibold font-serif tracking-wide text-white transition-colors hover:border-silver hover:text-silver"
+        href="/"
+      >
+        Keystone Notary Group, LLC
+      </a>
+      <button
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+        class="md:hidden flex flex-col items-center justify-center"
+      >
+        <span
+          class="mb-1 block h-0.5 w-6 bg-platinum transition-colors hover:bg-silver"
+        />
+        <span
+          class="mb-1 block h-0.5 w-6 bg-platinum transition-colors hover:bg-silver"
+        />
+        <span
+          class="block h-0.5 w-6 bg-platinum transition-colors hover:bg-silver"
+        />
+      </button>
+      <ul
+        class="hidden md:flex space-x-3"
+      >
+        <li>
+          <a
+            aria-current="page"
+            class="block rounded border border-transparent bg-deepgray px-3 py-2 text-lg font-medium transition-colors hover:bg-charcoal hover:border-silver hover:text-silver hover:shadow text-silver shadow-inner"
+            href="/"
+          >
+            Home
+          </a>
+        </li>
+        <li>
+          <a
+            class="block rounded border border-transparent bg-deepgray px-3 py-2 text-lg font-medium transition-colors hover:bg-charcoal hover:border-silver hover:text-silver hover:shadow text-platinum"
+            href="/about"
+          >
+            About
+          </a>
+        </li>
+        <li>
+          <a
+            class="block rounded border border-transparent bg-deepgray px-3 py-2 text-lg font-medium transition-colors hover:bg-charcoal hover:border-silver hover:text-silver hover:shadow text-platinum"
+            href="/services"
+          >
+            Services
+          </a>
+        </li>
+        <li>
+          <a
+            class="block rounded border border-transparent bg-deepgray px-3 py-2 text-lg font-medium transition-colors hover:bg-charcoal hover:border-silver hover:text-silver hover:shadow text-platinum"
+            href="/faq"
+          >
+            FAQ
+          </a>
+        </li>
+        <li>
+          <a
+            class="block rounded border border-transparent bg-deepgray px-3 py-2 text-lg font-medium transition-colors hover:bg-charcoal hover:border-silver hover:text-silver hover:shadow text-platinum"
+            href="/contact"
+          >
+            Contact
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+</DocumentFragment>
+`;

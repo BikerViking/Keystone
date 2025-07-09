@@ -14,4 +14,13 @@ describe('Layout component', () => {
     expect(screen.getByRole('banner')).toBeInTheDocument();
     expect(screen.getByRole('contentinfo')).toBeInTheDocument();
   });
+
+  test('matches snapshot', () => {
+    const { asFragment } = render(
+      <MemoryRouter future={{ v7_relativeSplatPath: true, v7_startTransition: true }}>
+        <Layout />
+      </MemoryRouter>,
+    );
+    expect(asFragment()).toMatchSnapshot();
+  });
 });
