@@ -7,5 +7,5 @@
 - Full scanner interface and results card rendering.
 
 ### Fixes
-- Fixed visual alignment issues with the NNA badge.
-- Polished responsive layout on mobile viewports.
+- Fixed visual alignment issues with the NNA badge.- Polished responsive layout on mobile viewports.
+- Reverted section divider updates to maintain previous design.

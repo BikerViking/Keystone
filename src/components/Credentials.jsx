@@ -44,8 +44,6 @@ export default function Credentials({ className = '' }) {
           height="80"
         />
       </header>
-      {/* replicate hero divider beneath heading */}
-      <hr className="w-full border-t border-gray-600 my-4" />
 
       <ul className="mx-auto w-max flex flex-col gap-4 text-left">
         {credentials.map((cred) => (
