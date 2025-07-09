@@ -39,6 +39,13 @@ export default function StructuredData() {
           },
         },
         {
+          '@type': 'Notary',
+          '@id': `${baseUrl}/#services`,
+          serviceType: 'Mobile Notary Public',
+          areaServed: 'Philadelphia, PA',
+          provider: { '@id': `${baseUrl}/#organization` },
+        },
+        {
           '@type': 'WebSite',
           '@id': `${baseUrl}/#website`,
           url: baseUrl,
