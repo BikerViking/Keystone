@@ -17,7 +17,7 @@ export default function Hero() {
         transition={{ duration: 0.8 }}
         className="container relative z-10 flex flex-col items-center gap-8 px-4 lg:gap-10"
       >
-        <h1 className="hero-heading text-4xl font-serif font-semibold tracking-wide heading-gradient lg:text-6xl">
+        <h1 className="hero-heading w-full text-4xl font-serif font-semibold tracking-wide heading-gradient lg:text-6xl">
           Keystone Notary Group, LLC
         </h1>
         <p className="text-lg font-light lg:text-2xl">Reliable Mobile Notary Services</p>
