@@ -3,7 +3,6 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
-
 - Reverted to "Audit and secure code base for HTTPS" patch state.
 - Extended decorative underline for section headings and positioned
   NNA badge over the Credentials line.
@@ -11,5 +10,9 @@ All notable changes to this project will be documented in this file.
   consistent appearance.
 - Shifted NNA badge closer to the heading and increased size by 20%.
 - Aligned badge center with the decorative underline for cleaner spacing.
-- Enlarged NNA badge by an additional 12% for improved visibility.
-  ## [1.0.0] - YYYY-MM-DD### Added- Initial project setup.- Core components and layouts.
+- Enlarged NNA badge by an additional 12% for improved visibility.- Restored NNA badge enlargement after rollback.
+
+## [1.0.0] - YYYY-MM-DD
+### Added
+- Initial project setup.
+- Core components and layouts.

@@ -19,29 +19,38 @@ export default function Credentials({ className = '' }) {
         className,
       )}
     >
-      <header className="heading-gradient flex items-center justify-center gap-4">
+      <header className="relative flex justify-center">
         {/*
-          Shift heading slightly left so the "C" aligns with the list
-          checkmarks while keeping the badge spacing consistent.
+          Center heading to mirror other sections while preserving space for the
+          credential badge overlay.
         */}
         <h2
           id="credentials-heading"
-          /*
-            Slightly increased negative margin ensures the "C" of
-            Credentials lines up with the leading check marks below
-            while maintaining badge spacing across breakpoints.
-          */
-          className="-ml-8 text-3xl font-serif font-semibold tracking-wide text-silver"
+
+          /* Uniform width ensures the decorative underline matches other
+             headings. Additional padding keeps text clear of the badge. */
+          className="w-full pr-32 text-3xl font-serif font-semibold tracking-wide heading-gradient text-silver"
         >
           Credentials
         </h2>
         {/* display NNA credential badge next to the heading */}
+        {/*
+          Position badge over the extended underline without shifting the
+          heading. Larger size improves readability across breakpoints.
+        */}
         <img
           src="/nna-badge.png"
           alt="Certified NNA Notary Signing Agent 2025 badge"
-          className="h-20 w-auto flex-none relative z-10"
-          width="80"
-          height="80"
+
+          /* Enlarged by an additional ~12% for improved visibility */
+          /*
+            Move badge lower so its center aligns with the decorative underline
+            rather than the heading's midpoint. Horizontal position remains
+            unchanged.
+          */
+          className="absolute right-10 top-[calc(50%+1.25rem)] h-[8rem] w-auto -translate-y-1/2"
+          width="128"
+          height="128"
         />
       </header>
 
