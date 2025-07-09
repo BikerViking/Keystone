@@ -19,11 +19,11 @@ export default function Credentials({ className = '' }) {
         className,
       )}
     >
-      <header className="flex flex-nowrap items-center justify-center gap-4">
+      <header className="heading-gradient flex flex-nowrap items-center justify-center gap-4">
         {/* Keep underline consistent with other headings */}
         <h2
           id="credentials-heading"
-          className="text-3xl font-serif font-semibold tracking-wide heading-gradient text-silver"
+          className="text-3xl font-serif font-semibold tracking-wide text-silver"
         >
           Credentials
         </h2>
@@ -46,5 +46,4 @@ export default function Credentials({ className = '' }) {
         ))}
       </ul>
     </MotionSection>
-  );
-}
+  );}
