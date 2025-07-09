@@ -19,7 +19,7 @@ export default function Credentials({ className = '' }) {
         className,
       )}
     >
-      <header className="flex items-center justify-center gap-4">
+      <header className="heading-gradient flex items-center justify-center gap-4">
         {/*
           Shift heading slightly left so the "C" aligns with the list
           checkmarks while keeping the badge spacing consistent.
@@ -31,7 +31,7 @@ export default function Credentials({ className = '' }) {
             Credentials lines up with the leading check marks below
             while maintaining badge spacing across breakpoints.
           */
-          className="-ml-8 text-3xl font-serif font-semibold tracking-wide heading-gradient text-silver"
+          className="-ml-8 text-3xl font-serif font-semibold tracking-wide text-silver"
         >
           Credentials
         </h2>
@@ -39,7 +39,7 @@ export default function Credentials({ className = '' }) {
         <img
           src="/nna-badge.png"
           alt="Certified NNA Notary Signing Agent 2025 badge"
-          className="h-20 w-auto flex-none"
+          className="h-20 w-auto flex-none relative z-10"
           width="80"
           height="80"
         />
