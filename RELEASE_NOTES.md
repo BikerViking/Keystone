@@ -54,6 +54,12 @@
 
 - Standardized divider line style for consistent appearance site-wide.
 
+## Version 1.0.6 – YYYY-MM-DD
+
+### Added
+
+- Chat widget now closes when clicking outside, traps focus, and includes FAQ shortcuts.
+
 ## Version 1.0.1 – YYYY-MM-DD
 
 ### Changes
