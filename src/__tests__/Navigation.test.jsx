@@ -37,3 +37,12 @@ test('page indicator reflects current page and supports navigation', async () =>
   expect(await screen.findByRole('heading', { name: /^services$/i })).toBeInTheDocument();
 });
 
+test('vertical scrolling does not trigger navigation', () => {
+  setup();
+  const main = screen.getByRole('main');
+  fireEvent.touchStart(main, { touches: [{ clientX: 100, clientY: 0 }] });
+  fireEvent.touchMove(main, { touches: [{ clientX: 100, clientY: 50 }] });
+  fireEvent.touchEnd(main, { changedTouches: [{ clientX: 100, clientY: 100 }] });
+  expect(screen.queryByRole('heading', { name: /about us/i })).not.toBeInTheDocument();
+});
+

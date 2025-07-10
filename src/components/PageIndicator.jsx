@@ -1,9 +1,17 @@
+import { motion } from 'framer-motion';
 import clsx from 'clsx';
 
-export default function PageIndicator({ pages, current, onSelect }) {
+export default function PageIndicator({ pages, current, onSelect, className }) {
   return (
-    <nav aria-label="Page indicator" className="mt-4">
-      <ul className="flex items-center justify-center gap-2">
+    <motion.nav
+      aria-label="Page indicator"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 0.5 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.3, ease: 'easeInOut' }}
+      className={clsx(className)}
+    >
+      <ul className="pointer-events-auto flex items-center justify-center gap-2">
         {pages.map((page, i) => (
           <li key={page}>
             <button
@@ -20,6 +28,6 @@ export default function PageIndicator({ pages, current, onSelect }) {
           </li>
         ))}
       </ul>
-    </nav>
+    </motion.nav>
   );
 }
