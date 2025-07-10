@@ -19,32 +19,30 @@ export default function Credentials({ className = '' }) {
         className,
       )}
     >
-      <header className="heading-gradient flex flex-nowrap items-center justify-center gap-4">
-        {/* Keep underline consistent with other headings */}
-        <h2
-          id="credentials-heading"
-          className="text-3xl font-serif font-semibold tracking-wide text-silver"
-        >
-          Credentials
-        </h2>
-        {/* Ensure badge stays beside heading across breakpoints */}
+      <h2
+        id="credentials-heading"
+        className="text-3xl font-serif font-semibold tracking-wide heading-gradient text-silver"
+      >
+        Credentials
+      </h2>
+
+      {/* Badge sits beside the credentials list on desktop and below on mobile */}
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
+        <ul className="flex flex-col gap-4 text-left">
+          {credentials.map((cred) => (
+            <li key={cred} className="flex items-start">
+              <CheckIcon className="mr-2 h-5 w-5 text-silver" aria-hidden="true" />
+              <span className="text-platinum">{cred}</span>
+            </li>
+          ))}
+        </ul>
         <img
           src="/nna-badge.png"
-          alt="Certified NNA Notary Signing Agent 2025 badge"
-          className="flex-shrink-0 translate-y-[62.5%]"
-          width="220"
-          height="220"
+          alt="NNA Certified Notary Signing Agent 2025 badge"
+          className="w-[220px] h-[220px] mx-auto mt-6 sm:mt-0 sm:ml-8 drop-shadow-xl pointer-events-none select-none"
+          draggable={false}
         />
-      </header>
-
-      <ul className="mx-auto w-max flex flex-col gap-4 text-left">
-        {credentials.map((cred) => (
-          <li key={cred} className="flex items-start justify-start">
-            <CheckIcon className="mr-2 h-5 w-5 text-silver" aria-hidden="true" />
-            <span className="text-platinum">{cred}</span>
-          </li>
-        ))}
-      </ul>
+      </div>
     </MotionSection>
   );
 }
