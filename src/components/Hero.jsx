@@ -8,7 +8,7 @@ export default function Hero() {
   const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0, 300], [0, -40]);
   return (
-    <section className="relative flex min-h-screen w-full items-center justify-center bg-black px-4 text-center sm:px-8">
+    <section className="hero-layer relative flex min-h-screen w-full items-center justify-center overflow-hidden bg-black px-4 text-center sm:px-8">
       {/* Gradient overlay improves text legibility without obscuring background */}
       <div className="absolute inset-0 bg-gradient-to-b from-black via-black/70 to-transparent" />
       <motion.div
@@ -33,7 +33,7 @@ export default function Hero() {
               draggable={false}
             />
           </motion.div>
-          <h1 className="hero-heading w-full text-4xl font-serif font-semibold tracking-wide heading-gradient lg:text-6xl">
+          <h1 className="hero-heading animated-gradient w-full text-4xl font-serif font-semibold tracking-wide heading-gradient lg:text-6xl">
             Keystone Notary Group, LLC
           </h1>
         </header>
