@@ -33,6 +33,7 @@ All notable changes to this project will be documented in this file.
 - Enhanced navigation link transitions and focus visibility.
 - Refined chat widget sizing and input focus styling.
 - Removed obsolete development TODO comment.
+- Added focus rings to CTA buttons and mobile menu trigger for improved keyboard accessibility.
 
 ## [1.0.2] - YYYY-MM-DD
 
