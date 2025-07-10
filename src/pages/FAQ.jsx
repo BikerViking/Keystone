@@ -38,16 +38,17 @@ export default function FAQ() {
   };
 
   return (
-    <MotionSection className="container flex flex-col gap-8 py-8">
+    <MotionSection className="w-full py-8 px-4 sm:px-8">
       <SEO
         title="Notary FAQs | Keystone Notary Group"
         description="Answers to common questions about our mobile notary services and scheduling."
         path="/faq"
       />
-      <h1 className="text-4xl font-serif font-semibold tracking-wide heading-gradient text-silver">
-        Frequently Asked Questions
-      </h1>
-      <ul className="flex flex-col gap-4">
+      <div className="mx-auto flex max-w-2xl flex-col gap-8">
+        <h1 className="text-4xl font-serif font-semibold tracking-wide heading-gradient text-silver">
+          Frequently Asked Questions
+        </h1>
+        <ul className="flex flex-col gap-4">
         {faqs.map(({ q, a }, idx) => {
           const isOpen = openIndex === idx;
           return (
@@ -95,7 +96,8 @@ export default function FAQ() {
             </li>
           );
         })}
-      </ul>
+        </ul>
+      </div>
     </MotionSection>
   );
 }

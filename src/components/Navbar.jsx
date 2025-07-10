@@ -58,7 +58,7 @@ export default function Navbar() {
       role="banner"
       className="fixed inset-x-0 top-0 z-50 bg-black/80 backdrop-blur-md"
     >
-      <nav className="container flex items-center justify-between py-3 md:py-4">
+      <nav className="flex w-full items-center justify-between py-3 px-4 sm:px-8 md:py-4">
         <Link
           to="/"
           className="flex items-center rounded border border-transparent px-3 text-xl font-semibold font-serif tracking-wide text-white transition-colors hover:border-silver hover:text-silver"

@@ -15,10 +15,11 @@ export default function Credentials({ className = '' }) {
     <MotionSection
       aria-labelledby="credentials-heading"
       className={clsx(
-        'container mt-12 border-t border-deepgray py-8 text-center flex flex-col gap-6',
+        'mt-12 flex w-full flex-col items-center gap-6 border-t border-deepgray py-8 px-4 sm:px-8 text-center',
         className,
       )}
     >
+      <div className="mx-auto max-w-2xl">
       <h2
         id="credentials-heading"
         className="text-3xl font-serif font-semibold tracking-wide heading-gradient text-silver"
@@ -34,6 +35,7 @@ export default function Credentials({ className = '' }) {
           </li>
         ))}
       </ul>
+      </div>
     </MotionSection>
   );
 }

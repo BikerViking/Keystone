@@ -29,7 +29,7 @@ export default function Services() {
   ];
 
   return (
-    <MotionSection className="container flex flex-col gap-8">
+    <MotionSection className="flex w-full flex-col gap-8 px-4 sm:px-8">
       <SEO
         title="Notary Services | Keystone Notary Group"
         description="Explore our full range of notary services including loan signings, apostilles, and more."

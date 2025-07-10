@@ -15,7 +15,7 @@ export default function Hero() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="container relative z-10 flex flex-col items-center gap-8 px-4 lg:gap-10"
+        className="relative z-10 flex w-full flex-col items-center gap-8 px-4 sm:px-8 lg:gap-10"
       >
         <h1 className="hero-heading w-full text-4xl font-serif font-semibold tracking-wide heading-gradient lg:text-6xl">
           Keystone Notary Group, LLC
