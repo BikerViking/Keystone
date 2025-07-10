@@ -26,23 +26,14 @@ export default function Credentials({ className = '' }) {
         Credentials
       </h2>
 
-      {/* Badge sits beside the credentials list on desktop and below on mobile */}
-      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
-        <ul className="flex flex-col gap-4 text-left">
-          {credentials.map((cred) => (
-            <li key={cred} className="flex items-start">
-              <CheckIcon className="mr-2 h-5 w-5 text-silver" aria-hidden="true" />
-              <span className="text-platinum">{cred}</span>
-            </li>
-          ))}
-        </ul>
-        <img
-          src="/nna-badge.png"
-          alt="NNA Certified Notary Signing Agent 2025 badge"
-          className="w-[220px] h-[220px] mx-auto mt-6 sm:mt-0 sm:ml-8 drop-shadow-xl pointer-events-none select-none"
-          draggable={false}
-        />
-      </div>
+      <ul className="flex flex-col gap-4 text-left">
+        {credentials.map((cred) => (
+          <li key={cred} className="flex items-start">
+            <CheckIcon className="mr-2 h-5 w-5 text-silver" aria-hidden="true" />
+            <span className="text-platinum">{cred}</span>
+          </li>
+        ))}
+      </ul>
     </MotionSection>
   );
 }

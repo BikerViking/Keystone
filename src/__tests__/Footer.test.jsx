@@ -13,4 +13,12 @@ describe('Footer component', () => {
     const footer = screen.getByRole('contentinfo');
     expect(footer).toBeInTheDocument();
   });
+
+  test('shows clickable contact links', () => {
+    render(<Footer />);
+    const phone = screen.getByRole('link', { name: /\(267\) 309-9000/i });
+    expect(phone).toHaveAttribute('href', 'tel:2673099000');
+    const email = screen.getByRole('link', { name: /info@keystonenotarygroup.com/i });
+    expect(email).toHaveAttribute('href', 'mailto:info@keystonenotarygroup.com');
+  });
 });
