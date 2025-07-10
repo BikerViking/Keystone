@@ -18,41 +18,33 @@ export default function Credentials({ className = "" }) {
         className,
       )}
     >
-        <header className="flex justify-start w-full">
-          <div
-            className="relative flex flex-row items-center w-full"
-            style={{ minHeight: '7rem' }}
-          >
-            {/* Decorative line runs fully behind both heading and badge */}
-            <div className="absolute left-0 right-0 top-1/2 -translate-y-1/2 h-0.5 bg-gray-400 z-0" />
-            <h2
-              id="credentials-heading"
-              className="relative z-10 text-4xl font-serif font-semibold tracking-wide text-silver"
-              style={{ lineHeight: 1 }}
-            >
-              Credentials
-            </h2>
-          </div>
-        </header>
+      <header className="sticky top-0 z-20 bg-black pb-2">
+        <h2
+          id="credentials-heading"
+          className="text-4xl font-serif font-semibold tracking-wide text-silver"
+          style={{ lineHeight: 1 }}
+        >
+          Credentials
+        </h2>
+        <div className="mt-2 h-px w-full bg-gray-400" />
+      </header>
 
-      <ul className="mx-auto w-max flex flex-col gap-4 text-left">
-        {credentials.map((cred) => (
-          <li key={cred} className="flex items-start justify-start">
-            <CheckIcon
-              className="mr-2 h-5 w-5 text-silver"
-              aria-hidden="true"
-            />
-            <span className="text-platinum">{cred}</span>
-          </li>
-        ))}
-      </ul>
-      <img
-        src="/nna-badge.png"
-        className="absolute -bottom-8 -right-8 w-32 h-32 drop-shadow-xl pointer-events-none select-none"
-        style={{ zIndex: 10 }}
-        alt="NNA Certified Notary Signing Agent 2025 badge"
-        draggable={false}
-      />
+      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between">
+        <ul className="flex flex-col gap-4 text-left">
+          {credentials.map((cred) => (
+            <li key={cred} className="flex items-start justify-start">
+              <CheckIcon className="mr-2 h-5 w-5 text-silver" aria-hidden="true" />
+              <span className="text-platinum">{cred}</span>
+            </li>
+          ))}
+        </ul>
+        <img
+          src="/nna-badge.png"
+          className="block ml-auto mt-4 w-28 h-28 drop-shadow-xl pointer-events-none select-none"
+          alt="NNA Certified Notary Signing Agent 2025 badge"
+          draggable={false}
+        />
+      </div>
     </MotionSection>
   );
 }
