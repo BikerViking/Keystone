@@ -3,11 +3,14 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
+
 - Reverted to "Audit and secure code base for HTTPS" patch state.
 - Extended decorative underline for section headings and positioned
   NNA badge over the Credentials line.
 - Adjusted Credentials underline alignment and enlarged badge for
   consistent appearance.
+- Updated dependencies to latest minor versions and fixed MotionSection
+  formatting.
 - Shifted NNA badge closer to the heading and increased size by 20%.
 - Aligned badge center with the decorative underline for cleaner spacing.
 - Enlarged NNA badge by an additional 12% for improved visibility.- Restored NNA badge enlargement after rollback.
@@ -21,17 +24,23 @@ All notable changes to this project will be documented in this file.
 - Reverted Credentials layout to stable version with 220x220 NNA badge.
 
 ## [1.0.2] - YYYY-MM-DD
+
 ### Changed
+
 - Standardized full-width containers and centered content.
 - Expanded card widths and removed leftover margins.
 - Ensured divider lines span each section without gaps.
 
 ## [1.0.1] - YYYY-MM-DD
+
 ### Changed
+
 - Removed NNA badge image and updated credentials list layout.
 - Added clickable phone and email links to the footer.
 
 ## [1.0.0] - YYYY-MM-DD
+
 ### Added
+
 - Initial project setup.
 - Core components and layouts.

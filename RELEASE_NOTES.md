@@ -3,15 +3,17 @@
 ## Version 1.0.0 – YYYY-MM-DD
 
 ### Features
+
 - Production-ready release of the app.
 - Full scanner interface and results card rendering.
 
 ### Fixes
+
 - Fixed visual alignment issues with the NNA badge.
 - Polished responsive layout on mobile viewports.
 - Reverted to "Audit and secure code base for HTTPS" patch state.
 - Extended decorative underline for Why Choose Us and Credentials
-  headings, overlaying the badge without disrupting layout.- Aligned Credentials line with other sections and shifted badge left  at a larger size.
+  headings, overlaying the badge without disrupting layout.- Aligned Credentials line with other sections and shifted badge left at a larger size.
 - Moved NNA badge closer to heading and enlarged by 20% for clarity.
 - Centered NNA badge on decorative underline for improved alignment.
 - Enlarged NNA badge slightly for better readability across devices.
@@ -28,12 +30,21 @@
 ## Version 1.0.2 – YYYY-MM-DD
 
 ### Changes
+
 - Unified full-width section containers and centered interior content.
 - Updated cards to max-w-3xl and removed stray margins.
 - Divider lines now stretch edge to edge within each section.
 
+## Version 1.0.3 – YYYY-MM-DD
+
+### Changes
+
+- Updated key dependencies to current minor versions.
+- Cleaned up MotionSection component formatting.
+
 ## Version 1.0.1 – YYYY-MM-DD
 
 ### Changes
+
 - Removed the NNA badge from the Credentials section for a cleaner layout.
 - Footer now includes clickable phone and email contact links.
