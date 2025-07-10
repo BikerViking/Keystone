@@ -4,6 +4,9 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+### Added
+- Hero section now displays company parchment logo with responsive sizing.
+
 - Reverted to "Audit and secure code base for HTTPS" patch state.
 - Extended decorative underline for section headings and positioned
   NNA badge over the Credentials line.

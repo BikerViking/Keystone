@@ -42,6 +42,12 @@
 - Updated key dependencies to current minor versions.
 - Cleaned up MotionSection component formatting.
 
+## Version 1.0.4 – YYYY-MM-DD
+
+### Added
+
+- Hero section displays parchment logo at the top with responsive sizes.
+
 ## Version 1.0.1 – YYYY-MM-DD
 
 ### Changes
