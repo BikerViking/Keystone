@@ -11,11 +11,10 @@ export default function Credentials({ className = "" }) {
   ];
 
   return (
-    // Top margin and border create clear division from prior section
     <MotionSection
       aria-labelledby="credentials-heading"
       className={clsx(
-        "container mt-12 border-t border-deepgray py-8 text-center flex flex-col gap-6",
+        "relative bg-black max-w-xl mx-auto p-8 rounded-lg shadow-lg",
         className,
       )}
     >
@@ -33,13 +32,6 @@ export default function Credentials({ className = "" }) {
             >
               Credentials
             </h2>
-            <img
-              src="/nna-badge.png"
-              alt="Certified NNA Notary Signing Agent 2025 badge"
-              className="relative z-10 w-28 h-28 -my-8 ml-2 drop-shadow-xl pointer-events-none select-none"
-              style={{ objectFit: 'contain' }}
-              draggable={false}
-            />
           </div>
         </header>
 
@@ -54,4 +46,13 @@ export default function Credentials({ className = "" }) {
           </li>
         ))}
       </ul>
-    </MotionSection>  );}
+      <img
+        src="/nna-badge.png"
+        className="absolute -bottom-8 -right-8 w-32 h-32 drop-shadow-xl pointer-events-none select-none"
+        style={{ zIndex: 10 }}
+        alt="NNA Certified Notary Signing Agent 2025 badge"
+        draggable={false}
+      />
+    </MotionSection>
+  );
+}

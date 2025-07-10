@@ -10,7 +10,7 @@ describe("Credentials component", () => {
   test("displays NNA badge image with alt text", () => {
     render(<Credentials />);
     const badge = screen.getByAltText(
-      /certified nna notary signing agent 2025 badge/i,
+      /nna certified notary signing agent 2025 badge/i,
     );
     expect(badge).toBeInTheDocument();
   });
@@ -18,13 +18,14 @@ describe("Credentials component", () => {
   test("badge uses expected attributes and classes", () => {
     render(<Credentials />);
     const badge = screen.getByAltText(
-      /certified nna notary signing agent 2025 badge/i,
+      /nna certified notary signing agent 2025 badge/i,
     );
     const className = badge.getAttribute("class");
-    expect(className).toEqual(expect.stringContaining("relative"));
-    expect(className).toEqual(expect.stringContaining("w-28"));
-    expect(className).toEqual(expect.stringContaining("h-28"));
-    expect(className).toEqual(expect.stringContaining("-my-8"));
+    expect(className).toEqual(expect.stringContaining("absolute"));
+    expect(className).toEqual(expect.stringContaining("-bottom-8"));
+    expect(className).toEqual(expect.stringContaining("-right-8"));
+    expect(className).toEqual(expect.stringContaining("w-32"));
+    expect(className).toEqual(expect.stringContaining("h-32"));
     expect(className).toEqual(expect.stringContaining("drop-shadow-xl"));
     expect(badge.getAttribute("width")).toBeNull();
     expect(badge.getAttribute("height")).toBeNull();
