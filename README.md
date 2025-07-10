@@ -2,7 +2,7 @@
 
 A professional notary website built with [React](https://reactjs.org/), [Vite](https://vitejs.dev/), and [Tailwind CSS](https://tailwindcss.com/). The project includes SEO metadata, automated sitemap generation, and PWA support through a web manifest and install icons. Favicons and Apple splash screens are integrated for a polished mobile experience.
 
-The "Ask a Notary" chat widget provides quick answers and is fully accessible with keyboard navigation and high‑contrast styling.
+The "Ask a Notary" chat widget now sports a sleek glassy interface while remaining fully accessible with keyboard navigation and high‑contrast styling.
 
 ## Development
 
