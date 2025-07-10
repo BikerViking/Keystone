@@ -23,3 +23,4 @@
 - Replaced NNA badge image with a 220x220 asset to remove scaling.
 - Final-size badge now absolutely positioned to keep the heading centered.
 - Removed background and padding from the Credentials heading and badge so the underline shows continuously behind them.
+- Reverted Credentials layout to stable version with 220x220 NNA badge.
