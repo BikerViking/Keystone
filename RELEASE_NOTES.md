@@ -25,6 +25,13 @@
 - Removed background and padding from the Credentials heading and badge so the underline shows continuously behind them.
 - Reverted Credentials layout to stable version with 220x220 NNA badge.
 
+## Version 1.0.2 – YYYY-MM-DD
+
+### Changes
+- Unified full-width section containers and centered interior content.
+- Updated cards to max-w-3xl and removed stray margins.
+- Divider lines now stretch edge to edge within each section.
+
 ## Version 1.0.1 – YYYY-MM-DD
 
 ### Changes

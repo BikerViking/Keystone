@@ -19,7 +19,7 @@ export default function Credentials({ className = '' }) {
         className,
       )}
     >
-      <div className="mx-auto max-w-2xl">
+      <div className="mx-auto w-full max-w-3xl">
       <h2
         id="credentials-heading"
         className="text-3xl font-serif font-semibold tracking-wide heading-gradient text-silver"

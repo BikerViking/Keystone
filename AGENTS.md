@@ -24,3 +24,5 @@ Our mobile notaries travel throughout southeastern Pennsylvania, including Phila
 To book a notary, email [info@keystonenotarygroup.com](mailto:info@keystonenotarygroup.com) or submit a request through our website's contact page. Please include the type of documents, preferred appointment time and location so we can assign the appropriate signing agent.
 
 For urgent matters, call the phone number listed on the site to check availability. We look forward to assisting with your notarization needs.
+
+Our website now features a streamlined layout optimized for mobile devices, so you can schedule appointments quickly from any screen size.

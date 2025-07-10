@@ -44,7 +44,7 @@ export default function FAQ() {
         description="Answers to common questions about our mobile notary services and scheduling."
         path="/faq"
       />
-      <div className="mx-auto flex max-w-2xl flex-col gap-8">
+      <div className="mx-auto w-full max-w-3xl flex flex-col gap-8">
         <h1 className="text-4xl font-serif font-semibold tracking-wide heading-gradient text-silver">
           Frequently Asked Questions
         </h1>
