@@ -12,6 +12,10 @@ function setup() {
 
 test('renders price list with notarial fees', () => {
   setup();
-  expect(screen.getByRole('heading', { name: /fee schedule/i })).toBeInTheDocument();
-  expect(screen.getByText(/acknowledgment \(first signature\)/i)).toBeInTheDocument();
+  expect(
+    screen.getByRole('heading', { name: /fee schedule/i })
+  ).toBeInTheDocument();
+  expect(
+    screen.getByText(/notarial act \(per signature\/stamp\)/i)
+  ).toBeInTheDocument();
 });
