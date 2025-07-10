@@ -66,7 +66,8 @@ export default function Navbar() {
           Keystone Notary Group, LLC
         </Link>
         <button
-          className="md:hidden flex flex-col items-center justify-center"
+          className="md:hidden flex flex-col items-center justify-center p-2 focus:outline-none focus:ring-2 focus:ring-platinum"
+          /* Focus ring ensures mobile menu trigger is keyboard accessible */
           onClick={toggle}
           aria-label="Toggle navigation"
           aria-expanded={open}

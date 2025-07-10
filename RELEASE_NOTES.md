@@ -8,6 +8,7 @@
 - Added navigation link transitions with visible focus rings.
 - Adjusted chat widget dimensions and input styling for accessibility.
 - Removed obsolete development TODO comment.
+- Added focus indicators to all CTA buttons and the mobile menu trigger.
 
 ## Version 1.0.0 – YYYY-MM-DD
 
