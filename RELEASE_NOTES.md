@@ -66,3 +66,9 @@
 
 - Removed the NNA badge from the Credentials section for a cleaner layout.
 - Footer now includes clickable phone and email contact links.
+
+## Version 1.0.7 – YYYY-MM-DD
+
+### Changed
+
+- Redesigned chat widget with glassy styling and smoother animations.

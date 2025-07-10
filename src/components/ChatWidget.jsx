@@ -124,85 +124,100 @@ export default function ChatWidget() {
               type="button"
               aria-label="Close chat"
               onClick={() => setOpen(false)}
-              className="fixed inset-0 z-40 bg-black/50"/>
+              className="fixed inset-0 z-40 bg-black/50"
+            />
             <motion.div
               key="chat"
               role="dialog"
               aria-label="Ask a Notary"
               ref={chatRef}
-              className="fixed bottom-4 right-4 z-50 flex h-80 w-72 flex-col overflow-hidden rounded border border-platinum bg-black text-platinum shadow-lg sm:h-96 sm:w-80"
+              className="fixed bottom-0 left-0 right-0 z-50 m-4 flex max-h-[80vh] w-[92vw] max-w-[92vw] flex-col overflow-hidden rounded-2xl border border-[#E5E4E2]/80 bg-black/80 text-platinum shadow-2xl backdrop-blur-md sm:bottom-4 sm:left-auto sm:right-4 sm:w-[370px]"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 20 }}
               transition={{ duration: 0.2 }}
             >
-            <div className="flex items-center justify-between bg-deepgray px-3 py-2">
-              <span className="font-medium text-white">Ask a Notary</span>
-              <button
-                onClick={() => setOpen(false)}
-                aria-label="Close chat"
-                className="text-white hover:text-silver focus:outline-none"
-              >
-                ✕
-              </button>
-            </div>
-            <div
-              ref={listRef}
-              className="flex-1 space-y-2 overflow-y-auto px-3 py-2 text-sm"
-              aria-live="polite"
-            >
-              <p className="text-xs text-platinum">
-                For legal advice or sensitive matters, please call or text directly.
-              </p>
-              {messages.map((msg, idx) => (
-                <p
-                  key={idx}
-                  className={clsx('rounded px-2 py-1', {
-                    'ml-auto bg-deepgray text-white': msg.from === 'user',
-                    'mr-auto bg-charcoal text-platinum': msg.from === 'bot',
-                  })}
+              <div className="flex items-center justify-between border-b border-[#E5E4E2]/50 px-4 py-3">
+                <span className="flex items-center gap-2 font-semibold text-silver">
+                  <span aria-hidden="true">🖋️</span>Ask a Notary
+                </span>
+                <button
+                  onClick={() => setOpen(false)}
+                  aria-label="Close chat"
+                  className="text-silver hover:text-white focus:outline-none focus:ring-2 focus:ring-silver"
                 >
-                  {msg.text}
-                </p>
-              ))}
-              <div className="mt-2 flex flex-wrap gap-2">
-                {FAQ.map(({ q }) => (
-                  <button
-                    key={q}
-                    type="button"
-                    onClick={() => sendMessage(q)}
-                    className="rounded bg-deepgray px-2 py-1 text-xs text-white hover:bg-charcoal focus:outline-none focus:ring focus:ring-platinum"
-                  >
-                    {q}
-                  </button>
-                ))}
+                  ✕
+                </button>
               </div>
-            </div>
-            <form onSubmit={handleSend} className="flex gap-2 border-t border-platinum p-2">
-              <label htmlFor="question" className="sr-only">
-                Type your question
-              </label>
-              <input
-                id="question"
-                name="question"
-                ref={inputRef}
-                type="text"
-                className="flex-1 rounded border border-platinum bg-deepgray px-2 py-1 text-white placeholder-platinum focus:border-silver focus:outline-none"
-                placeholder="Ask a question..."
-                autoComplete="off"
-              />
-              <button
-                type="submit"
-                className="rounded bg-deepgray px-3 text-white transition-colors hover:bg-charcoal focus:outline-none focus:ring focus:ring-platinum"
+              <div
+                ref={listRef}
+                className="flex-1 space-y-3 overflow-y-auto px-4 py-3 text-sm"
+                aria-live="polite"
               >
-                Send
-              </button>
-            </form>
-            <p className="px-3 py-1 text-center text-2xs text-platinum">
-              Responses are informational and not legal advice.
-            </p>
-          </motion.div>
-        </>
+                <p className="text-xs text-platinum">
+                  For legal advice or sensitive matters, please call or text directly.
+                </p>
+                <AnimatePresence initial={false}>
+                  {messages.map((msg, idx) => (
+                    <motion.p
+                      key={idx}
+                      className={clsx(
+                        'max-w-[80%] rounded-lg px-3 py-2 shadow',
+                        {
+                          'ml-auto bg-gradient-to-br from-deepgray to-charcoal text-white':
+                            msg.from === 'user',
+                          'mr-auto bg-gradient-to-br from-charcoal to-deepgray text-platinum':
+                            msg.from === 'bot',
+                        },
+                      )}
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: 10 }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      {msg.text}
+                    </motion.p>
+                  ))}
+                </AnimatePresence>
+                <div className="mt-2 flex flex-wrap gap-2">
+                  {FAQ.map(({ q }) => (
+                    <button
+                      key={q}
+                      type="button"
+                      onClick={() => sendMessage(q)}
+                      className="rounded bg-deepgray px-2 py-1 text-xs text-white shadow hover:bg-charcoal focus:outline-none focus:ring-2 focus:ring-silver"
+                    >
+                      {q}
+                    </button>
+                  ))}
+                </div>
+              </div>
+              <form onSubmit={handleSend} className="flex items-center gap-2 border-t border-[#E5E4E2]/50 p-3">
+                <label htmlFor="question" className="sr-only">
+                  Type your question
+                </label>
+                <input
+                  id="question"
+                  name="question"
+                  ref={inputRef}
+                  type="text"
+                  className="flex-1 rounded-full border border-silver/70 bg-transparent px-3 py-2 text-white placeholder-platinum focus:outline-none focus:ring-2 focus:ring-silver"
+                  placeholder="Ask a question..."
+                  autoComplete="off"
+                />
+                <button
+                  type="submit"
+                  aria-label="Send message"
+                  className="rounded-full bg-deepgray px-4 py-2 text-silver shadow transition-colors hover:bg-charcoal focus:outline-none focus:ring-2 focus:ring-silver"
+                >
+                  ➤
+                </button>
+              </form>
+              <p className="px-4 py-2 text-center text-2xs text-platinum">
+                Responses are informational and not legal advice.
+              </p>
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
     </>
