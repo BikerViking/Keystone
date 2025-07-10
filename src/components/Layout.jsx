@@ -13,6 +13,7 @@ export default function Layout() {
   const location = useLocation();
   const navigate = useNavigate();
   const [direction, setDirection] = useState(0);
+  const [showIndicator, setShowIndicator] = useState(true);
 
   // Define page order to allow sequential navigation via swipes
   const pages = ['/', '/about', '/services', '/faq', '/prices', '/contact'];
@@ -22,6 +23,7 @@ export default function Layout() {
     if (index === -1) return;
     const nextIndex = (index + 1) % pages.length;
     setDirection(-1); // Slide left when moving forward
+    setShowIndicator(false);
     navigate(pages[nextIndex]);
   }
 
@@ -29,12 +31,14 @@ export default function Layout() {
     if (index === -1) return;
     const prevIndex = (index - 1 + pages.length) % pages.length;
     setDirection(1); // Slide right when moving backward
+    setShowIndicator(false);
     navigate(pages[prevIndex]);
   }
 
   function goTo(i) {
     if (i === index || index === -1) return;
     setDirection(i > index ? -1 : 1);
+    setShowIndicator(false);
     navigate(pages[i]);
   }
 
@@ -42,7 +46,8 @@ export default function Layout() {
     onSwipedLeft: goNext,
     onSwipedRight: goPrev,
     trackMouse: true,
-    delta: 40,
+    delta: 80,
+    preventScrollOnSwipe: false,
   });
 
   const variants = {
@@ -72,15 +77,28 @@ export default function Layout() {
             animate="center"
             exit="exit"
             custom={direction}
-            transition={{ type: 'tween', duration: 0.35, ease: [0.4, 0, 0.2, 1] }}
-            onAnimationComplete={() => setDirection(0)}
+            transition={{ type: 'tween', duration: 0.4, ease: 'easeInOut' }}
+            onAnimationComplete={() => {
+              setDirection(0);
+              setShowIndicator(true);
+            }}
             id="content"
             className="flex-grow pt-16"
           >
             <Outlet />
           </motion.main>
         </AnimatePresence>
-        <PageIndicator pages={pages} current={index} onSelect={goTo} />
+        <AnimatePresence initial={false}>
+          {showIndicator && (
+            <PageIndicator
+              key={location.pathname}
+              pages={pages}
+              current={index}
+              onSelect={goTo}
+              className="fixed inset-x-0 bottom-10 pointer-events-none md:hidden"
+            />
+          )}
+        </AnimatePresence>
         <Footer />
         <ScrollToTopButton />
         <ChatWidget />
