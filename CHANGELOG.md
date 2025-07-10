@@ -4,6 +4,18 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [1.0.11] - YYYY-MM-DD
+### Changed
+- Added accent color and parallax hero animation.
+- Refreshed service cards with icons and responsive grid.
+- Segmented About content with mission and service area list.
+- Modernized fee schedule using responsive cards.
+- Improved FAQ accordion with chevron icon and contact link.
+- Upgraded 404 page with animated logo and search field.
+- Navigation now includes persistent "Book Now" button and scroll shadow.
+- Footer features quick links and social placeholders.
+- Chat widget shows typing indicator and feedback buttons.
+
 ### Added
 - Accessible "Ask a Notary" chat widget with focus trap, overlay close, and FAQ suggestions.
 - Hero section now displays company logo on parchment with responsive sizing.

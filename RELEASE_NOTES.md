@@ -1,5 +1,20 @@
 # Release Notes
 
+## Version 1.0.11 – YYYY-MM-DD
+
+### Changed
+
+- Accent color highlights CTAs across the site.
+- Parallax hero animation creates depth.
+- Responsive service grid with icons and new "Book Now" button.
+- About page segmented with mission, service area, and team sections.
+- Prices displayed in cards with contact CTA.
+- FAQ accordion uses chevron indicator and ends with contact link.
+- 404 page now includes animated logo and search form.
+- Navigation gains scroll shadow and persistent booking link.
+- Footer adds quick links and social placeholders.
+- Chat widget shows typing indicator and feedback buttons.
+
 ## Version 1.0.10 – YYYY-MM-DD
 
 ### Changed

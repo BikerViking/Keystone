@@ -72,13 +72,13 @@ export default function FAQ() {
                 aria-expanded={isOpen}
                 aria-controls={`faq-panel-${idx}`}
                 id={`faq-header-${idx}`}
-                className="flex w-full items-center justify-between bg-deepgray px-4 py-3 text-left text-platinum transition-colors hover:bg-black focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-silver"
+                className="flex w-full items-center justify-between bg-deepgray px-4 py-4 text-left text-platinum transition-colors hover:bg-black focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
               >
                 <span className="font-medium">{q}</span>
                 <svg
                   className={clsx(
                     'h-5 w-5 transform transition-transform',
-                    isOpen ? 'rotate-45 text-silver' : 'text-platinum',
+                    isOpen ? 'rotate-180 text-silver' : 'text-platinum',
                   )}
                   viewBox="0 0 20 20"
                   fill="none"
@@ -86,7 +86,7 @@ export default function FAQ() {
                   strokeWidth="2"
                   strokeLinecap="round"
                 >
-                  <path d="M10 4v12M4 10h12" />
+                  <path d="M6 8l4 4 4-4" />
                 </svg>
               </button>
               <AnimatePresence initial={false}>
@@ -110,6 +110,13 @@ export default function FAQ() {
           );
         })}
         </ul>
+        <p className="mt-4 text-platinum">
+          Still have questions?{' '}
+          <Link to="/" className="underline hover:text-silver">
+            Contact us
+          </Link>
+          .
+        </p>
       </div>
     </MotionSection>
   );

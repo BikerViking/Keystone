@@ -25,6 +25,7 @@ const findAnswer = (question) => {
 export default function ChatWidget() {
   const [open, setOpen] = useState(false);
   const [messages, setMessages] = useState([]); // { from: 'user' | 'bot', text: string }
+  const [typing, setTyping] = useState(false);
   const [greeted, setGreeted] = useState(false);
   const inputRef = useRef(null);
   const listRef = useRef(null);
@@ -52,7 +53,11 @@ export default function ChatWidget() {
     setMessages((m) => [...m, { from: 'user', text }]);
     const match = findAnswer(text);
     const answer = match ? match.a : 'Great question! Please call or text for a personalized answer.';
-    setMessages((m) => [...m, { from: 'bot', text: answer }]);
+    setTyping(true);
+    setTimeout(() => {
+      setTyping(false);
+      setMessages((m) => [...m, { from: 'bot', text: answer }]);
+    }, 600);
   };
 
   const handleSend = (e) => {
@@ -175,9 +180,18 @@ export default function ChatWidget() {
                       transition={{ duration: 0.2 }}
                     >
                       {msg.text}
+                      {msg.from === 'bot' && (
+                        <span className="ml-2 inline-flex gap-1">
+                          <button type="button" aria-label="Helpful" className="text-xs">👍</button>
+                          <button type="button" aria-label="Not helpful" className="text-xs">👎</button>
+                        </span>
+                      )}
                     </motion.p>
                   ))}
                 </AnimatePresence>
+                {typing && (
+                  <p className="text-platinum">Typing...</p>
+                )}
                 <div className="mt-2 flex flex-wrap gap-2">
                   {FAQ.map(({ q }) => (
                     <button

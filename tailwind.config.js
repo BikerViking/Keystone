@@ -13,6 +13,7 @@ export default {
         deepgray: '#1A1A1A',
         platinum: '#999999',
         silver: '#bfbfbf',
+        accent: '#2aa198',
       },
       container: {
         center: true,
