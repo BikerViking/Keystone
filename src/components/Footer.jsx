@@ -2,7 +2,7 @@ export default function Footer() {
   return (
     <footer
       role="contentinfo"
-      className="bg-charcoal py-8 px-4 text-center text-sm text-platinum"
+      className="footer-gradient bg-charcoal py-8 px-4 text-center text-sm text-platinum"
     >
       <nav aria-label="Footer" className="mb-4 flex justify-center gap-4">
         <a href="/about" aria-label="Footer link to About" className="hover:text-silver">About</a>

@@ -29,8 +29,20 @@
   }
 
   .cta-button {
-    @apply inline-block rounded border border-platinum bg-gradient-to-br from-accent to-deepgray px-8 py-3 text-lg font-medium text-white shadow-md transition-transform duration-200 focus:outline-none focus:ring-2 focus:ring-accent hover:shadow-lg hover:-translate-y-1 hover:scale-105 active:scale-95;
+    @apply relative inline-block rounded border border-platinum bg-gradient-to-br from-accent to-deepgray px-8 py-3 text-lg font-medium text-white shadow-md transition-transform duration-200 focus:outline-none focus:ring-2 focus:ring-accent hover:shadow-lg hover:-translate-y-1 hover:scale-105 active:scale-95;
     /* Add focus ring to ensure keyboard users can see button focus */
+  }
+
+  .cta-button::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    @apply bg-white/20 opacity-0 transition-opacity duration-300;
+  }
+
+  .cta-button:hover::after {
+    @apply opacity-20;
   }
 
   @keyframes bounce {
@@ -40,6 +52,51 @@
 
   .scroll-hint {
     animation: bounce 1.5s infinite;
+  }
+
+  /* Animated gradient for standout headings */
+  @keyframes gradient-shift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  .animated-gradient {
+    @apply bg-clip-text text-transparent font-semibold;
+    background-image: linear-gradient(90deg, #bfbfbf, #ffffff, #bfbfbf);
+    background-size: 200% 200%;
+    animation: gradient-shift 8s ease infinite;
+  }
+
+  /* Spinning radial overlay for hero background */
+  @keyframes hero-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  .hero-layer::before {
+    content: '';
+    position: absolute;
+    top: -20%;
+    left: -20%;
+    width: 140%;
+    height: 140%;
+    background: radial-gradient(circle at center, rgba(42,161,152,0.25), transparent 70%);
+    animation: hero-spin 40s linear infinite;
+    z-index: 0;
+  }
+
+  .footer-gradient {
+    @apply relative;
+  }
+
+  .footer-gradient::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, transparent, #bfbfbf, transparent);
   }
 
 
