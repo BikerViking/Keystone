@@ -15,6 +15,7 @@ All notable changes to this project will be documented in this file.
 - Navigation now includes persistent "Book Now" button and scroll shadow.
 - Footer features quick links and social placeholders.
 - Chat widget shows typing indicator and feedback buttons.
+- Swipe navigation refined with smooth transitions and a page indicator.
 
 ### Added
 - Accessible "Ask a Notary" chat widget with focus trap, overlay close, and FAQ suggestions.
