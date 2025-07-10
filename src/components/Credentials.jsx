@@ -15,7 +15,7 @@ export default function Credentials({ className = '' }) {
     <MotionSection
       aria-labelledby="credentials-heading"
       className={clsx(
-        'mt-12 flex w-full flex-col items-center gap-6 border-t border-deepgray py-8 px-4 sm:px-8 text-center',
+        'mt-12 section-divider flex w-full flex-col items-center gap-6 px-4 sm:px-8 text-center',
         className,
       )}
     >

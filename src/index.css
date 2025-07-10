@@ -25,7 +25,7 @@
   }
 
   .section-divider {
-    @apply border-t border-gray-700/60 py-16;
+    @apply border-t border-platinum py-16;
   }
 
   .cta-button {
