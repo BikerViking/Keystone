@@ -33,6 +33,7 @@ All notable changes to this project will be documented in this file.
 - Standardized full-width containers and centered content.
 - Expanded card widths and removed leftover margins.
 - Ensured divider lines span each section without gaps.
+- Standardized divider styling and color for consistency.
 
 ## [1.0.1] - YYYY-MM-DD
 

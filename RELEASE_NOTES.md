@@ -48,6 +48,12 @@
 
 - Hero section displays logo on parchment at the top with responsive sizes.
 
+## Version 1.0.5 – YYYY-MM-DD
+
+### Changed
+
+- Standardized divider line style for consistent appearance site-wide.
+
 ## Version 1.0.1 – YYYY-MM-DD
 
 ### Changes
