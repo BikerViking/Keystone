@@ -8,7 +8,7 @@ const MotionLink = motion.create(Link);
 
 export default function Hero() {
   return (
-    <section className="relative flex min-h-screen w-full items-center justify-center px-4 text-center sm:px-8">
+    <section className="relative flex min-h-screen w-full items-center justify-center bg-black px-4 text-center sm:px-8">
       {/* Semi-transparent overlay for better text readability over the background */}
       <div className="absolute inset-0 bg-black/80" />
       <motion.div
@@ -17,6 +17,15 @@ export default function Hero() {
         transition={{ duration: 0.8 }}
         className="relative z-10 flex w-full flex-col items-center gap-8 px-4 sm:px-8 lg:gap-10"
       >
+        {/* Company logo displayed prominently at the top of the hero */}
+        <img
+          src="/hero-logo.PNG"
+          alt="Keystone Notary Group, LLC parchment logo"
+          width="1024"
+          height="1024"
+          className="mx-auto w-[300px] sm:w-[350px] md:w-[400px] lg:w-[450px] max-w-full h-auto mt-10 mb-6 drop-shadow-lg"
+          draggable={false}
+        />
         <h1 className="hero-heading w-full text-4xl font-serif font-semibold tracking-wide heading-gradient lg:text-6xl">
           Keystone Notary Group, LLC
         </h1>

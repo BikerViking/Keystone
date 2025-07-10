@@ -13,6 +13,8 @@ test('renders home page heading and cta', () => {
   expect(cta).toHaveAttribute('href', '/contact#contact');
   const phoneLink = screen.getByRole('link', { name: /call or text/i });
   expect(phoneLink).toHaveAttribute('href', 'tel:2673099000');
-  // Hero should not display a placeholder logo image
-  expect(screen.queryByAltText(/keystone notary group logo/i)).not.toBeInTheDocument();
+  // Hero displays the parchment logo for brand recognition
+  expect(
+    screen.getByAltText(/keystone notary group, llc parchment logo/i),
+  ).toBeInTheDocument();
 });

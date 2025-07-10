@@ -18,5 +18,8 @@ describe('Hero component', () => {
     expect(
       screen.getByRole('link', { name: /call or text 267-309-9000/i }),
     ).toHaveAttribute('href', 'tel:2673099000');
+    expect(
+      screen.getByAltText(/keystone notary group, llc parchment logo/i),
+    ).toBeInTheDocument();
   });
 });
