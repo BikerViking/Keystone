@@ -7,6 +7,7 @@ import Footer from './Footer';
 import ScrollToTopButton from './ScrollToTopButton';
 import StructuredData from './StructuredData';
 import ChatWidget from './ChatWidget';
+import PageIndicator from './PageIndicator';
 
 export default function Layout() {
   const location = useLocation();
@@ -31,14 +32,23 @@ export default function Layout() {
     navigate(pages[prevIndex]);
   }
 
-  const isTouch = typeof window !== 'undefined' &&
-    ('ontouchstart' in window || navigator.maxTouchPoints > 0);
-  const handlers = useSwipeable({ onSwipedLeft: goNext, onSwipedRight: goPrev });
+  function goTo(i) {
+    if (i === index || index === -1) return;
+    setDirection(i > index ? -1 : 1);
+    navigate(pages[i]);
+  }
+
+  const handlers = useSwipeable({
+    onSwipedLeft: goNext,
+    onSwipedRight: goPrev,
+    trackMouse: true,
+    delta: 40,
+  });
 
   const variants = {
-    enter: (dir) => ({ x: dir > 0 ? -50 : 50, opacity: 0 }),
+    enter: (dir) => ({ x: dir > 0 ? -30 : 30, opacity: 0 }),
     center: { x: 0, opacity: 1 },
-    exit: (dir) => ({ x: dir > 0 ? 50 : -50, opacity: 0 }),
+    exit: (dir) => ({ x: dir > 0 ? 30 : -30, opacity: 0 }),
   };
 
   return (
@@ -56,13 +66,13 @@ export default function Layout() {
         <AnimatePresence mode="wait" custom={direction}>
           <motion.main
             key={location.pathname}
-            {...(isTouch ? handlers : {})}
+            {...handlers}
             variants={variants}
             initial="enter"
             animate="center"
             exit="exit"
             custom={direction}
-            transition={{ type: 'tween', duration: 0.3 }}
+            transition={{ type: 'tween', duration: 0.35, ease: [0.4, 0, 0.2, 1] }}
             onAnimationComplete={() => setDirection(0)}
             id="content"
             className="flex-grow pt-16"
@@ -70,6 +80,7 @@ export default function Layout() {
             <Outlet />
           </motion.main>
         </AnimatePresence>
+        <PageIndicator pages={pages} current={index} onSelect={goTo} />
         <Footer />
         <ScrollToTopButton />
         <ChatWidget />

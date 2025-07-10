@@ -29,3 +29,11 @@ test('swipe left from home navigates to about page', async () => {
   expect(await screen.findByRole('heading', { name: /about us/i })).toBeInTheDocument();
 });
 
+test('page indicator reflects current page and supports navigation', async () => {
+  setup();
+  const buttons = screen.getAllByRole('button', { name: /go to page/i });
+  expect(buttons).toHaveLength(6);
+  fireEvent.click(buttons[2]);
+  expect(await screen.findByRole('heading', { name: /^services$/i })).toBeInTheDocument();
+});
+
