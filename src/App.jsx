@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
 import FAQ from './pages/FAQ';
+import Prices from './pages/Prices';
 import NotFound from './pages/NotFound';
 
 export default function App() {
@@ -13,6 +14,7 @@ export default function App() {
         <Route index element={<Home />} />
         <Route path="about" element={<About />} />
         <Route path="services" element={<Services />} />
+        <Route path="prices" element={<Prices />} />
         <Route path="faq" element={<FAQ />} />
         <Route path="*" element={<NotFound />} />
       </Route>

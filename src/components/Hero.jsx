@@ -1,10 +1,6 @@
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import PhoneIcon from './PhoneIcon';
 
-// framer-motion 11 deprecates `motion()` in favor of `motion.create()`
-// Use the new API to avoid deprecation warnings during tests
-const MotionLink = motion.create(Link);
 const MotionAnchor = motion.a;
 
 export default function Hero() {

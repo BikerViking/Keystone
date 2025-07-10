@@ -23,3 +23,13 @@ test('renders FAQ page and toggles an answer', () => {
     screen.getByText(/we can notarize a wide variety of documents/i)
   ).toBeInTheDocument();
 });
+
+test('links to price list from FAQ', () => {
+  setup();
+  const priceQuestion = screen.getByRole('button', {
+    name: /where can i see your current rates\?/i,
+  });
+  fireEvent.click(priceQuestion);
+  const link = screen.getByRole('link', { name: /view price list/i });
+  expect(link).toHaveAttribute('href', '/prices');
+});

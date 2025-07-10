@@ -18,6 +18,8 @@ All notable changes to this project will be documented in this file.
   formatting.
 - Shifted NNA badge closer to the heading and increased size by 20%.
 - Aligned badge center with the decorative underline for cleaner spacing.
+- Price list page with full fee schedule accessible at `/prices`.
+- FAQ updated with link to the price list.
 - Enlarged NNA badge by an additional 12% for improved visibility.- Restored NNA badge enlargement after rollback.
 - Ensured NNA badge uses responsive positioning to maintain placement across screen sizes.
 - Moved decorative underline to the `header` element so it spans both the heading and badge.
