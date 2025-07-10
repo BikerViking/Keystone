@@ -14,11 +14,11 @@ export default function Credentials({ className = "" }) {
     <MotionSection
       aria-labelledby="credentials-heading"
       className={clsx(
-        "relative bg-black max-w-xl mx-auto p-8 rounded-lg shadow-lg",
+        "relative bg-black max-w-xl mx-auto p-8 rounded-lg shadow-lg mt-4 sm:mt-8",
         className,
       )}
     >
-      <header className="sticky top-0 z-20 bg-black pb-2">
+      <header className="pb-2">
         <h2
           id="credentials-heading"
           className="text-4xl font-serif font-semibold tracking-wide text-silver"
@@ -29,7 +29,7 @@ export default function Credentials({ className = "" }) {
         <div className="mt-2 h-px w-full bg-gray-400" />
       </header>
 
-      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between">
+      <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between">
         <ul className="flex flex-col gap-4 text-left">
           {credentials.map((cred) => (
             <li key={cred} className="flex items-start justify-start">
@@ -40,7 +40,7 @@ export default function Credentials({ className = "" }) {
         </ul>
         <img
           src="/nna-badge.png"
-          className="block ml-auto mt-4 w-28 h-28 drop-shadow-xl pointer-events-none select-none"
+          className="mx-auto mt-6 sm:mt-0 sm:ml-8 w-24 h-24 sm:w-28 sm:h-28 drop-shadow-xl pointer-events-none select-none"
           alt="NNA Certified Notary Signing Agent 2025 badge"
           draggable={false}
         />

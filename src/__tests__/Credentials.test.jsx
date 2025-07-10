@@ -21,11 +21,14 @@ describe("Credentials component", () => {
       /nna certified notary signing agent 2025 badge/i,
     );
     const className = badge.getAttribute("class");
-    expect(className).toEqual(expect.stringContaining("block"));
-    expect(className).toEqual(expect.stringContaining("ml-auto"));
-    expect(className).toEqual(expect.stringContaining("mt-4"));
-    expect(className).toEqual(expect.stringContaining("w-28"));
-    expect(className).toEqual(expect.stringContaining("h-28"));
+    expect(className).toEqual(expect.stringContaining("mx-auto"));
+    expect(className).toEqual(expect.stringContaining("mt-6"));
+    expect(className).toEqual(expect.stringContaining("sm:mt-0"));
+    expect(className).toEqual(expect.stringContaining("sm:ml-8"));
+    expect(className).toEqual(expect.stringContaining("w-24"));
+    expect(className).toEqual(expect.stringContaining("h-24"));
+    expect(className).toEqual(expect.stringContaining("sm:w-28"));
+    expect(className).toEqual(expect.stringContaining("sm:h-28"));
     expect(className).toEqual(expect.stringContaining("drop-shadow-xl"));
     expect(className).toEqual(expect.stringContaining("pointer-events-none"));
     expect(className).toEqual(expect.stringContaining("select-none"));
