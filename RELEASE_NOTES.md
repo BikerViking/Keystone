@@ -1,5 +1,12 @@
 # Release Notes
 
+## Version 1.0.9 – YYYY-MM-DD
+
+### Added
+
+- Price list page with detailed fee schedule.
+- FAQ links directly to the price list.
+
 ## Version 1.0.8 – YYYY-MM-DD
 
 ### Changed

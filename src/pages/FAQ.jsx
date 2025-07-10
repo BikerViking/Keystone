@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import { MotionSection, SEO } from '../components';
 import clsx from 'clsx';
@@ -27,6 +28,18 @@ const faqs = [
   {
     q: 'Where do you offer mobile notary services?',
     a: 'We serve the Greater Philadelphia area, including Bucks, Montgomery, Chester, Delaware, and Philadelphia counties. Travel beyond this area may be arranged upon request.',
+  },
+  {
+    q: 'Where can I see your current rates?',
+    a: (
+      <>
+        Our current price list is always available here:{' '}
+        <Link to="/prices" className="underline hover:text-silver">
+          View Price List
+        </Link>
+        . All fees are quoted up front and comply with Pennsylvania law.
+      </>
+    ),
   },
 ];
 
