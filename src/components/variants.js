@@ -10,7 +10,7 @@ export const inputStyles = tv({
 });
 
 export const navLinkStyles = tv({
-  base: 'block rounded border border-transparent bg-deepgray px-3 py-2 text-lg font-medium transition-colors duration-200 hover:bg-charcoal hover:border-silver hover:text-silver hover:shadow focus:outline-none focus:ring focus:ring-silver',
+  base: 'block rounded border border-transparent bg-deepgray px-3 py-2 text-lg font-medium transition-colors duration-200 hover:bg-charcoal hover:border-silver hover:text-silver hover:shadow focus:outline-none focus:ring focus:ring-silver hover:scale-105 active:scale-95',
   variants: {
     active: {
       true: 'text-silver shadow-inner',
