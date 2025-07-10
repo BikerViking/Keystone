@@ -28,6 +28,12 @@ All notable changes to this project will be documented in this file.
 - Removed background and padding on Credentials heading and badge, keeping line visible behind both elements.
 - Reverted Credentials layout to stable version with 220x220 NNA badge.
 
+### Changed
+- Polished hero layout and tagline color for consistent branding.
+- Enhanced navigation link transitions and focus visibility.
+- Refined chat widget sizing and input focus styling.
+- Removed obsolete development TODO comment.
+
 ## [1.0.2] - YYYY-MM-DD
 
 ### Changed

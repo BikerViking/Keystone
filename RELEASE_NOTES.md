@@ -1,5 +1,14 @@
 # Release Notes
 
+## Version 1.0.8 – YYYY-MM-DD
+
+### Changed
+
+- Fine-tuned hero alignment and tagline color.
+- Added navigation link transitions with visible focus rings.
+- Adjusted chat widget dimensions and input styling for accessibility.
+- Removed obsolete development TODO comment.
+
 ## Version 1.0.0 – YYYY-MM-DD
 
 ### Features

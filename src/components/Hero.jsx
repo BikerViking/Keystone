@@ -15,7 +15,7 @@ export default function Hero() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="relative z-10 flex w-full flex-col items-center gap-8 px-4 sm:px-8 lg:gap-10"
+        className="relative z-10 mx-auto flex w-full max-w-4xl flex-col items-center gap-8 px-4 sm:px-8 lg:gap-10"
       >
         {/*
           Group brand elements for easier layout tuning and animation hooks.
@@ -37,7 +37,7 @@ export default function Hero() {
             Keystone Notary Group, LLC
           </h1>
         </header>
-        <p className="text-lg font-light lg:text-2xl">Reliable Mobile Notary Services</p>
+        <p className="text-lg font-light text-silver lg:text-2xl">Reliable Mobile Notary Services</p>
         <a
           href="tel:2673099000"
           aria-label="Call or text 267-309-9000"

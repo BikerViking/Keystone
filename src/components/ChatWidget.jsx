@@ -21,7 +21,6 @@ const findAnswer = (question) => {
   return FAQ.find(({ q }) => normalized.includes(q.toLowerCase()));
 };
 
-// TODO(phase-2): Replace findAnswer logic with OpenAI API call for dynamic responses.
 
 export default function ChatWidget() {
   const [open, setOpen] = useState(false);
@@ -124,14 +123,14 @@ export default function ChatWidget() {
               type="button"
               aria-label="Close chat"
               onClick={() => setOpen(false)}
-              className="fixed inset-0 z-40 bg-black/50"
+              className="fixed inset-0 z-40 bg-black/50 focus:outline-none"
             />
             <motion.div
               key="chat"
               role="dialog"
               aria-label="Ask a Notary"
               ref={chatRef}
-              className="fixed bottom-0 left-0 right-0 z-50 m-4 flex max-h-[80vh] w-[92vw] max-w-[92vw] flex-col overflow-hidden rounded-2xl border border-[#E5E4E2]/80 bg-black/80 text-platinum shadow-2xl backdrop-blur-md sm:bottom-4 sm:left-auto sm:right-4 sm:w-[370px]"
+              className="fixed bottom-0 left-0 right-0 z-50 m-4 flex max-h-[80vh] w-full max-w-sm flex-col overflow-hidden rounded-2xl border border-[#E5E4E2]/80 bg-black/80 text-platinum shadow-2xl backdrop-blur-md sm:bottom-4 sm:left-auto sm:right-4 sm:w-[370px]"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 20 }}
@@ -201,7 +200,7 @@ export default function ChatWidget() {
                   name="question"
                   ref={inputRef}
                   type="text"
-                  className="flex-1 rounded-full border border-silver/70 bg-transparent px-3 py-2 text-white placeholder-platinum focus:outline-none focus:ring-2 focus:ring-silver"
+                  className="flex-1 rounded-full border border-silver/70 bg-transparent px-3 py-3 text-white placeholder-platinum transition-shadow focus:outline-none focus:ring-2 focus:ring-silver focus:ring-offset-2 focus:ring-offset-black"
                   placeholder="Ask a question..."
                   autoComplete="off"
                 />
