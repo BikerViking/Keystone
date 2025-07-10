@@ -5,6 +5,7 @@ import PhoneIcon from './PhoneIcon';
 // framer-motion 11 deprecates `motion()` in favor of `motion.create()`
 // Use the new API to avoid deprecation warnings during tests
 const MotionLink = motion.create(Link);
+const MotionAnchor = motion.a;
 
 export default function Hero() {
   return (
@@ -46,13 +47,18 @@ export default function Hero() {
           <PhoneIcon className="h-5 w-5" />
           <span className="whitespace-nowrap">Call or Text: (267) 309-9000</span>
         </a>
-        <MotionLink
-          to="/contact#contact"
+        <MotionAnchor
+          href="https://forms.gle/b1Xg8pYkZABk4wN96"
+          target="_blank"
+          rel="noopener noreferrer"
           whileHover={{ y: -2, boxShadow: '0 4px 15px rgba(255,255,255,0.15)' }}
           className="cta-button hover:border-silver hover:text-silver"
         >
-          Schedule Appointment
-        </MotionLink>
+          Book Appointment
+        </MotionAnchor>
+        <p className="text-xs italic text-platinum">
+          Bookings are reviewed and confirmed before they’re official.
+        </p>
       </motion.div>
     </section>
   );

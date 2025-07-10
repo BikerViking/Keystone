@@ -10,8 +10,8 @@ test('renders not found message and navigation links', () => {
   );
   expect(screen.getByRole('img', { name: /keystone notary group logo/i })).toBeInTheDocument();
   expect(screen.getByRole('heading', { name: /404/i })).toBeInTheDocument();
-  const scheduleLink = screen.getByRole('link', { name: /schedule appointment/i });
-  expect(scheduleLink).toHaveAttribute('href', '/contact#contact');
+  const scheduleLink = screen.getByRole('link', { name: /book appointment/i });
+  expect(scheduleLink).toHaveAttribute('href', 'https://forms.gle/b1Xg8pYkZABk4wN96');
   const homeLink = screen.getByRole('link', { name: /return home/i });
   expect(homeLink).toHaveAttribute('href', '/');
 });
