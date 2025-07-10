@@ -5,6 +5,7 @@ All notable changes to this project will be documented in this file.
 ## [Unreleased]
 
 ### Added
+- Accessible "Ask a Notary" chat widget with focus trap, overlay close, and FAQ suggestions.
 - Hero section now displays company logo on parchment with responsive sizing.
 
 - Reverted to "Audit and secure code base for HTTPS" patch state.

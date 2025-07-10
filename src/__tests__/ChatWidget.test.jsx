@@ -1,4 +1,4 @@
-import { fireEvent, render, screen } from '@testing-library/react';
+import { fireEvent, render, screen, waitForElementToBeRemoved } from '@testing-library/react';
 import ChatWidget from '../components/ChatWidget';
 
 // Chat bubble should open and display a response when a question is asked
@@ -17,6 +17,21 @@ describe('ChatWidget component', () => {
     fireEvent.submit(screen.getByRole('textbox', { name: /type your question/i }).closest('form'));
 
     expect(screen.getByText(/mobile notary services throughout/i)).toBeInTheDocument();
+  });
+
+  test('closes when clicking outside', async () => {
+    render(<ChatWidget />);
+    fireEvent.click(screen.getByRole('button', { name: /ask a notary/i }));
+    const [overlay] = screen.getAllByRole('button', { name: /close chat/i });
+    fireEvent.click(overlay);
+    await waitForElementToBeRemoved(() => screen.queryByRole('dialog', { name: /ask a notary/i }));
+  });
+
+  test('renders greeting and suggestion buttons', () => {
+    render(<ChatWidget />);
+    fireEvent.click(screen.getByRole('button', { name: /ask a notary/i }));
+    expect(screen.getByText(/virtual notary assistant/i)).toBeInTheDocument();
+    expect(screen.getAllByRole('button', { name: /what documents can you notarize/i })).toHaveLength(1);
   });
 
   test('fallback response for unknown question', () => {
