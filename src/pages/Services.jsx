@@ -43,7 +43,7 @@ export default function Services() {
           {services.map(({ title, desc }) => (
             <li
               key={title}
-              className="rounded border border-platinum bg-deepgray p-4 shadow-sm"
+              className="rounded border border-platinum bg-deepgray p-4 shadow-sm transition-colors hover:bg-charcoal hover:shadow-lg"
             >
               <h2 className="text-xl font-semibold text-platinum">{title}</h2>
               <p className="mt-2 text-platinum">{desc}</p>

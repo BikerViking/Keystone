@@ -6,8 +6,8 @@ const MotionAnchor = motion.a;
 export default function Hero() {
   return (
     <section className="relative flex min-h-screen w-full items-center justify-center bg-black px-4 text-center sm:px-8">
-      {/* Semi-transparent overlay for better text readability over the background */}
-      <div className="absolute inset-0 bg-black/80" />
+      {/* Gradient overlay improves text legibility without obscuring background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black via-black/70 to-transparent" />
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -55,6 +55,12 @@ export default function Hero() {
         <p className="text-xs italic text-platinum">
           Bookings are reviewed and confirmed before they’re official.
         </p>
+        <a
+          href="#why-heading"
+          className="mt-4 text-silver transition-transform hover:translate-y-1 focus:outline-none focus:ring-2 focus:ring-platinum"
+        >
+          ↓
+        </a>
       </motion.div>
     </section>
   );

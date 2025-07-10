@@ -32,4 +32,14 @@ describe('Layout component', () => {
     );
     expect(screen.getByRole('button', { name: /ask a notary/i })).toBeInTheDocument();
   });
+
+  test('has a skip navigation link', () => {
+    render(
+      <MemoryRouter future={{ v7_relativeSplatPath: true, v7_startTransition: true }}>
+        <Layout />
+      </MemoryRouter>,
+    );
+    const skip = screen.getByRole('link', { name: /skip to content/i });
+    expect(skip).toHaveAttribute('href', '#content');
+  });
 });

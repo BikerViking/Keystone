@@ -36,6 +36,10 @@ All notable changes to this project will be documented in this file.
 - Refined chat widget sizing and input focus styling.
 - Removed obsolete development TODO comment.
 - Added focus rings to CTA buttons and mobile menu trigger for improved keyboard accessibility.
+- Hero overlay now uses a rich gradient and includes a scroll-down indicator.
+- Service cards gain hover shadows for a tactile feel.
+- New skip link improves keyboard navigation across the site.
+- CTA buttons animate on hover for better engagement.
 
 ## [1.0.2] - YYYY-MM-DD
 

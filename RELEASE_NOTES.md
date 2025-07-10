@@ -1,5 +1,14 @@
 # Release Notes
 
+## Version 1.0.10 – YYYY-MM-DD
+
+### Changed
+
+- Hero section now uses a gradient overlay and includes a subtle scroll indicator.
+- Added skip navigation link for keyboard users.
+- CTA buttons and navigation links animate on hover for improved engagement.
+- Service cards feature hover shadows and color transitions.
+
 ## Version 1.0.9 – YYYY-MM-DD
 
 ### Added
