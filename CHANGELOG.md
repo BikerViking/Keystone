@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 ## [Unreleased]
 
 ### Added
-- Hero section now displays company parchment logo with responsive sizing.
+- Hero section now displays company logo on parchment with responsive sizing.
 
 - Reverted to "Audit and secure code base for HTTPS" patch state.
 - Extended decorative underline for section headings and positioned
