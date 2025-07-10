@@ -3,7 +3,7 @@ import ChatWidget from '../components/ChatWidget';
 
 // Chat bubble should open and display a response when a question is asked
 describe('ChatWidget component', () => {
-  test('opens chat window and displays answer', () => {
+  test('opens chat window and displays answer', async () => {
     render(<ChatWidget />);
 
     // open chat
@@ -16,7 +16,7 @@ describe('ChatWidget component', () => {
     });
     fireEvent.submit(screen.getByRole('textbox', { name: /type your question/i }).closest('form'));
 
-    expect(screen.getByText(/mobile notary services throughout/i)).toBeInTheDocument();
+    expect(await screen.findByText(/mobile notary services throughout/i)).toBeInTheDocument();
   });
 
   test('closes when clicking outside', async () => {
@@ -34,7 +34,7 @@ describe('ChatWidget component', () => {
     expect(screen.getAllByRole('button', { name: /what documents can you notarize/i })).toHaveLength(1);
   });
 
-  test('fallback response for unknown question', () => {
+  test('fallback response for unknown question', async () => {
     render(<ChatWidget />);
     fireEvent.click(screen.getByRole('button', { name: /ask a notary/i }));
 
@@ -44,7 +44,7 @@ describe('ChatWidget component', () => {
     fireEvent.submit(screen.getByRole('textbox', { name: /type your question/i }).closest('form'));
 
     expect(
-      screen.getByText(/great question! please call or text for a personalized answer./i),
+      await screen.findByText(/great question! please call or text for a personalized answer./i),
     ).toBeInTheDocument();
   });
 });

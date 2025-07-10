@@ -1,9 +1,12 @@
-import { motion } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import PhoneIcon from './PhoneIcon';
 
 const MotionAnchor = motion.a;
 
 export default function Hero() {
+  // Parallax effect: move logo slightly slower than scroll for depth
+  const { scrollY } = useScroll();
+  const y = useTransform(scrollY, [0, 300], [0, -40]);
   return (
     <section className="relative flex min-h-screen w-full items-center justify-center bg-black px-4 text-center sm:px-8">
       {/* Gradient overlay improves text legibility without obscuring background */}
@@ -19,8 +22,8 @@ export default function Hero() {
           The wrapper also keeps logo and heading aligned across breakpoints.
         */}
         <header className="flex flex-col items-center">
-          {/* Fade in logo separately so future animations can target it */}
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.6 }}>
+          {/* Logo shifts with scroll for a subtle parallax effect */}
+          <motion.div style={{ y }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.6 }}>
             <img
               src="/hero-logo.PNG"
               alt="Keystone Notary Group logo on parchment"
@@ -47,8 +50,8 @@ export default function Hero() {
           href="https://forms.gle/b1Xg8pYkZABk4wN96"
           target="_blank"
           rel="noopener noreferrer"
-          whileHover={{ y: -2, boxShadow: '0 4px 15px rgba(255,255,255,0.15)' }}
-          className="cta-button hover:border-silver hover:text-silver"
+          whileHover={{ y: -2 }}
+          className="cta-button"
         >
           Book Appointment
         </MotionAnchor>
@@ -57,7 +60,8 @@ export default function Hero() {
         </p>
         <a
           href="#why-heading"
-          className="mt-4 text-silver transition-transform hover:translate-y-1 focus:outline-none focus:ring-2 focus:ring-platinum"
+          className="scroll-hint mt-4 text-silver focus:outline-none focus:ring-2 focus:ring-accent"
+          aria-label="Scroll for more"
         >
           ↓
         </a>

@@ -60,22 +60,27 @@ export default function Prices() {
             >
               {category}
             </h2>
-            <table className="w-full border-collapse text-left">
-              <thead className="sr-only">
-                <tr>
-                  <th scope="col">Service</th>
-                  <th scope="col">Price</th>
-                </tr>
-              </thead>
-              <tbody>
-                {items.map(({ name, price }) => (
-                  <tr key={name} className="border-b border-platinum last:border-0">
-                    <td className="py-2 pr-4 text-platinum">{name}</td>
-                    <td className="py-2 text-platinum">{price}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+            <ul className="grid gap-4 sm:grid-cols-2">
+              {items.map(({ name, price }) => (
+                <li
+                  key={name}
+                  className="rounded border border-platinum bg-deepgray p-4 shadow-sm"
+                >
+                  <h3
+                    className="flex items-center justify-between text-platinum"
+                  >
+                    <span>{name}</span>
+                    <span
+                      className={
+                        name.includes('Loan signing') ? 'text-accent font-semibold' : ''
+                      }
+                    >
+                      {price}
+                    </span>
+                  </h3>
+                </li>
+              ))}
+            </ul>
           </section>
         ))}
         <p className="text-sm text-platinum">
@@ -97,6 +102,12 @@ export default function Prices() {
           </a>
           .
         </p>
+        <a
+          href="mailto:info@keystonenotarygroup.com"
+          className="cta-button mt-2 w-max"
+        >
+          Contact Us
+        </a>
       </div>
     </MotionSection>
   );

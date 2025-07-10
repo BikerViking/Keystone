@@ -17,31 +17,32 @@ export default function About() {
         <h1 className="text-4xl font-serif font-semibold tracking-wide heading-gradient text-silver">
           About Us
         </h1>
-      <p className="text-lg text-platinum">
-        Keystone Notary Group, LLC is a Pennsylvania-commissioned mobile notary
-        company serving the Greater Philadelphia area.
-      </p>
-      <p className="text-lg text-platinum">
-        We provide in-person notarizations to individuals, attorneys, financial
-        institutions, and the general public. All agents are NNA Certified
-        Notary Signing Agents with current background checks and are bonded and
-        insured.
-      </p>
-      <p className="text-lg text-platinum">
-        Known for professionalism, punctuality, confidentiality, and document
-        accuracy, we also offer after-hours and emergency notarizations for
-        time-sensitive needs.
-      </p>
-      <h2 className="text-3xl font-serif font-semibold tracking-wide heading-gradient text-silver">
-        Service Area
-      </h2>
-      <p className="text-lg text-platinum">
-        Our notaries travel throughout Bucks, Montgomery, Philadelphia, Delaware,
-        and Chester Counties.
-      </p>
+        <section className="space-y-4">
+          <h2 className="text-2xl font-semibold text-silver">Mission</h2>
+          <p className="text-lg text-platinum">
+            Keystone Notary Group, LLC is a Pennsylvania-commissioned mobile notary company providing reliable mobile notarization throughout the Greater Philadelphia area.
+            Our commitment is to accuracy, confidentiality and convenience for every signing.
+          </p>
+        </section>
+        <section className="space-y-4">
+          <h2 className="text-2xl font-semibold text-silver">Service Area</h2>
+          <ul className="list-disc pl-6 text-platinum">
+            <li>Bucks County</li>
+            <li>Montgomery County</li>
+            <li>Philadelphia County</li>
+            <li>Delaware County</li>
+            <li>Chester County</li>
+          </ul>
+        </section>
+        <section className="space-y-4">
+          <h2 className="text-2xl font-semibold text-silver">Our Team</h2>
+          <p className="text-lg text-platinum">
+            Each notary is licensed, bonded and insured with current background checks and extensive signing experience.
+          </p>
+        </section>
         <Link
           to="/"
-          className="cta-button mt-4 inline-block hover:border-silver hover:text-silver"
+          className="cta-button mt-4 inline-block"
         >
           Back to Home
         </Link>

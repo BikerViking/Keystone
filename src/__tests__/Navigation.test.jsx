@@ -12,6 +12,6 @@ function setup() {
 
 test('navigates to about page', () => {
   setup();
-  fireEvent.click(screen.getByRole('link', { name: /about/i }));
+  fireEvent.click(screen.getAllByRole('link', { name: /^about$/i })[0]);
   expect(screen.getByRole('heading', { name: /about us/i })).toBeInTheDocument();
 });

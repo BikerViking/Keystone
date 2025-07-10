@@ -6,25 +6,73 @@ export default function Services() {
       title: 'Acknowledgements & Oaths',
       desc:
         'Official witnessing of signatures, affirmations, and acknowledgements as required by Pennsylvania law.',
+      icon: (
+        <svg viewBox="0 0 24 24" className="h-6 w-6 text-accent" aria-hidden="true">
+          <path
+            d="M5 13l4 4L19 7"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      ),
     },
     {
       title: 'Loan Signing Services',
       desc: 'Professional handling of mortgage closings and refinance packages.',
+      icon: (
+        <svg viewBox="0 0 24 24" className="h-6 w-6 text-accent" aria-hidden="true">
+          <path
+            d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      ),
     },
     {
       title: 'After-Hours & Emergency Notary',
       desc:
         'Provide notary services outside regular business hours or on short notice, subject to availability and applicable surcharges.',
+      icon: (
+        <svg viewBox="0 0 24 24" className="h-6 w-6 text-accent" aria-hidden="true">
+          <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2" fill="none" />
+          <path d="M12 6v6l3 3" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" />
+        </svg>
+      ),
     },
     {
       title: 'Oaths & Affirmations',
       desc:
         'Administer legally binding oaths and affirmations for affidavits, statements, and declarations.',
+      icon: (
+        <svg viewBox="0 0 24 24" className="h-6 w-6 text-accent" aria-hidden="true">
+          <path
+            d="M12 6v6l3 3"
+            stroke="currentColor"
+            strokeWidth="2"
+            fill="none"
+            strokeLinecap="round"
+          />
+          <path d="M5 19h14" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" />
+        </svg>
+      ),
     },
     {
       title: 'Document Certifications',
       desc:
         'Certify copies of documents as true and accurate representations of the original when allowed by law.',
+      icon: (
+        <svg viewBox="0 0 24 24" className="h-6 w-6 text-accent" aria-hidden="true">
+          <rect x="3" y="3" width="18" height="18" rx="2" ry="2" stroke="currentColor" strokeWidth="2" fill="none" />
+          <path d="M3 9h18M9 21V9" stroke="currentColor" strokeWidth="2" fill="none" />
+        </svg>
+      ),
     },
   ];
 
@@ -39,17 +87,28 @@ export default function Services() {
         <h1 className="text-4xl font-serif font-semibold tracking-wide heading-gradient text-silver">
           Services
         </h1>
-        <ul className="grid gap-6 min-[568px]:grid-cols-2">
-          {services.map(({ title, desc }) => (
+        <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          {services.map(({ title, desc, icon }) => (
             <li
               key={title}
               className="rounded border border-platinum bg-deepgray p-4 shadow-sm transition-colors hover:bg-charcoal hover:shadow-lg"
             >
-              <h2 className="text-xl font-semibold text-platinum">{title}</h2>
+              <div className="flex items-center gap-2">
+                {icon}
+                <h2 className="text-xl font-semibold text-platinum">{title}</h2>
+              </div>
               <p className="mt-2 text-platinum">{desc}</p>
             </li>
           ))}
         </ul>
+        <a
+          href="https://forms.gle/b1Xg8pYkZABk4wN96"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="cta-button mt-4 self-start"
+        >
+          Book Now
+        </a>
       </div>
     </MotionSection>
   );
