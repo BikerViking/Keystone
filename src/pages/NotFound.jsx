@@ -12,13 +12,21 @@ export default function NotFound() {
       <h1 className="text-6xl font-serif font-semibold tracking-wide heading-gradient text-silver">404</h1>
       <p className="text-lg text-platinum">Sorry, we can’t find that page.</p>
       <nav aria-label="Helpful links" className="flex flex-col items-center gap-4 sm:flex-row">
-        <Link to="/contact#contact" className="cta-button hover:border-silver hover:text-silver px-6">
-          Schedule Appointment
-        </Link>
+        <a
+          href="https://forms.gle/b1Xg8pYkZABk4wN96"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="cta-button hover:border-silver hover:text-silver px-6"
+        >
+          Book Appointment
+        </a>
         <Link to="/" className="cta-button hover:border-silver hover:text-silver px-6">
           Return Home
         </Link>
       </nav>
+      <p className="mt-4 text-xs italic text-platinum">
+        All bookings are reviewed and confirmed before they are finalized.
+      </p>
     </MotionSection>
   );
 }

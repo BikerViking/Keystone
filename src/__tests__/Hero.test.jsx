@@ -13,8 +13,8 @@ describe('Hero component', () => {
       screen.getByRole('heading', { name: /keystone notary group, llc/i }),
     ).toBeInTheDocument();
     expect(
-      screen.getByRole('link', { name: /schedule appointment/i }),
-    ).toHaveAttribute('href', '/contact#contact');
+      screen.getByRole('link', { name: /book appointment/i }),
+    ).toHaveAttribute('href', 'https://forms.gle/b1Xg8pYkZABk4wN96');
     expect(
       screen.getByRole('link', { name: /call or text 267-309-9000/i }),
     ).toHaveAttribute('href', 'tel:2673099000');

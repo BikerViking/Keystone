@@ -21,7 +21,7 @@ This file outlines features, improvements, and implementation tasks for Codex to
 - [ ] Implement appointment request system with manual approval flow, including scheduling logic to track availability.
 - [ ] Add inline form validation and display for success/error messages.
 - [ ] Include a confirmation screen or success state for the contact form.
-- [ ] Include "Schedule Appointment" CTA on 404 fallback.
+- [ ] Include "Book Appointment" CTA on 404 fallback.
 
 ---
 
