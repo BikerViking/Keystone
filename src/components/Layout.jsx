@@ -4,6 +4,7 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 import ScrollToTopButton from './ScrollToTopButton';
 import StructuredData from './StructuredData';
+import ChatWidget from './ChatWidget';
 
 export default function Layout() {
   const location = useLocation();
@@ -27,6 +28,7 @@ export default function Layout() {
         </AnimatePresence>
         <Footer />
         <ScrollToTopButton />
+        <ChatWidget />
       </div>
     </>
   );

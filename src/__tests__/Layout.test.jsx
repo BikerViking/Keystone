@@ -23,4 +23,13 @@ describe('Layout component', () => {
     );
     expect(screen.getByRole('main')).toBeInTheDocument();
   });
+
+  test('renders chat widget bubble', () => {
+    render(
+      <MemoryRouter future={{ v7_relativeSplatPath: true, v7_startTransition: true }}>
+        <Layout />
+      </MemoryRouter>,
+    );
+    expect(screen.getByRole('button', { name: /ask a notary/i })).toBeInTheDocument();
+  });
 });
