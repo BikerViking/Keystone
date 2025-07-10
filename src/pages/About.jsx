@@ -13,7 +13,7 @@ export default function About() {
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 opacity-20 [background:radial-gradient(circle_at_center,_rgba(255,255,255,0.05),_transparent)]"
       />
-      <div className="mx-auto flex max-w-2xl flex-col gap-8">
+      <div className="mx-auto w-full max-w-3xl flex flex-col gap-8">
         <h1 className="text-4xl font-serif font-semibold tracking-wide heading-gradient text-silver">
           About Us
         </h1>

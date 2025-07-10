@@ -8,7 +8,7 @@ const MotionLink = motion.create(Link);
 
 export default function Hero() {
   return (
-    <section className="relative flex min-h-screen items-center justify-center text-center">
+    <section className="relative flex min-h-screen w-full items-center justify-center px-4 text-center sm:px-8">
       {/* Semi-transparent overlay for better text readability over the background */}
       <div className="absolute inset-0 bg-black/80" />
       <motion.div

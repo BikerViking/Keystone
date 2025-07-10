@@ -20,6 +20,12 @@ All notable changes to this project will be documented in this file.
 - Removed background and padding on Credentials heading and badge, keeping line visible behind both elements.
 - Reverted Credentials layout to stable version with 220x220 NNA badge.
 
+## [1.0.2] - YYYY-MM-DD
+### Changed
+- Standardized full-width containers and centered content.
+- Expanded card widths and removed leftover margins.
+- Ensured divider lines span each section without gaps.
+
 ## [1.0.1] - YYYY-MM-DD
 ### Changed
 - Removed NNA badge image and updated credentials list layout.

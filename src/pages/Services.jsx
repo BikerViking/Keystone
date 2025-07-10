@@ -35,20 +35,22 @@ export default function Services() {
         description="Explore our full range of notary services including loan signings, apostilles, and more."
         path="/services"
       />
-      <h1 className="text-4xl font-serif font-semibold tracking-wide heading-gradient text-silver">
-        Services
-      </h1>
-      <ul className="grid gap-6 min-[568px]:grid-cols-2">
-        {services.map(({ title, desc }) => (
-          <li
-            key={title}
-            className="rounded border border-platinum bg-deepgray p-4 shadow-sm"
-          >
-            <h2 className="text-xl font-semibold text-platinum">{title}</h2>
-            <p className="mt-2 text-platinum">{desc}</p>
-          </li>
-        ))}
-      </ul>
+      <div className="mx-auto w-full max-w-3xl flex flex-col gap-8">
+        <h1 className="text-4xl font-serif font-semibold tracking-wide heading-gradient text-silver">
+          Services
+        </h1>
+        <ul className="grid gap-6 min-[568px]:grid-cols-2">
+          {services.map(({ title, desc }) => (
+            <li
+              key={title}
+              className="rounded border border-platinum bg-deepgray p-4 shadow-sm"
+            >
+              <h2 className="text-xl font-semibold text-platinum">{title}</h2>
+              <p className="mt-2 text-platinum">{desc}</p>
+            </li>
+          ))}
+        </ul>
+      </div>
     </MotionSection>
   );
 }

@@ -26,7 +26,7 @@ export default function Contact() {
           description="Request a mobile notary appointment or ask questions through our contact form."
           path="/contact"
         />
-        <div className="mx-auto max-w-2xl">
+        <div className="mx-auto w-full max-w-3xl">
           <ThankYou />
         </div>
       </MotionSection>
@@ -40,7 +40,7 @@ export default function Contact() {
         description="Request a mobile notary appointment or ask questions through our contact form."
         path="/contact"
       />
-      <div className="mx-auto max-w-2xl">
+      <div className="mx-auto w-full max-w-3xl">
         <ContactForm onSuccess={() => setSubmitted(true)} />
       </div>
     </MotionSection>
