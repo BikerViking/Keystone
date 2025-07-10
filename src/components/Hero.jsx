@@ -17,18 +17,26 @@ export default function Hero() {
         transition={{ duration: 0.8 }}
         className="relative z-10 flex w-full flex-col items-center gap-8 px-4 sm:px-8 lg:gap-10"
       >
-        {/* Company logo displayed prominently at the top of the hero */}
-        <img
-          src="/hero-logo.PNG"
-          alt="Keystone Notary Group, LLC parchment logo"
-          width="1024"
-          height="1024"
-          className="mx-auto w-[300px] sm:w-[350px] md:w-[400px] lg:w-[450px] max-w-full h-auto mt-10 mb-6 drop-shadow-lg"
-          draggable={false}
-        />
-        <h1 className="hero-heading w-full text-4xl font-serif font-semibold tracking-wide heading-gradient lg:text-6xl">
-          Keystone Notary Group, LLC
-        </h1>
+        {/*
+          Group brand elements for easier layout tuning and animation hooks.
+          The wrapper also keeps logo and heading aligned across breakpoints.
+        */}
+        <header className="flex flex-col items-center">
+          {/* Fade in logo separately so future animations can target it */}
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.6 }}>
+            <img
+              src="/hero-logo.PNG"
+              alt="Keystone Notary Group logo on parchment"
+              width="1024"
+              height="1024"
+              className="mx-auto mt-6 mb-6 h-auto w-[300px] max-w-full sm:w-[350px] md:w-[400px] lg:w-[450px] drop-shadow-lg"
+              draggable={false}
+            />
+          </motion.div>
+          <h1 className="hero-heading w-full text-4xl font-serif font-semibold tracking-wide heading-gradient lg:text-6xl">
+            Keystone Notary Group, LLC
+          </h1>
+        </header>
         <p className="text-lg font-light lg:text-2xl">Reliable Mobile Notary Services</p>
         <a
           href="tel:2673099000"

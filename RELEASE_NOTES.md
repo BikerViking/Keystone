@@ -46,7 +46,7 @@
 
 ### Added
 
-- Hero section displays parchment logo at the top with responsive sizes.
+- Hero section displays logo on parchment at the top with responsive sizes.
 
 ## Version 1.0.1 – YYYY-MM-DD
 
