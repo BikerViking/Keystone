@@ -3,7 +3,7 @@ import { MotionSection, SEO } from '../components';
 
 export default function About() {
   return (
-    <MotionSection className="relative container flex flex-col gap-8 py-8">
+    <MotionSection className="relative w-full py-8 px-4 sm:px-8">
       <SEO
         title="About Keystone Notary Group | Professional Mobile Notaries"
         description="Learn about Keystone Notary Group, our mission, and the services we provide across the Greater Philadelphia area."
@@ -13,9 +13,10 @@ export default function About() {
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 opacity-20 [background:radial-gradient(circle_at_center,_rgba(255,255,255,0.05),_transparent)]"
       />
-      <h1 className="text-4xl font-serif font-semibold tracking-wide heading-gradient text-silver">
-        About Us
-      </h1>
+      <div className="mx-auto flex max-w-2xl flex-col gap-8">
+        <h1 className="text-4xl font-serif font-semibold tracking-wide heading-gradient text-silver">
+          About Us
+        </h1>
       <p className="text-lg text-platinum">
         Keystone Notary Group, LLC is a Pennsylvania-commissioned mobile notary
         company serving the Greater Philadelphia area.
@@ -38,12 +39,13 @@ export default function About() {
         Our notaries travel throughout Bucks, Montgomery, Philadelphia, Delaware,
         and Chester Counties.
       </p>
-      <Link
-        to="/"
-        className="cta-button mt-4 inline-block hover:border-silver hover:text-silver"
-      >
-        Back to Home
-      </Link>
+        <Link
+          to="/"
+          className="cta-button mt-4 inline-block hover:border-silver hover:text-silver"
+        >
+          Back to Home
+        </Link>
+      </div>
     </MotionSection>
   );
 }

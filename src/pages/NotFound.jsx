@@ -3,7 +3,7 @@ import { MotionSection, SEO } from '../components';
 
 export default function NotFound() {
   return (
-    <MotionSection className="container flex min-h-screen flex-col items-center justify-center gap-6 py-8 text-center">
+    <MotionSection className="flex min-h-screen w-full flex-col items-center justify-center gap-6 py-8 px-4 sm:px-8 text-center">
       <SEO
         title="Page Not Found | Keystone Notary Group"
         description="Sorry, the page you are looking for does not exist."

@@ -20,25 +20,29 @@ export default function Contact() {
 
   if (submitted) {
     return (
-      <MotionSection className="container flex flex-col gap-6 py-20">
+      <MotionSection className="flex w-full flex-col gap-6 py-20 px-4 sm:px-8">
         <SEO
           title="Contact Keystone Notary Group | Schedule a Notary"
           description="Request a mobile notary appointment or ask questions through our contact form."
           path="/contact"
         />
-        <ThankYou />
+        <div className="mx-auto max-w-2xl">
+          <ThankYou />
+        </div>
       </MotionSection>
     );
   }
 
   return (
-    <MotionSection id="contact" className="container flex flex-col gap-8 py-8">
+    <MotionSection id="contact" className="flex w-full flex-col gap-8 py-8 px-4 sm:px-8">
       <SEO
         title="Contact Keystone Notary Group | Schedule a Notary"
         description="Request a mobile notary appointment or ask questions through our contact form."
         path="/contact"
       />
-      <ContactForm onSuccess={() => setSubmitted(true)} />
+      <div className="mx-auto max-w-2xl">
+        <ContactForm onSuccess={() => setSubmitted(true)} />
+      </div>
     </MotionSection>
   );
 }
