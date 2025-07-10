@@ -10,3 +10,6 @@ export { default as StructuredData } from './StructuredData';
 export { default as PhoneIcon } from './PhoneIcon';
 export { default as SEO } from './SEO';
 export { default as ChatWidget } from './ChatWidget';
+export { default as ContactForm } from './ContactForm';
+export { default as ContactFields } from './ContactFields';
+export { default as ThankYou } from './ThankYou';
