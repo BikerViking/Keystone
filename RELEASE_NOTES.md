@@ -24,3 +24,9 @@
 - Final-size badge now absolutely positioned to keep the heading centered.
 - Removed background and padding from the Credentials heading and badge so the underline shows continuously behind them.
 - Reverted Credentials layout to stable version with 220x220 NNA badge.
+
+## Version 1.0.1 – YYYY-MM-DD
+
+### Changes
+- Removed the NNA badge from the Credentials section for a cleaner layout.
+- Footer now includes clickable phone and email contact links.

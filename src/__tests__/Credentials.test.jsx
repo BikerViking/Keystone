@@ -7,30 +7,12 @@ function setViewport(width) {
 }
 
 describe('Credentials component', () => {
-  test('displays NNA badge image with alt text', () => {
+  test('renders credential list', () => {
     render(<Credentials />);
-    const badge = screen.getByAltText(/nna certified notary signing agent 2025 badge/i);
-    expect(badge).toBeInTheDocument();
-  });
-
-  test('badge uses expected attributes and classes', () => {
-    render(<Credentials />);
-    const badge = screen.getByAltText(/nna certified notary signing agent 2025 badge/i);
-    const className = badge.getAttribute('class');
-    expect(className).toEqual(expect.stringContaining('w-[220px]'));
-    expect(className).toEqual(expect.stringContaining('h-[220px]'));
-    expect(className).toEqual(expect.stringContaining('mx-auto'));
-    expect(className).toEqual(expect.stringContaining('sm:ml-8'));
-    expect(badge.getAttribute('draggable')).toBe('false');
-  });
-
-  test('layout container uses responsive flex classes', () => {
-    render(<Credentials />);
-    const badge = screen.getByAltText(/nna certified notary signing agent 2025 badge/i);
-    const container = badge.parentElement;
-    const className = container?.getAttribute('class') || '';
-    expect(className).toEqual(expect.stringContaining('flex-col'));
-    expect(className).toEqual(expect.stringContaining('sm:flex-row'));
+    const list = screen.getByRole('list');
+    expect(list).toBeInTheDocument();
+    const items = screen.getAllByRole('listitem');
+    expect(items).toHaveLength(3);
   });
 
   const viewports = [320, 640, 1024, 1280];
