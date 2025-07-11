@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import { AnimatePresence } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import clsx from 'clsx';
 import { navLinkStyles } from './variants';
 
@@ -66,8 +66,11 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header
+    <motion.header
       role="banner"
+      initial={{ y: -40, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.5 }}
       className={clsx(
         'fixed inset-x-0 top-0 z-50 backdrop-blur-md transition-shadow',
         scrolled ? 'bg-black/90 shadow-md' : 'bg-black/80'
@@ -163,6 +166,6 @@ export default function Navbar() {
             </div>
           )}
         </AnimatePresence>
-    </header>
+    </motion.header>
   );
 }
