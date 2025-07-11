@@ -16,6 +16,12 @@
 - Chat widget shows typing indicator and feedback buttons.
 - Swipe navigation refined with smoother motion and a page indicator.
 
+## Version 1.0.12 – YYYY-MM-DD
+
+### Changed
+- Swipe gestures now require deliberate horizontal motion with velocity-based thresholds and spring animations.
+- Page indicator fades slightly and the active dot glides between positions.
+
 ## Version 1.0.10 – YYYY-MM-DD
 
 ### Changed

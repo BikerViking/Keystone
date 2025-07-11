@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [1.0.12] - YYYY-MM-DD
+### Changed
+- Swipe navigation uses velocity-aware thresholds and rubber-band drag tracking.
+- Page indicator animates active dot and fades when inactive.
+
 ## [1.0.11] - YYYY-MM-DD
 ### Changed
 - Added accent color and parallax hero animation.
