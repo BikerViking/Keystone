@@ -1,6 +1,6 @@
 # Release Notes
 
-## Version 1.0.11 – YYYY-MM-DD
+## Version 1.0.11 – 2025-07-11
 
 ### Changed
 
@@ -14,6 +14,7 @@
 - Navigation gains scroll shadow and persistent booking link.
 - Footer adds quick links and social placeholders.
 - Chat widget shows typing indicator and feedback buttons.
+- Credentials list is now centered with extra padding for clarity.
 
 ## Version 1.0.10 – YYYY-MM-DD
 
