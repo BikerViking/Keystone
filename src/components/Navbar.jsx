@@ -128,7 +128,8 @@ export default function Navbar() {
               ref={menuRef}
               aria-label="Mobile navigation"
               onMouseDown={(e) => e.stopPropagation()}
-              className="relative h-full mt-8 p-6"
+              /* Center drawer and limit width so it never spans edge to edge */
+              className="relative mx-auto mt-8 w-full max-w-[96vw] sm:max-w-sm p-6"
             >
               <button
                 className="absolute top-4 right-4 text-platinum"

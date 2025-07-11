@@ -24,9 +24,14 @@ export default {
         accent: '#2aa198',
         accentDark: '#1d716a',
       },
+      // Limit container width for consistent layouts across large screens
       container: {
         center: true,
         padding: '1rem',
+        screens: {
+          xl: '1200px',
+          '2xl': '1200px',
+        },
       },
     },
   },

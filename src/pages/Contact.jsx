@@ -38,7 +38,10 @@ export default function Contact() {
         description="Request a mobile notary appointment or ask questions through our contact form."
         path="/contact"
       />
-      <ContactForm onSuccess={() => setSubmitted(true)} />
+      {/* Center the form and limit width to maintain focus and readability */}
+      <div className="mx-auto w-full max-w-[600px] px-4">
+        <ContactForm onSuccess={() => setSubmitted(true)} />
+      </div>
     </MotionSection>
   );
 }
