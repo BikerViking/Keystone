@@ -16,6 +16,6 @@ test('renders price list with notarial fees', () => {
     screen.getByRole('heading', { name: /fee schedule/i })
   ).toBeInTheDocument();
   expect(
-    screen.getByText(/notarial act \(per signature\/stamp\)/i)
+    screen.getByText(/notarial act \(per signature\/seal\)/i)
   ).toBeInTheDocument();
 });

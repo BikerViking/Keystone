@@ -33,11 +33,11 @@ const faqs = [
     q: 'Where can I see your current rates?',
     a: (
       <>
-        Our current price list is always available here:{' '}
+        Our current price list can be viewed{' '}
         <Link to="/prices" className="underline hover:text-silver">
-          View Price List
+          here
         </Link>
-        . All fees are quoted up front and comply with Pennsylvania law.
+        .
       </>
     ),
   },
