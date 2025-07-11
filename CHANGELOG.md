@@ -4,11 +4,6 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
-## [1.0.12] - YYYY-MM-DD
-### Changed
-- Swipe navigation uses velocity-aware thresholds and rubber-band drag tracking.
-- Page indicator animates active dot and fades when inactive.
-
 ## [1.0.11] - YYYY-MM-DD
 ### Changed
 - Added accent color and parallax hero animation.
@@ -20,7 +15,6 @@ All notable changes to this project will be documented in this file.
 - Navigation now includes persistent "Book Now" button and scroll shadow.
 - Footer features quick links and social placeholders.
 - Chat widget shows typing indicator and feedback buttons.
-- Swipe navigation refined with smooth transitions and a page indicator.
 
 ### Added
 - Accessible "Ask a Notary" chat widget with focus trap, overlay close, and FAQ suggestions.
