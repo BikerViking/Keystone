@@ -22,7 +22,7 @@ export default function Credentials({ className = '' }) {
       <div className="mx-auto flex w-full max-w-3xl flex-col items-center gap-8">
         <h2
           id="credentials-heading"
-          className="text-3xl font-serif font-semibold tracking-wide heading-gradient text-silver"
+          className="w-full text-3xl font-serif font-semibold tracking-wide heading-gradient text-silver"
         >
           Credentials
         </h2>
