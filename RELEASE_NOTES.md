@@ -16,6 +16,14 @@
 - Chat widget shows typing indicator and feedback buttons.
 - Credentials list is now centered with extra padding for clarity.
 
+## Version 1.0.12 – 2025-07-12
+
+### Changed
+
+- Removed Prices page link from main navigation and footer.
+- FAQ now links to the fee schedule with accessible "here" text.
+- Simplified fee schedule page for clarity and responsive layout.
+
 ## Version 1.0.10 – YYYY-MM-DD
 
 ### Changed

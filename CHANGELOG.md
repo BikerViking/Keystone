@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [1.0.12] - 2025-07-12
+### Changed
+- Removed fee schedule link from navigation and footer; accessible only via FAQ.
+- Updated FAQ rates entry and redesigned price list page.
+
 ## [1.0.11] - 2025-07-11
 ### Changed
 - Added accent color and parallax hero animation.

@@ -7,7 +7,6 @@ export default function Footer() {
       <nav aria-label="Footer" className="mb-4 flex justify-center gap-4">
         <a href="/about" aria-label="Footer link to About" className="hover:text-silver">About</a>
         <a href="/services" aria-label="Footer link to Services" className="hover:text-silver">Services</a>
-        <a href="/prices" aria-label="Footer link to Prices" className="hover:text-silver">Prices</a>
         <a href="/contact" aria-label="Footer link to Contact" className="hover:text-silver">Contact</a>
       </nav>
       <p className="mb-2">

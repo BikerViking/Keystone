@@ -30,6 +30,6 @@ test('links to price list from FAQ', () => {
     name: /where can i see your current rates\?/i,
   });
   fireEvent.click(priceQuestion);
-  const link = screen.getByRole('link', { name: /view price list/i });
+  const link = screen.getByRole('link', { name: /^here$/i });
   expect(link).toHaveAttribute('href', '/prices');
 });
