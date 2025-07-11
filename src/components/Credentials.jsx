@@ -15,26 +15,26 @@ export default function Credentials({ className = '' }) {
     <MotionSection
       aria-labelledby="credentials-heading"
       className={clsx(
-        'mt-12 section-divider flex w-full flex-col items-center gap-6 px-4 sm:px-8 text-center',
+        'mt-12 section-divider flex w-full flex-col items-center px-4 sm:px-8 text-center',
         className,
       )}
     >
-      <div className="mx-auto w-full max-w-3xl">
-      <h2
-        id="credentials-heading"
-        className="text-3xl font-serif font-semibold tracking-wide heading-gradient text-silver"
-      >
-        Credentials
-      </h2>
+      <div className="mx-auto flex w-full max-w-3xl flex-col items-center gap-8">
+        <h2
+          id="credentials-heading"
+          className="text-3xl font-serif font-semibold tracking-wide heading-gradient text-silver"
+        >
+          Credentials
+        </h2>
 
-      <ul className="flex flex-col gap-4 text-left">
-        {credentials.map((cred) => (
-          <li key={cred} className="flex items-start">
-            <CheckIcon className="mr-2 h-5 w-5 text-silver" aria-hidden="true" />
-            <span className="text-platinum">{cred}</span>
-          </li>
-        ))}
-      </ul>
+        <ul className="mx-auto flex w-max flex-col items-start gap-4">
+          {credentials.map((cred) => (
+            <li key={cred} className="flex items-start">
+              <CheckIcon className="mr-2 h-5 w-5 text-silver" aria-hidden="true" />
+              <span className="text-platinum">{cred}</span>
+            </li>
+          ))}
+        </ul>
       </div>
     </MotionSection>
   );

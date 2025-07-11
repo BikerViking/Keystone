@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
-## [1.0.11] - YYYY-MM-DD
+## [1.0.11] - 2025-07-11
 ### Changed
 - Added accent color and parallax hero animation.
 - Refreshed service cards with icons and responsive grid.
@@ -15,6 +15,7 @@ All notable changes to this project will be documented in this file.
 - Navigation now includes persistent "Book Now" button and scroll shadow.
 - Footer features quick links and social placeholders.
 - Chat widget shows typing indicator and feedback buttons.
+- Credentials list now centered with additional spacing.
 
 ### Added
 - Accessible "Ask a Notary" chat widget with focus trap, overlay close, and FAQ suggestions.
