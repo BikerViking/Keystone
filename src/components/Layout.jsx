@@ -1,12 +1,17 @@
-import { useRef, useState } from 'react';
-import { Outlet, useLocation, useNavigate } from 'react-router-dom';
-import { AnimatePresence, motion, useMotionValue, animate } from 'framer-motion';
-import Navbar from './Navbar';
-import Footer from './Footer';
-import ScrollToTopButton from './ScrollToTopButton';
-import StructuredData from './StructuredData';
-import ChatWidget from './ChatWidget';
-import PageIndicator from './PageIndicator';
+import { useRef, useState } from "react";
+import { Outlet, useLocation, useNavigate } from "react-router-dom";
+import {
+  AnimatePresence,
+  motion,
+  useMotionValue,
+  animate,
+} from "framer-motion";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
+import ScrollToTopButton from "./ScrollToTopButton";
+import StructuredData from "./StructuredData";
+import ChatWidget from "./ChatWidget";
+import PageIndicator from "./PageIndicator";
 
 export default function Layout() {
   const location = useLocation();
@@ -15,7 +20,7 @@ export default function Layout() {
   const [showIndicator, setShowIndicator] = useState(true);
 
   // Define page order to allow sequential navigation via swipes
-  const pages = ['/', '/about', '/services', '/faq', '/prices', '/contact'];
+  const pages = ["/", "/about", "/services", "/faq", "/prices", "/contact"];
   const index = pages.indexOf(location.pathname);
 
   function goNext() {
@@ -41,7 +46,6 @@ export default function Layout() {
     navigate(pages[i]);
   }
 
-
   // Track horizontal drag offset in real time
   const dragX = useMotionValue(0);
   const dragState = useRef({
@@ -54,8 +58,8 @@ export default function Layout() {
 
   // Normalize pointer and touch events to get client coordinates
   function point(event) {
-    if ('touches' in event && event.touches.length) return event.touches[0];
-    if ('changedTouches' in event && event.changedTouches.length)
+    if ("touches" in event && event.touches.length) return event.touches[0];
+    if ("changedTouches" in event && event.changedTouches.length)
       return event.changedTouches[0];
     return event;
   }
@@ -94,7 +98,8 @@ export default function Layout() {
       event.preventDefault();
       const width = window.innerWidth;
       // Apply friction when dragging past screen edges for rubber band effect
-      const offset = Math.abs(dx) > width ? width + (dx - Math.sign(dx) * width) / 4 : dx;
+      const offset =
+        Math.abs(dx) > width ? width + (dx - Math.sign(dx) * width) / 4 : dx;
       dragX.set(offset);
     }
   }
@@ -115,13 +120,14 @@ export default function Layout() {
     const effectiveDist = Math.abs(velocity) > 0.65 ? baseDist * 0.5 : baseDist;
 
     const qualifies =
-      state.horizontal && Math.abs(dx) > Math.abs(dy) * 2 &&
+      state.horizontal &&
+      Math.abs(dx) > Math.abs(dy) * 2 &&
       (Math.abs(dx) > effectiveDist || Math.abs(velocity) > 0.65);
 
     if (qualifies) {
       const dir = dx < 0 ? -1 : 1;
       animate(dragX, dir * window.innerWidth, {
-        type: 'spring',
+        type: "spring",
         stiffness: 260,
         damping: 30,
       }).then(() => {
@@ -131,7 +137,7 @@ export default function Layout() {
       });
     } else {
       animate(dragX, 0, {
-        type: 'spring',
+        type: "spring",
         stiffness: 300,
         damping: 30,
       }).then(() => setShowIndicator(true));
@@ -139,15 +145,31 @@ export default function Layout() {
   }
 
   const variants = {
-    enter: (dir) => ({ x: dir > 0 ? -window.innerWidth : window.innerWidth, opacity: 0 }),
+    enter: (dir) => ({
+      x: dir > 0 ? -window.innerWidth : window.innerWidth,
+      opacity: 0,
+    }),
     center: { x: 0, opacity: 1 },
-    exit: (dir) => ({ x: dir > 0 ? window.innerWidth : -window.innerWidth, opacity: 0 }),
+    exit: (dir) => ({
+      x: dir > 0 ? window.innerWidth : -window.innerWidth,
+      opacity: 0,
+    }),
   };
 
   return (
     <>
       <StructuredData />
-      <div className="flex min-h-screen flex-col bg-charcoal text-platinum">
+      <motion.div
+        data-testid="swipe-container"
+        onPointerDown={handleStart}
+        onPointerMove={handleMove}
+        onPointerUp={handleEnd}
+        onTouchStart={handleStart}
+        onTouchMove={handleMove}
+        onTouchEnd={handleEnd}
+        style={{ x: dragX }}
+        className="flex min-h-screen flex-col bg-charcoal text-platinum"
+      >
         {/* Accessibility skip link lets keyboard users bypass repetitive navigation */}
         <a
           href="#content"
@@ -159,19 +181,12 @@ export default function Layout() {
         <AnimatePresence mode="wait" custom={direction}>
           <motion.main
             key={location.pathname}
-            onPointerDown={handleStart}
-            onPointerMove={handleMove}
-            onPointerUp={handleEnd}
-            onTouchStart={handleStart}
-            onTouchMove={handleMove}
-            onTouchEnd={handleEnd}
-            style={{ x: dragX }}
             variants={variants}
             initial="enter"
             animate="center"
             exit="exit"
             custom={direction}
-            transition={{ type: 'tween', duration: 0.4, ease: 'easeInOut' }}
+            transition={{ type: "tween", duration: 0.4, ease: "easeInOut" }}
             onAnimationComplete={() => {
               setDirection(0);
               setShowIndicator(true);
@@ -196,7 +211,7 @@ export default function Layout() {
         <Footer />
         <ScrollToTopButton />
         <ChatWidget />
-      </div>
+      </motion.div>
     </>
   );
 }
