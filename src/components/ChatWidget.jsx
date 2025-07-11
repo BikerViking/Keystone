@@ -137,7 +137,7 @@ export default function ChatWidget() {
               role="dialog"
               aria-label="Ask a Notary"
               ref={chatRef}
-              className="fixed bottom-0 left-0 right-0 z-50 m-4 flex max-h-[80vh] w-full max-w-sm flex-col overflow-hidden rounded-2xl border border-[#E5E4E2]/80 bg-black/80 text-platinum shadow-2xl backdrop-blur-md sm:bottom-4 sm:left-auto sm:right-4 sm:w-[370px]"
+              className="fixed bottom-0 left-0 right-0 z-50 m-4 flex max-h-[80vh] w-full max-w-sm flex-col overflow-hidden rounded-2xl border border-[#E5E4E2]/80 bg-black/80 text-platinum shadow-2xl backdrop-blur-md sm:bottom-4 sm:left-auto sm:right-4 sm:w-96"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 20 }}

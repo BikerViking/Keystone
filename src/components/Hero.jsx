@@ -37,7 +37,7 @@ export default function Hero() {
               alt="Keystone Notary Group logo on parchment"
               width="1024"
               height="1024"
-              className="mx-auto mt-6 mb-6 h-auto w-[300px] max-w-full sm:w-[350px] md:w-[400px] lg:w-[450px] drop-shadow-lg"
+              className="mx-auto mb-6 mt-6 h-auto w-72 max-w-full sm:w-80 md:w-96 lg:w-[30rem] drop-shadow-lg"
               draggable={false}
             />
           </motion.div>
