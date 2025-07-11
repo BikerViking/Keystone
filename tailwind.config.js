@@ -14,6 +14,7 @@ export default {
         platinum: '#999999',
         silver: '#bfbfbf',
         accent: '#2aa198',
+        accentDark: '#1d716a',
       },
       container: {
         center: true,
