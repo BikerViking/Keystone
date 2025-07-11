@@ -78,12 +78,13 @@ export default function Navbar() {
       <nav className="flex w-full items-center justify-between py-3 px-4 sm:px-8 md:py-4">
         <Link
           to="/"
-          className="flex items-center rounded border border-transparent px-3 text-xl font-semibold font-serif tracking-wide text-white transition-colors hover:border-silver hover:text-silver"
+          className="flex flex-shrink-0 items-center rounded border border-transparent px-3 text-xl font-semibold font-serif tracking-wide text-white transition-colors hover:border-silver hover:text-silver"
         >
-          Keystone Notary Group, LLC
+          <span className="hidden nav:inline whitespace-nowrap">Keystone Notary Group, LLC</span>
+          <span className="nav:hidden whitespace-nowrap">Keystone Notary</span>
         </Link>
         <button
-          className="md:hidden flex flex-col items-center justify-center p-2 focus:outline-none focus:ring-2 focus:ring-platinum"
+          className="nav:hidden flex flex-col items-center justify-center p-2 focus:outline-none focus:ring-2 focus:ring-platinum"
           /* Focus ring ensures mobile menu trigger is keyboard accessible */
           onClick={toggle}
           aria-label="Toggle navigation"
@@ -93,7 +94,7 @@ export default function Navbar() {
           <span className="mb-1 block h-0.5 w-6 bg-platinum transition-colors hover:bg-silver" />
           <span className="block h-0.5 w-6 bg-platinum transition-colors hover:bg-silver" />
         </button>
-        <ul className="hidden items-center gap-3 md:flex">
+        <ul className="hidden items-center gap-3 nav:flex">
           {navItems.map((item) => (
             <li key={item.name}>
               <NavLink to={item.path} className={linkClasses} end>
@@ -115,7 +116,7 @@ export default function Navbar() {
       </nav>
       <AnimatePresence>
         {open && (
-          <div className="relative fixed inset-0 z-40 bg-black md:hidden">
+          <div className="relative fixed inset-0 z-40 bg-black nav:hidden">
             <button
               type="button"
               aria-label="Close menu overlay"
