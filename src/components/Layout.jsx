@@ -60,7 +60,7 @@ export default function Layout() {
     return event;
   }
 
-  // Start tracking on pointer down to later decide if it's a swipe or scroll
+  // Start tracking drag gesture and hide indicators until it resolves
   function handleStart(event) {
     const p = point(event);
     dragState.current = {
@@ -70,9 +70,11 @@ export default function Layout() {
       dragging: true,
       horizontal: false,
     };
+    // Hide indicator during drag to avoid distraction
+    setShowIndicator(false);
   }
 
-  // Update motion value during horizontal drag; cancel if user scrolls vertically
+  // Update motion value during drag; cancel if user scrolls vertically
   function handleMove(event) {
     const state = dragState.current;
     if (!state.dragging) return;
@@ -80,47 +82,59 @@ export default function Layout() {
     const dx = p.clientX - state.startX;
     const dy = p.clientY - state.startY;
     if (!state.horizontal) {
-      if (Math.abs(dx) > 10 && Math.abs(dx) > Math.abs(dy)) {
+      // Require clear horizontal intent before locking scroll
+      if (Math.abs(dx) > 10 && Math.abs(dx) > Math.abs(dy) * 2) {
         state.horizontal = true;
-      } else if (Math.abs(dy) > 10) {
-        // User moved more vertically than horizontally, allow scrolling
+      } else if (Math.abs(dy) > 10 && Math.abs(dy) > Math.abs(dx)) {
         state.dragging = false;
         return;
       }
     }
     if (state.horizontal) {
-      // Prevent vertical scrolling once horizontal intent is confirmed
       event.preventDefault();
-      dragX.set(dx);
+      const width = window.innerWidth;
+      // Apply friction when dragging past screen edges for rubber band effect
+      const offset = Math.abs(dx) > width ? width + (dx - Math.sign(dx) * width) / 4 : dx;
+      dragX.set(offset);
     }
   }
 
-  // On release, decide whether to navigate or snap back based on distance/speed
+  // Decide whether to navigate or snap back on release
   function handleEnd(event) {
     const state = dragState.current;
     if (!state.dragging && !state.horizontal) return;
     const p = point(event);
     const dx = p.clientX - state.startX;
-    const dt = event.timeStamp - state.time;
+    const dy = p.clientY - state.startY;
+    const dt = Math.max(event.timeStamp - state.time, 1);
     const velocity = dx / dt;
     state.dragging = false;
-    const threshold = 80;
-    const speed = 0.5;
-    if (state.horizontal && (Math.abs(dx) > threshold || Math.abs(velocity) > speed)) {
+
+    // Distance threshold scales with viewport and swipe speed
+    const baseDist = Math.max(window.innerWidth * 0.3, 100);
+    const effectiveDist = Math.abs(velocity) > 0.65 ? baseDist * 0.5 : baseDist;
+
+    const qualifies =
+      state.horizontal && Math.abs(dx) > Math.abs(dy) * 2 &&
+      (Math.abs(dx) > effectiveDist || Math.abs(velocity) > 0.65);
+
+    if (qualifies) {
       const dir = dx < 0 ? -1 : 1;
-      // Continue motion off screen before navigating to the next page
       animate(dragX, dir * window.innerWidth, {
         type: 'spring',
         stiffness: 260,
         damping: 30,
-        duration: 0.35,
       }).then(() => {
         dir < 0 ? goNext() : goPrev();
         dragX.set(0);
+        setShowIndicator(true);
       });
     } else {
-      // Not enough momentum: return to starting position
-      animate(dragX, 0, { type: 'spring', stiffness: 300, damping: 30, duration: 0.35 });
+      animate(dragX, 0, {
+        type: 'spring',
+        stiffness: 300,
+        damping: 30,
+      }).then(() => setShowIndicator(true));
     }
   }
 
@@ -175,7 +189,7 @@ export default function Layout() {
               pages={pages}
               current={index}
               onSelect={goTo}
-              className="fixed inset-x-0 bottom-10 pointer-events-none md:hidden"
+              className="fixed inset-x-0 bottom-8 pointer-events-none md:hidden"
             />
           )}
         </AnimatePresence>
