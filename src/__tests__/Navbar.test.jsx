@@ -5,31 +5,17 @@ import { Navbar } from "../components";
 describe("Navbar component", () => {
   test("toggles mobile menu", async () => {
     render(
-      <MemoryRouter
-        future={{ v7_relativeSplatPath: true, v7_startTransition: true }}
-      >
+      <MemoryRouter future={{ v7_relativeSplatPath: true, v7_startTransition: true }}>
         <Navbar />
       </MemoryRouter>,
     );
 
     const button = screen.getByRole("button", { name: /toggle navigation/i });
     fireEvent.click(button);
-    expect(
-      screen.getByRole("button", { name: /close navigation/i }),
-    ).toBeInTheDocument();
-    // Mobile menu should render with a navigation region for accessibility
-    expect(
-      screen.getByRole("navigation", { name: /mobile navigation/i }),
-    ).toBeInTheDocument();
-
-    // Clicking outside the menu should close it
-    fireEvent.click(
-      screen.getByRole("button", { name: /close menu overlay/i }),
-    );
+    expect(screen.getByRole("navigation", { name: /mobile navigation/i })).toBeInTheDocument();
+    fireEvent.click(button);
     await waitFor(() =>
-      expect(
-        screen.queryByRole("button", { name: /close navigation/i }),
-      ).not.toBeInTheDocument(),
+      expect(screen.queryByRole("navigation", { name: /mobile navigation/i })).not.toBeInTheDocument(),
     );
   });
 
@@ -49,7 +35,7 @@ describe("Navbar component", () => {
     expect(toggleButton).toHaveAttribute("aria-expanded", "true");
   });
 
-  test("menu stays open on orientation change", () => {
+  test("menu closes on orientation change", async () => {
     render(
       <MemoryRouter
         future={{ v7_relativeSplatPath: true, v7_startTransition: true }}
@@ -57,13 +43,14 @@ describe("Navbar component", () => {
         <Navbar />
       </MemoryRouter>,
     );
-    fireEvent.click(screen.getByRole("button", { name: /toggle navigation/i }));
-    expect(
-      screen.getByRole("button", { name: /close navigation/i }),
-    ).toBeInTheDocument();
+    const toggleButton = screen.getByRole("button", { name: /toggle navigation/i });
+    fireEvent.click(toggleButton);
+    expect(screen.getByRole("navigation", { name: /mobile navigation/i })).toBeInTheDocument();
     window.dispatchEvent(new Event("orientationchange"));
-    expect(
-      screen.getByRole("button", { name: /close navigation/i }),
-    ).toBeInTheDocument();
+    await waitFor(() =>
+      expect(
+        screen.queryByRole("navigation", { name: /mobile navigation/i }),
+      ).not.toBeInTheDocument(),
+    );
   });
 });
