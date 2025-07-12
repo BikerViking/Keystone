@@ -119,13 +119,13 @@ export default function Navbar() {
           onClick={toggle}
           aria-label="Toggle navigation"
           aria-expanded={open}
-          className="col-start-3 flex justify-self-end md:hidden landscape-toggle items-center justify-center p-2 focus:outline-none focus:ring-2 focus:ring-platinum"
+          className="col-start-3 flex h-11 w-11 items-center justify-center justify-self-end rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-platinum md:hidden landscape-toggle"
         >
           <GridIcon className="h-6 w-6 text-platinum transition-colors hover:text-silver" />
         </button>
         <Link
           to="/"
-          className="col-start-2 justify-self-center whitespace-nowrap rounded border border-transparent px-3 font-serif text-xl font-semibold text-white transition-colors hover:border-silver hover:text-silver landscape-brand"
+          className="col-start-2 justify-self-center whitespace-nowrap rounded border border-transparent px-2 text-lg font-serif font-semibold text-white transition-colors hover:border-silver hover:text-silver sm:px-3 sm:text-xl landscape-brand"
         >
           Keystone Notary Group, LLC
         </Link>
