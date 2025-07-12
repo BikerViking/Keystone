@@ -24,10 +24,6 @@
     background-image: linear-gradient(to right, #bfbfbf, transparent);
   }
 
-  .section-divider {
-    @apply border-t border-platinum py-16;
-  }
-
   .cta-button {
     @apply relative inline-block rounded border border-platinum bg-gradient-to-br from-accentDark to-deepgray px-8 py-3 text-lg font-medium text-white shadow-md transition-transform duration-200 focus:outline-none focus:ring-2 focus:ring-accentDark hover:shadow-lg hover:-translate-y-1 hover:scale-105 active:scale-95;
     /* Add focus ring to ensure keyboard users can see button focus */
