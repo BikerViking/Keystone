@@ -1,5 +1,5 @@
 import { Outlet, useLocation } from 'react-router-dom';
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import ScrollToTopButton from './ScrollToTopButton';
@@ -8,6 +8,7 @@ import ChatWidget from './ChatWidget';
 
 export default function Layout() {
   const location = useLocation();
+  const reduce = useReducedMotion();
 
   return (
     <>
@@ -24,9 +25,9 @@ export default function Layout() {
         <AnimatePresence mode="wait">
           <motion.main
             key={location.pathname}
-            initial={{ opacity: 0 }}
+            initial={reduce ? false : { opacity: 0 }}
             animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            exit={reduce ? false : { opacity: 0 }}
             transition={{ duration: 0.3 }}
             id="content"
             className="flex-grow pt-16"

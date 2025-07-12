@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [1.0.15] - 2025-07-15
+
+### Added
+
+- Reduced-motion variants for key animations to respect user preferences.
+- Chat widget now displays a pulsing typing indicator.
+
 ## [1.0.14] - 2025-07-14
 
 ### Changed

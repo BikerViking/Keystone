@@ -47,4 +47,15 @@ describe('ChatWidget component', () => {
       await screen.findByText(/great question! please call or text for a personalized answer./i),
     ).toBeInTheDocument();
   });
+
+  test('shows typing indicator while generating reply', async () => {
+    render(<ChatWidget />);
+    fireEvent.click(screen.getByRole('button', { name: /ask a notary/i }));
+    fireEvent.change(screen.getByRole('textbox', { name: /type your question/i }), {
+      target: { value: 'Hello?' },
+    });
+    fireEvent.submit(screen.getByRole('textbox', { name: /type your question/i }).closest('form'));
+    expect(screen.getByLabelText(/typing indicator/i)).toBeInTheDocument();
+    await waitForElementToBeRemoved(() => screen.queryByLabelText(/typing indicator/i));
+  });
 });

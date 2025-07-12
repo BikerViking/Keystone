@@ -36,6 +36,13 @@
 
 - Reverted to default system fonts after encountering an issue with the bundled Playfair Display asset.
 
+## Version 1.0.15 – 2025-07-15
+
+### Added
+
+- Reduced-motion variants for animations to respect prefers-reduced-motion.
+- Chat widget typing indicator now animates with a pulse effect.
+
 ## Version 1.0.10 – YYYY-MM-DD
 
 ### Changed

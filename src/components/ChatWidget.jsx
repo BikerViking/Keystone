@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
 import clsx from 'clsx';
 
 // Predefined FAQs for quick matching without external calls
@@ -30,6 +30,7 @@ export default function ChatWidget() {
   const inputRef = useRef(null);
   const listRef = useRef(null);
   const chatRef = useRef(null);
+  const reduce = useReducedMotion();
 
   // When chat opens, focus input and send greeting once for user onboarding
   useEffect(() => {
@@ -113,9 +114,9 @@ export default function ChatWidget() {
             className="fixed bottom-4 right-4 rounded-full bg-deepgray px-4 py-2 text-white shadow-lg transition-colors hover:bg-charcoal focus:outline-none focus:ring focus:ring-platinum"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            initial={{ opacity: 0, scale: 0.8 }}
+            initial={reduce ? false : { opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.8 }}
+            exit={reduce ? false : { opacity: 0, scale: 0.8 }}
             transition={{ duration: 0.2 }}
           >
             Ask a Notary
@@ -131,6 +132,9 @@ export default function ChatWidget() {
               aria-label="Close chat"
               onClick={() => setOpen(false)}
               className="fixed inset-0 z-40 bg-black/50 focus:outline-none"
+              initial={reduce ? false : { opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={reduce ? false : { opacity: 0 }}
             />
             <motion.div
               key="chat"
@@ -138,9 +142,9 @@ export default function ChatWidget() {
               aria-label="Ask a Notary"
               ref={chatRef}
               className="fixed bottom-0 left-0 right-0 z-50 m-4 flex max-h-[80vh] w-full max-w-sm flex-col overflow-hidden rounded-2xl border border-[#E5E4E2]/80 bg-black/80 text-platinum shadow-2xl backdrop-blur-md sm:bottom-4 sm:left-auto sm:right-4 sm:w-96"
-              initial={{ opacity: 0, y: 20 }}
+              initial={reduce ? false : { opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: 20 }}
+              exit={reduce ? false : { opacity: 0, y: 20 }}
               transition={{ duration: 0.2 }}
             >
               <div className="flex items-center justify-between border-b border-[#E5E4E2]/50 px-4 py-3">
@@ -192,7 +196,9 @@ export default function ChatWidget() {
                   ))}
                 </AnimatePresence>
                 {typing && (
-                  <p className="text-platinum">Typing...</p>
+                  <p aria-label="Typing indicator" className="animate-pulse text-platinum">
+                    Typing...
+                  </p>
                 )}
                 <div className="mt-2 flex flex-wrap gap-2">
                   {FAQ.map(({ q }) => (
