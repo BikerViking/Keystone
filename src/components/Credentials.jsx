@@ -11,11 +11,11 @@ export default function Credentials({ className = '' }) {
   ];
 
   return (
-    // Top margin and border create clear division from prior section
+    // Top margin keeps breathing room from prior section
     <MotionSection
       aria-labelledby="credentials-heading"
       className={clsx(
-        'mt-12 section-divider flex w-full flex-col items-center px-4 sm:px-8 text-center',
+        'mt-10 flex w-full flex-col items-center px-4 sm:px-8 text-center py-12 sm:py-16',
         className,
       )}
     >
