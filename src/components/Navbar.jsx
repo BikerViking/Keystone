@@ -5,19 +5,27 @@ import clsx from "clsx";
 import { navLinkStyles } from "./variants";
 import GridIcon from "./GridIcon";
 
-// Slide down for mobile menu with subtle fade
+// Smooth spring animation for mobile menu reveal
 const menuVariants = {
   closed: { height: 0, opacity: 0 },
   open: {
     height: "auto",
     opacity: 1,
-    transition: { duration: 0.3, staggerChildren: 0.05 },
+    transition: {
+      height: { type: "spring", stiffness: 80, damping: 15 },
+      opacity: { duration: 0.25 },
+      staggerChildren: 0.06,
+    },
   },
 };
 
 const itemVariants = {
   closed: { opacity: 0, y: -10 },
-  open: { opacity: 1, y: 0 },
+  open: {
+    opacity: 1,
+    y: 0,
+    transition: { type: "spring", stiffness: 80, damping: 20 },
+  },
 };
 
 const navItems = [

@@ -152,5 +152,8 @@
     .landscape-menu {
       display: block !important;
     }
+    .landscape-menu ul {
+      @apply flex-row justify-center gap-6 py-4;
+    }
   }
 }
