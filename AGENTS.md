@@ -45,8 +45,8 @@ The Keystone brand uses a restrained palette built around charcoal, black, and v
 - **Charcoal** `#121212`
 - **Deep Gray** `#1A1A1A`
 - **Platinum Gray** `#999999`
-- **Light Gray** ``
-- **Medium Gray** ``
+- **Light Gray** `#CCCCCC`
+- **Medium Gray** `#666666`
 - **Silver** `#bfbfbf`
 - **Metallic Silver** ``
 
