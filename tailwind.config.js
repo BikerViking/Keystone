@@ -21,8 +21,8 @@ export default {
         deepgray: '#1A1A1A',
         platinum: '#999999',
         silver: '#bfbfbf',
-        accent: '#2aa198',
-        accentDark: '#1d716a',
+        accent: '#d4af37',
+        accentDark: '#b8860b',
       },
       // Limit container width for consistent layouts across large screens
       container: {

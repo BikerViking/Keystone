@@ -3,6 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import clsx from "clsx";
 import { navLinkStyles } from "./variants";
+import HamburgerIcon from "./HamburgerIcon";
 
 // Animation variants for the sliding mobile menu
 const menuVariants = {
@@ -97,15 +98,13 @@ export default function Navbar() {
           <span className="nav:hidden whitespace-nowrap">Keystone Notary</span>
         </Link>
         <button
-          className="nav:hidden flex flex-col items-center justify-center p-2 focus:outline-none focus:ring-2 focus:ring-platinum"
+          className="nav:hidden flex items-center justify-center p-2 focus:outline-none focus:ring-2 focus:ring-platinum"
           /* Focus ring ensures mobile menu trigger is keyboard accessible */
           onClick={toggle}
           aria-label="Toggle navigation"
           aria-expanded={open}
         >
-          <span className="mb-1 block h-0.5 w-6 bg-platinum transition-colors hover:bg-silver" />
-          <span className="mb-1 block h-0.5 w-6 bg-platinum transition-colors hover:bg-silver" />
-          <span className="block h-0.5 w-6 bg-platinum transition-colors hover:bg-silver" />
+          <HamburgerIcon className="h-6 w-6 text-platinum transition-colors hover:text-silver" />
         </button>
         <ul className="hidden items-center gap-3 nav:flex">
           {navItems.map((item) => (
@@ -160,7 +159,7 @@ export default function Navbar() {
                 ✕
               </button>
               <motion.ul
-                className="mt-8 flex flex-col gap-4"
+                className="mt-8 flex flex-col divide-y divide-platinum/20 border-t border-platinum/20"
                 variants={{ open: { transition: { staggerChildren: 0.05 } } }}
               >
                 {navItems.map((item) => (
