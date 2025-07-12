@@ -5,9 +5,18 @@ import clsx from "clsx";
 import { navLinkStyles } from "./variants";
 import GridIcon from "./GridIcon";
 
-// Smooth spring animation for mobile menu reveal
+// Menu reveal with gentle spring for a premium feel
 const menuVariants = {
-  closed: { height: 0, opacity: 0 },
+  closed: {
+    height: 0,
+    opacity: 0,
+    transition: {
+      height: { type: "spring", stiffness: 80, damping: 20 },
+      opacity: { duration: 0.2 },
+      staggerChildren: 0.04,
+      staggerDirection: -1,
+    },
+  },
   open: {
     height: "auto",
     opacity: 1,
@@ -76,6 +85,22 @@ export default function Navbar() {
     };
   }, []);
 
+  // Dismiss mobile menu when tapping outside
+  useEffect(() => {
+    if (!open) return;
+    function handleClick(event) {
+      if (
+        event.target.closest(".landscape-menu") ||
+        event.target.closest(".landscape-toggle")
+      ) {
+        return;
+      }
+      closeMenu();
+    }
+    document.addEventListener("click", handleClick);
+    return () => document.removeEventListener("click", handleClick);
+  }, [open]);
+
   return (
     <motion.header
       role="banner"
@@ -83,12 +108,12 @@ export default function Navbar() {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
       className={clsx(
-        'fixed inset-x-0 top-0 z-50 border-b border-silver bg-charcoal/90 backdrop-blur-md transition-shadow',
-        scrolled && 'shadow-md',
+        "fixed inset-x-0 top-0 z-50 border-b border-silver bg-charcoal/90 backdrop-blur-md transition-shadow",
+        scrolled && "shadow-md",
       )}
     >
-      <nav className="mx-auto grid max-w-5xl grid-cols-3 items-center px-4 py-3 sm:px-6 md:py-4">
-        <div className="flex md:hidden landscape-toggle">
+      <nav className="mx-auto grid max-w-5xl grid-cols-[1fr_auto_1fr] items-center px-4 py-3 sm:px-6 md:py-4">
+        <div className="col-start-3 flex justify-self-end md:hidden landscape-toggle">
           <button
             onClick={toggle}
             aria-label="Toggle navigation"
@@ -100,11 +125,11 @@ export default function Navbar() {
         </div>
         <Link
           to="/"
-          className="justify-self-center whitespace-nowrap rounded border border-transparent px-3 font-serif text-xl font-semibold text-white transition-colors hover:border-silver hover:text-silver landscape-brand"
+          className="col-start-2 justify-self-center whitespace-nowrap rounded border border-transparent px-3 font-serif text-xl font-semibold text-white transition-colors hover:border-silver hover:text-silver landscape-brand"
         >
           Keystone Notary Group, LLC
         </Link>
-        <ul className="hidden items-center justify-end gap-x-8 md:flex landscape-links">
+        <ul className="hidden items-center justify-end gap-x-8 md:flex landscape-links col-start-3 justify-self-end">
           {navItems.map((item) => (
             <li key={item.name}>
               <NavLink to={item.path} className={linkClasses} end>
