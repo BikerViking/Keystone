@@ -17,7 +17,7 @@ respect_previous_context = true
 maintain_continuity = true
 no_duplicate_logic = true
 maintain_luxury_appearance = true
-layout_modification_permissions_granted = true
+layout_improvement_permissions_granted = true
 ensure_codex_file_adherence = true
 unrestricted_codex_network_access = true
 
