@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [1.0.14] - 2025-07-14
+
+### Changed
+
+- Reverted bundled Playfair Display font and returned to system fonts for
+  improved reliability.
+
 ## [1.0.13] - 2025-07-13
 
 ### Added

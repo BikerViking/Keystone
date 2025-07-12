@@ -30,6 +30,12 @@
 
 - Mobile menu now glides in from the right with a soft overlay and staggered link animations.
 
+## Version 1.0.14 – 2025-07-14
+
+### Changed
+
+- Reverted to default system fonts after encountering an issue with the bundled Playfair Display asset.
+
 ## Version 1.0.10 – YYYY-MM-DD
 
 ### Changed
