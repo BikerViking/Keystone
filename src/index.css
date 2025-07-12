@@ -140,5 +140,14 @@
     .why-heading {
       @apply text-2xl;
     }
+    .landscape-toggle {
+      display: flex !important;
+    }
+    .landscape-links {
+      display: none !important;
+    }
+    .landscape-brand {
+      @apply text-lg px-2;
+    }
   }
 }
