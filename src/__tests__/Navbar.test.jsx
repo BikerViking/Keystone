@@ -1,4 +1,5 @@
 import { fireEvent, render, screen, waitFor } from "@testing-library/react";
+import { act } from "react";
 import { MemoryRouter } from "react-router-dom";
 import { Navbar } from "../components";
 
@@ -46,7 +47,9 @@ describe("Navbar component", () => {
     const toggleButton = screen.getByRole("button", { name: /toggle navigation/i });
     fireEvent.click(toggleButton);
     expect(screen.getByRole("navigation", { name: /mobile navigation/i })).toBeInTheDocument();
-    window.dispatchEvent(new Event("orientationchange"));
+    act(() => {
+      window.dispatchEvent(new Event("orientationchange"));
+    });
     await waitFor(() =>
       expect(
         screen.queryByRole("navigation", { name: /mobile navigation/i }),
