@@ -26,3 +26,14 @@ To book a notary, email [info@keystonenotarygroup.com](mailto:info@keystonenotar
 For urgent matters, call the phone number listed on the site to check availability. We look forward to assisting with your notarization needs.
 
 Our website now features a streamlined layout optimized for mobile devices, so you can schedule appointments quickly from any screen size.
+
+## Brand Guidelines
+
+The Keystone brand uses a restrained palette built around charcoal, black, and varying shades of gray. Primary colors include:
+
+- **Charcoal** `#121212`
+- **Deep Gray** `#1A1A1A`
+- **Platinum Gray** `#999999`
+- **Silver** `#bfbfbf`
+
+Metallic silver accents are allowed, but gold or other hues should not be introduced. Designs should feel minimalist and professional—mirroring our charcoal matte business cards with silver foil logos. All website updates should maintain this luxurious, monochromatic style.
