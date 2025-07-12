@@ -231,4 +231,3 @@ require_plain_text_summary = true
 [privacy]
 never_log_user_data = true
 anonymize_debug_output = true
-require_cookie_disclosure = true
