@@ -9,7 +9,7 @@ This file outlines features, improvements, and implementation tasks for Codex to
 - [x] Create a full About page with company overview, professionalism, and mission statement.
 - [x] Create a full Services page listing all notarial offerings in a well-structured layout.
 - [x] Build a styled FAQ page with accessible, collapsible Q&A components.
-- [ ] Enhance the Contact form with fields for appointment type and document category.
+- [x] Enhance the Contact form with fields for appointment type and document category.
 - [x] Add Open Graph and Twitter Card metadata for SEO and sharing.
 - [x] Add a favicon and Apple touch icon to the site.
 - [x] Design and implement custom 404 page with router fallback and homepage link.
