@@ -72,11 +72,13 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close mobile menu when orientation or viewport width changes
+  // Close menu when switching to a true desktop layout
+  // Landscape phones remain in "mobile" mode even if width exceeds 768px
   useEffect(() => {
-    const closeOnChange = () => {
-      if (window.innerWidth >= 768) setOpen(false);
-    };
+    function closeOnChange() {
+      const isDesktop = window.innerWidth >= 768 && window.innerHeight > 500;
+      if (isDesktop) setOpen(false);
+    }
     window.addEventListener("orientationchange", closeOnChange);
     window.addEventListener("resize", closeOnChange);
     return () => {

@@ -5,6 +5,7 @@ All notable changes to this project will be documented in this file.
 ## [Unreleased]
 - Added mobile notary services section and centered "Book Now" button on Services page.
 - Replaced hamburger navigation with full-screen overlay menu.
+- Fixed hamburger menu not opening in landscape orientation.
 
 ## [1.0.15] - 2025-07-15
 

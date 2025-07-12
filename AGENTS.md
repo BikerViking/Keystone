@@ -25,7 +25,7 @@ To book a notary, email [info@keystonenotarygroup.com](mailto:info@keystonenotar
 
 For urgent matters, call the phone number listed on the site to check availability. We look forward to assisting with your notarization needs.
 
-Our website now features a streamlined layout optimized for mobile devices, so you can schedule appointments quickly from any screen size.
+Our website now features a streamlined layout optimized for mobile devices. Landscape orientation is fully supported so you can schedule appointments quickly from any screen size.
 
 ## Brand Guidelines
 
