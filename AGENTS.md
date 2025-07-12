@@ -19,6 +19,7 @@ Our mobile notaries travel throughout southeastern Pennsylvania, including Phila
 - Legal Filings
 - Deed Transfers
 - Wills & Trusts
+- Contracts
 - Power of Attorneys
 - Medical Directives 
 - General acknowledgements
