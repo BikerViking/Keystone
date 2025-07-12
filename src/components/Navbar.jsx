@@ -95,7 +95,7 @@ export default function Navbar() {
           <span className="hidden nav:inline whitespace-nowrap">
             Keystone Notary Group, LLC
           </span>
-          <span className="nav:hidden whitespace-nowrap">Keystone Notary</span>
+          <span className="nav:hidden whitespace-nowrap">Keystone Notary Group, LLC</span>
         </Link>
         <button
           className="nav:hidden flex items-center justify-center p-2 focus:outline-none focus:ring-2 focus:ring-platinum"
