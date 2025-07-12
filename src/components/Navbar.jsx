@@ -5,22 +5,19 @@ import clsx from "clsx";
 import { navLinkStyles } from "./variants";
 import GridIcon from "./GridIcon";
 
-// Fade in the overlay with a slight upward motion
+// Slide down for mobile menu with subtle fade
 const menuVariants = {
-  closed: { opacity: 0, y: 20 },
+  closed: { height: 0, opacity: 0 },
   open: {
+    height: "auto",
     opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.3,
-      staggerChildren: 0.05,
-    },
+    transition: { duration: 0.3, staggerChildren: 0.05 },
   },
 };
 
 const itemVariants = {
-  closed: { opacity: 0, x: 20 },
-  open: { opacity: 1, x: 0 },
+  closed: { opacity: 0, y: -10 },
+  open: { opacity: 1, y: 0 },
 };
 
 const navItems = [
@@ -65,30 +62,28 @@ export default function Navbar() {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
       className={clsx(
-        "fixed inset-x-0 top-0 z-50 backdrop-blur-md transition-shadow",
-        scrolled ? "bg-black/90 shadow-md" : "bg-black/80",
+        'fixed inset-x-0 top-0 z-50 border-b border-silver bg-charcoal/90 backdrop-blur-md transition-shadow',
+        scrolled && 'shadow-md',
       )}
     >
-      <nav className="flex w-full items-center justify-between py-3 px-4 sm:px-8 md:py-4">
+      <nav className="mx-auto grid max-w-5xl grid-cols-3 items-center px-4 py-3 sm:px-6 md:py-4">
+        <div className="flex md:hidden">
+          <button
+            onClick={toggle}
+            aria-label="Toggle navigation"
+            aria-expanded={open}
+            className="flex items-center justify-center p-2 focus:outline-none focus:ring-2 focus:ring-platinum"
+          >
+            <GridIcon className="h-6 w-6 text-platinum transition-colors hover:text-silver" />
+          </button>
+        </div>
         <Link
           to="/"
-          className="flex flex-shrink-0 items-center rounded border border-transparent px-3 text-xl font-semibold font-serif tracking-wide text-white transition-colors hover:border-silver hover:text-silver"
+          className="justify-self-center whitespace-nowrap rounded border border-transparent px-3 font-serif text-xl font-semibold text-white transition-colors hover:border-silver hover:text-silver"
         >
-          <span className="hidden nav:inline whitespace-nowrap">
-            Keystone Notary Group, LLC
-          </span>
-          <span className="nav:hidden whitespace-nowrap">Keystone Notary Group, LLC</span>
+          Keystone Notary Group, LLC
         </Link>
-        <button
-          className="nav:hidden flex items-center justify-center p-2 focus:outline-none focus:ring-2 focus:ring-platinum"
-          /* Focus ring ensures mobile menu trigger is keyboard accessible */
-          onClick={toggle}
-          aria-label="Toggle navigation"
-          aria-expanded={open}
-        >
-          <GridIcon className="h-6 w-6 text-platinum transition-colors hover:text-silver" />
-        </button>
-        <ul className="hidden items-center gap-3 nav:flex">
+        <ul className="hidden items-center justify-end gap-x-8 md:flex">
           {navItems.map((item) => (
             <li key={item.name}>
               <NavLink to={item.path} className={linkClasses} end>
@@ -111,30 +106,17 @@ export default function Navbar() {
       <AnimatePresence>
         {open && (
           <motion.div
-            className="fixed inset-0 z-40 flex items-center justify-center bg-black/90 backdrop-blur-md nav:hidden"
-            initial={{ opacity: 0 }}
+            initial="closed"
             animate="open"
             exit="closed"
             variants={menuVariants}
+            className="overflow-hidden border-b border-silver bg-charcoal md:hidden"
           >
-            <button
-              type="button"
-              aria-label="Close menu overlay"
-              onClick={closeMenu}
-              className="absolute inset-0"
-            />
-            <motion.nav
-              aria-label="Mobile navigation"
-              className="relative flex flex-col items-center gap-6 text-xl"
-            >
-              <button
-                className="absolute top-4 right-4 text-platinum"
-                onClick={closeMenu}
-                aria-label="Close navigation"
+            <motion.nav aria-label="Mobile navigation" className="px-4">
+              <motion.ul
+                className="flex flex-col items-center gap-4 py-4"
+                variants={{ open: { transition: { staggerChildren: 0.05 } } }}
               >
-                ✕
-              </button>
-              <motion.ul className="flex flex-col items-center gap-6" variants={{ open: { transition: { staggerChildren: 0.05 } } }}>
                 {navItems.map((item) => (
                   <motion.li key={item.name} variants={itemVariants}>
                     <NavLink

@@ -10,11 +10,13 @@ export const inputStyles = tv({
 });
 
 export const navLinkStyles = tv({
-  base: 'block rounded border border-transparent bg-deepgray px-3 py-2 text-lg font-medium transition-colors duration-200 hover:bg-charcoal hover:border-silver hover:text-silver hover:shadow focus:outline-none focus:ring focus:ring-silver hover:scale-105 active:scale-95',
+  // Minimal styling keeps links lightweight while providing clear focus states
+  base:
+    'block rounded px-4 py-2 text-lg font-medium text-platinum transition-colors duration-200 hover:text-silver focus:outline-none focus:ring focus:ring-silver',
   variants: {
     active: {
-      true: 'text-silver shadow-inner',
-      false: 'text-platinum',
+      true: 'text-silver underline',
+      false: '',
     },
   },
 });
