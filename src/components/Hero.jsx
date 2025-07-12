@@ -31,13 +31,14 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6 }}
+            className="logo-wrapper mx-auto mb-6 mt-6 drop-shadow-xl"
           >
             <img
               src="/hero-logo.PNG"
               alt="Keystone Notary Group logo on parchment"
               width="1024"
               height="1024"
-              className="mx-auto mb-6 mt-6 h-auto w-72 max-w-full sm:w-80 md:w-96 lg:w-[30rem] drop-shadow-lg"
+              className="h-auto w-72 max-w-full sm:w-80 md:w-96 lg:w-[30rem]"
               draggable={false}
             />
           </motion.div>
