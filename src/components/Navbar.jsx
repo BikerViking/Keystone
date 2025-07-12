@@ -130,7 +130,7 @@ export default function Navbar() {
       <AnimatePresence>
         {open && (
           <motion.div
-            className="fixed inset-0 z-40 bg-black/70 nav:hidden"
+            className="fixed inset-0 z-40 bg-black/70 backdrop-blur-sm nav:hidden"
             initial={{ opacity: 0 }}
             animate={{ opacity: 0.7 }}
             exit={{ opacity: 0 }}
@@ -146,7 +146,7 @@ export default function Navbar() {
               ref={menuRef}
               aria-label="Mobile navigation"
               onMouseDown={(e) => e.stopPropagation()}
-              className="ml-auto h-full w-full max-w-xs sm:max-w-sm bg-black/90 p-6 shadow-xl backdrop-blur-md"
+              className="ml-auto h-full w-full max-w-xs sm:max-w-sm bg-black/80 backdrop-blur-lg border-l border-white/20 p-6 shadow-xl"
               initial="closed"
               animate="open"
               exit="closed"
