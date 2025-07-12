@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file.
 - Added mobile notary services section and centered "Book Now" button on Services page.
 - Replaced hamburger navigation with full-screen overlay menu.
 - Removed teal hue from hero background and simplified logo rendering.
+- Wrapped service card headings and descriptions to prevent text overflow on small screens.
 
 ## [1.0.15] - 2025-07-15
 

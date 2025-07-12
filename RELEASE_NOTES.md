@@ -61,6 +61,12 @@
 
 - Updated hero background to silver hue and removed blend masks to improve performance.
 
+## Version 1.0.19 – 2025-07-19
+
+### Fixed
+
+- Service card headings now wrap properly and descriptions break words to prevent overflow.
+
 ## Version 1.0.10 – YYYY-MM-DD
 
 ### Changed
