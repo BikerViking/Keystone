@@ -53,4 +53,18 @@ describe("Navbar component", () => {
       ).not.toBeInTheDocument(),
     );
   });
+
+  test("includes landscape layout classes", () => {
+    render(
+      <MemoryRouter future={{ v7_relativeSplatPath: true, v7_startTransition: true }}>
+        <Navbar />
+      </MemoryRouter>,
+    );
+    const toggleWrapper = screen.getByRole("button", { name: /toggle navigation/i }).parentElement;
+    expect(toggleWrapper).toHaveClass("landscape-toggle");
+    const brand = screen.getByRole("link", { name: /keystone notary group, llc/i });
+    expect(brand).toHaveClass("landscape-brand");
+    const list = screen.getByRole("list");
+    expect(list).toHaveClass("landscape-links");
+  });
 });

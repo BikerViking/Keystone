@@ -80,7 +80,7 @@ export default function Navbar() {
       )}
     >
       <nav className="mx-auto grid max-w-5xl grid-cols-3 items-center px-4 py-3 sm:px-6 md:py-4">
-        <div className="flex md:hidden">
+        <div className="flex md:hidden landscape-toggle">
           <button
             onClick={toggle}
             aria-label="Toggle navigation"
@@ -92,11 +92,11 @@ export default function Navbar() {
         </div>
         <Link
           to="/"
-          className="justify-self-center whitespace-nowrap rounded border border-transparent px-3 font-serif text-xl font-semibold text-white transition-colors hover:border-silver hover:text-silver"
+          className="justify-self-center whitespace-nowrap rounded border border-transparent px-3 font-serif text-xl font-semibold text-white transition-colors hover:border-silver hover:text-silver landscape-brand"
         >
           Keystone Notary Group, LLC
         </Link>
-        <ul className="hidden items-center justify-end gap-x-8 md:flex">
+        <ul className="hidden items-center justify-end gap-x-8 md:flex landscape-links">
           {navItems.map((item) => (
             <li key={item.name}>
               <NavLink to={item.path} className={linkClasses} end>
