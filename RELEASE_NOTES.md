@@ -49,6 +49,12 @@
 
 - Added mobile notary services listing. Centered "Book Now" button on the Services page.
 
+## Version 1.0.17 – 2025-07-17
+
+### Changed
+
+- Replaced hamburger navigation with a full-screen overlay menu using a grid icon.
+
 ## Version 1.0.10 – YYYY-MM-DD
 
 ### Changed
