@@ -55,6 +55,12 @@
 
 - Replaced hamburger navigation with a full-screen overlay menu using a grid icon.
 
+## Version 1.0.18 – 2025-07-18
+
+### Changed
+
+- Updated hero background to silver hue and removed blend masks to improve performance.
+
 ## Version 1.0.10 – YYYY-MM-DD
 
 ### Changed
