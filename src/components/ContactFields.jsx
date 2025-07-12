@@ -22,11 +22,11 @@ export default function ContactFields({
           aria-invalid={!!errors.name}
           className={inputStyles()}
         />
-        {errors.name && (
-          <p role="alert" className="mt-1 text-sm text-red-500">
-            {errors.name}
-          </p>
-        )}
+          {errors.name && (
+            <p role="alert" className="mt-1 text-sm text-silver">
+              {errors.name}
+            </p>
+          )}
       </label>
       <label className="block" htmlFor="email">
         <span className="mb-1 block text-platinum">Email Address</span>
@@ -40,11 +40,11 @@ export default function ContactFields({
           aria-invalid={!!errors.email}
           className={inputStyles()}
         />
-        {errors.email && (
-          <p role="alert" className="mt-1 text-sm text-red-500">
-            {errors.email}
-          </p>
-        )}
+          {errors.email && (
+            <p role="alert" className="mt-1 text-sm text-silver">
+              {errors.email}
+            </p>
+          )}
       </label>
       <label className="block" htmlFor="phone">
         <span className="mb-1 block text-platinum">Phone Number</span>
@@ -74,11 +74,11 @@ export default function ContactFields({
           <option value="business">Business Document</option>
           <option value="other">Other</option>
         </select>
-        {errors.documentCategory && (
-          <p role="alert" className="mt-1 text-sm text-red-500">
-            {errors.documentCategory}
-          </p>
-        )}
+          {errors.documentCategory && (
+            <p role="alert" className="mt-1 text-sm text-silver">
+              {errors.documentCategory}
+            </p>
+          )}
       </label>
       <label className="flex items-center gap-2" htmlFor="requestAppointment">
         <input
@@ -119,11 +119,11 @@ export default function ContactFields({
           <option value="in_person">In-Person</option>
           <option value="remote">Remote/Online</option>
         </select>
-        {errors.appointmentType && (
-          <p role="alert" className="mt-1 text-sm text-red-500">
-            {errors.appointmentType}
-          </p>
-        )}
+          {errors.appointmentType && (
+            <p role="alert" className="mt-1 text-sm text-silver">
+              {errors.appointmentType}
+            </p>
+          )}
       </label>
       <label className="block" htmlFor="date">
         <span className="mb-1 block text-platinum">Preferred Date</span>
@@ -138,11 +138,11 @@ export default function ContactFields({
           aria-invalid={!!errors.date}
           className={inputStyles()}
         />
-        {errors.date && (
-          <p role="alert" className="mt-1 text-sm text-red-500">
-            {errors.date}
-          </p>
-        )}
+          {errors.date && (
+            <p role="alert" className="mt-1 text-sm text-silver">
+              {errors.date}
+            </p>
+          )}
       </label>
       <label className="block" htmlFor="time">
         <span className="mb-1 block text-platinum">Preferred Time</span>
@@ -157,11 +157,11 @@ export default function ContactFields({
           aria-invalid={!!errors.time}
           className={inputStyles()}
         />
-        {errors.time && (
-          <p role="alert" className="mt-1 text-sm text-red-500">
-            {errors.time}
-          </p>
-        )}
+          {errors.time && (
+            <p role="alert" className="mt-1 text-sm text-silver">
+              {errors.time}
+            </p>
+          )}
       </label>
       {!requestAppointment && (
         <p className="text-xs italic text-platinum">
