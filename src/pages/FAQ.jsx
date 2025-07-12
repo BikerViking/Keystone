@@ -112,7 +112,7 @@ export default function FAQ() {
         </ul>
         <p className="mt-4 text-platinum">
           Still have questions?{' '}
-          <Link to="/" className="underline hover:text-silver">
+          <Link to="/contact" className="underline hover:text-silver">
             Contact us
           </Link>
           .
