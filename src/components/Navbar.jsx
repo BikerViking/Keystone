@@ -1,19 +1,18 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import clsx from "clsx";
 import { navLinkStyles } from "./variants";
-import HamburgerIcon from "./HamburgerIcon";
+import GridIcon from "./GridIcon";
 
-// Animation variants for the sliding mobile menu
+// Fade in the overlay with a slight upward motion
 const menuVariants = {
-  closed: { x: "100%" },
+  closed: { opacity: 0, y: 20 },
   open: {
-    x: 0,
+    opacity: 1,
+    y: 0,
     transition: {
-      type: "spring",
-      stiffness: 260,
-      damping: 24,
+      duration: 0.3,
       staggerChildren: 0.05,
     },
   },
@@ -34,35 +33,18 @@ const navItems = [
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-  const menuRef = useRef(null);
   const [scrolled, setScrolled] = useState(false);
   const toggle = () => setOpen((prev) => !prev);
   const closeMenu = () => setOpen(false);
 
-  // Keep menu open unless overlay or close icon are activated
+  // Close menu on Escape key for accessibility
   useEffect(() => {
     if (!open) return;
-
-    function handlePointerDown(event) {
-      if (menuRef.current && !menuRef.current.contains(event.target)) {
-        closeMenu();
-      }
-    }
-
     function handleKey(event) {
-      if (event.key === "Escape") {
-        closeMenu();
-      }
+      if (event.key === "Escape") closeMenu();
     }
-
-    document.addEventListener("mousedown", handlePointerDown);
-    document.addEventListener("touchstart", handlePointerDown);
     document.addEventListener("keydown", handleKey);
-    return () => {
-      document.removeEventListener("mousedown", handlePointerDown);
-      document.removeEventListener("touchstart", handlePointerDown);
-      document.removeEventListener("keydown", handleKey);
-    };
+    return () => document.removeEventListener("keydown", handleKey);
   }, [open]);
 
   const linkClasses = ({ isActive }) => navLinkStyles({ active: isActive });
@@ -104,7 +86,7 @@ export default function Navbar() {
           aria-label="Toggle navigation"
           aria-expanded={open}
         >
-          <HamburgerIcon className="h-6 w-6 text-platinum transition-colors hover:text-silver" />
+          <GridIcon className="h-6 w-6 text-platinum transition-colors hover:text-silver" />
         </button>
         <ul className="hidden items-center gap-3 nav:flex">
           {navItems.map((item) => (
@@ -129,10 +111,11 @@ export default function Navbar() {
       <AnimatePresence>
         {open && (
           <motion.div
-            className="fixed inset-0 z-40 bg-black/90 backdrop-blur-sm nav:hidden"
+            className="fixed inset-0 z-40 flex items-center justify-center bg-black/90 backdrop-blur-md nav:hidden"
             initial={{ opacity: 0 }}
-            animate={{ opacity: 0.9 }}
-            exit={{ opacity: 0 }}
+            animate="open"
+            exit="closed"
+            variants={menuVariants}
           >
             <button
               type="button"
@@ -140,16 +123,9 @@ export default function Navbar() {
               onClick={closeMenu}
               className="absolute inset-0"
             />
-            {/* eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions */}
             <motion.nav
-              ref={menuRef}
               aria-label="Mobile navigation"
-              onMouseDown={(e) => e.stopPropagation()}
-              className="ml-auto h-full w-full max-w-xs sm:max-w-sm bg-black/90 backdrop-blur-lg border-l border-white/20 p-6 shadow-xl"
-              initial="closed"
-              animate="open"
-              exit="closed"
-              variants={menuVariants}
+              className="relative flex flex-col items-center gap-6 text-xl"
             >
               <button
                 className="absolute top-4 right-4 text-platinum"
@@ -158,10 +134,7 @@ export default function Navbar() {
               >
                 ✕
               </button>
-              <motion.ul
-                className="mt-8 flex flex-col divide-y divide-platinum/20 border-t border-platinum/20"
-                variants={{ open: { transition: { staggerChildren: 0.05 } } }}
-              >
+              <motion.ul className="flex flex-col items-center gap-6" variants={{ open: { transition: { staggerChildren: 0.05 } } }}>
                 {navItems.map((item) => (
                   <motion.li key={item.name} variants={itemVariants}>
                     <NavLink

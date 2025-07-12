@@ -1,4 +1,4 @@
-export default function HamburgerIcon({ className }) {
+export default function GridIcon({ className }) {
   return (
     <svg
       className={className}
@@ -8,7 +8,7 @@ export default function HamburgerIcon({ className }) {
       strokeWidth="2"
       aria-hidden="true"
     >
-      <path d="M3 6h18M3 12h18M3 18h18" strokeLinecap="round" />
+      <path d="M3 3h4v4H3zM10 3h4v4h-4zM17 3h4v4h-4zM3 10h4v4H3zM10 10h4v4h-4zM17 10h4v4h-4zM3 17h4v4H3zM10 17h4v4h-4zM17 17h4v4h-4z" />
     </svg>
   );
 }
