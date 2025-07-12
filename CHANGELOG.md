@@ -4,13 +4,23 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [1.0.13] - 2025-07-13
+
+### Added
+
+- Mobile navigation slides in from the right with blurred backdrop.
+
 ## [1.0.12] - 2025-07-12
+
 ### Changed
+
 - Removed fee schedule link from navigation and footer; accessible only via FAQ.
 - Updated FAQ rates entry and redesigned price list page.
 
 ## [1.0.11] - 2025-07-11
+
 ### Changed
+
 - Added accent color and parallax hero animation.
 - Refreshed service cards with icons and responsive grid.
 - Segmented About content with mission and service area list.
@@ -23,6 +33,7 @@ All notable changes to this project will be documented in this file.
 - Credentials list now centered with additional spacing.
 
 ### Added
+
 - Accessible "Ask a Notary" chat widget with focus trap, overlay close, and FAQ suggestions.
 - Hero section now displays company logo on parchment with responsive sizing.
 - Redesigned chat widget with rounded glassy styling and smoother animations.
@@ -49,6 +60,7 @@ All notable changes to this project will be documented in this file.
 - Reverted Credentials layout to stable version with 220x220 NNA badge.
 
 ### Changed
+
 - Polished hero layout and tagline color for consistent branding.
 - Enhanced navigation link transitions and focus visibility.
 - Refined chat widget sizing and input focus styling.

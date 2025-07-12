@@ -24,6 +24,12 @@
 - FAQ now links to the fee schedule with accessible "here" text.
 - Simplified fee schedule page for clarity and responsive layout.
 
+## Version 1.0.13 – 2025-07-13
+
+### Added
+
+- Mobile menu now glides in from the right with a soft overlay and staggered link animations.
+
 ## Version 1.0.10 – YYYY-MM-DD
 
 ### Changed

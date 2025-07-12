@@ -1,8 +1,27 @@
-import { useState, useRef, useEffect } from 'react';
-import { Link, NavLink } from 'react-router-dom';
-import { AnimatePresence, motion } from 'framer-motion';
-import clsx from 'clsx';
-import { navLinkStyles } from './variants';
+import { useState, useRef, useEffect } from "react";
+import { Link, NavLink } from "react-router-dom";
+import { AnimatePresence, motion } from "framer-motion";
+import clsx from "clsx";
+import { navLinkStyles } from "./variants";
+
+// Animation variants for the sliding mobile menu
+const menuVariants = {
+  closed: { x: "100%" },
+  open: {
+    x: 0,
+    transition: {
+      type: "spring",
+      stiffness: 260,
+      damping: 24,
+      staggerChildren: 0.05,
+    },
+  },
+};
+
+const itemVariants = {
+  closed: { opacity: 0, x: 20 },
+  open: { opacity: 1, x: 0 },
+};
 
 const navItems = [
   { name: "Home", path: "/" },
@@ -19,7 +38,7 @@ export default function Navbar() {
   const toggle = () => setOpen((prev) => !prev);
   const closeMenu = () => setOpen(false);
 
-  // Close menu on outside click or orientation change for mobile UX
+  // Keep menu open unless overlay or close icon are activated
   useEffect(() => {
     if (!open) return;
 
@@ -35,21 +54,13 @@ export default function Navbar() {
       }
     }
 
-    function handleResize() {
-      closeMenu();
-    }
-
     document.addEventListener("mousedown", handlePointerDown);
     document.addEventListener("touchstart", handlePointerDown);
     document.addEventListener("keydown", handleKey);
-    window.addEventListener("orientationchange", handleResize);
-    window.addEventListener("resize", handleResize);
     return () => {
       document.removeEventListener("mousedown", handlePointerDown);
       document.removeEventListener("touchstart", handlePointerDown);
       document.removeEventListener("keydown", handleKey);
-      window.removeEventListener("orientationchange", handleResize);
-      window.removeEventListener("resize", handleResize);
     };
   }, [open]);
 
@@ -60,8 +71,8 @@ export default function Navbar() {
       setScrolled(window.scrollY > 10);
     };
     handleScroll();
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
@@ -71,8 +82,8 @@ export default function Navbar() {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
       className={clsx(
-        'fixed inset-x-0 top-0 z-50 backdrop-blur-md transition-shadow',
-        scrolled ? 'bg-black/90 shadow-md' : 'bg-black/80'
+        "fixed inset-x-0 top-0 z-50 backdrop-blur-md transition-shadow",
+        scrolled ? "bg-black/90 shadow-md" : "bg-black/80",
       )}
     >
       <nav className="flex w-full items-center justify-between py-3 px-4 sm:px-8 md:py-4">
@@ -80,7 +91,9 @@ export default function Navbar() {
           to="/"
           className="flex flex-shrink-0 items-center rounded border border-transparent px-3 text-xl font-semibold font-serif tracking-wide text-white transition-colors hover:border-silver hover:text-silver"
         >
-          <span className="hidden nav:inline whitespace-nowrap">Keystone Notary Group, LLC</span>
+          <span className="hidden nav:inline whitespace-nowrap">
+            Keystone Notary Group, LLC
+          </span>
           <span className="nav:hidden whitespace-nowrap">Keystone Notary</span>
         </Link>
         <button
@@ -116,7 +129,12 @@ export default function Navbar() {
       </nav>
       <AnimatePresence>
         {open && (
-          <div className="relative fixed inset-0 z-40 bg-black nav:hidden">
+          <motion.div
+            className="fixed inset-0 z-40 bg-black/70 nav:hidden"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 0.7 }}
+            exit={{ opacity: 0 }}
+          >
             <button
               type="button"
               aria-label="Close menu overlay"
@@ -124,12 +142,15 @@ export default function Navbar() {
               className="absolute inset-0"
             />
             {/* eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions */}
-            <nav
+            <motion.nav
               ref={menuRef}
               aria-label="Mobile navigation"
               onMouseDown={(e) => e.stopPropagation()}
-              /* Center drawer and limit width so it never spans edge to edge */
-              className="relative mx-auto mt-8 w-full max-w-[96vw] sm:max-w-sm p-6"
+              className="ml-auto h-full w-full max-w-xs sm:max-w-sm bg-black/90 p-6 shadow-xl backdrop-blur-md"
+              initial="closed"
+              animate="open"
+              exit="closed"
+              variants={menuVariants}
             >
               <button
                 className="absolute top-4 right-4 text-platinum"
@@ -138,10 +159,12 @@ export default function Navbar() {
               >
                 ✕
               </button>
-              {/* Mobile menu with a solid background behind item gaps */}
-              <ul className="flex flex-col gap-4 bg-black">
+              <motion.ul
+                className="mt-8 flex flex-col gap-4"
+                variants={{ open: { transition: { staggerChildren: 0.05 } } }}
+              >
                 {navItems.map((item) => (
-                  <li key={item.name}>
+                  <motion.li key={item.name} variants={itemVariants}>
                     <NavLink
                       to={item.path}
                       className={linkClasses}
@@ -150,9 +173,9 @@ export default function Navbar() {
                     >
                       {item.name}
                     </NavLink>
-                  </li>
+                  </motion.li>
                 ))}
-                <li>
+                <motion.li variants={itemVariants}>
                   <a
                     href="https://forms.gle/b1Xg8pYkZABk4wN96"
                     target="_blank"
@@ -161,12 +184,12 @@ export default function Navbar() {
                   >
                     Book Now
                   </a>
-                </li>
-              </ul>
-              </nav>
-            </div>
-          )}
-        </AnimatePresence>
+                </motion.li>
+              </motion.ul>
+            </motion.nav>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.header>
   );
 }
