@@ -3,6 +3,24 @@ import { MotionSection, SEO } from '../components';
 export default function Services() {
   const services = [
     {
+      title: 'Mobile Notary Services',
+      desc:
+        'Convenient on-site notarization at your home, office, or other location.',
+      icon: (
+        <svg viewBox="0 0 24 24" className="h-6 w-6 text-silver" aria-hidden="true">
+          <path
+            d="M12 2a7 7 0 00-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 00-7-7z"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <circle cx="12" cy="9" r="2" fill="currentColor" />
+        </svg>
+      ),
+    },
+    {
       title: 'Acknowledgements & Oaths',
       desc:
         'Official witnessing of signatures, affirmations, and acknowledgements as required by Pennsylvania law.',
@@ -77,7 +95,7 @@ export default function Services() {
   ];
 
   return (
-    <MotionSection className="flex w-full flex-col gap-8 px-4 sm:px-8">
+    <MotionSection className="flex w-full flex-col gap-8 px-4 py-8 sm:px-8">
       <SEO
         title="Notary Services | Keystone Notary Group"
         description="Explore our full range of notary services including loan signings, apostilles, and more."
@@ -105,7 +123,7 @@ export default function Services() {
           href="https://forms.gle/b1Xg8pYkZABk4wN96"
           target="_blank"
           rel="noopener noreferrer"
-          className="cta-button mt-4 self-start"
+          className="cta-button mt-8 mb-8 self-center"
         >
           Book Now
         </a>

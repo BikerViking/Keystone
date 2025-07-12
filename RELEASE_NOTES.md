@@ -43,6 +43,12 @@
 - Reduced-motion variants for animations to respect prefers-reduced-motion.
 - Chat widget typing indicator now animates with a pulse effect.
 
+## Version 1.0.16 – 2025-07-16
+
+### Changed
+
+- Added mobile notary services listing. Centered "Book Now" button on the Services page.
+
 ## Version 1.0.10 – YYYY-MM-DD
 
 ### Changed
