@@ -113,9 +113,9 @@ export default function Services() {
             >
               <div className="flex items-center gap-2">
                 {icon}
-                <h2 className="text-xl font-semibold text-platinum">{title}</h2>
+                <h2 className="text-lg font-semibold text-platinum sm:text-xl">{title}</h2>
               </div>
-              <p className="mt-2 text-platinum">{desc}</p>
+              <p className="mt-2 text-sm text-platinum sm:text-base">{desc}</p>
             </li>
           ))}
         </ul>
