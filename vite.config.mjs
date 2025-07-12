@@ -7,7 +7,7 @@ export default defineConfig({
     react(),
     sitemap({
       hostname: 'https://keystonenotarygroup.com',
-      generateRobotsTxt: false,
+      generateRobotsTxt: true,
     }),
   ],
   // ⚠️ React Router v7 warnings already suppressed — do not re-add
