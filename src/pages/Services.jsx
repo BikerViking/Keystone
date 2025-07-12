@@ -7,7 +7,7 @@ export default function Services() {
       desc:
         'Official witnessing of signatures, affirmations, and acknowledgements as required by Pennsylvania law.',
       icon: (
-        <svg viewBox="0 0 24 24" className="h-6 w-6 text-accent" aria-hidden="true">
+        <svg viewBox="0 0 24 24" className="h-6 w-6 text-silver" aria-hidden="true">
           <path
             d="M5 13l4 4L19 7"
             fill="none"
@@ -23,7 +23,7 @@ export default function Services() {
       title: 'Loan Signing Services',
       desc: 'Professional handling of mortgage closings and refinance packages.',
       icon: (
-        <svg viewBox="0 0 24 24" className="h-6 w-6 text-accent" aria-hidden="true">
+        <svg viewBox="0 0 24 24" className="h-6 w-6 text-silver" aria-hidden="true">
           <path
             d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"
             fill="none"
@@ -40,7 +40,7 @@ export default function Services() {
       desc:
         'Provide notary services outside regular business hours or on short notice, subject to availability and applicable surcharges.',
       icon: (
-        <svg viewBox="0 0 24 24" className="h-6 w-6 text-accent" aria-hidden="true">
+        <svg viewBox="0 0 24 24" className="h-6 w-6 text-silver" aria-hidden="true">
           <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2" fill="none" />
           <path d="M12 6v6l3 3" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" />
         </svg>
@@ -51,7 +51,7 @@ export default function Services() {
       desc:
         'Administer legally binding oaths and affirmations for affidavits, statements, and declarations.',
       icon: (
-        <svg viewBox="0 0 24 24" className="h-6 w-6 text-accent" aria-hidden="true">
+        <svg viewBox="0 0 24 24" className="h-6 w-6 text-silver" aria-hidden="true">
           <path
             d="M12 6v6l3 3"
             stroke="currentColor"
@@ -68,7 +68,7 @@ export default function Services() {
       desc:
         'Certify copies of documents as true and accurate representations of the original when allowed by law.',
       icon: (
-        <svg viewBox="0 0 24 24" className="h-6 w-6 text-accent" aria-hidden="true">
+        <svg viewBox="0 0 24 24" className="h-6 w-6 text-silver" aria-hidden="true">
           <rect x="3" y="3" width="18" height="18" rx="2" ry="2" stroke="currentColor" strokeWidth="2" fill="none" />
           <path d="M3 9h18M9 21V9" stroke="currentColor" strokeWidth="2" fill="none" />
         </svg>

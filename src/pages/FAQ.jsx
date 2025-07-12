@@ -72,7 +72,7 @@ export default function FAQ() {
                 aria-expanded={isOpen}
                 aria-controls={`faq-panel-${idx}`}
                 id={`faq-header-${idx}`}
-                className="flex w-full items-center justify-between bg-deepgray px-4 py-4 text-left text-platinum transition-colors hover:bg-black focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                className="flex w-full items-center justify-between bg-deepgray px-4 py-4 text-left text-platinum transition-colors hover:bg-black focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-silver"
               >
                 <span className="font-medium">{q}</span>
                 <svg

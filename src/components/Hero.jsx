@@ -78,7 +78,7 @@ export default function Hero() {
         </p>
         <a
           href="#why-heading"
-          className="scroll-hint mt-4 text-silver focus:outline-none focus:ring-2 focus:ring-accent"
+          className="scroll-hint mt-4 text-silver focus:outline-none focus:ring-2 focus:ring-silver"
           aria-label="Scroll for more"
         >
           <span aria-hidden="true">↓</span>
