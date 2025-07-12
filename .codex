@@ -140,7 +140,7 @@ require_changelog = true
 require_release_notes = true
 require_comments_explaining_intent = true
 track_technical_debt = true
-require_updated_agents_file = true
+require_agents_file = true
 
 [dependencies]
 auto_update_necessary_dependencies = true
