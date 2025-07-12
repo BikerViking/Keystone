@@ -4,8 +4,6 @@
 
 ## Outstanding Issues
 
-- [ ] Badge alignment using manual negative margins
-
 ## Planned Improvements
 
 - Refactor layout to remove pixel-based overrides.
