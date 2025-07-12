@@ -80,7 +80,7 @@ export default function Hero() {
           className="scroll-hint mt-4 text-silver focus:outline-none focus:ring-2 focus:ring-accent"
           aria-label="Scroll for more"
         >
-          ↓
+          <span aria-hidden="true">↓</span>
         </a>
       </motion.div>
     </section>

@@ -1,4 +1,6 @@
 export default function Footer() {
+  // Cache the year so it doesn't recompute on every render
+  const currentYear = new Date().getFullYear();
   return (
     <footer
       role="contentinfo"
@@ -59,7 +61,7 @@ export default function Footer() {
           </svg>
         </a>
       </p>
-      <p>&copy; {new Date().getFullYear()} Keystone Notary Group, LLC. All rights reserved.</p>
+      <p>&copy; {currentYear} Keystone Notary Group, LLC. All rights reserved.</p>
     </footer>
   );
 }
