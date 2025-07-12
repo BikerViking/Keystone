@@ -8,6 +8,7 @@ export { default as Navbar } from './Navbar';
 export { default as ScrollToTopButton } from './ScrollToTopButton';
 export { default as StructuredData } from './StructuredData';
 export { default as PhoneIcon } from './PhoneIcon';
+export { default as HamburgerIcon } from './HamburgerIcon';
 export { default as SEO } from './SEO';
 export { default as ChatWidget } from './ChatWidget';
 export { default as ContactForm } from './ContactForm';
