@@ -4,7 +4,6 @@
 
 ## Outstanding Issues
 
-- [ ] Duplicate layout logic in `CredentialsSection.tsx`
 - [ ] Badge alignment using manual negative margins
 
 ## Planned Improvements
