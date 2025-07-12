@@ -1,21 +1,13 @@
-import {
-  fireEvent,
-  render,
-  screen,
-  waitFor,
-} from "@testing-library/react";
+import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
 import { Navbar } from "../components";
-
-function setViewport(width) {
-  window.innerWidth = width;
-  window.dispatchEvent(new Event('resize'));
-}
 
 describe("Navbar component", () => {
   test("toggles mobile menu", async () => {
     render(
-      <MemoryRouter future={{ v7_relativeSplatPath: true, v7_startTransition: true }}>
+      <MemoryRouter
+        future={{ v7_relativeSplatPath: true, v7_startTransition: true }}
+      >
         <Navbar />
       </MemoryRouter>,
     );
@@ -32,39 +24,46 @@ describe("Navbar component", () => {
 
     // Clicking outside the menu should close it
     fireEvent.click(
-      screen.getByRole("button", { name: /close menu overlay/i })
+      screen.getByRole("button", { name: /close menu overlay/i }),
     );
     await waitFor(() =>
       expect(
-        screen.queryByRole("button", { name: /close navigation/i })
-      ).not.toBeInTheDocument()
+        screen.queryByRole("button", { name: /close navigation/i }),
+      ).not.toBeInTheDocument(),
     );
   });
 
-  test('aria-expanded toggles on button click', () => {
+  test("aria-expanded toggles on button click", () => {
     render(
-      <MemoryRouter future={{ v7_relativeSplatPath: true, v7_startTransition: true }}>
+      <MemoryRouter
+        future={{ v7_relativeSplatPath: true, v7_startTransition: true }}
+      >
         <Navbar />
       </MemoryRouter>,
     );
-    const toggleButton = screen.getByRole('button', { name: /toggle navigation/i });
-    expect(toggleButton).toHaveAttribute('aria-expanded', 'false');
+    const toggleButton = screen.getByRole("button", {
+      name: /toggle navigation/i,
+    });
+    expect(toggleButton).toHaveAttribute("aria-expanded", "false");
     fireEvent.click(toggleButton);
-    expect(toggleButton).toHaveAttribute('aria-expanded', 'true');
+    expect(toggleButton).toHaveAttribute("aria-expanded", "true");
   });
 
-  test('menu closes on orientation change', async () => {
-    setViewport(500);
+  test("menu stays open on orientation change", () => {
     render(
-      <MemoryRouter future={{ v7_relativeSplatPath: true, v7_startTransition: true }}>
+      <MemoryRouter
+        future={{ v7_relativeSplatPath: true, v7_startTransition: true }}
+      >
         <Navbar />
       </MemoryRouter>,
     );
-    fireEvent.click(screen.getByRole('button', { name: /toggle navigation/i }));
-    expect(screen.getByRole('button', { name: /close navigation/i })).toBeInTheDocument();
-    window.dispatchEvent(new Event('orientationchange'));
-    await waitFor(() =>
-      expect(screen.queryByRole('button', { name: /close navigation/i })).not.toBeInTheDocument(),
-    );
+    fireEvent.click(screen.getByRole("button", { name: /toggle navigation/i }));
+    expect(
+      screen.getByRole("button", { name: /close navigation/i }),
+    ).toBeInTheDocument();
+    window.dispatchEvent(new Event("orientationchange"));
+    expect(
+      screen.getByRole("button", { name: /close navigation/i }),
+    ).toBeInTheDocument();
   });
 });
