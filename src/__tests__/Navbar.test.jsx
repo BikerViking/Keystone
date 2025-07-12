@@ -35,7 +35,7 @@ describe("Navbar component", () => {
     expect(toggleButton).toHaveAttribute("aria-expanded", "true");
   });
 
-  test("menu stays open on orientation change", () => {
+  test("menu closes on orientation change", async () => {
     render(
       <MemoryRouter
         future={{ v7_relativeSplatPath: true, v7_startTransition: true }}
@@ -47,6 +47,10 @@ describe("Navbar component", () => {
     fireEvent.click(toggleButton);
     expect(screen.getByRole("navigation", { name: /mobile navigation/i })).toBeInTheDocument();
     window.dispatchEvent(new Event("orientationchange"));
-    expect(screen.getByRole("navigation", { name: /mobile navigation/i })).toBeInTheDocument();
+    await waitFor(() =>
+      expect(
+        screen.queryByRole("navigation", { name: /mobile navigation/i }),
+      ).not.toBeInTheDocument(),
+    );
   });
 });

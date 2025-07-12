@@ -55,6 +55,19 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Close mobile menu when orientation or viewport width changes
+  useEffect(() => {
+    const closeOnChange = () => {
+      if (window.innerWidth >= 768) setOpen(false);
+    };
+    window.addEventListener("orientationchange", closeOnChange);
+    window.addEventListener("resize", closeOnChange);
+    return () => {
+      window.removeEventListener("orientationchange", closeOnChange);
+      window.removeEventListener("resize", closeOnChange);
+    };
+  }, []);
+
   return (
     <motion.header
       role="banner"
