@@ -60,8 +60,10 @@ describe("Navbar component", () => {
         <Navbar />
       </MemoryRouter>,
     );
-    const toggleWrapper = screen.getByRole("button", { name: /toggle navigation/i }).parentElement;
-    expect(toggleWrapper).toHaveClass("landscape-toggle");
+    const toggleButton = screen.getByRole("button", {
+      name: /toggle navigation/i,
+    });
+    expect(toggleButton).toHaveClass("landscape-toggle");
     const brand = screen.getByRole("link", { name: /keystone notary group, llc/i });
     expect(brand).toHaveClass("landscape-brand");
     const list = screen.getByRole("list");

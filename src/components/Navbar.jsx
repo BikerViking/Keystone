@@ -112,17 +112,17 @@ export default function Navbar() {
         scrolled && "shadow-md",
       )}
     >
-      <nav className="mx-auto grid max-w-5xl grid-cols-[1fr_auto_1fr] items-center px-4 py-3 sm:px-6 md:py-4">
-        <div className="col-start-3 flex justify-self-end md:hidden landscape-toggle">
-          <button
-            onClick={toggle}
-            aria-label="Toggle navigation"
-            aria-expanded={open}
-            className="flex items-center justify-center p-2 focus:outline-none focus:ring-2 focus:ring-platinum"
-          >
-            <GridIcon className="h-6 w-6 text-platinum transition-colors hover:text-silver" />
-          </button>
-        </div>
+      <nav
+        className="mx-auto grid max-w-5xl grid-cols-[1fr_auto_1fr] items-center gap-x-4 px-4 py-3 sm:px-8 sm:py-4"
+      >
+        <button
+          onClick={toggle}
+          aria-label="Toggle navigation"
+          aria-expanded={open}
+          className="col-start-3 flex justify-self-end md:hidden landscape-toggle items-center justify-center p-2 focus:outline-none focus:ring-2 focus:ring-platinum"
+        >
+          <GridIcon className="h-6 w-6 text-platinum transition-colors hover:text-silver" />
+        </button>
         <Link
           to="/"
           className="col-start-2 justify-self-center whitespace-nowrap rounded border border-transparent px-3 font-serif text-xl font-semibold text-white transition-colors hover:border-silver hover:text-silver landscape-brand"
