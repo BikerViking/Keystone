@@ -13,11 +13,20 @@ Our mobile notaries travel throughout southeastern Pennsylvania, including Phila
 
 ## Services Offered
 
-- General acknowledgements and jurats
+- Mobile Notary Services
+- Oathes & Affirmations
+- Affidavits & Sworn Statements
+- Legal Filings
+- Deed Transfers
+- Wills & Trusts
+- Power of Attorneys
+- Medical Directives 
+- General acknowledgements
 - Loan signing appointments for buyers, sellers and refinances
-- Apostille facilitation and document authentication
+- Document Certification
 - I-9 employment verification
-- Remote and electronic notarization where permitted
+
+  If you do not see your document type listed here, please contact us to inquire if it is something we can notarize.
 
 ## Schedule an Appointment
 
@@ -31,9 +40,13 @@ Our website now features a streamlined layout optimized for mobile devices, so y
 
 The Keystone brand uses a restrained palette built around charcoal, black, and varying shades of gray. Primary colors include:
 
+- **Black** `#000000`
 - **Charcoal** `#121212`
 - **Deep Gray** `#1A1A1A`
 - **Platinum Gray** `#999999`
+- **Light Gray** ``
+- **Medium Gray** ``
 - **Silver** `#bfbfbf`
+- **Metallic Silver** ``
 
 Metallic silver accents are allowed, but gold or other hues should not be introduced. Designs should feel minimalist and professional—mirroring our charcoal matte business cards with silver foil logos. All website updates should maintain this luxurious, monochromatic style.
