@@ -17,9 +17,9 @@ respect_previous_context = true
 maintain_continuity = true
 no_duplicate_logic = true
 maintain_luxury_appearance = true
-auto_improve_luxury_appearance = true
 layout_modification_permissions_granted = true
 ensure_codex_file_adherence = true
+unrestricted_codex_network_access = true
 
 
 [code_purity]
@@ -70,6 +70,7 @@ smooth_transitions = true
 handle_edge_cases = true
 
 [testing]
+ensure_all_tests_present = true
 remove_broken_snapshots = true
 simulate_mobile_viewport = true
 simulate_desktop_viewport = true
@@ -92,7 +93,7 @@ require_wcag_aa = true
 no_third_party_assets = true
 no_env_leaks = true
 prohibit_env_leaks = true
-prohibit_third_party_fonts = false
+prohibit_third_party_fonts = true
 prohibit_inline_tokens = true
 enforce_https_links = true
 
@@ -109,12 +110,14 @@ use_named_functions = true
 enforce_semantic_tags = true
 
 [self_testing]
+auto_detect_ux_errors = true
 auto_detect_bloat = true
+auto_detect_visual_inconsistencies = true
 auto_improve_visual_appearance = true
 auto_check_responsive_layouts = true
 auto_remove_invalid_structure = true
 auto_rewrite_broken_layouts = true
-auto_maintain_clean_codebase = true
+auto_clean_codebase = true
 
 [merge_checklist]
 tests_pass = true
@@ -136,9 +139,11 @@ require_changelog = true
 require_release_notes = true
 require_comments_explaining_intent = true
 track_technical_debt = true
-require_agents_file = true
+require_updated_agents_file = true
 
 [dependencies]
+auto_update_necessary_dependencies = true
+ensure_dependency_compatibility = true
 allow_auto_install = true
 only_dev_dependencies = false
 allow_global_packages = true
