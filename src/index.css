@@ -149,5 +149,8 @@
     .landscape-brand {
       @apply text-lg px-2;
     }
+    .landscape-menu {
+      display: block !important;
+    }
   }
 }

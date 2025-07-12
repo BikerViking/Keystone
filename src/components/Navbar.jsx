@@ -123,7 +123,7 @@ export default function Navbar() {
             animate="open"
             exit="closed"
             variants={menuVariants}
-            className="overflow-hidden border-b border-silver bg-charcoal md:hidden"
+            className="landscape-menu overflow-hidden border-b border-silver bg-charcoal md:hidden"
           >
             <motion.nav aria-label="Mobile navigation" className="px-4">
               <motion.ul
