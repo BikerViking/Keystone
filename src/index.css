@@ -112,6 +112,12 @@
     background: radial-gradient(circle at center, rgba(0,0,0,0) 50%, rgba(0,0,0,0.8) 90%);
   }
 
+  /* Fade the left and right edges so parchment blends into hero background */
+  .mask-side-fade {
+    -webkit-mask-image: linear-gradient(to right, transparent 0, black 5%, black 95%, transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0, black 5%, black 95%, transparent 100%);
+  }
+
 
   .footer-gradient {
     @apply relative;
