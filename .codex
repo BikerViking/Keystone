@@ -20,6 +20,7 @@ maintain_luxury_appearance = true
 layout_improvement_permissions_granted = true
 ensure_codex_file_adherence = true
 unrestricted_codex_network_access = true
+auto_escape_user_data = true
 
 
 [code_purity]
@@ -28,6 +29,7 @@ remove_unused_imports = true
 no_duplicate_markup = true
 flatten_nesting = true
 prefer_modern_idioms = true
+
 
 [intent_comments]
 require_why_comments = true
@@ -78,15 +80,15 @@ prefer_getByRole = true
 validate_all = ["yarn test", "yarn lint"]
 require_snapshot_tests = true
 require_accessibility_tests = true
-simulate_viewport_mobile = true
-prefer_getByRole_queries = true
 stub_network_calls = true
 auto_update_snapshots_if_layout_changes = true
+require_unit_tests = true
 
 [testing_advanced]
 auto_mock_api_calls = true
 auto_generate_missing_tests = true
 warn_on_low_test_coverage = true
+warn_on_high_complexity = true
 
 [accessibility_security]
 require_wcag_aa = true
@@ -123,7 +125,6 @@ auto_clean_codebase = true
 tests_pass = true
 fully_responsive = true
 no_lint_warnings = true
-no_duplicate_logic = true
 layout_polished = true
 secure_code = true
 semantic_and_a11y_verified = true
@@ -181,12 +182,13 @@ detect_nested_headings = true
 resolve_duplicate_elements = true
 enable_intent_comments = true
 anticipate_user_intent = true
+explain_in_plain_language = true
 infer_missing_specs = true
 clean_aria_inconsistencies = true
 semantic_structure_enforcement = true
 
 [shell_limits]
-max_output_bytes = 1000
+max_output_bytes = 1600
 truncate_large_outputs = true
 use_grep_preview_mode = true
 exclude_dirs = ["node_modules", "dist", "build", ".next", ".vercel", "out"]
@@ -211,6 +213,7 @@ limit_component_size_lines = 200
 auto_update_documents = true
 auto_document_components = true
 generate_function_comments = true
+auto_generate_readme = true
 
 [component_architecture]
 enforce_component_directory_structure = true
@@ -222,6 +225,8 @@ auto_summarize_changes = true
 require_changelog_entry = true
 limit_pr_file_count = 15
 enforce_clear_commit_messages = true
+enforce_commit_format = true
+require_plain_text_summary = true
 
 [privacy]
 never_log_user_data = true
