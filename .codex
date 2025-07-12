@@ -16,8 +16,14 @@
 respect_previous_context = true
 maintain_continuity = true
 no_duplicate_logic = true
+maintain_luxury_appearance = true
+auto_improve_luxury_appearance = true
+layout_modification_permissions_granted = true
+ensure_codex_file_adherence = true
+
 
 [code_purity]
+remove_leftover_code = true
 remove_unused_imports = true
 no_duplicate_markup = true
 flatten_nesting = true
@@ -56,6 +62,9 @@ require_strictmode_in_tests = true
 warn_if_strictmode_missing = true
 
 [ux_polish]
+auto_refine_ux = true
+auto_polish_ux = true
+all_device_compatible = true
 perfect_spacing = true
 smooth_transitions = true
 handle_edge_cases = true
@@ -63,6 +72,7 @@ handle_edge_cases = true
 [testing]
 remove_broken_snapshots = true
 simulate_mobile_viewport = true
+simulate_desktop_viewport = true
 prefer_getByRole = true
 validate_all = ["yarn test", "yarn lint"]
 require_snapshot_tests = true
@@ -82,7 +92,7 @@ require_wcag_aa = true
 no_third_party_assets = true
 no_env_leaks = true
 prohibit_env_leaks = true
-prohibit_third_party_fonts = true
+prohibit_third_party_fonts = false
 prohibit_inline_tokens = true
 enforce_https_links = true
 
@@ -100,9 +110,11 @@ enforce_semantic_tags = true
 
 [self_testing]
 auto_detect_bloat = true
-check_responsive_layouts = true
-remove_invalid_structure = true
-rewrite_broken_layouts = true
+auto_improve_visual_appearance = true
+auto_check_responsive_layouts = true
+auto_remove_invalid_structure = true
+auto_rewrite_broken_layouts = true
+auto_maintain_clean_codebase = true
 
 [merge_checklist]
 tests_pass = true
@@ -124,6 +136,7 @@ require_changelog = true
 require_release_notes = true
 require_comments_explaining_intent = true
 track_technical_debt = true
+require_agents_file = true
 
 [dependencies]
 allow_auto_install = true
@@ -190,6 +203,7 @@ warn_on_large_assets = true
 limit_component_size_lines = 200
 
 [docs]
+auto_update_documents = true
 auto_document_components = true
 generate_function_comments = true
 
