@@ -113,7 +113,7 @@ export default function Services() {
             >
               <div className="flex flex-wrap items-start gap-2">
                 {icon}
-                <h2 className="break-words text-lg font-semibold text-platinum sm:text-xl">{title}</h2>
+                <h2 className="min-w-0 break-words text-lg font-semibold text-platinum sm:text-xl">{title}</h2>
               </div>
               <p className="mt-2 break-words text-sm text-platinum sm:text-base">{desc}</p>
             </li>
