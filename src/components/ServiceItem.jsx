@@ -5,7 +5,12 @@ import clsx from 'clsx';
 export default function ServiceItem({ id, title, desc }) {
   const [open, setOpen] = useState(false);
   return (
-    <li className="overflow-hidden rounded border border-platinum">
+    <li
+      className={clsx(
+        'overflow-hidden rounded border border-platinum',
+        open && 'col-span-full'
+      )}
+    >
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}
