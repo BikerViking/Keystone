@@ -56,7 +56,7 @@ export default function Services() {
           {categories.map(({ heading, items }) => (
             <section key={heading} className="flex flex-col gap-6">
               <h2 className="text-2xl font-semibold text-silver">{heading}</h2>
-              <ul className="grid grid-flow-dense gap-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
+              <ul className="flex flex-col gap-4">
                 {items.map((title) => (
                   <ServiceItem key={title} title={title} />
                 ))}

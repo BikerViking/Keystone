@@ -1,6 +1,8 @@
 export default function ServiceItem({ title }) {
   return (
-    <li className="rounded border border-platinum bg-deepgray p-4 text-center text-platinum transition-colors hover:bg-black">
+    <li
+      className="mx-auto flex min-h-[3rem] w-full max-w-md items-center justify-center rounded border border-platinum bg-deepgray px-4 py-3 text-center text-platinum transition-colors hover:bg-black"
+    >
       {title}
     </li>
   );
