@@ -4,9 +4,6 @@
 
 ## Outstanding Issues
 
-- [ ] Duplicate layout logic in `CredentialsSection.tsx`
-- [ ] Badge alignment using manual negative margins
-
 ## Planned Improvements
 
 - Refactor layout to remove pixel-based overrides.
