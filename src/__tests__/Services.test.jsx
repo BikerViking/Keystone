@@ -19,14 +19,8 @@ test('renders services list with updated offerings', () => {
   expect(
     screen.getByRole('heading', { level: 1, name: /services/i })
   ).toBeInTheDocument();
-  // check that service toggles render as buttons
-  expect(
-    screen.getByRole('button', { name: /after-hours & emergency notary/i })
-  ).toBeInTheDocument();
-  expect(
-    screen.getByRole('button', { name: /document certification/i })
-  ).toBeInTheDocument();
-  expect(
-    screen.getByRole('button', { name: /affidavits & sworn statements/i })
-  ).toBeInTheDocument();
+  // service items should display as simple list entries
+  expect(screen.getByText(/after-hours & emergency notary/i)).toBeInTheDocument();
+  expect(screen.getByText(/document certification/i)).toBeInTheDocument();
+  expect(screen.getByText(/affidavits & sworn statements/i)).toBeInTheDocument();
 });
