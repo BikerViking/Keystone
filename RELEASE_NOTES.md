@@ -49,6 +49,12 @@
 
 - Added mobile notary services listing. Centered "Book Now" button on the Services page.
 
+## Version 1.0.18 – YYYY-MM-DD
+
+### Fixed
+
+- Hamburger menu now opens correctly in landscape orientation.
+
 ## Version 1.0.17 – 2025-07-17
 
 ### Changed
