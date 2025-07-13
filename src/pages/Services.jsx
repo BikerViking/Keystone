@@ -109,13 +109,13 @@ export default function Services() {
           {services.map(({ title, desc, icon }) => (
             <li
               key={title}
-              className="rounded border border-platinum bg-deepgray p-4 shadow-sm transition-transform transition-colors hover:-translate-y-1 hover:bg-charcoal hover:shadow-lg"
+              className="rounded border border-platinum bg-deepgray p-4 shadow-sm transition-transform transition-colors hover:-translate-y-1 hover:bg-charcoal hover:shadow-lg overflow-hidden"
             >
               <div className="flex flex-wrap items-start gap-2">
                 {icon}
-                <h2 className="text-lg font-semibold text-platinum sm:text-xl">{title}</h2>
+                <h2 className="break-words text-lg font-semibold text-platinum sm:text-xl">{title}</h2>
               </div>
-              <p className="mt-2 text-sm break-words text-platinum sm:text-base">{desc}</p>
+              <p className="mt-2 break-words text-sm text-platinum sm:text-base">{desc}</p>
             </li>
           ))}
         </ul>
