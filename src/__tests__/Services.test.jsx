@@ -19,14 +19,14 @@ test('renders services list with updated offerings', () => {
   expect(
     screen.getByRole('heading', { level: 1, name: /services/i })
   ).toBeInTheDocument();
-  // check for one of the new service titles
+  // check that service toggles render as buttons
   expect(
-    screen.getByRole('heading', { name: /after-hours & emergency notary/i })
+    screen.getByRole('button', { name: /after-hours & emergency notary/i })
   ).toBeInTheDocument();
   expect(
-    screen.getByRole('heading', { name: /document certification/i })
+    screen.getByRole('button', { name: /document certification/i })
   ).toBeInTheDocument();
   expect(
-    screen.getByRole('heading', { name: /affidavits & sworn statements/i })
+    screen.getByRole('button', { name: /affidavits & sworn statements/i })
   ).toBeInTheDocument();
 });
