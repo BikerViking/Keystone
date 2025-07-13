@@ -24,6 +24,9 @@ test('renders services list with updated offerings', () => {
     screen.getByRole('heading', { name: /after-hours & emergency notary/i })
   ).toBeInTheDocument();
   expect(
-    screen.getByRole('heading', { name: /document certifications/i })
+    screen.getByRole('heading', { name: /document certification/i })
+  ).toBeInTheDocument();
+  expect(
+    screen.getByRole('heading', { name: /affidavits & sworn statements/i })
   ).toBeInTheDocument();
 });
