@@ -5,77 +5,35 @@ export default function Services() {
     {
       heading: 'General Notary',
       items: [
-        {
-          title: 'Mobile Notary Services',
-          desc: 'Convenient on-site notarization at your home, office, or other location.',
-        },
-        {
-          title: 'General Acknowledgements',
-          desc: 'Verification of signatures for a variety of documents.',
-        },
-        {
-          title: 'After-Hours & Emergency Notary',
-          desc: 'Provide notary services outside regular business hours or on short notice, subject to availability and applicable surcharges.',
-        },
+        'Mobile Notary Services',
+        'General Acknowledgements',
+        'After-Hours & Emergency Notary',
       ],
     },
     {
       heading: 'Personal & Family',
       items: [
-        {
-          title: 'Oaths & Affirmations',
-          desc: 'Administer legally binding oaths and affirmations for affidavits, statements, and declarations.',
-        },
-        {
-          title: 'Affidavits & Sworn Statements',
-          desc: 'Preparation and notarization of affidavits and sworn statements.',
-        },
-        {
-          title: 'Wills & Trusts',
-          desc: 'Execution of wills, living wills, and trust documents.',
-        },
-        {
-          title: 'Power of Attorney',
-          desc: 'Preparation and notarization of power of attorney forms.',
-        },
-        {
-          title: 'Medical Directives',
-          desc: 'Notarization of healthcare directives and related documents.',
-        },
+        'Oaths & Affirmations',
+        'Affidavits & Sworn Statements',
+        'Wills & Trusts',
+        'Power of Attorney',
+        'Medical Directives',
       ],
     },
     {
       heading: 'Business & Legal',
       items: [
-        {
-          title: 'Contracts',
-          desc: 'Witnessing and notarizing contract agreements and amendments.',
-        },
-        {
-          title: 'Legal Filings',
-          desc: 'Assistance with notarizing and submitting legal documents and filings.',
-        },
-        {
-          title: 'Document Certification',
-          desc: 'Certify copies of documents as true and accurate when allowed by law.',
-        },
-        {
-          title: 'I-9 Employment Verification',
-          desc: 'Authorized completion of Form I-9 as an employer agent.',
-        },
+        'Contracts',
+        'Legal Filings',
+        'Document Certification',
+        'I-9 Employment Verification',
       ],
     },
     {
       heading: 'Real Estate',
       items: [
-        {
-          title: 'Deed Transfers',
-          desc: 'Notarization services for property deeds and title transfers.',
-        },
-        {
-          title: 'Loan Signing Appointments',
-          desc: 'Professional handling of mortgage closings and refinance packages.',
-        },
+        'Deed Transfers',
+        'Loan Signing Appointments',
       ],
     },
   ];
@@ -99,8 +57,8 @@ export default function Services() {
             <section key={heading} className="flex flex-col gap-6">
               <h2 className="text-2xl font-semibold text-silver">{heading}</h2>
               <ul className="grid grid-flow-dense gap-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
-                {items.map(({ title, desc }, idx) => (
-                  <ServiceItem key={title} id={`${heading}-${idx}`} title={title} desc={desc} />
+                {items.map((title) => (
+                  <ServiceItem key={title} title={title} />
                 ))}
               </ul>
             </section>
