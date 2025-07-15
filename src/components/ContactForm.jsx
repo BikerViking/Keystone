@@ -67,7 +67,7 @@ export default function ContactForm({ onSuccess }) {
 
   return (
     <>
-      <h1 className="text-4xl font-serif font-semibold tracking-wide heading-gradient text-charcoal">
+      <h1 className="text-4xl font-serif font-semibold tracking-wide heading-gradient text-silver">
         Contact Us
       </h1>
       <form onSubmit={handleSubmit} className="space-y-6" noValidate>
