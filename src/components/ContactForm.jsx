@@ -104,11 +104,11 @@ export default function ContactForm({ onSuccess }) {
           Send Message
         </button>
       </form>
-      <p className="text-sm italic text-platinum">
+      <p className="mt-6 text-center text-sm italic text-platinum">
         Submitting this form does not guarantee an appointment. All requests are
         subject to confirmation by Keystone Notary Group, LLC.
       </p>
-      <p className="text-xs text-platinum">
+      <p className="mt-2 text-center text-xs text-platinum">
         Keystone Notary Group, LLC is not a law firm and does not provide legal
         advice or services. Please consult an attorney for legal questions or
         document preparation.
