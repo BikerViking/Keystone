@@ -14,7 +14,7 @@ export default function About() {
         className="pointer-events-none absolute inset-0 opacity-20 [background:radial-gradient(circle_at_center,_rgba(255,255,255,0.05),_transparent)]"
       />
       <div className="mx-auto w-full max-w-3xl flex flex-col gap-8">
-        <h1 className="text-4xl font-serif font-semibold tracking-wide heading-gradient text-silver">
+        <h1 className="text-4xl font-serif font-semibold tracking-wide heading-gradient text-purewhite">
           About Us
         </h1>
         <section className="space-y-4">

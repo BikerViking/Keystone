@@ -1,7 +1,7 @@
 import { tv } from 'tailwind-variants';
 
 export const inputStyles = tv({
-  base: 'w-full rounded border border-platinum bg-deepgray px-3 py-2 text-white placeholder-platinum focus:border-silver focus:outline-none focus:ring-2 focus:ring-silver transition-colors duration-200',
+  base: 'w-full rounded border border-silver bg-deepgray px-3 py-2 text-purewhite placeholder-platinum focus:border-purewhite focus:outline-none focus:ring-2 focus:ring-purewhite transition-colors duration-200',
   variants: {
     disabled: {
       true: 'opacity-50 cursor-not-allowed',

@@ -9,7 +9,7 @@ export default function Prices() {
         path="/prices"
       />
       <div className="mx-auto w-full max-w-3xl space-y-8">
-        <h1 className="text-4xl font-serif font-semibold tracking-wide heading-gradient text-silver">
+        <h1 className="text-4xl font-serif font-semibold tracking-wide heading-gradient text-purewhite">
           Keystone Notary Group, LLC – Fee Schedule
         </h1>
         <section aria-labelledby="standard-fees-heading">

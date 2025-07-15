@@ -48,6 +48,11 @@ The Keystone brand uses a restrained palette built around charcoal, black, and v
 - **Light Gray** `#CCCCCC`
 - **Medium Gray** `#666666`
 - **Silver** `#bfbfbf`
+- **Pure White** `#ffffff`
+- **Off White** `#f6f6f6`
 - **Metallic Silver** ``
+
+White tones may be used for prominent headings, call-to-action elements,
+and form highlights while maintaining the monochromatic style.
 
 Metallic silver accents are allowed, but gold or other hues should not be introduced. Designs should feel minimalist and professional—mirroring our charcoal matte business cards with silver foil logos. All website updates should maintain this luxurious, monochromatic style.
