@@ -6,7 +6,6 @@ export { default as Layout } from './Layout';
 export { default as MotionSection } from './MotionSection';
 export { default as Navbar } from './Navbar';
 export { default as ScrollToTopButton } from './ScrollToTopButton';
-export { default as StructuredData } from './StructuredData';
 export { default as PhoneIcon } from './PhoneIcon';
 export { default as GridIcon } from './GridIcon';
 export { default as SEO } from './SEO';

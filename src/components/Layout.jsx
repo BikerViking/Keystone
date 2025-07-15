@@ -3,7 +3,6 @@ import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import ScrollToTopButton from './ScrollToTopButton';
-import StructuredData from './StructuredData';
 import ChatWidget from './ChatWidget';
 
 export default function Layout() {
@@ -12,7 +11,6 @@ export default function Layout() {
 
   return (
     <>
-      <StructuredData />
       <div className="flex min-h-screen flex-col bg-charcoal text-lightgray">
         {/* Accessibility skip link lets keyboard users bypass repetitive navigation */}
         <a
