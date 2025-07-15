@@ -37,7 +37,7 @@ export default function About() {
         <section className="space-y-4">
           <h2 className="text-2xl font-semibold text-silver">Our Team</h2>
           <p className="text-lg text-platinum">
-            Each notary is licensed, bonded and insured with current background checks and extensive signing experience.
+            Commissioned by the Commonwealth of Pennsylvania, every notary is an NNA Certified Signing Agent who is bonded and insured with up-to-date background checks and extensive signing experience.
           </p>
         </section>
         <Link
