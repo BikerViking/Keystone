@@ -1,9 +1,18 @@
-import { MotionSection, SEO, ServiceItem } from '../components';
+import {
+  MotionSection,
+  SEO,
+  ServiceItem,
+  DocumentIcon,
+  UsersIcon,
+  BriefcaseIcon,
+  HomeIcon,
+} from '../components';
 
 export default function Services() {
   const categories = [
     {
       heading: 'General Notary',
+      Icon: DocumentIcon,
       items: [
         'Mobile Notary Services',
         'General Acknowledgements',
@@ -12,6 +21,7 @@ export default function Services() {
     },
     {
       heading: 'Personal & Family',
+      Icon: UsersIcon,
       items: [
         'Oaths & Affirmations',
         'Affidavits & Sworn Statements',
@@ -22,6 +32,7 @@ export default function Services() {
     },
     {
       heading: 'Business & Legal',
+      Icon: BriefcaseIcon,
       items: [
         'Contracts',
         'Legal Filings',
@@ -31,6 +42,7 @@ export default function Services() {
     },
     {
       heading: 'Real Estate',
+      Icon: HomeIcon,
       items: [
         'Deed Transfers',
         'Loan Signing Appointments',
@@ -53,9 +65,12 @@ export default function Services() {
       </MotionSection>
       <MotionSection className="flex w-full flex-col gap-12 px-4 pb-8 sm:px-8">
         <div className="mx-auto w-full max-w-5xl space-y-12">
-          {categories.map(({ heading, items }) => (
+          {categories.map(({ heading, items, Icon }) => (
             <section key={heading} className="flex flex-col gap-6">
-              <h2 className="text-2xl font-semibold text-silver">{heading}</h2>
+              <h2 className="flex items-center gap-2 text-2xl font-semibold text-silver">
+                <Icon className="h-6 w-6 text-silver" aria-hidden="true" />
+                {heading}
+              </h2>
               <ul className="flex flex-col gap-4">
                 {items.map((title) => (
                   <ServiceItem key={title} title={title} />

@@ -1,4 +1,12 @@
 import { inputStyles } from './variants';
+import {
+  UsersIcon,
+  DocumentIcon,
+  EnvelopeIcon,
+  PhoneIcon,
+  CalendarIcon,
+  ClockIcon,
+} from './index';
 
 export default function ContactFields({
   formData,
@@ -11,7 +19,10 @@ export default function ContactFields({
   return (
     <fieldset className="space-y-4">
       <label className="block" htmlFor="name">
-        <span className="mb-1 block text-lightgray">Full Name</span>
+        <span className="mb-1 flex items-center gap-2 text-lightgray">
+          <UsersIcon className="h-5 w-5 text-silver" aria-hidden="true" />
+          Full Name
+        </span>
         <input
           id="name"
           name="name"
@@ -29,7 +40,10 @@ export default function ContactFields({
           )}
       </label>
       <label className="block" htmlFor="email">
-        <span className="mb-1 block text-lightgray">Email Address</span>
+        <span className="mb-1 flex items-center gap-2 text-lightgray">
+          <EnvelopeIcon className="h-5 w-5 text-silver" aria-hidden="true" />
+          Email Address
+        </span>
         <input
           id="email"
           name="email"
@@ -47,7 +61,10 @@ export default function ContactFields({
           )}
       </label>
       <label className="block" htmlFor="phone">
-        <span className="mb-1 block text-lightgray">Phone Number</span>
+        <span className="mb-1 flex items-center gap-2 text-lightgray">
+          <PhoneIcon className="h-5 w-5 text-silver" aria-hidden="true" />
+          Phone Number
+        </span>
         <input
           id="phone"
           name="phone"
@@ -58,7 +75,10 @@ export default function ContactFields({
         />
       </label>
       <label className="block" htmlFor="documentCategory">
-        <span className="mb-1 block text-lightgray">Document Category</span>
+        <span className="mb-1 flex items-center gap-2 text-lightgray">
+          <DocumentIcon className="h-5 w-5 text-silver" aria-hidden="true" />
+          Document Category
+        </span>
         <select
           id="documentCategory"
           name="documentCategory"
@@ -104,7 +124,10 @@ export default function ContactFields({
         <span className="text-lightgray">I am requesting an appointment.</span>
       </label>
       <label className="block" htmlFor="appointmentType">
-        <span className="mb-1 block text-lightgray">Appointment Type</span>
+        <span className="mb-1 flex items-center gap-2 text-lightgray">
+          <CalendarIcon className="h-5 w-5 text-silver" aria-hidden="true" />
+          Appointment Type
+        </span>
         <select
           id="appointmentType"
           name="appointmentType"
@@ -126,7 +149,10 @@ export default function ContactFields({
           )}
       </label>
       <label className="block" htmlFor="date">
-        <span className="mb-1 block text-lightgray">Preferred Date</span>
+        <span className="mb-1 flex items-center gap-2 text-lightgray">
+          <CalendarIcon className="h-5 w-5 text-silver" aria-hidden="true" />
+          Preferred Date
+        </span>
         <input
           id="date"
           name="date"
@@ -145,7 +171,10 @@ export default function ContactFields({
           )}
       </label>
       <label className="block" htmlFor="time">
-        <span className="mb-1 block text-lightgray">Preferred Time</span>
+        <span className="mb-1 flex items-center gap-2 text-lightgray">
+          <ClockIcon className="h-5 w-5 text-silver" aria-hidden="true" />
+          Preferred Time
+        </span>
         <input
           id="time"
           name="time"
