@@ -21,6 +21,7 @@ export default {
         deepgray: '#1A1A1A',
         platinum: '#999999',
         silver: '#bfbfbf',
+        lightgray: '#CCCCCC',
         accent: '#bfbfbf',
         accentDark: '#333333',
       },

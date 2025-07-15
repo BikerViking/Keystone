@@ -16,7 +16,7 @@ export default function Prices() {
           <h2 id="standard-fees-heading" className="mb-2 text-2xl font-semibold text-silver">
             Standard Notary Fees
           </h2>
-          <ul className="list-disc pl-5 text-platinum space-y-1">
+          <ul className="list-disc pl-5 text-lightgray space-y-1">
             <li>Notarial Act (per signature/seal): $5</li>
             <li>Oath or Affirmation: $5</li>
             <li>Document/Copy Certification: $5</li>
@@ -26,7 +26,7 @@ export default function Prices() {
           <h2 id="travel-fees-heading" className="mb-2 text-2xl font-semibold text-silver">
             Mobile/Travel Fees
           </h2>
-          <ul className="list-disc pl-5 text-platinum space-y-1">
+          <ul className="list-disc pl-5 text-lightgray space-y-1">
             <li>Up to 10 miles: $35</li>
             <li>11–20 miles: $45</li>
             <li>21–30 miles: $55</li>
@@ -37,7 +37,7 @@ export default function Prices() {
           <h2 id="surcharges-heading" className="mb-2 text-2xl font-semibold text-silver">
             Surcharges
           </h2>
-          <ul className="list-disc pl-5 text-platinum space-y-1">
+          <ul className="list-disc pl-5 text-lightgray space-y-1">
             <li>After-hours (after 6pm or weekends): +$35</li>
             <li>Late night/major holiday: +$60</li>
             <li>Emergency/rush (within 2 hours): +$100</li>
@@ -48,7 +48,7 @@ export default function Prices() {
           <h2 id="specialized-heading" className="mb-2 text-2xl font-semibold text-silver">
             Specialized Services
           </h2>
-          <ul className="list-disc pl-5 text-platinum space-y-1">
+          <ul className="list-disc pl-5 text-lightgray space-y-1">
             <li>Loan signing / Real estate closing (buyer/seller/refi): $125–$175 (varies by package, call for quote)</li>
             <li>Complex signings: Quoted</li>
             <li>Deed-only appointment: $85</li>
@@ -56,7 +56,7 @@ export default function Prices() {
         </section>
         <section aria-labelledby="notes-heading">
           <h2 id="notes-heading" className="mb-2 text-2xl font-semibold text-silver">Notes</h2>
-          <ul className="list-disc pl-5 text-platinum space-y-1">
+          <ul className="list-disc pl-5 text-lightgray space-y-1">
             <li>All appointments must be confirmed.</li>
             <li>Payment accepted: Cash, check, card, or Venmo.</li>
             <li>Valid, unexpired government-issued photo ID is required.</li>

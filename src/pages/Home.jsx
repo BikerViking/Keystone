@@ -21,7 +21,7 @@ export default function Home() {
         >
           Why Choose Us?
         </h2>
-        <p className="text-lg text-platinum">
+        <p className="text-lg text-lightgray">
           Keystone Notary Group, LLC provides professional, reliable, and
           convenient mobile notary services. We bring the notary public to you.
         </p>

@@ -59,7 +59,7 @@ export default function Hero() {
         <a
           href="tel:2673099000"
           aria-label="Call or text 267-309-9000"
-          className="flex items-center justify-center gap-2 py-2 text-platinum hover:text-silver focus:outline-none focus:ring focus:ring-platinum"
+          className="flex items-center justify-center gap-2 py-2 text-lightgray hover:text-silver focus:outline-none focus:ring focus:ring-platinum"
         >
           <PhoneIcon className="h-5 w-5" />
           <span className="whitespace-nowrap">Call or Text: (267) 309-9000</span>
@@ -73,7 +73,7 @@ export default function Hero() {
         >
           Book Appointment
         </MotionAnchor>
-        <p className="text-xs italic text-platinum">
+        <p className="text-xs italic text-lightgray">
           Bookings are reviewed and confirmed before they’re official.
         </p>
         <a

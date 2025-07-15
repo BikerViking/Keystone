@@ -123,7 +123,7 @@ export default function Navbar() {
           aria-expanded={open}
           className="col-start-3 flex justify-self-end md:hidden landscape-toggle items-center justify-center p-2 focus:outline-none focus:ring-2 focus:ring-platinum"
         >
-          <GridIcon className="h-6 w-6 text-platinum transition-colors hover:text-silver" />
+          <GridIcon className="h-6 w-6 text-lightgray transition-colors hover:text-silver" />
         </button>
         <Link
           to="/"

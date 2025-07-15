@@ -11,7 +11,7 @@ export default function ContactFields({
   return (
     <fieldset className="space-y-4">
       <label className="block" htmlFor="name">
-        <span className="mb-1 block text-platinum">Full Name</span>
+        <span className="mb-1 block text-lightgray">Full Name</span>
         <input
           id="name"
           name="name"
@@ -29,7 +29,7 @@ export default function ContactFields({
           )}
       </label>
       <label className="block" htmlFor="email">
-        <span className="mb-1 block text-platinum">Email Address</span>
+        <span className="mb-1 block text-lightgray">Email Address</span>
         <input
           id="email"
           name="email"
@@ -47,7 +47,7 @@ export default function ContactFields({
           )}
       </label>
       <label className="block" htmlFor="phone">
-        <span className="mb-1 block text-platinum">Phone Number</span>
+        <span className="mb-1 block text-lightgray">Phone Number</span>
         <input
           id="phone"
           name="phone"
@@ -58,7 +58,7 @@ export default function ContactFields({
         />
       </label>
       <label className="block" htmlFor="documentCategory">
-        <span className="mb-1 block text-platinum">Document Category</span>
+        <span className="mb-1 block text-lightgray">Document Category</span>
         <select
           id="documentCategory"
           name="documentCategory"
@@ -101,10 +101,10 @@ export default function ContactFields({
           }}
           className="h-5 w-5 accent-silver"
         />
-        <span className="text-platinum">I am requesting an appointment.</span>
+        <span className="text-lightgray">I am requesting an appointment.</span>
       </label>
       <label className="block" htmlFor="appointmentType">
-        <span className="mb-1 block text-platinum">Appointment Type</span>
+        <span className="mb-1 block text-lightgray">Appointment Type</span>
         <select
           id="appointmentType"
           name="appointmentType"
@@ -126,7 +126,7 @@ export default function ContactFields({
           )}
       </label>
       <label className="block" htmlFor="date">
-        <span className="mb-1 block text-platinum">Preferred Date</span>
+        <span className="mb-1 block text-lightgray">Preferred Date</span>
         <input
           id="date"
           name="date"
@@ -145,7 +145,7 @@ export default function ContactFields({
           )}
       </label>
       <label className="block" htmlFor="time">
-        <span className="mb-1 block text-platinum">Preferred Time</span>
+        <span className="mb-1 block text-lightgray">Preferred Time</span>
         <input
           id="time"
           name="time"
@@ -164,7 +164,7 @@ export default function ContactFields({
           )}
       </label>
       {!requestAppointment && (
-        <p className="text-xs italic text-platinum">
+        <p className="text-xs italic text-lightgray">
           Enable appointment request above to choose date and time.
         </p>
       )}
