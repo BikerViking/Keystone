@@ -47,7 +47,7 @@ export default function Services() {
           path="/services"
         />
         <div aria-hidden="true" className="pointer-events-none absolute inset-0 opacity-20 [background:radial-gradient(circle_at_center,_rgba(255,255,255,0.05),_transparent)]" />
-        <h1 className="relative z-10 text-4xl font-serif font-semibold tracking-wide heading-gradient text-purewhite">
+        <h1 className="relative z-10 text-4xl font-serif font-semibold tracking-wide heading-gradient text-charcoal">
           Our Professional Services
         </h1>
       </MotionSection>
@@ -55,7 +55,7 @@ export default function Services() {
         <div className="mx-auto w-full max-w-5xl space-y-12">
           {categories.map(({ heading, items }) => (
             <section key={heading} className="flex flex-col gap-6">
-              <h2 className="text-2xl font-semibold text-silver">{heading}</h2>
+              <h2 className="text-2xl font-semibold text-charcoal">{heading}</h2>
               <ul className="flex flex-col gap-4">
                 {items.map((title) => (
                   <ServiceItem key={title} title={title} />

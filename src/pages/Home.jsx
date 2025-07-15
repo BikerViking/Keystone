@@ -17,11 +17,11 @@ export default function Home() {
       >
         <h2
           id="why-heading"
-          className="why-heading w-full text-3xl font-serif font-semibold tracking-wide heading-gradient text-silver"
+          className="why-heading w-full text-3xl font-serif font-semibold tracking-wide heading-gradient text-charcoal"
         >
           Why Choose Us?
         </h2>
-        <p className="text-lg text-platinum">
+        <p className="text-lg text-deepgray">
           Keystone Notary Group, LLC provides professional, reliable, and
           convenient mobile notary services. We bring the notary public to you.
         </p>
