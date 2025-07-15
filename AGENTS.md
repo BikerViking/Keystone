@@ -37,10 +37,6 @@ For urgent matters, call the phone number listed on the site to check availabili
 
 Our website now features a streamlined layout optimized for mobile devices. Landscape orientation is fully supported so you can schedule appointments quickly from any screen size.
 
-## Updated Color Scheme
-
-The site has transitioned to a light theme to better showcase content. **Off White** serves as the primary background while text defaults to **Charcoal** for optimal contrast. Silver accents remain for borders and subtle highlights. Dark sections like the footer may retain a **Charcoal** background with light text for emphasis.
-
 ## Brand Guidelines
 
 The Keystone brand uses a restrained palette built around charcoal, black, and varying shades of gray. Primary colors include:
@@ -52,9 +48,6 @@ The Keystone brand uses a restrained palette built around charcoal, black, and v
 - **Light Gray** `#CCCCCC`
 - **Medium Gray** `#666666`
 - **Silver** `#bfbfbf`
-- **Pure White** `#ffffff`
-- **Off White** `#f6f6f6`
 - **Metallic Silver** ``
 
-Use Off White backgrounds with Charcoal text for a clean, modern look.
-Metallic silver accents are allowed, but gold or other hues should not be introduced. Designs should remain minimalist and professional—mirroring our matte business cards with silver foil logos. All website updates should maintain this luxurious style.
+Metallic silver accents are allowed, but gold or other hues should not be introduced. Designs should feel minimalist and professional—mirroring our charcoal matte business cards with silver foil logos. All website updates should maintain this luxurious, monochromatic style.

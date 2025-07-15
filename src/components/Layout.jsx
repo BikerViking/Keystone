@@ -13,7 +13,7 @@ export default function Layout() {
   return (
     <>
       <StructuredData />
-      <div className="flex min-h-screen flex-col bg-offwhite text-charcoal">
+      <div className="flex min-h-screen flex-col bg-charcoal text-platinum">
         {/* Accessibility skip link lets keyboard users bypass repetitive navigation */}
         <a
           href="#content"
