@@ -99,7 +99,7 @@ export default function ContactForm({ onSuccess }) {
         </label>
         <button
           type="submit"
-          className="cta-button hover:border-silver hover:text-silver"
+          className="cta-button mx-auto block px-6 py-2 text-base hover:border-silver hover:text-silver"
         >
           Send Message
         </button>
