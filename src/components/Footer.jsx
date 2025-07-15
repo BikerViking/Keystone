@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer
       role="contentinfo"
-      className="footer-gradient bg-charcoal py-8 px-4 text-center text-sm text-platinum"
+      className="footer-gradient bg-charcoal py-8 px-4 text-center text-sm text-lightgray"
     >
       <nav aria-label="Footer" className="mb-4 flex justify-center gap-4">
         <a href="/about" aria-label="Footer link to About" className="hover:text-silver">About</a>
@@ -28,7 +28,7 @@ export default function Footer() {
         <a
           href="https://twitter.com"
           aria-label="Twitter"
-          className="text-platinum transition-colors hover:text-silver"
+          className="text-lightgray transition-colors hover:text-silver"
         >
           <svg viewBox="0 0 24 24" className="h-5 w-5" aria-hidden="true">
             <path
@@ -40,7 +40,7 @@ export default function Footer() {
         <a
           href="https://facebook.com"
           aria-label="Facebook"
-          className="text-platinum transition-colors hover:text-silver"
+          className="text-lightgray transition-colors hover:text-silver"
         >
           <svg viewBox="0 0 24 24" className="h-5 w-5" aria-hidden="true">
             <path
@@ -52,7 +52,7 @@ export default function Footer() {
         <a
           href="https://linkedin.com"
           aria-label="LinkedIn"
-          className="text-platinum transition-colors hover:text-silver"
+          className="text-lightgray transition-colors hover:text-silver"
         >
           <svg viewBox="0 0 24 24" className="h-5 w-5" aria-hidden="true">
             <path

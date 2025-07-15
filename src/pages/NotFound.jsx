@@ -17,7 +17,7 @@ export default function NotFound() {
         transition={{ repeat: Infinity, duration: 8 }}
       />
       <h1 className="text-6xl font-serif font-semibold tracking-wide heading-gradient text-silver">404</h1>
-      <p className="text-lg text-platinum">Sorry, we can’t find that page.</p>
+      <p className="text-lg text-lightgray">Sorry, we can’t find that page.</p>
       <nav aria-label="Helpful links" className="flex flex-col items-center gap-4 sm:flex-row">
         <a
           href="https://forms.gle/b1Xg8pYkZABk4wN96"
@@ -31,7 +31,7 @@ export default function NotFound() {
           Return Home
         </Link>
       </nav>
-      <p className="mt-4 text-xs italic text-platinum">
+      <p className="mt-4 text-xs italic text-lightgray">
         All bookings are reviewed and confirmed before they are finalized.
       </p>
     </MotionSection>

@@ -141,7 +141,7 @@ export default function ChatWidget() {
               role="dialog"
               aria-label="Ask a Notary"
               ref={chatRef}
-              className="fixed bottom-0 left-0 right-0 z-50 m-4 flex max-h-[80vh] w-full max-w-sm flex-col overflow-hidden rounded-2xl border border-[#E5E4E2]/80 bg-black/80 text-platinum shadow-2xl backdrop-blur-md sm:bottom-4 sm:left-auto sm:right-4 sm:w-96"
+              className="fixed bottom-0 left-0 right-0 z-50 m-4 flex max-h-[80vh] w-full max-w-sm flex-col overflow-hidden rounded-2xl border border-[#E5E4E2]/80 bg-black/80 text-lightgray shadow-2xl backdrop-blur-md sm:bottom-4 sm:left-auto sm:right-4 sm:w-96"
               initial={reduce ? false : { opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={reduce ? false : { opacity: 0, y: 20 }}
@@ -164,7 +164,7 @@ export default function ChatWidget() {
                 className="flex-1 space-y-3 overflow-y-auto px-4 py-3 text-sm"
                 aria-live="polite"
               >
-                <p className="text-xs text-platinum">
+                <p className="text-xs text-lightgray">
                   For legal advice or sensitive matters, please call or text directly.
                 </p>
                 <AnimatePresence initial={false}>
@@ -176,7 +176,7 @@ export default function ChatWidget() {
                         {
                           'ml-auto bg-gradient-to-br from-deepgray to-charcoal text-white':
                             msg.from === 'user',
-                          'mr-auto bg-gradient-to-br from-charcoal to-deepgray text-platinum':
+                          'mr-auto bg-gradient-to-br from-charcoal to-deepgray text-lightgray':
                             msg.from === 'bot',
                         },
                       )}
@@ -196,7 +196,7 @@ export default function ChatWidget() {
                   ))}
                 </AnimatePresence>
                 {typing && (
-                  <p aria-label="Typing indicator" className="animate-pulse text-platinum">
+                  <p aria-label="Typing indicator" className="animate-pulse text-lightgray">
                     Typing...
                   </p>
                 )}
@@ -222,7 +222,7 @@ export default function ChatWidget() {
                   name="question"
                   ref={inputRef}
                   type="text"
-                  className="flex-1 rounded-full border border-silver/70 bg-transparent px-3 py-3 text-white placeholder-platinum transition-shadow focus:outline-none focus:ring-2 focus:ring-silver focus:ring-offset-2 focus:ring-offset-black"
+                  className="flex-1 rounded-full border border-silver/70 bg-transparent px-3 py-3 text-white placeholder-lightgray transition-shadow focus:outline-none focus:ring-2 focus:ring-silver focus:ring-offset-2 focus:ring-offset-black"
                   placeholder="Ask a question..."
                   autoComplete="off"
                 />
@@ -234,7 +234,7 @@ export default function ChatWidget() {
                   ➤
                 </button>
               </form>
-              <p className="px-4 py-2 text-center text-2xs text-platinum">
+              <p className="px-4 py-2 text-center text-2xs text-lightgray">
                 Responses are informational and not legal advice.
               </p>
             </motion.div>
