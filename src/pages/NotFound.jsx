@@ -16,7 +16,7 @@ export default function NotFound() {
         animate={{ rotate: [0, 5, -5, 0] }}
         transition={{ repeat: Infinity, duration: 8 }}
       />
-      <h1 className="text-6xl font-serif font-semibold tracking-wide heading-gradient text-silver">404</h1>
+      <h1 className="text-6xl font-serif font-semibold tracking-wide heading-gradient text-charcoal">404</h1>
       <p className="text-lg text-platinum">Sorry, we can’t find that page.</p>
       <nav aria-label="Helpful links" className="flex flex-col items-center gap-4 sm:flex-row">
         <a

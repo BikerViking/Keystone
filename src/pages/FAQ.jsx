@@ -58,7 +58,7 @@ export default function FAQ() {
         path="/faq"
       />
       <div className="mx-auto w-full max-w-3xl flex flex-col gap-8">
-        <h1 className="text-4xl font-serif font-semibold tracking-wide heading-gradient text-silver">
+        <h1 className="text-4xl font-serif font-semibold tracking-wide heading-gradient text-charcoal">
           Frequently Asked Questions
         </h1>
         <ul className="flex flex-col gap-4">

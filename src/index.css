@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply bg-charcoal text-platinum font-sans;
+    @apply bg-offwhite text-charcoal font-sans;
     /* Keep the background clean with no decorative textures */
   }
 }
