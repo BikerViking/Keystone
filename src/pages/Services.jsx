@@ -47,7 +47,7 @@ export default function Services() {
           path="/services"
         />
         <div aria-hidden="true" className="pointer-events-none absolute inset-0 opacity-20 [background:radial-gradient(circle_at_center,_rgba(255,255,255,0.05),_transparent)]" />
-        <h1 className="relative z-10 text-4xl font-serif font-semibold tracking-wide heading-gradient text-silver">
+        <h1 className="relative z-10 text-4xl font-serif font-semibold tracking-wide heading-gradient text-purewhite">
           Our Professional Services
         </h1>
       </MotionSection>

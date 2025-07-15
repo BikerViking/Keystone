@@ -52,7 +52,7 @@ export default function Hero() {
         </header>
         <motion.p
           style={{ y: reduce ? 0 : taglineY }}
-          className="text-lg font-light text-silver lg:text-2xl"
+          className="text-lg font-light text-purewhite lg:text-2xl"
         >
           Reliable Mobile Notary Services
         </motion.p>

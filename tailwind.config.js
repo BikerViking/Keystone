@@ -23,6 +23,8 @@ export default {
         silver: '#bfbfbf',
         accent: '#bfbfbf',
         accentDark: '#333333',
+        purewhite: '#ffffff',
+        offwhite: '#f6f6f6',
       },
       // Limit container width for consistent layouts across large screens
       container: {
