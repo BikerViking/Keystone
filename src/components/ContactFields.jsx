@@ -15,6 +15,7 @@ export default function ContactFields({
   requestAppointment,
   setRequestAppointment,
   setErrors,
+  fieldRefs,
 }) {
   return (
     <fieldset className="space-y-4">
@@ -28,6 +29,7 @@ export default function ContactFields({
           name="name"
           type="text"
           required
+          ref={(el) => (fieldRefs.current.name = el)}
           value={formData.name}
           onChange={onChange}
           aria-invalid={!!errors.name}
@@ -49,6 +51,7 @@ export default function ContactFields({
           name="email"
           type="email"
           required
+          ref={(el) => (fieldRefs.current.email = el)}
           value={formData.email}
           onChange={onChange}
           aria-invalid={!!errors.email}
@@ -83,6 +86,7 @@ export default function ContactFields({
           id="documentCategory"
           name="documentCategory"
           required
+          ref={(el) => (fieldRefs.current.documentCategory = el)}
           value={formData.documentCategory}
           onChange={onChange}
           aria-invalid={!!errors.documentCategory}
@@ -133,6 +137,7 @@ export default function ContactFields({
           name="appointmentType"
           disabled={!requestAppointment}
           required={requestAppointment}
+          ref={(el) => (fieldRefs.current.appointmentType = el)}
           value={formData.appointmentType}
           onChange={onChange}
           aria-invalid={!!errors.appointmentType}
@@ -159,6 +164,7 @@ export default function ContactFields({
           type="date"
           disabled={!requestAppointment}
           required={requestAppointment}
+          ref={(el) => (fieldRefs.current.date = el)}
           value={formData.date}
           onChange={onChange}
           aria-invalid={!!errors.date}
@@ -181,6 +187,7 @@ export default function ContactFields({
           type="time"
           disabled={!requestAppointment}
           required={requestAppointment}
+          ref={(el) => (fieldRefs.current.time = el)}
           value={formData.time}
           onChange={onChange}
           aria-invalid={!!errors.time}
