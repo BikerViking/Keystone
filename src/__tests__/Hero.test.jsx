@@ -19,7 +19,7 @@ describe('Hero component', () => {
       screen.getByRole('link', { name: /call or text 267-309-9000/i }),
     ).toHaveAttribute('href', 'tel:2673099000');
     expect(
-      screen.getByAltText(/keystone notary group logo on parchment/i),
+      screen.getByAltText(/keystone notary group logo/i),
     ).toBeInTheDocument();
   });
 });

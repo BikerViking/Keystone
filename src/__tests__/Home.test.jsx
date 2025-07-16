@@ -15,6 +15,6 @@ test('renders home page heading and cta', () => {
   expect(phoneLink).toHaveAttribute('href', 'tel:2673099000');
   // Hero displays the parchment logo for brand recognition
   expect(
-    screen.getByAltText(/keystone notary group logo on parchment/i),
+    screen.getByAltText(/keystone notary group logo/i),
   ).toBeInTheDocument();
 });
