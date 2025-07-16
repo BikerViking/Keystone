@@ -122,9 +122,6 @@
 
 
   @media (orientation: landscape) and (max-height: 500px) {
-    .hero-heading {
-      @apply text-3xl;
-    }
     .why-heading {
       @apply text-2xl;
     }

@@ -7,9 +7,8 @@ export default function Hero() {
   // Parallax effect: move logo slightly slower than scroll for depth
   const reduce = useReducedMotion();
   const { scrollY } = useScroll();
-  // Parallax values keep heading and logo subtly offset for depth
+  // Parallax values keep logo and tagline subtly offset for depth
   const logoY = useTransform(scrollY, [0, 300], [0, reduce ? 0 : -40]);
-  const headingY = useTransform(scrollY, [0, 200], [0, reduce ? 0 : -20]);
   const taglineY = useTransform(scrollY, [0, 200], [0, reduce ? 0 : -10]);
   return (
     <section className="hero-layer relative flex min-h-screen w-full items-center justify-center overflow-hidden bg-black px-4 text-center sm:px-8">
@@ -43,12 +42,7 @@ export default function Hero() {
               draggable={false}
             />
           </motion.div>
-          <motion.h1
-            style={{ y: reduce ? 0 : headingY }}
-            className="hero-heading animated-gradient w-full text-4xl font-serif font-semibold tracking-wide heading-gradient lg:text-6xl"
-          >
-            Keystone Notary Group, LLC
-          </motion.h1>
+          <h1 className="sr-only">Keystone Notary Group, LLC</h1>
         </header>
         <motion.p
           style={{ y: reduce ? 0 : taglineY }}
