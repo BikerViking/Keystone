@@ -35,8 +35,8 @@ export default function Hero() {
             className="logo-wrapper mx-auto mb-6 mt-6"
           >
             <img
-              src="/hero-logo.PNG"
-              alt="Keystone Notary Group logo on parchment"
+              src="/hero-logo.png"
+              alt="Keystone Notary Group logo"
               width="1024"
               height="1024"
               className="h-auto w-72 max-w-full sm:w-80 md:w-96 lg:w-[30rem]"
