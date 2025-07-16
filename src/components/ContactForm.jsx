@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import ContactFields from './ContactFields';
 import { inputStyles } from './variants';
 
@@ -15,6 +15,16 @@ export default function ContactForm({ onSuccess }) {
     message: '',
   });
   const [errors, setErrors] = useState({});
+
+  const fieldRefs = useRef({
+    name: null,
+    email: null,
+    documentCategory: null,
+    appointmentType: null,
+    date: null,
+    time: null,
+    message: null,
+  });
 
   const validate = () => {
     const newErrors = {};
@@ -59,6 +69,8 @@ export default function ContactForm({ onSuccess }) {
     const validation = validate();
     if (Object.keys(validation).length > 0) {
       setErrors(validation);
+      const first = Object.keys(validation)[0];
+      fieldRefs.current[first]?.focus();
       return;
     }
     setErrors({});
@@ -78,6 +90,7 @@ export default function ContactForm({ onSuccess }) {
           requestAppointment={requestAppointment}
           setRequestAppointment={setRequestAppointment}
           setErrors={setErrors}
+          fieldRefs={fieldRefs}
         />
         <label className="block" htmlFor="message">
           <span className="mb-1 block text-lightgray">Message</span>
@@ -86,6 +99,7 @@ export default function ContactForm({ onSuccess }) {
             name="message"
             required
             rows="4"
+            ref={(el) => (fieldRefs.current.message = el)}
             value={formData.message}
             onChange={handleChange}
             aria-invalid={!!errors.message}
