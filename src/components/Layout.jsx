@@ -11,7 +11,7 @@ export default function Layout() {
 
   return (
     <>
-      <div className="flex min-h-screen flex-col bg-charcoal text-lightgray">
+      <div className="flex min-h-screen flex-col bg-black text-lightgray">
         {/* Accessibility skip link lets keyboard users bypass repetitive navigation */}
         <a
           href="#content"

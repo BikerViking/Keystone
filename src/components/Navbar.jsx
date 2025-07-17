@@ -118,7 +118,7 @@ export default function Navbar() {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
       className={clsx(
-        "fixed inset-x-0 top-0 z-50 border-b border-silver bg-charcoal/90 backdrop-blur-md transition-shadow",
+        "fixed inset-x-0 top-0 z-50 border-b border-silver bg-black/90 backdrop-blur-md transition-shadow",
         scrolled && "shadow-md",
       )}
     >
@@ -166,7 +166,7 @@ export default function Navbar() {
             animate="open"
             exit="closed"
             variants={menuVariants}
-            className="landscape-menu overflow-hidden border-b border-silver bg-charcoal md:hidden"
+            className="landscape-menu overflow-hidden border-b border-silver bg-black md:hidden"
           >
             <motion.nav aria-label="Mobile navigation" className="px-4">
               <motion.ul
