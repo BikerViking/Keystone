@@ -4,9 +4,9 @@ import clsx from 'clsx';
 
 // Provide optional className for additional layout control
 const credentials = [
-  'Licensed & Bonded',
-  'Certified Signing Agent',
-  'Member of National Notary Association',
+  'Commissioned Notary Public',
+  'NNA Certified Notary Signing Agent',
+  'Bonded & Insured',
 ];
 
 // Reusable credentials block styled like other sections
@@ -37,11 +37,6 @@ export default function Credentials({ className = '' }) {
             </li>
           ))}
         </ul>
-        {/* Subtle divider to separate this block from surrounding sections */}
-        <div
-          aria-hidden="true"
-          className="mt-8 h-px w-full bg-gradient-to-r from-transparent via-silver to-transparent"
-        />
       </div>
     </MotionSection>
   );
