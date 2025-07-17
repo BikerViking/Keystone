@@ -7,6 +7,7 @@ import {
   BriefcaseIcon,
   HomeIcon,
 } from '../components';
+import { sectionSpacing } from '../components/variants';
 
 export default function Services() {
   const categories = [
@@ -52,7 +53,7 @@ export default function Services() {
 
   return (
     <>
-      <MotionSection className="relative w-full py-12 px-4 text-center sm:px-8">
+      <MotionSection className={`relative w-full px-4 text-center sm:px-8 ${sectionSpacing}`}> 
         <SEO
           title="Notary Services | Keystone Notary Group"
           description="Explore our full range of notary services including loan signings, apostilles, and more."
@@ -63,7 +64,7 @@ export default function Services() {
           Our Professional Services
         </h1>
       </MotionSection>
-      <MotionSection className="flex w-full flex-col gap-12 px-4 pb-8 sm:px-8">
+      <MotionSection className={`flex w-full flex-col gap-12 px-4 sm:px-8 ${sectionSpacing}`}> 
         <div className="mx-auto w-full max-w-5xl space-y-12">
           {categories.map(({ heading, items, Icon }) => (
             <section key={heading} className="flex flex-col gap-6">

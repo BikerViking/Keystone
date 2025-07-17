@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom';
 import { MotionSection, SEO } from '../components';
+import { sectionSpacing } from '../components/variants';
 
 export default function About() {
   return (
-    <MotionSection className="relative w-full py-8 px-4 sm:px-8">
+    <MotionSection className={`relative w-full px-4 sm:px-8 ${sectionSpacing}`}>
       <SEO
         title="About Keystone Notary Group | Professional Mobile Notaries"
         description="Learn about Keystone Notary Group, our mission, and the services we provide across the Greater Philadelphia area."
