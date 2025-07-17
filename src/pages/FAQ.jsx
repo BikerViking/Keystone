@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import { MotionSection, SEO } from '../components';
+import { sectionSpacing } from '../components/variants';
 import clsx from 'clsx';
 
 const faqs = [
@@ -51,7 +52,7 @@ export default function FAQ() {
   };
 
   return (
-    <MotionSection className="w-full py-8 px-4 sm:px-8">
+    <MotionSection className={`w-full px-4 sm:px-8 ${sectionSpacing}`}>
       <SEO
         title="Notary FAQs | Keystone Notary Group"
         description="Answers to common questions about our mobile notary services and scheduling."

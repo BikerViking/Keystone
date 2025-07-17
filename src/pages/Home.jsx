@@ -1,4 +1,5 @@
 import { Hero, Credentials, MotionSection, SEO } from '../components';
+import { sectionSpacing } from '../components/variants';
 
 export default function Home() {
   return (
@@ -13,7 +14,7 @@ export default function Home() {
       {/* Why Choose Us section explains our value prop */}
       <MotionSection
         aria-labelledby="why-heading"
-        className="flex w-full flex-col items-center gap-6 py-8 px-4 sm:px-8 text-center"
+        className={`flex w-full flex-col items-center gap-6 px-4 sm:px-8 text-center ${sectionSpacing}`}
       >
         <h2
           id="why-heading"

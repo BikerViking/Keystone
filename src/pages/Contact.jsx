@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { MotionSection, SEO } from '../components';
+import { sectionSpacing } from '../components/variants';
 import ContactForm from '../components/ContactForm';
 import ThankYou from '../components/ThankYou';
 
@@ -20,7 +21,7 @@ export default function Contact() {
 
   if (submitted) {
     return (
-      <MotionSection className="container space-y-6 py-20">
+      <MotionSection className={`container space-y-6 ${sectionSpacing}`}>
         <SEO
           title="Contact Keystone Notary Group | Schedule a Notary"
           description="Request a mobile notary appointment or ask questions through our contact form."
@@ -32,7 +33,7 @@ export default function Contact() {
   }
 
   return (
-    <MotionSection id="contact" className="container space-y-8 py-8">
+    <MotionSection id="contact" className={`container space-y-8 ${sectionSpacing}`}>
       <SEO
         title="Contact Keystone Notary Group | Schedule a Notary"
         description="Request a mobile notary appointment or ask questions through our contact form."

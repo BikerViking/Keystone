@@ -1,8 +1,9 @@
 import { MotionSection, SEO } from '../components';
+import { sectionSpacing } from '../components/variants';
 
 export default function Prices() {
   return (
-    <MotionSection className="w-full py-8 px-4 sm:px-8">
+    <MotionSection className={`w-full px-4 sm:px-8 ${sectionSpacing}`}>
       <SEO
         title="Keystone Notary Group, LLC – Fee Schedule"
         description="Official price list for all services."
