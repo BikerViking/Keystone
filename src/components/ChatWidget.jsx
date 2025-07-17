@@ -27,10 +27,26 @@ export default function ChatWidget() {
   const [messages, setMessages] = useState([]); // { from: 'user' | 'bot', text: string }
   const [typing, setTyping] = useState(false);
   const [greeted, setGreeted] = useState(false);
+  const [showButton, setShowButton] = useState(false);
   const inputRef = useRef(null);
   const listRef = useRef(null);
   const chatRef = useRef(null);
   const reduce = useReducedMotion();
+
+  // Hide chat button when hero is in view to prevent obstruction
+  useEffect(() => {
+    const hero = document.querySelector('.hero-layer');
+    if (!hero) {
+      setShowButton(true);
+      return;
+    }
+    const observer = new IntersectionObserver(
+      ([entry]) => setShowButton(!entry.isIntersecting),
+      { rootMargin: '-80px 0px -80px 0px' }
+    );
+    observer.observe(hero);
+    return () => observer.disconnect();
+  }, []);
 
   // When chat opens, focus input and send greeting once for user onboarding
   useEffect(() => {
@@ -107,7 +123,7 @@ export default function ChatWidget() {
   return (
     <>
       <AnimatePresence>
-        {!open && (
+        {!open && showButton && (
           <motion.button
             key="bubble"
             onClick={() => setOpen(true)}

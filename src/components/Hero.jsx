@@ -11,7 +11,7 @@ export default function Hero() {
   const logoY = useTransform(scrollY, [0, 300], [0, reduce ? 0 : -40]);
   const taglineY = useTransform(scrollY, [0, 200], [0, reduce ? 0 : -10]);
   return (
-    <section className="hero-layer relative flex min-h-screen w-full items-center justify-center overflow-hidden bg-[#0D0B0A] px-4 text-center sm:px-8">
+    <section className="hero-layer relative flex min-h-screen w-full items-center justify-center overflow-hidden bg-black px-4 text-center sm:px-8">
       {/* Gradient overlay improves text legibility without obscuring background */}
       <div className="absolute inset-0 bg-gradient-to-b from-black via-black/70 to-transparent" />
       <motion.div
@@ -36,8 +36,8 @@ export default function Hero() {
             <img
               src="/hero-logo.webp"
               alt="Keystone Notary Group logo"
-              width="1024"
-              height="1024"
+              width="1011"
+              height="1175"
               className="max-h-[75vh] w-auto max-w-full"
               draggable={false}
             />
