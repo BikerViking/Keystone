@@ -28,7 +28,7 @@ export default function Credentials({ className = '' }) {
         >
           Credentials
         </h2>
-        <hr className="my-6 h-px w-full border-0 bg-silver/50" />
+        <hr className="section-divider" />
 
         <ul className="mx-auto flex w-max flex-col items-start gap-4">
           {credentials.map((cred) => (

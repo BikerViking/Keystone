@@ -92,6 +92,12 @@
     background-image: linear-gradient(to right, transparent, #bfbfbf, transparent);
   }
 
+  /* Horizontal gradient line used as section divider */
+  .section-divider {
+    @apply my-6 h-px w-full border-0;
+    background-image: linear-gradient(to right, transparent, #bfbfbf, transparent);
+  }
+
 
   @media (orientation: landscape) and (max-height: 500px) {
     .why-heading {
