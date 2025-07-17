@@ -62,18 +62,18 @@ export default function FAQ() {
         <h1 className="text-4xl font-serif font-semibold tracking-wide heading-gradient text-silver">
           Frequently Asked Questions
         </h1>
-        <ul className="flex flex-col gap-4">
+        <ul className="flex flex-col divide-y divide-platinum rounded-md border border-platinum">
         {faqs.map(({ q, a }, idx) => {
           const isOpen = openIndex === idx;
           return (
-            <li key={q} className="overflow-hidden rounded border border-platinum">
+            <li key={q} className="overflow-hidden">
               <button
                 type="button"
                 onClick={() => toggle(idx)}
                 aria-expanded={isOpen}
                 aria-controls={`faq-panel-${idx}`}
                 id={`faq-header-${idx}`}
-                className="flex w-full items-center justify-between bg-deepgray px-4 py-4 text-left text-lightgray transition-colors hover:bg-black focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-silver"
+                className="flex w-full items-center justify-between bg-deepgray px-4 py-5 text-left text-lightgray transition-colors hover:bg-black focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-silver sm:px-6 sm:py-6 text-base sm:text-lg"
               >
                 <span className="font-medium">{q}</span>
                 <svg
@@ -100,8 +100,8 @@ export default function FAQ() {
                     initial={{ height: 0, opacity: 0 }}
                     animate={{ height: 'auto', opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.3, ease: 'easeOut' }}
-                    className="px-4 pb-4 pt-2 text-lightgray"
+                    transition={{ duration: 0.3, ease: 'easeInOut' }}
+                    className="px-4 pb-5 pt-2 text-lightgray text-sm leading-relaxed sm:px-6 sm:text-base"
                   >
                     <p>{a}</p>
                   </motion.div>
