@@ -4,15 +4,11 @@ import { sectionSpacing } from '../components/variants';
 
 export default function About() {
   return (
-    <MotionSection className={`relative w-full px-4 sm:px-8 ${sectionSpacing}`}>
+    <MotionSection className={`w-full px-4 sm:px-8 ${sectionSpacing}`}>
       <SEO
         title="About Keystone Notary Group | Professional Mobile Notaries"
         description="Learn about Keystone Notary Group, our mission, and the services we provide across the Greater Philadelphia area."
         path="/about"
-      />
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 opacity-20 [background:radial-gradient(circle_at_center,_rgba(255,255,255,0.05),_transparent)]"
       />
       <div className="mx-auto w-full max-w-3xl flex flex-col gap-8">
         <h1 className="text-4xl font-serif font-semibold tracking-wide heading-gradient text-silver">
