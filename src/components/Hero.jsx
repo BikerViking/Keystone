@@ -12,8 +12,6 @@ export default function Hero() {
   const taglineY = useTransform(scrollY, [0, 200], [0, reduce ? 0 : -10]);
   return (
     <section className="hero-layer relative flex min-h-[70vh] md:min-h-screen w-full items-center justify-center overflow-hidden bg-black text-center">
-      {/* Gradient overlay improves text legibility without obscuring background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black via-black/70 to-transparent" />
       <motion.div
         initial={reduce ? false : { opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
