@@ -21,13 +21,14 @@ export default function Credentials({ className = '' }) {
         className,
       )}
     >
-      <div className="mx-auto flex w-full max-w-3xl flex-col items-center gap-8">
+      <div className="mx-auto flex w-full max-w-3xl flex-col items-center gap-6">
         <h2
           id="credentials-heading"
           className="w-full text-3xl font-serif font-semibold tracking-wide heading-gradient text-silver"
         >
           Credentials
         </h2>
+        <hr className="my-6 h-px w-full border-0 bg-silver/50" />
 
         <ul className="mx-auto flex w-max flex-col items-start gap-4">
           {credentials.map((cred) => (

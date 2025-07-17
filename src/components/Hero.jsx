@@ -18,7 +18,7 @@ export default function Hero() {
         initial={reduce ? false : { opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="relative z-10 mx-auto flex w-full max-w-screen-xl flex-col items-center gap-8 px-4 sm:px-8 lg:gap-10"
+        className="relative z-10 mx-auto flex w-full max-w-screen-xl flex-col items-center gap-6 sm:gap-8 lg:gap-10 px-4 sm:px-8"
       >
         {/*
           Group brand elements for easier layout tuning and animation hooks.
@@ -38,7 +38,7 @@ export default function Hero() {
               alt="Keystone Notary Group logo"
               width="1440"
               height="600"
-              className="w-full max-w-screen-lg object-contain"
+              className="w-full max-w-screen-xl object-contain"
               draggable={false}
             />
           </motion.div>
