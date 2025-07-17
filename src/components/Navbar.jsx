@@ -63,6 +63,14 @@ export default function Navbar() {
 
   const linkClasses = ({ isActive }) => navLinkStyles({ active: isActive });
 
+  // Prevent background scrolling when mobile menu is open
+  useEffect(() => {
+    document.body.style.overflow = open ? 'hidden' : '';
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [open]);
+
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 10);

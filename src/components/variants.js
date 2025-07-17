@@ -22,4 +22,4 @@ export const navLinkStyles = tv({
 });
 
 // Consistent vertical rhythm for sections across the site
-export const sectionSpacing = 'py-12 sm:py-16';
+export const sectionSpacing = 'py-16 sm:py-20 md:py-24';

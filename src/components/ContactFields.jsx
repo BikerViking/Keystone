@@ -127,78 +127,79 @@ export default function ContactFields({
         />
         <span className="text-lightgray">I am requesting an appointment.</span>
       </label>
-      <label className="block" htmlFor="appointmentType">
-        <span className="mb-1 flex items-center gap-2 text-lightgray">
-          <CalendarIcon className="h-5 w-5 text-silver" aria-hidden="true" />
-          Appointment Type
-        </span>
-        <select
-          id="appointmentType"
-          name="appointmentType"
-          disabled={!requestAppointment}
-          required={requestAppointment}
-          ref={(el) => (fieldRefs.current.appointmentType = el)}
-          value={formData.appointmentType}
-          onChange={onChange}
-          aria-invalid={!!errors.appointmentType}
-          className={inputStyles()}
-        >
-          <option value="">Select type</option>
-          <option value="in_person">In-Person</option>
-          <option value="remote">Remote/Online</option>
-        </select>
-          {errors.appointmentType && (
-            <p role="alert" className="mt-1 text-sm text-silver">
-              {errors.appointmentType}
-            </p>
-          )}
-      </label>
-      <label className="block" htmlFor="date">
-        <span className="mb-1 flex items-center gap-2 text-lightgray">
-          <CalendarIcon className="h-5 w-5 text-silver" aria-hidden="true" />
-          Preferred Date
-        </span>
-        <input
-          id="date"
-          name="date"
-          type="date"
-          disabled={!requestAppointment}
-          required={requestAppointment}
-          ref={(el) => (fieldRefs.current.date = el)}
-          value={formData.date}
-          onChange={onChange}
-          aria-invalid={!!errors.date}
-          className={inputStyles()}
-        />
-          {errors.date && (
-            <p role="alert" className="mt-1 text-sm text-silver">
-              {errors.date}
-            </p>
-          )}
-      </label>
-      <label className="block" htmlFor="time">
-        <span className="mb-1 flex items-center gap-2 text-lightgray">
-          <ClockIcon className="h-5 w-5 text-silver" aria-hidden="true" />
-          Preferred Time
-        </span>
-        <input
-          id="time"
-          name="time"
-          type="time"
-          disabled={!requestAppointment}
-          required={requestAppointment}
-          ref={(el) => (fieldRefs.current.time = el)}
-          value={formData.time}
-          onChange={onChange}
-          aria-invalid={!!errors.time}
-          className={inputStyles()}
-        />
-          {errors.time && (
-            <p role="alert" className="mt-1 text-sm text-silver">
-              {errors.time}
-            </p>
-          )}
-      </label>
+      {requestAppointment && (
+        <>
+          <label className="block" htmlFor="appointmentType">
+            <span className="mb-1 flex items-center gap-2 text-lightgray">
+              <CalendarIcon className="h-5 w-5 text-silver" aria-hidden="true" />
+              Appointment Type
+            </span>
+            <select
+              id="appointmentType"
+              name="appointmentType"
+              required
+              ref={(el) => (fieldRefs.current.appointmentType = el)}
+              value={formData.appointmentType}
+              onChange={onChange}
+              aria-invalid={!!errors.appointmentType}
+              className={inputStyles()}
+            >
+              <option value="">Select type</option>
+              <option value="in_person">In-Person</option>
+              <option value="remote">Remote/Online</option>
+            </select>
+            {errors.appointmentType && (
+              <p role="alert" className="mt-1 text-sm text-silver">
+                {errors.appointmentType}
+              </p>
+            )}
+          </label>
+          <label className="block" htmlFor="date">
+            <span className="mb-1 flex items-center gap-2 text-lightgray">
+              <CalendarIcon className="h-5 w-5 text-silver" aria-hidden="true" />
+              Preferred Date
+            </span>
+            <input
+              id="date"
+              name="date"
+              type="date"
+              required
+              ref={(el) => (fieldRefs.current.date = el)}
+              value={formData.date}
+              onChange={onChange}
+              aria-invalid={!!errors.date}
+              className={inputStyles()}
+            />
+            {errors.date && (
+              <p role="alert" className="mt-1 text-sm text-silver">
+                {errors.date}
+              </p>
+            )}
+          </label>
+          <label className="block" htmlFor="time">
+            <span className="mb-1 flex items-center gap-2 text-lightgray">
+              <ClockIcon className="h-5 w-5 text-silver" aria-hidden="true" />
+              Preferred Time
+            </span>
+            <input
+              id="time"
+              name="time"
+              type="time"
+              required
+              ref={(el) => (fieldRefs.current.time = el)}
+              value={formData.time}
+              onChange={onChange}
+              aria-invalid={!!errors.time}
+              className={inputStyles()}
+            />
+            {errors.time && (
+              <p role="alert" className="mt-1 text-sm text-silver">
+                {errors.time}
+              </p>
+            )}
+          </label>
+        </>
+      )}
       {!requestAppointment && (
         <p className="text-xs italic text-lightgray">
           Enable appointment request above to choose date and time.
