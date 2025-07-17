@@ -11,7 +11,7 @@ export default function Hero() {
   const logoY = useTransform(scrollY, [0, 300], [0, reduce ? 0 : -40]);
   const taglineY = useTransform(scrollY, [0, 200], [0, reduce ? 0 : -10]);
   return (
-    <section className="hero-layer relative flex min-h-[70vh] md:min-h-screen w-full items-center justify-center overflow-hidden bg-black text-center pt-24 sm:pt-32">
+    <section className="hero-layer relative flex min-h-[70vh] md:min-h-screen w-full items-center justify-center overflow-hidden bg-black text-center pt-32 sm:pt-40">
       <motion.div
         initial={reduce ? false : { opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -34,9 +34,7 @@ export default function Hero() {
             <img
               src="/images/hero-logo.webp"
               alt="Keystone Notary Group logo"
-              width="974"
-              height="1175"
-              className="mx-auto w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl object-contain"
+              className="mx-auto w-auto max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl object-contain"
               draggable={false}
             />
           </motion.div>
