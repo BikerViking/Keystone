@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply bg-charcoal text-lightgray font-sans;
+    @apply bg-charcoal text-lightgray font-sans leading-relaxed;
     /* Keep the background clean with no decorative textures */
   }
 }
@@ -25,7 +25,7 @@
   }
 
   .cta-button {
-    @apply relative inline-block rounded border border-silver bg-gradient-to-br from-accentDark via-deepgray to-black px-8 py-3 text-lg font-medium text-white shadow-md transition-transform duration-200 focus:outline-none focus:ring-2 focus:ring-silver hover:shadow-lg hover:-translate-y-1 hover:scale-105 active:scale-95;
+    @apply relative inline-block rounded border border-silver bg-gradient-to-br from-accentDark via-deepgray to-black px-8 py-3 text-lg font-medium text-white shadow-md transition-transform duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-silver hover:shadow-lg hover:-translate-y-1 hover:scale-105 active:scale-95 ring-1 ring-silver/30 hover:ring-silver;
     /* Buttons use a dark silver gradient for readability */
   }
 

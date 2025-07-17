@@ -21,7 +21,7 @@ export default function Contact() {
 
   if (submitted) {
     return (
-      <MotionSection className={`container space-y-6 ${sectionSpacing}`}>
+      <MotionSection className={`container space-y-8 ${sectionSpacing}`}>
         <SEO
           title="Contact Keystone Notary Group | Schedule a Notary"
           description="Request a mobile notary appointment or ask questions through our contact form."
