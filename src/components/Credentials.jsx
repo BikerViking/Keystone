@@ -1,5 +1,6 @@
 import CheckIcon from './CheckIcon';
 import MotionSection from './MotionSection';
+import { sectionSpacing } from './variants';
 import clsx from 'clsx';
 
 // Provide optional className for additional layout control
@@ -13,13 +14,9 @@ const credentials = [
 export default function Credentials({ className = '' }) {
 
   return (
-    // Top margin keeps breathing room from prior section
     <MotionSection
       aria-labelledby="credentials-heading"
-      className={clsx(
-        'mt-10 flex w-full flex-col items-center px-4 sm:px-8 text-center py-12 sm:py-16',
-        className,
-      )}
+      className={clsx('w-full px-4 sm:px-8 text-center', sectionSpacing, className)}
     >
       <div className="mx-auto flex w-full max-w-3xl flex-col items-center gap-6">
         <h2

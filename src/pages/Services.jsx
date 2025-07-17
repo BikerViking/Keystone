@@ -53,13 +53,12 @@ export default function Services() {
 
   return (
     <>
-      <MotionSection className={`relative w-full px-4 text-center sm:px-8 ${sectionSpacing}`}> 
+      <MotionSection className={`w-full px-4 text-center sm:px-8 ${sectionSpacing}`}>
         <SEO
           title="Notary Services | Keystone Notary Group"
           description="Explore our full range of notary services including loan signings, apostilles, and more."
           path="/services"
         />
-        <div aria-hidden="true" className="pointer-events-none absolute inset-0 opacity-20 [background:radial-gradient(circle_at_center,_rgba(255,255,255,0.05),_transparent)]" />
         <h1 className="relative z-10 text-4xl font-serif font-semibold tracking-wide heading-gradient text-silver">
           Our Professional Services
         </h1>
