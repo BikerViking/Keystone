@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply bg-charcoal text-lightgray font-sans leading-relaxed;
+    @apply bg-black text-lightgray font-sans leading-relaxed;
     /* Keep the background clean with no decorative textures */
   }
 }
