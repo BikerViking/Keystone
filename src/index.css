@@ -101,7 +101,7 @@
 
   /* Wrapper remains for layout but no extra shading */
   .logo-wrapper {
-    @apply relative inline-block rounded-lg;
+    @apply relative inline-block;
   }
 
 
