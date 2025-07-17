@@ -15,10 +15,6 @@ describe('Credentials component', () => {
     expect(items).toHaveLength(3);
   });
 
-  test('includes a divider line', () => {
-    render(<Credentials />);
-    expect(screen.getByRole('separator')).toBeInTheDocument();
-  });
 
   const viewports = [320, 640, 1024, 1280];
 

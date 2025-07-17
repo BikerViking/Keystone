@@ -28,8 +28,6 @@ export default function Credentials({ className = '' }) {
         >
           Credentials
         </h2>
-        <hr className="section-divider" />
-
         <ul className="mx-auto flex w-max flex-col items-start gap-4">
           {credentials.map((cred) => (
             <li key={cred} className="flex items-start">
