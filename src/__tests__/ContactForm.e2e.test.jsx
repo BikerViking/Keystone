@@ -34,6 +34,7 @@ describe('ContactForm end-to-end', () => {
 
     expect(await screen.findByRole('heading', { name: /thank you/i })).toHaveFocus();
     expect(screen.getByText(/your message has been received/i)).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: /return home/i })).toBeInTheDocument();
   });
 
   test.each(viewports)('appointment request submission at %ipx', async (width) => {
@@ -63,5 +64,6 @@ describe('ContactForm end-to-end', () => {
 
     expect(await screen.findByRole('heading', { name: /thank you/i })).toHaveFocus();
     expect(screen.getByText(/your message has been received/i)).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: /return home/i })).toBeInTheDocument();
   });
 });
