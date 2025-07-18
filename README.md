@@ -11,6 +11,12 @@ npm install
 npm run dev
 ```
 
+If your repository does not have a remote configured yet, add one:
+
+```bash
+git remote add origin <repo-url>
+```
+
 ## Build
 
 ```bash
