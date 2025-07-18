@@ -15,13 +15,8 @@
 [task_memory]
 respect_previous_context = true
 maintain_continuity = true
-no_duplicate_logic = true
-maintain_luxury_appearance = true
-layout_improvement_permissions_granted = true
-ensure_codex_file_adherence = true
-unrestricted_codex_network_access = true
-auto_escape_user_data = true
-
+layout_improvement_permissions_granted = false
+maintain_luxury_appearance = false
 
 [code_purity]
 remove_leftover_code = true
@@ -30,18 +25,14 @@ no_duplicate_markup = true
 flatten_nesting = true
 prefer_modern_idioms = true
 
-
 [intent_comments]
 require_why_comments = true
 annotate_new_logic = true
 explain_functions_plain_english = true
 
 [react_tailwind]
-use_semantic_html = true
-require_flex_grid = true
-eliminate_wrapper_divs = true
-use_clsx_or_variants = true
-no_inline_complex_styles = true
+prohibit_absolute_unless_explicit = false
+eliminate_wrapper_divs = false
 
 [react_tailwind_strict]
 require_flex_grid = true
