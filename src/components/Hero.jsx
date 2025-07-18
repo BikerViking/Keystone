@@ -32,7 +32,7 @@ export default function Hero() {
             className="logo-wrapper mx-auto"
           >
             <img
-              src="/images/hero-logo.webp"
+              src="/hero-logo.webp"
               alt="Keystone Notary Group logo"
               className="mx-auto w-auto max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl object-contain bg-black"
               style={{ imageRendering: 'auto' }}
